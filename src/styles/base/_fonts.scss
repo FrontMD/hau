@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Suisse Intl';
+    src: url('../fonts/suisse-intl/SuisseIntl-Regular.woff2') format('woff2'),
+        url('../fonts/suisse-intl/SuisseIntl-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Intl';
+    src: url('../fonts/suisse-intl/SuisseIntl-Medium.woff2') format('woff2'),
+        url('../fonts/suisse-intl/SuisseIntl-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monrope';
+    src: url('../fonts/manrope/Manrope-Regular.woff2') format('woff2'),
+        url('../fonts/manrope/Manrope-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monrope';
+    src: url('../fonts/manrope/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/manrope/Manrope-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monrope';
+    src: url('../fonts/manrope/Manrope-ExtraBold.woff2') format('woff2'),
+        url('../fonts/manrope/Manrope-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

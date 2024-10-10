@@ -1,0 +1,19 @@
+.main-burger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $c-accent;
+    padding: 40px 35px;
+    width: 100px;
+    height: 100vh;
+
+    &__icon {
+        cursor: pointer;
+        color: $c-white;
+    }
+
+    &__icon svg {
+        width: 29px;
+        height: 21.82px;
+    }
+}

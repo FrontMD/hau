@@ -1,0 +1,22 @@
+extends layouts/default
+
+block variables
+	- const title = "Страницы"
+
+block content
+
+	.page
+		section.section.pages-list
+			.m-container
+				+title({
+					classes: 'pages-list__title',
+					tag: 'h1',
+					text: 'Страницы'
+				})
+				+title({
+					classes: 'pages-list__subtitle',
+					tag: 'h2',
+					text: 'ГОСТ / Сведения'
+				})
+				.pages-list__links
+					a.pages-list__link(href="mto.html") Материально-техническое обеспечение и оснащённость образовательного процесса
