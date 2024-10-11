@@ -1,0 +1,30 @@
+-
+    const defaultLinkBlockProps = {
+        classes: '',
+        text: 'Сведения о наличии оборудованных учебных кабинетов',
+        linkText: 'Скачать документ',
+        icon: 'download',
+        vMode: 'note'
+    }
+
+mixin link-block(props= defaultLinkBlockProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultLinkBlockProps.classes,
+            text: props.text ? props.text : defaultLinkBlockProps.text,
+            linkText: props.linkText ? props.linkText : defaultLinkBlockProps.linkText,
+            icon: props.icon ? props.icon : defaultLinkBlockProps.icon,
+            vMode: props.vMode ? props.vMode : defaultLinkBlockProps.vMode,
+
+        }
+
+    .link-block(class= checkProps.classes + ' ' + `link-block--${checkProps.vMode}`)&attributes(attributes)
+        .link-block__desc!= checkProps.text
+        a.link-block__link(href="javascript:void(0)")
+            span.link-block__text!= checkProps.linkText
+            span.link-block__icon
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+
+
+

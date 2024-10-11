@@ -1,0 +1,19 @@
+-
+    const defaultMColumnsProps = {
+        classes: '',
+        title: 'Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий'
+    }
+
+mixin m-columns(props= defaultMColumnsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMColumnsProps.classes,
+            title: props.title ? props.title : defaultMColumnsProps.title
+        }
+
+    .m-columns(class= checkProps.classes)&attributes(attributes)
+        .m-columns__title!= checkProps.title
+        .m-columns__main.text-editor
+            block
+
+

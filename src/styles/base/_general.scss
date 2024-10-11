@@ -109,8 +109,7 @@ body {
 
 	font-family: $ff-main;
 	font-size: 16px;
-	line-height: 1.2;
-
+	line-height: 1.02em;
 	background-color: $c-bg-main;
 }
 
@@ -125,21 +124,10 @@ body {
 
 .m-container {
 	box-sizing: border-box;
-	width: 1472px;
-	max-width: 95%;
-	max-width: calc(100% - 64px * 2);
+	width: 100%;
+	max-width: 1820px;
 	margin: 0 auto;
-
-	@include max(lg) {
-		max-width: calc(100% - 30px * 2);
-
-	}
-
-	@include max(md) {
-		max-width: calc(100% - 16px * 2);
-	}
-
-
+	padding: 0 28px;
 
 }
 
@@ -178,9 +166,87 @@ table {
 	overflow: hidden;
 }
 
+.text-editor {
+	>*:first-child {
+		margin-top: 0 !important;
+	}
+
+	>*:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	p {
+		color: rgba(1, 50, 32, 0.4);
+	}
+
+	b {
+		color: $c-accent;
+		font-weight: inherit;
+	}
+
+	p {
+		margin-bottom: 36px;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.55em;
+	}
+
+	ul {
+		padding-left: 35px;
+		list-style: none;
+		margin-bottom: 36px;
+	}
+
+	ul>li {
+		position: relative;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.55em;
+	}
+
+	ul>li::before {
+		content: '';
+		position: absolute;
+		top: 0.775em;
+		left: -22px;
+		transform: translateY(-50%);
+		width: 9px;
+		height: 9px;
+		background-color: $c-accent;
+		border-radius: 100%;
+	}
+
+	ol {
+		list-style: none;
+		counter-reset: num;
+		color: $c-accent;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.55em;
+	}
+
+	ol li {
+		position: relative;
+		padding: 20px 25px 20px 96px;
+
+		&:nth-child(odd) {
+			background-color: $c-bg-main;
+		}
+
+		&::before {
+			content: counter(num) '';
+			counter-increment: num;
+			position: absolute;
+			top: 20px;
+			left: 25px;
+			font-weight: 500;
+		}
+	}
+}
+
 //страница со списком страниц
 .pages-list {
-	padding: 140px 0 60px;
+	padding: 237px 0 60px 100px;
 }
 
 .pages-list__links {
@@ -200,6 +266,7 @@ table {
 	text-decoration: none;
 	color: $c-accent;
 	transition: color 0.3s linear;
+	line-height: 1.02em;
 }
 
 .pages-list__link:hover {

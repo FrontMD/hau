@@ -1,0 +1,1 @@
+@@include("../../blocks/components/tabs-block/tabs-block.js")

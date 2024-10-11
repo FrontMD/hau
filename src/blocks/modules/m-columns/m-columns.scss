@@ -1,0 +1,19 @@
+.m-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 34px;
+    padding: 20px 28px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+    &__title {
+        flex: 0 0 413px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.02em;
+        color: $c-accent-middle;
+    }
+
+    &__main {
+        flex: 1 1 auto;
+    }
+}

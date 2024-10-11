@@ -1,0 +1,11 @@
+.page-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    min-height: 380px;
+    padding: 24px 33px 40px;
+
+    &__content {
+        margin-top: auto;
+    }
+}

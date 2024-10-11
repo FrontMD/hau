@@ -1,0 +1,32 @@
+-
+    const defaultTabsProps = {
+        classes: '',
+        tabs: [
+            {
+                name: 'Материально-техническое обеспечение и оснащённость образовательного процесса',
+            },
+            {
+                name: ' Индивидуальная работа с обучающимися',
+            },
+        ],
+    }
+
+mixin tabs-block(props= defaultTabsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTabsProps.classes,
+            tabs: props.tabs ? props.tabs : defaultTabsProps.tabs
+        }
+
+    .tabs-block(class= checkProps.classes)&attributes(attributes)
+        .tabs-block__tabs(data-js="tabsBlockTabs")
+            - let count = 0 
+            - while (count < checkProps.tabs.length)
+                .tabs-block__tab(class= count === 0 ? "tabs-block__tab--active" : "" )!= checkProps.tabs[count].name
+
+                - count += 1;
+
+        .tabs-block__slides(data-js="tabsBlockSlides")
+            block
+
+

@@ -1,0 +1,59 @@
+.breadcrumbs {
+    position: relative;
+    z-index: 30;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        gap: 9px;
+        font-size: 16px;
+        line-height: 1.02em;
+        font-weight: 400;
+        color: $c-accent;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        a {
+            transition: color $tr-time;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $c-accent-light;
+        }
+    }
+
+    &__item--current {
+        color: #AFB2B8;
+        pointer-events: none;
+    }
+
+    &__separator {
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background-color: $c-accent-light;
+    }
+}
+
+.breadcrumbs {
+    &--light &__list {
+        color: white;
+    }
+
+    &--light &__back {
+        .btn__text {
+            color: white;
+        }
+
+        .btn__icon {
+            color: white;
+        }
+    }
+}
