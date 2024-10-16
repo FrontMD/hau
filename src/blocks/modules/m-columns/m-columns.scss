@@ -3,17 +3,50 @@
     align-items: flex-start;
     gap: 34px;
     padding: 20px 28px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid $c-border;
+
+    &__subtitle {
+        max-width: 930px;
+        padding-top: 184px;
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 0.91em;
+        letter-spacing: -2px;
+        color: $c-accent;
+    }
 
     &__title {
         flex: 0 0 413px;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.02em;
-        color: $c-accent-middle;
     }
 
     &__main {
         flex: 1 1 auto;
+    }
+
+    &--column {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &--column &__main {
+        margin-top: 48px;
+    }
+
+    &--column &__title {
+        flex-basis: auto;
+        width: 100%;
+
+        &>* {
+            max-width: 510px;
+        }
+    }
+
+    &--subtitle {
+        border-top: none;
+    }
+
+    &--subtitle &__title {
+        padding-top: 32px;
+        border-top: 1px solid $c-border;
     }
 }

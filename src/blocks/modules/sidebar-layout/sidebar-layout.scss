@@ -2,6 +2,7 @@
     padding: 240px 0 40px 100px;
 
     &__container {
+        position: relative;
         display: flex;
         align-items: stretch;
         gap: 38px;
@@ -9,11 +10,54 @@
 
     &__sidebar {
         flex: 0 0 408px;
+
+        @include max(large) {
+            position: absolute;
+            top: 0;
+            left: 28px;
+            width: 70px;
+            background-color: $c-bg-main;
+            z-index: 5;
+            min-height: 100%;
+            overflow: hidden;
+            transition: width $tr-time;
+        }
+
+        .side-menu {
+            @include max(large) {
+                opacity: 0;
+                transition: opacity $tr-time;
+            }
+        }
+
+        &--expanded {
+            @include max(large) {
+                width: 408px;
+            }
+
+            .side-menu {
+                @include max(large) {
+                    opacity: 1;
+                }
+            }
+
+            .sidebar-toggle__btn--open {
+                opacity: 0 !important;
+            }
+
+            .sidebar-toggle__btn--close {
+                opacity: 1 !important;
+            }
+        }
     }
 
     &__main {
         background-color: $c-white;
         flex: 1 1 auto;
+
+        @include max(large) {
+            padding-left: 70px;
+        }
     }
 
     .side-menu {
@@ -22,7 +66,7 @@
         list-style: none;
 
         &__item {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid $c-border;
         }
 
         &__link {
@@ -36,10 +80,53 @@
             color: $c-accent;
             transition: background-color $tr-time, color $tr-time;
 
+            @include max(large) {
+                margin: 0;
+            }
+
             &:hover,
             &--active {
                 color: $c-white;
                 background-color: $c-accent;
+            }
+        }
+    }
+
+    .sidebar-toggle {
+        display: none;
+        position: relative;
+        height: 50px;
+        width: 50px;
+
+        @include max(large) {
+            display: block;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            color: $c-accent;
+
+            svg {
+                width: 100%;
+                max-height: 100%;
+            }
+
+            &--open {
+                opacity: 1;
+                transition: opacity $tr-time;
+            }
+
+            &--close {
+                opacity: 0;
+                transition: opacity $tr-time;
             }
         }
     }

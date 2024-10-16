@@ -13,6 +13,11 @@
         justify-content: space-between;
         padding-left: 22px;
         min-height: 183px;
+        transition: min-height $tr-time linear;
+    }
+
+    &--small &__container {
+        min-height: 90px;
     }
 
     &__logo {

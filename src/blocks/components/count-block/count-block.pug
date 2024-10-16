@@ -1,0 +1,24 @@
+-
+    const defaultCountBlockProps = {
+        classes: '',
+        text: 'Общее количество компьютеров с выходом в информационно-телекоммуни-кационную сеть «Интернет», к которым имеют доступ обучающиеся',
+        num: '1500',
+        vMode: 'row'
+    }
+
+mixin count-block(props= defaultCountBlockProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCountBlockProps.classes,
+            text: props.text ? props.text : defaultCountBlockProps.text,
+            num: props.num ? props.num : defaultCountBlockProps.num,
+            vMode: props.vMode ? props.vMode : defaultCountBlockProps.vMode,
+        }
+
+    .count-block(class= checkProps.classes + ' ' + `count-block--${checkProps.vMode}`)&attributes(attributes)
+        .count-block__desc!= checkProps.text
+        .count-block__num!= checkProps.num
+
+
+
+

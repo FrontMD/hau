@@ -1,0 +1,47 @@
+.m-table {
+    overflow-x: auto;
+    margin-top: 34px;
+    min-width: 100%;
+
+    th,
+    td {
+        padding: 23px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        color: $c-accent;
+    }
+
+    th {
+        background-color: $c-accent-middle;
+        color: $c-white;
+    }
+
+    tbody tr:nth-child(odd) td {
+        background-color: $c-bg-main;
+    }
+}
+
+.m-table.m-table--rows {
+    overflow: hidden;
+    display: flex;
+
+    tbody {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tbody tr:nth-child(odd) td {
+        background-color: $c-white;
+    }
+
+    tbody tr td:nth-child(odd) {
+        background-color: $c-bg-main;
+    }
+}

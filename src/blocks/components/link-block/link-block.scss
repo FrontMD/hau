@@ -12,19 +12,17 @@
         background-color: $c-bg-main;
         padding: 22.5px 14px 22.5px 36px;
         border-left: 4px solid $c-accent-light;
+        margin-top: 10px;
     }
 
     &--table {
         padding-bottom: 22px;
+        margin-top: 22px;
         border-bottom: 1px solid rgb(0, 0, 0, 0.2);
     }
 
-    &--text {
-        margin-top: 10px;
-
-        &.link-block--table {
-            margin-top: 22px;
-        }
+    &--link &__link {
+        flex: 0 0 137px;
     }
 
     &__desc {
@@ -34,10 +32,11 @@
     &__link {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-self: flex-start;
         gap: 14px;
         flex: 0 0 214px;
+        min-height: 54px;
     }
 
     &__text {

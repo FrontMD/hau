@@ -18,15 +18,15 @@ mixin tabs-block(props= defaultTabsProps)
             tabs: props.tabs ? props.tabs : defaultTabsProps.tabs
         }
 
-    .tabs-block(class= checkProps.classes)&attributes(attributes)
-        .tabs-block__tabs(data-js="tabsBlockTabs")
+    .tabs-block(class= checkProps.classes data-js="tabsBlock")&attributes(attributes)
+        .tabs-block__tabs
             - let count = 0 
             - while (count < checkProps.tabs.length)
-                .tabs-block__tab(class= count === 0 ? "tabs-block__tab--active" : "" )!= checkProps.tabs[count].name
+                .tabs-block__tab(class= count === 0 ? "tabs-block__tab--active" : "" data-index= count data-js="tabsBlockTab")!= checkProps.tabs[count].name
 
                 - count += 1;
 
-        .tabs-block__slides(data-js="tabsBlockSlides")
+        .tabs-block__slides
             block
 
 

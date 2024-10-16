@@ -1,18 +1,27 @@
 -
     const defaultMColumnsProps = {
         classes: '',
-        title: 'Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий'
+        title: '<h2>Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий</h2>',
+        titlePosLeft: 'true',
+        subtitle: ''
     }
 
 mixin m-columns(props= defaultMColumnsProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultMColumnsProps.classes,
-            title: props.title ? props.title : defaultMColumnsProps.title
+            title: props.title ? props.title : defaultMColumnsProps.title,
+            titlePosLeft: props.titlePosLeft ? props.titlePosLeft : defaultMColumnsProps.titlePosLeft,
+            subtitle: props.subtitle ? props.subtitle : defaultMColumnsProps.subtitle,
         }
 
-    .m-columns(class= checkProps.classes)&attributes(attributes)
-        .m-columns__title!= checkProps.title
+        let columnDirClass = checkProps.titlePosLeft == 'true' ? '' : ' m-columns--column'
+        let subtitleClass =  checkProps.subtitle.length < 1 ? '' : ' m-columns--subtitle'
+
+    .m-columns(class= `${checkProps.classes} ${columnDirClass} ${subtitleClass}`)&attributes(attributes)
+        - if(checkProps.subtitle.length > 0)
+            .m-columns__subtitle!= checkProps.subtitle
+        .m-columns__title.text-editor!= checkProps.title
         .m-columns__main.text-editor
             block
 

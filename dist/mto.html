@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" data-js="siteHeader">
       <div class="section">
         <div class="site-header__container"><a class="site-header__logo" href="/"><img src="img/full_logo.svg" alt=""></a>
           <div class="site-header__socials"><a class="site-header__social" href="#">
@@ -56,7 +56,19 @@
       <div class="page">
             <div class="sidebar-layout">
               <div class="m-container sidebar-layout__container">
-                <div class="sidebar-layout__sidebar">
+                <div class="sidebar-layout__sidebar" data-js="sidebarLayoutsidebar">
+                  <div class="sidebar-toggle" data-js="sidebarToggle">
+                    <div class="sidebar-toggle__btn sidebar-toggle__btn--open">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#main_burger"></use>
+                      </svg>
+                    </div>
+                    <div class="sidebar-toggle__btn sidebar-toggle__btn--close">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                  </div>
                   <ul class="side-menu">
                     <li class="side-menu__item"><a class="side-menu__link" href="#">Основные сведения</a></li>
                     <li class="side-menu__item"><a class="side-menu__link" href="#">Структура и органы управления образовательной организацией</a></li>
@@ -90,43 +102,78 @@
                               </div>
                             </div>
                       </section>
-                      <div class="tabs-block">
-                        <div class="tabs-block__tabs" data-js="tabsBlockTabs">
-                          <div class="tabs-block__tab tabs-block__tab--active">Материально-техническое обеспечение и оснащённость образовательного процесса</div>
-                          <div class="tabs-block__tab"> Индивидуальная работа с обучающимися</div>
+                      <div class="tabs-block" data-js="tabsBlock">
+                        <div class="tabs-block__tabs">
+                          <div class="tabs-block__tab tabs-block__tab--active" data-index="0" data-js="tabsBlockTab">Материально-техническое обеспечение и оснащённость образовательного процесса</div>
+                          <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab"> Индивидуальная работа с обучающимися</div>
                         </div>
-                        <div class="tabs-block__slides" data-js="tabsBlockSlides">
-                          <div class="tabs-block__slide tabs-block__slide--active">
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий</div>
+                        <div class="tabs-block__slides">
+                          <div class="tabs-block__slide tabs-block__slide--active" data-js="tabsBlockSlide">
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Сведения о наличии оборудованных учебных кабинетов</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Служба психологической помощи</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Сведения о наличии оборудованных учебных кабинетов</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Служба психологической помощи</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Информация о библиотеке(ах)</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о библиотеке(ах)</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Положение о БИЦ</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Положение о БИЦ</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Сведения о средствах обучения и&nbsp;воспитания</div>
+                            <div class="gost-section gost-section--bordered text-editor"><h2>Информация об объектах спорта</h2>
+                                  <div class="info-tag">Актуальная дата проверки: 01.09.2024
+                                  </div>
+                                  <table class="m-table  m-table--columns">
+                                    <thead>
+                                      <tr>
+                                        <th>№</th>
+                                        <th>Наименование объекта</th>
+                                        <th>Вид помещения</th>
+                                        <th>Адрес местонахождения</th>
+                                        <th>Общая площадь (кв.м.)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Спортивный зал №1</td>
+                                        <td>Объект спорта</td>
+                                        <td>Сретенская ул., 23, Херсон</td>
+                                        <td>536,4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Спорткомплекс</td>
+                                        <td>Объект спорта</td>
+                                        <td>Сретенская ул., 23, Херсон</td>
+                                        <td>437,3</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Сведения о средствах обучения и&nbsp;воспитания</h2></div>
                                   <div class="m-columns__main text-editor">
                                     <p> <b>В корпусах размещены аудитории, учебные и научные лаборатории, компьютерные классы, спортивные залы, читальные залы, научно-техническая библиотека с фондом около 2 млн. экземпляров, столовые и буфеты. Также во всех корпусах предоставляется высокоскоростной проводной доступ к сети интернет. Часть корпусов оборудована доступом к Wi-Fi-сети.</b></p>
                                     <p> <b>Все основные образовательные программы обеспечены лабораториями со специальным оборудованием в соответствии с профилями специальностей и направлений. Лабораторная база постоянно обновляется, закупается новое оборудование.</b></p>
@@ -140,8 +187,8 @@
                                     </ul>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Приоритетными направлениями воспитательной работы и средствами воспитания в университете, в том числе приспособленными для использования инвалидами и лицами с ограниченными возможностями здоровья являются:</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Приоритетными направлениями воспитательной работы и средствами воспитания в университете, в том числе приспособленными для использования инвалидами и лицами с ограниченными возможностями здоровья являются:</h2></div>
                                   <div class="m-columns__main text-editor">
                                     <ol> 
                                       <li>Совершенствование системы воспитательной работы</li>
@@ -155,89 +202,428 @@
                                     </ol>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Сведения об условиях охраны здоровья обучающихся</div>
+                            <div class="gost-section gost-section--bordered text-editor"><h2>Информация об условиях питания обучающихся</h2>
+                                  <div class="info-tag">Актуальная дата проверки: 01.09.2024
+                                  </div>
+                                  <table class="m-table  m-table--columns">
+                                    <thead>
+                                      <tr>
+                                        <th>№</th>
+                                        <th>Наименование объекта</th>
+                                        <th>Вид помещения</th>
+                                        <th>Адрес местонахождения</th>
+                                        <th>Количество посадочных мест</th>
+                                        <th>Общая площадь (кв.м.)</th>
+                                        <th>График работы</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Буфет</td>
+                                        <td>Объект питания</td>
+                                        <td>Сретенская ул., 23, Херсон</td>
+                                        <td>10</td>
+                                        <td>19,8</td>
+                                        <td>пн.-сб. 8:00-17:00</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Столовая</td>
+                                        <td>Объект питания</td>
+                                        <td>Сретенская ул., 23, Херсон</td>
+                                        <td>45</td>
+                                        <td>86,5</td>
+                                        <td>пн.-пт. 9:00-17:00</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Сведения об условиях охраны здоровья обучающихся</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Медицинский пункт</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Служба психологической помощи</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Медицинский пункт</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Служба психологической помощи</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Информация о наличии доступа к информационно-телекомму-никационной сети "Интернет"</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о наличии доступа к информационно-телекомму-никационной сети "Интернет"</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Дог. расходный № 1260_1859.ЕП_22 от 30.12.2022 с СВЯЗЬ АО Оказание услуг по идентификации пользователей wi-fi (3028066 v1)</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Подписанный договор Лот 1 Единственный поставщик (223-ФЗ) Закупка на услуги по предоставлению  доступа к сети (3036960 v1)</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Дог. расходный № 1260_1859.ЕП_22 от 30.12.2022 с СВЯЗЬ АО Оказание услуг по идентификации пользователей wi-fi (3028066 v1)</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Подписанный договор Лот 1 Единственный поставщик (223-ФЗ) Закупка на услуги по предоставлению  доступа к сети (3036960 v1)</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Информация о наличии локального нормативного акта об электронной информационной образовательной среде</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о наличии локального нормативного акта об электронной информационной образовательной среде</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--note">
-                                          <div class="link-block__desc">Положение об электронной информационно-образовательной среде</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--note link-block--download">
+                                            <div class="link-block__desc">Положение об электронной информационно-образовательной среде</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Информация о наличии доступа к электронному расписанию</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о наличии доступа к электронному расписанию</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--table">
-                                          <div class="link-block__desc">Личный кабинет</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#link"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--table">
-                                          <div class="link-block__desc">Расписание занятий</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#link"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--table">
-                                          <div class="link-block__desc">Расписание экзаменов и зачётов</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#link"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Личный кабинет</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Расписание занятий</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Расписание экзаменов и зачётов</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="m-columns">
-                                  <div class="m-columns__title">Информация о наличии доступа к учебным планам, рабочим программам дисциплин (модулей), программам практик, электронным учебным изданиям и электронным образовательным ресурсам, указанным в рабочих программах дисциплин (модулей), программах практик по каждой образовательной программе</div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о наличии доступа к учебным планам, рабочим программам дисциплин (модулей), программам практик, электронным учебным изданиям и электронным образовательным ресурсам, указанным в рабочих программах дисциплин (модулей), программах практик по каждой образовательной программе</h2></div>
                                   <div class="m-columns__main text-editor">
-                                        <div class="link-block link-block--text link-block--table">
-                                          <div class="link-block__desc">Доступ к учебным планам, рабочим программам дисциплин (модулей), программам практик, электронным учебным изданиям и электронным образовательным ресурсам, указанным в рабочих программах дисциплин (модулей), программах практик по каждой образовательной программе</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#link"></use>
-                                              </svg></span></a>
-                                        </div>
-                                        <div class="link-block link-block--text link-block--table">
-                                          <div class="link-block__desc">Доступ к системе дистанционного образования</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
-                                              <svg> 
-                                                <use xlink:href="img/sprites/sprite.svg#link"></use>
-                                              </svg></span></a>
-                                        </div>
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Доступ к учебным планам, рабочим программам дисциплин (модулей), программам практик, электронным учебным изданиям и электронным образовательным ресурсам, указанным в рабочих программах дисциплин (модулей), программах практик по каждой образовательной программе</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Доступ к системе дистанционного образования</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Общее количество компьютеров и электронных образовательных и информационных ресурсов</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="count-block  count-block--row">
+                                            <div class="count-block__desc">Общее количество компьютеров с выходом в информационно-телекоммуни-кационную сеть «Интернет», к которым имеют доступ обучающиеся</div>
+                                            <div class="count-block__num">1500</div>
+                                          </div>
+                                          <div class="count-block  count-block--row">
+                                            <div class="count-block__desc">Общее количество ЭБС, к которым имеют доступ обучающиеся (собственных или на договорной основе)</div>
+                                            <div class="count-block__num">5</div>
+                                          </div>
+                                          <div class="count-block  count-block--row">
+                                            <div class="count-block__desc">Наличие собственных электронных образовательных и информационных ресурсов</div>
+                                            <div class="count-block__num">4</div>
+                                          </div>
+                                          <div class="count-block  count-block--row">
+                                            <div class="count-block__desc">Наличие сторонних электронных образовательных и информационных ресурсов</div>
+                                            <div class="count-block__num">3</div>
+                                          </div>
+                                          <div class="count-block  count-block--row">
+                                            <div class="count-block__desc">Наличие базы данных электронного каталога (количество)</div>
+                                            <div class="count-block__num">1</div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информационная обеспеченность</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Обеспеченность преподавателей компьютерами</div>
+                                            <div class="count-block__num">820 ноутбуков выдано преподавателям</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Общее кол-во компьютеров с выходом в интернет</div>
+                                            <div class="count-block__num">1500</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Обеспеченность интерактивными досками</div>
+                                            <div class="count-block__num">314 интерактивных панелей размещено по учебным аудиториям</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Обеспеченность мультимедийными проекторами</div>
+                                            <div class="count-block__num">40 штук</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Обеспеченность учащихся компьютерами</div>
+                                            <div class="count-block__num">1500 персональных компьютеров</div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о собственных электронных образовательных и информационных ресурсах</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Eдиный электронный каталог БИЦ</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронная библиотека</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронная база ВКР</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронные образовательные ресурсы</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Информация о сторонних электронных образовательных и информационных ресурсах</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронно-библиотечная система «Лань»</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Образовательная платформа «Юрайт»</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронно-библиотечная система IPR SMART</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Национальная электронная библиотека</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Президентская библиотека им. Б.Н. Ельцина</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Наличие базы данных электронного каталога (количество):</div>
+                                            <div class="link-block__link"><span class="link-block__text">1</span></div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Перечень электронных ресурсов, к которым обеспечивается доступ обучающихся</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронно-библиотечная система «Лань»</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Образовательная платформа «Юрайт»</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Электронно-библиотечная система IPR SMART</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Национальная электронная библиотека</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                          <div class="link-block  link-block--table link-block--link">
+                                            <div class="link-block__desc">Президентская библиотека им. Б.Н. Ельцина</div><a class="link-block__link" href="javascript:void(0)"><span class="link-block__text">Перейти</span><span class="link-block__icon">
+                                                <svg> 
+                                                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg></span></a>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Количество изданных и принятых к публикации статей в изданиях, для публикации научных работ за отчётный период</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Рекомендованных ВАК:</div>
+                                            <div class="count-block__num">148</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Зарубежных:</div>
+                                            <div class="count-block__num">99</div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Количество патентов, полученных на разработки за последние 5 лет:</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Российских: </div>
+                                            <div class="count-block__num">104</div>
+                                          </div>
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Зарубежных:</div>
+                                            <div class="count-block__num">0</div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Количество свидетельств о регистрации объекта интеллектуальной собственности, выданных на разработки за отчётный период</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-items-list">
+                                          <div class="count-block  count-block--column">
+                                            <div class="count-block__desc">Количество</div>
+                                            <div class="count-block__num">24</div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="tabs-block__slide" data-js="tabsBlockSlide">
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Условия для индивидуальной работы с обучающимися</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <p> <b>Обеспечивается участие студентов в кружках, спортивных секциях, творческих коллективах </b></p>
+                                    <ul>
+                                      <li> <b>Танцевальный коллектив  Dance Family</b></li>
+                                      <li> <b>Профорганизация</b></li>
+                                      <li> <b>Волонтёрский центр</b></li>
+                                      <li> <b>Студенческое общественное объединение </b></li>
+                                      <li> <b>Объединённый совет обучающихся</b></li>
+                                      <li> <b>Комитет по качеству образования</b></li>
+                                      <li> <b>Студенчесĸий медиацентр</b></li>
+                                      <li> <b>Мини-футбол (Мужская команда)</b></li>
+                                      <li> <b>Мини-футбол (Женская команда)</b></li>
+                                      <li> <b>Волейбол (общая команда) </b></li>
+                                      <li> <b>Баскетбол (мужская команда)</b></li>
+                                      <li> <b>Баскетбол (женская команда)</b></li>
+                                      <li> <b>Лакросс</b></li>
+                                      <li> <b>Силовые виды спорта(Пауэрлифтинг, Стритлифтинг, Тяжёлая атлетика, Армреслинг), Атлетизм, Настольный теннис, ММА, Греплинг (борьба), Тхэквондо (WTF)</b></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="m-columns   ">
+                                  <div class="m-columns__title text-editor"><h2>Психологическая помощь и профилактика</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <p>В 2023 году студенты первого курса в количестве 2500 человек прошли социально-психологическое тестирование на предмет выявления предрасположенности к незаконному потреблению наркотических веществ (СПТ).</p>
+                                    <p>По итогам СПТ психологи из числа сотрудников службы психологической помощи провели порядка 60 тренингов со студентами первого курса, в целях профилактики аддиктивного поведения.</p>
+                                    <p>Также ежегодно проводятся лекции по профилактике <b>аддиктивного поведения</b> в рамках адаптационных мероприятий для студентов первого курса.</p>
+                                    <p> <b>Служба психологической помощи проводит консультации со студентами всех курсов по индивидуальным запросам.</b></p>
+                                    <p> <b>В 2023 году СПТ прошли 2800 студентов первого курса, а также прослушали лекцию на тему "Портрет студента", включающую в себя правила поведения в студенческой среде.</b></p>
+                                    <p> <b>Социально-психологическое тестирование на предмет раннего выявления незаконного потребления наркотических средств и психотропных веществ среди обучающихся в  университете проводилось в сентябре-октябре 2022 года. В тестирование приняли участие студенты 89 групп, в количестве 1571 студента.</b></p>
+                                    <p> <b>По результатам тестирования со студентами, попавшими в "группу риска" с повышенной вероятностью вовлечения в зависимое поведение, проводилась профилактическая работа направленная на предотвращение условий, способствующих вовлечению студентов первого курса в зависимое поведение, в период с апреля по июнь 2023 года силами сотрудников службы психологической помощи.</b></p>
+                                  </div>
+                                </div>
+                                <div class="m-columns   m-columns--column  m-columns--subtitle">
+                                  <div class="m-columns__subtitle">Наличие возможности развития творческих способностей и интересов обучающихся, включая их участие в конкурсах и олимпиадах (в том числе во всероссийских и международных), выставках, смотрах, физкультурных мероприятиях, спортивных мероприятиях, в том числе в официальных спортивных соревнованиях, и других массовых мероприятиях</div>
+                                  <div class="m-columns__title text-editor"><h2>Информация о&nbsp;конкурсах и&nbsp;олимпиадах в&nbsp;отчётном году (в&nbsp;том числе во&nbsp;всероссийских и&nbsp;международных), проводимых при&nbsp;участии организации</h2></div>
+                                  <div class="m-columns__main text-editor">
+                                    <div class="text-editor__columns">
+                                      <div class="text-editor__column">
+                                        <ul> 
+                                          <li>Студенческая научно-практическая конференция</li>
+                                          <li>Региональный этап Всероссийского конкурса "Студент года"</li>
+                                          <li>Всероссийский студенческий конкурс "Твой ход"</li>
+                                          <li>Всероссийская премия "Российская студенческая весна"</li>
+                                          <li>Смотр-конкурс "Фестиваль первокурсника"</li>
+                                          <li>Конкурс на лучшее профсоюзное бюро "Ты - лидер"</li>
+                                          <li>Конкурс "Студенческий лидер"</li>
+                                          <li>Конкурс на лучший студенческий совет общежития </li>
+                                          <li>Конкурс на лучшего молодого преподавателя вуза </li>
+                                          <li>Объединенная межвузовская математическая олимпиада</li>
+                                          <li>Всемирные зимние игры специальной олимпиады</li>
+                                          <li>Конкурс "Золотой голос"</li>
+                                          <li>Конкурс "Мистер и мисс"</li>
+                                          <li>Премия "ПИК" </li>
+                                          <li>Куратор года</li>
+                                          <li>Волонтер года</li>
+                                          <li>Кубок ректора по волейболу</li>
+                                          <li>Осенний университетский кросс</li>
+                                          <li>Турнир по силовым видам спорта</li>
+                                          <li>Серия турниров по шахматам</li>
+                                          <li>Кубок по мини-футболу</li>
+                                          <li>Спартакиада </li>
+                                          <li>Серия киберспортивных турниров</li>
+                                        </ul>
+                                      </div>
+                                      <div class="text-editor__column">
+                                        <p>Численность обучающихся, принявшие участие в отчётном году в различных олимпиадах, смотрах, конкурсах: <b>600</b></p>
+                                        <p>Наличие в отчётном году, из числа обучающихся в образовательной организации, победителей конкурсов, смотров и др. на мероприятиях:</p>
+                                        <ul>
+                                          <li>регионального уровня - <b>115</b></li>
+                                          <li>всероссийского уровня - <b>87</b></li>
+                                          <li>международного уровня - <b>37</b></li>
+                                        </ul>
+                                        <p>Численность обучающихся в образовательной организации, принявшие участие в спортивных олимпиадах, соревнованиях в отчётном году: <b>2200</b></p>
+                                        <p>Наличие в отчётном году победителей спортивных олимпиад различного уровня: <b>163</b></p>
+                                        <p>Проведение мероприятий по сдаче норм ГТО:</p>
+                                        <ul>
+                                          <li>Первенство  по многоборью с выполнением тестов ГТО (сентябрь 2022)</li>
+                                          <li>Первенство  по многоборью с выполнением тестов ГТО (декабрь 2022)</li>
+                                          <li>Первенство  по многоборью с выполнением тестов ГТО (май 2023)</li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                           </div>

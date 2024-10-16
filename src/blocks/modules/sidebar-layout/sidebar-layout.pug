@@ -1,7 +1,14 @@
 mixin sidebar-layout 
     .sidebar-layout
         .m-container.sidebar-layout__container
-            .sidebar-layout__sidebar
+            .sidebar-layout__sidebar(data-js='sidebarLayoutsidebar')
+                .sidebar-toggle(data-js='sidebarToggle')
+                    .sidebar-toggle__btn.sidebar-toggle__btn--open
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#main_burger`)
+                    .sidebar-toggle__btn.sidebar-toggle__btn--close
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#close`)
                 ul.side-menu
                     li.side-menu__item
                         a.side-menu__link(href="#") Основные сведения

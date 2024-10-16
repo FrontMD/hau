@@ -1,0 +1,38 @@
+.count-block {
+    display: flex;
+    justify-content: space-between;
+
+    &--row {
+        align-items: center;
+        background-color: $c-bg-main;
+        padding: 20px 25px;
+        margin-top: 18px;
+        gap: 50px;
+    }
+
+    &__desc {
+        flex: 1 1 auto;
+        color: $c-accent;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17em;
+    }
+
+    &__num {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.02em;
+        color: $c-accent-middle;
+    }
+
+    &--row &__num {
+        flex: 0 0 71px;
+    }
+
+    &--column {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 5px;
+    }
+
+}

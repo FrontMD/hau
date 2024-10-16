@@ -1,0 +1,17 @@
+-
+    const defaultInfoTagProps = {
+        classes: '',
+        text: 'Актуальная дата проверки: 01.09.2024',
+    }
+
+mixin info-tag(props= defaultInfoTagProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInfoTagProps.classes,
+            text: props.text ? props.text : defaultInfoTagProps.text,
+        }
+
+    .info-tag(class= checkProps.classes)&attributes(attributes)
+        != checkProps.text
+
+

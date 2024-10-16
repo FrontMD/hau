@@ -1,0 +1,92 @@
+-
+    const defaultMTableProps = {
+        classes: '',
+        vMode: 'columns',
+        header: [
+            '№',
+            'Наименование объекта',
+            'Вид помещения',
+            'Адрес местонахождения',
+            'Количество посадочных мест',
+            'Общая площадь (кв.м.)',
+            'График работы'
+        ],
+        rows: [
+            [
+                '1',
+                'Буфет',
+                'Объект питания',
+                'Сретенская ул., 23, Херсон',
+                '10',
+                '19,8',
+                'пн.-сб. 8:00-17:00'
+            ],
+            [
+                '2',
+                'Столовая',
+                'Объект питания',
+                'Сретенская ул., 23, Херсон',
+                '45',
+                '86,5',
+                'пн.-пт. 9:00-17:00'
+            ]
+        ]
+    }
+
+mixin m-table(props= defaultMTableProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMTableProps.classes,
+            header: props.header ? props.header : defaultMTableProps.header,
+            rows:  props.rows ? props.rows : defaultMTableProps.rows,
+            vMode: props.vMode ? props.vMode : defaultMTableProps.vMode,
+        }
+
+    table.m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}`)&attributes(attributes)
+        thead
+            tr
+                //-
+                    th '№',
+                    th 'Наименование объекта',
+                    th 'Вид помещения',
+                    th 'Адрес местонахождения',
+                    th 'Количество посадочных мест',
+                    th 'Общая площадь (кв.м.)',
+                    th 'График работы'
+
+                - let countHeader = 0 
+                - while (countHeader < checkProps.header.length)
+                    th!= checkProps.header[countHeader]
+
+                    - countHeader += 1;
+        tbody
+            //-
+                tr 
+                    td '1',
+                    td 'Буфет',
+                    td 'Объект питания',
+                    td 'Сретенская ул., 23, Херсон',
+                    td '10',
+                    td '19,8',
+                    td 'пн.-сб. 8:00-17:00'
+                tr 
+                    td '2',
+                    td 'Столовая',
+                    td 'Объект питания',
+                    td 'Сретенская ул., 23, Херсон',
+                    td '45',
+                    td '86,5',
+                    td 'пн.-пт. 9:00-17:00'
+            - let countRows = 0 
+            - while (countRows < checkProps.rows.length)
+                tr
+                    - let countCell = 0 
+                    - while (countCell < checkProps.rows[countRows].length)
+                        td!= checkProps.rows[countRows][countCell]
+
+                        - countCell += 1;
+
+                    - countRows += 1;
+
+
+
