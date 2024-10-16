@@ -3,6 +3,10 @@
     background-color: $c-accent;
     color: $c-white;
 
+    @include max(laptop) {
+        padding: 80px 0 120px;
+    }
+
     a {
         transition: color $tr-time;
     }
@@ -16,9 +20,29 @@
         align-items: flex-start;
         gap: 120px;
 
+        @include max(large) {
+            gap: 50px;
+        }
+
+        @include max(laptop) {
+            gap: 40px;
+        }
+
+        @include max(tablet) {
+            flex-wrap: wrap;
+        }
+
         &--mid {
             margin-top: 100px;
             gap: 90px;
+
+            @include max(large) {
+                gap: 25px;
+            }
+
+            @include max(laptop) {
+                gap: 20px;
+            }
         }
     }
 
@@ -31,6 +55,14 @@
         &--first {
             flex-basis: 540px;
         }
+
+        @include max(tablet) {
+            display: contents;
+        }
+    }
+
+    &__block {
+        flex: 0 1 calc((100% - 40px) / 2);
     }
 
     &__title {
@@ -38,6 +70,14 @@
         font-weight: 500;
         letter-spacing: -1px;
         line-height: 1.02em;
+
+        @include max(large) {
+            font-size: 28px;
+        }
+
+        @include max(laptop) {
+            font-size: 24px;
+        }
     }
 
     &__subtitle {
@@ -45,6 +85,14 @@
         font-weight: 500;
         line-height: 1.02em;
         margin-top: 30px;
+
+        @include max(large) {
+            font-size: 22px;
+        }
+
+        @include max(laptop) {
+            font-size: 18px;
+        }
     }
 
     &__textblock {
@@ -57,6 +105,16 @@
         line-height: 1.25em;
         color: #688D80;
 
+        @include max(large) {
+            font-size: 22px;
+        }
+
+        @include max(laptop) {
+            font-size: 18px;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
     }
 
     &__copyright {
@@ -67,6 +125,16 @@
         font-weight: 400;
         line-height: 27px;
         color: $c-text-grey;
+
+        @include max(large) {
+            font-size: 16px;
+            max-width: 840px;
+        }
+
+        @include max(laptop) {
+            font-size: 14px;
+            max-width: 720px;
+        }
     }
 
     &__links {
@@ -83,5 +151,13 @@
         font-weight: 800;
         line-height: 1.5em;
         text-transform: uppercase;
+
+        @include max(large) {
+            font-size: 16px;
+        }
+
+        @include max(laptop) {
+            font-size: 12px;
+        }
     }
 }

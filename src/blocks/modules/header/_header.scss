@@ -11,18 +11,43 @@
         display: flex;
         align-items: stretch;
         justify-content: space-between;
-        padding-left: 22px;
+        padding-left: 20px;
         min-height: 183px;
         transition: min-height $tr-time linear;
+
+        @include max(laptop) {
+            min-height: 135px;
+        }
+
+        @include max(tablet) {
+            min-height: 48px;
+            align-items: center;
+        }
     }
 
     &--small &__container {
         min-height: 90px;
+
+        @include max(laptop) {
+            min-height: 80px;
+        }
+
+        @include max(tablet) {
+            min-height: 48px;
+        }
     }
 
     &__logo {
         flex: 0 0 236px;
         padding-top: 10px;
+
+        @include max(laptop) {
+            flex-basis: 150px;
+        }
+
+        @include max(tablet) {
+            padding-top: 0;
+        }
 
         img {
             width: 100%;
@@ -37,6 +62,10 @@
         align-self: flex-start;
         margin-left: auto;
         padding: 3px 20px;
+
+        @include max(laptop) {
+            padding: 3px 15px;
+        }
     }
 
     &__social {
@@ -49,9 +78,19 @@
         align-items: center;
         justify-content: center;
 
+        @include max(laptop) {
+            width: 40px;
+            height: 40px;
+        }
+
         svg {
             max-width: 19.47px;
             max-height: 17px;
+
+            @include max(laptop) {
+                max-width: 14.6px;
+                max-height: 12.75px;
+            }
         }
 
     }
@@ -60,6 +99,10 @@
         display: flex;
         align-items: stretch;
         flex: 0 1 1065px;
+
+        @include max(tablet) {
+            display: none;
+        }
     }
 
     .nav-link {
@@ -73,6 +116,14 @@
         font-weight: 500;
         border-left: 1px solid $c-border;
 
+        @include max(laptop) {
+            padding: 3px 15px 11px;
+        }
+
+        @include max(laptop) {
+            font-size: 20px;
+        }
+
         &__icon {
             width: 53px;
             height: 53px;
@@ -84,9 +135,19 @@
             border: 1px solid $c-border;
             border-radius: 100%;
 
+            @include max(laptop) {
+                width: 40px;
+                height: 40px;
+            }
+
             svg {
                 width: 14px;
                 height: 14px;
+
+                @include max(laptop) {
+                    width: 10.5px;
+                    height: 10.5px;
+                }
             }
         }
     }

@@ -6,11 +6,12 @@
         display: flex;
         align-items: stretch;
         padding: 0 29px;
+        overflow-x: auto;
     }
 
     &__tab {
         width: 469px;
-        height: 80px;
+        min-height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -23,6 +24,13 @@
         color: $c-accent;
         background-color: $c-bg-light;
         transition: color $tr-time, background-color $tr-time;
+
+        @include max(laptop) {
+            min-height: 70px;
+            padding: 15px 25px;
+            font-size: 16px;
+            width: 410px;
+        }
 
         &--active {
             color: $c-white;
@@ -39,9 +47,7 @@
         display: none;
 
         &--active {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
+            display: block;
         }
     }
 }

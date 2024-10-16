@@ -3,12 +3,12 @@
     font-size: 80px;
     color: $c-accent;
 
-    @include max(1024) {
-        font-size: 34px;
+    @include max(laptop) {
+        font-size: 52px;
     }
 
-    @include max(768) {
-        font-size: 24px;
+    @include max(tablet) {
+        font-size: 40px;
     }
 
     &--light {

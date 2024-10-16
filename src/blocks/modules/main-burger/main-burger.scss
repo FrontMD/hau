@@ -2,11 +2,24 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: $c-accent;
-    padding: 40px 35px;
-    width: 100px;
-    height: 100vh;
     z-index: 90;
+
+    &__icon {
+        background-color: $c-accent;
+        padding: 40px 35px;
+        width: 100px;
+        height: 100vh;
+
+        @include max(laptop) {
+            padding: 25px 20px;
+            width: 70px;
+        }
+
+        @include max(tablet) {
+            height: 72px;
+        }
+    }
+
 
     &__icon {
         cursor: pointer;

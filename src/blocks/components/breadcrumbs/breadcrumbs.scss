@@ -1,6 +1,7 @@
 .breadcrumbs {
     position: relative;
     z-index: 3;
+    overflow: hidden;
 
     &__list {
         list-style-type: none;
@@ -10,12 +11,17 @@
         line-height: 1.02em;
         font-weight: 400;
         color: $c-accent;
+        padding-bottom: 10px;
+        margin-bottom: -10px;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
     &__item {
         display: flex;
         align-items: center;
         gap: 9px;
+        white-space: nowrap;
 
         a {
             transition: color $tr-time;

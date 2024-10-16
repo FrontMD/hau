@@ -1,7 +1,24 @@
 .m-table {
     overflow-x: auto;
     margin-top: 34px;
-    min-width: 100%;
+
+    &::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $c-accent-middle;
+        border-radius: 21px;
+    }
+
+    table {
+        min-width: 100%;
+    }
 
     th,
     td {
@@ -11,6 +28,10 @@
         font-weight: 500;
         line-height: 1.02em;
         color: $c-accent;
+
+        @include max(laptop) {
+            padding: 15px;
+        }
     }
 
     th {
@@ -24,17 +45,42 @@
 }
 
 .m-table.m-table--rows {
-    overflow: hidden;
-    display: flex;
+
+    table {
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+    }
 
     tbody {
         display: flex;
         overflow-x: auto;
+        align-items: stretch;
+
+        &::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-middle;
+            border-radius: 21px;
+        }
+    }
+
+    th,
+    td {
+        display: flex;
+        align-items: center;
     }
 
     tr {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-auto-rows: 1fr;
     }
 
     tbody tr:nth-child(odd) td {

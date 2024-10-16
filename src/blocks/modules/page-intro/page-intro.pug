@@ -15,7 +15,8 @@ mixin page-intro(props = defaultPageIntroProps)
 
     section.page-intro
         +breadcrumbs(checkProps.breadcrumbs)
-        +title({
-            tag: 'h1',
-            text: checkProps.title
-        })
+        .page-intro__content
+            +title({
+                tag: 'h1',
+                text: checkProps.title
+            })

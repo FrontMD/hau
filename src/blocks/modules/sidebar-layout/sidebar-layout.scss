@@ -1,6 +1,14 @@
 .sidebar-layout {
     padding: 240px 0 40px 100px;
 
+    @include max(laptop) {
+        padding: 190px 0 40px 70px;
+    }
+
+    @include max(tablet) {
+        padding: 102px 0 40px;
+    }
+
     &__container {
         position: relative;
         display: flex;
@@ -15,12 +23,20 @@
             position: absolute;
             top: 0;
             left: 28px;
-            width: 70px;
+            width: 50px;
             background-color: $c-bg-main;
             z-index: 5;
             min-height: 100%;
             overflow: hidden;
             transition: width $tr-time;
+        }
+
+        @include max(laptop) {
+            left: 20px;
+        }
+
+        @include max(tablet) {
+            left: 15px;
         }
 
         .side-menu {
@@ -56,7 +72,18 @@
         flex: 1 1 auto;
 
         @include max(large) {
-            padding-left: 70px;
+            padding-left: 50px;
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include max(tablet) {
+            gap: 30px;
         }
     }
 
