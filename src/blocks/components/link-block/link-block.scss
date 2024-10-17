@@ -21,6 +21,7 @@
 
         @include max(mobile) {
             padding: 10px;
+            border-left-width: 2px;
         }
     }
 
