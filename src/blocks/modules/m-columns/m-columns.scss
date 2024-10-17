@@ -11,13 +11,18 @@
         padding: 20px 25px;
     }
 
+    @include max(mobile) {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
     &__subtitle {
         max-width: 930px;
         padding-top: 184px;
         font-size: 45px;
         font-weight: 500;
         line-height: 0.91em;
-        letter-spacing: -2px;
+        letter-spacing: -0.044em;
         color: $c-accent;
 
         @include max(laptop) {
@@ -28,6 +33,11 @@
         @include max(tablet) {
             font-size: 30px;
             padding-top: 60px;
+        }
+
+        @include max(mobile) {
+            font-size: 22px;
+            padding-top: 30px;
         }
     }
 

@@ -3,6 +3,10 @@
     z-index: 3;
     overflow: hidden;
 
+    @include max(mobile) {
+        display: none;
+    }
+
     &__list {
         list-style-type: none;
         display: flex;

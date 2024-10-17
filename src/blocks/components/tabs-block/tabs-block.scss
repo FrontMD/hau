@@ -5,8 +5,26 @@
     &__tabs {
         display: flex;
         align-items: stretch;
-        padding: 0 29px;
+        padding: 0 29px 5px;
         overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-middle;
+            border-radius: 8px;
+        }
+
+        @include max(mobile) {
+            padding: 0 0 5px 15px;
+        }
     }
 
     &__tab {
@@ -31,6 +49,18 @@
             font-size: 16px;
             width: 410px;
         }
+
+        @include max(mobile) {
+            min-width: 220px;
+            font-size: 12px;
+            padding: 10px 15px;
+
+            &:last-child {
+                margin-right: 15px;
+            }
+        }
+
+
 
         &--active {
             color: $c-white;

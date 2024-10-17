@@ -11,6 +11,10 @@
         font-size: 40px;
     }
 
+    @include max(mobile) {
+        font-size: 24px;
+    }
+
     &--light {
         color: $c-white;
     }

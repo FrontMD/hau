@@ -7,4 +7,10 @@
     color: $c-white;
     background-color: $c-accent-light;
     border-radius: 27px;
+
+    @include max(mobile) {
+        padding: 10px 15px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
 }

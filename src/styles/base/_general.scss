@@ -180,13 +180,21 @@ table {
 	@include max(laptop) {
 		padding-left: 70px;
 	}
+
+	@include max(tablet) {
+		padding-left: 0;
+	}
 }
 
 .gost-section {
-	padding: 20px 28px 20px;
+	padding: 20px 28px;
 
 	&--bordered {
 		border-top: 1px solid $c-border;
+	}
+
+	@include max(mobile) {
+		padding: 20px 15px;
 	}
 
 }
@@ -245,6 +253,10 @@ table {
 		@include max(laptop) {
 			font-size: 22px;
 		}
+
+		@include max(mobile) {
+			font-size: 20px;
+		}
 	}
 
 	b {
@@ -262,12 +274,22 @@ table {
 			font-size: 20px;
 			margin-bottom: 28px;
 		}
+
+		@include max(mobile) {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
 	}
 
 	ul {
 		padding-left: 35px;
 		list-style: none;
 		margin-bottom: 36px;
+
+		@include max(mobile) {
+			margin-bottom: 20px;
+			padding-left: 15px;
+		}
 	}
 
 	ul>li {
@@ -278,6 +300,10 @@ table {
 
 		@include max(laptop) {
 			font-size: 20px;
+		}
+
+		@include max(mobile) {
+			font-size: 16px;
 		}
 	}
 
@@ -291,6 +317,12 @@ table {
 		height: 9px;
 		background-color: rgba(1, 50, 32, 0.4);
 		border-radius: 100%;
+
+		@include max(mobile) {
+			width: 5px;
+			height: 5px;
+			left: -10px;
+		}
 	}
 
 	ul>li:has(b):before {
@@ -308,6 +340,10 @@ table {
 		@include max(laptop) {
 			font-size: 20px;
 		}
+
+		@include max(mobile) {
+			font-size: 16px;
+		}
 	}
 
 	ol li {
@@ -316,6 +352,10 @@ table {
 
 		@include max(laptop) {
 			padding: 20px 25px 20px 85px;
+		}
+
+		@include max(mobile) {
+			padding: 10px 10px 10px 25px;
 		}
 
 		&:nth-child(odd) {
@@ -329,6 +369,11 @@ table {
 			top: 20px;
 			left: 25px;
 			font-weight: 500;
+
+			@include max(mobile) {
+				left: 5px;
+				top: 10px;
+			}
 		}
 	}
 }

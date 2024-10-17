@@ -18,6 +18,11 @@
         @include max(tablet) {
             height: 72px;
         }
+
+        @include max(mobile) {
+            height: 64px;
+            padding: 20px;
+        }
     }
 
 

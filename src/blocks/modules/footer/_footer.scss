@@ -7,6 +7,10 @@
         padding: 80px 0 120px;
     }
 
+    @include max(mobile) {
+        padding: 50px 0;
+    }
+
     a {
         transition: color $tr-time;
     }
@@ -28,8 +32,9 @@
             gap: 40px;
         }
 
-        @include max(tablet) {
-            flex-wrap: wrap;
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 30px;
         }
 
         &--mid {
@@ -42,6 +47,13 @@
 
             @include max(laptop) {
                 gap: 20px;
+            }
+
+            @include max(mobile) {
+                margin-top: 50px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px 30px;
             }
         }
     }
@@ -56,13 +68,18 @@
             flex-basis: 540px;
         }
 
-        @include max(tablet) {
-            display: contents;
+        @include max(mobile) {
+            flex-basis: auto;
+            gap: 30px;
         }
     }
 
     &__block {
         flex: 0 1 calc((100% - 40px) / 2);
+
+        @include max(mobile) {
+            flex-basis: auto;
+        }
     }
 
     &__title {
@@ -78,6 +95,14 @@
         @include max(laptop) {
             font-size: 24px;
         }
+
+        @include max(tablet) {
+            font-size: 22px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
+        }
     }
 
     &__subtitle {
@@ -92,6 +117,10 @@
 
         @include max(laptop) {
             font-size: 18px;
+        }
+
+        @include max(mobile) {
+            font-size: 16px;
         }
     }
 
@@ -115,6 +144,12 @@
             margin-top: 15px;
         }
 
+        @include max(mobile) {
+            font-size: 14px;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
     }
 
     &__copyright {
@@ -135,6 +170,11 @@
             font-size: 14px;
             max-width: 720px;
         }
+
+        @include max(mobile) {
+            font-size: 12px;
+            margin-top: 30px;
+        }
     }
 
     &__links {
@@ -142,6 +182,11 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+
+        @include max(mobile) {
+            flex-basis: 220px;
+            gap: 2px;
+        }
     }
 
     &__link {
@@ -153,7 +198,7 @@
         text-transform: uppercase;
 
         @include max(large) {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         @include max(laptop) {

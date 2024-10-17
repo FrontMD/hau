@@ -8,21 +8,39 @@
     font-weight: 500;
     line-height: 1.02em;
 
+    @include max(mobile) {
+        gap: 10px;
+        font-size: 14px;
+    }
+
     &--note {
         background-color: $c-bg-main;
         padding: 22.5px 14px 22.5px 36px;
         border-left: 4px solid $c-accent-light;
         margin-top: 10px;
+
+        @include max(mobile) {
+            padding: 10px;
+        }
     }
 
     &--table {
         padding-bottom: 22px;
         margin-top: 22px;
         border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+
+        @include max(mobile) {
+            padding-bottom: 15px;
+            margin-top: 15px;
+        }
     }
 
     &--link &__link {
         flex: 0 0 137px;
+
+        @include max(mobile) {
+            flex-basis: 30px;
+        }
     }
 
     &__desc {
@@ -37,11 +55,27 @@
         gap: 14px;
         flex: 0 0 214px;
         min-height: 54px;
+
+        @include max(mobile) {
+            flex-basis: 30px;
+            min-height: 30px;
+        }
+
+    }
+
+    &__link--nolink &__text {
+        @include max(mobile) {
+            display: block;
+        }
     }
 
     &__text {
         display: block;
         white-space: nowrap;
+
+        @include max(mobile) {
+            display: none;
+        }
     }
 
     &__icon {
@@ -54,11 +88,21 @@
         border-radius: 100%;
         color: $c-white;
 
+        @include max(mobile) {
+            flex-basis: 30px;
+            height: 30px;
+        }
+
         svg {
             max-width: 17.52px;
             max-height: 17.59px;
             width: 100%;
             height: 100%;
+
+            @include max(mobile) {
+                max-width: 9.81px;
+                max-height: 9.84px;
+            }
         }
     }
 

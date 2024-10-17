@@ -43,7 +43,7 @@ mixin m-table(props= defaultMTableProps)
         }
 
     .m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}`)&attributes(attributes)
-        table
+        table.scrollbar
             thead
                 tr
                     - let countHeader = 0 
@@ -51,7 +51,7 @@ mixin m-table(props= defaultMTableProps)
                         th!= checkProps.header[countHeader]
 
                         - countHeader += 1;
-            tbody
+            tbody.scrollbar
                 - let countRows = 0 
                 - while (countRows < checkProps.rows.length)
                     tr

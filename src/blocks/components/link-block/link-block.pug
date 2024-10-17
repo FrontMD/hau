@@ -28,7 +28,7 @@ mixin link-block(props= defaultLinkBlockProps)
                     svg 
                         use(xlink:href=`img/sprites/sprite.svg#${checkProps.type}`)
         - else
-            .link-block__link
+            .link-block__link.link-block__link--nolink
                 span.link-block__text!= checkProps.linkText
 
 
