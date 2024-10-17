@@ -1,6 +1,6 @@
 .title {
     //базовый размер заголовка h1, остальные размеры пропорциональны.
-    font-size: 80px;
+    font-size: 72px;
     color: $c-accent;
 
     @include max(laptop) {

@@ -15,10 +15,23 @@
         line-height: 1.02em;
         font-weight: 400;
         color: $c-accent;
-        padding-bottom: 10px;
-        margin-bottom: -10px;
+        padding-bottom: 6px;
         overflow-x: auto;
         overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-middle;
+            border-radius: 8px;
+        }
     }
 
     &__item {

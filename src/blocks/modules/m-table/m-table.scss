@@ -107,7 +107,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $c-accent-middle;
+            background-color: $c-accent-dark;
+            border: 1px solid $c-accent;
             border-radius: 100%;
             color: $c-white;
 
@@ -142,6 +143,11 @@
         overflow: hidden;
         display: flex;
         align-items: stretch;
+    }
+
+    thead {
+        display: grid;
+        grid-auto-rows: 1fr;
     }
 
     tbody {

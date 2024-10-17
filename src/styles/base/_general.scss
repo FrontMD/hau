@@ -220,6 +220,20 @@ table {
 		&>*:first-child {
 			margin-top: 0;
 		}
+
+		&__note {
+			margin-top: 18px;
+			max-width: 380px;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.02em;
+			color: $c-accent;
+			opacity: 0.3;
+
+			@include max(mobile) {
+				font-size: 12px;
+			}
+		}
 	}
 
 	&__columns {

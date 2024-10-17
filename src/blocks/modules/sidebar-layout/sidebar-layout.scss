@@ -106,6 +106,7 @@
     &__main {
         background-color: $c-white;
         flex: 1 1 auto;
+        max-width: calc(100% - 408px - 38px);
 
         @include max(large) {
             padding-left: 50px;

@@ -47,7 +47,7 @@ mixin m-table(props= defaultMTableProps)
     - let hasLinksClass = checkProps.hasLinks === 'true' ? ' m-table--haslinks' : ''
 
     .m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}` + hasLinksClass)&attributes(attributes)
-        table.scrollbar
+        table
             thead
                 tr
                     - let countHeader = 0 
@@ -55,7 +55,7 @@ mixin m-table(props= defaultMTableProps)
                         th!= checkProps.header[countHeader]
 
                         - countHeader += 1;
-            tbody.scrollbar
+            tbody
                 - let countRows = 0 
                 - while (countRows < checkProps.rows.length)
                     tr
