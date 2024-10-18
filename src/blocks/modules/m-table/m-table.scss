@@ -41,6 +41,7 @@
         font-weight: 500;
         line-height: 1.02em;
         color: $c-accent;
+        vertical-align: top;
 
         @include max(large) {
             min-width: 120px;
@@ -138,11 +139,16 @@
 }
 
 .m-table.m-table--rows {
+    overflow: hidden;
 
     table {
-        overflow: hidden;
         display: flex;
         align-items: stretch;
+        max-width: 100%;
+
+        @include max(mobile) {
+            margin-right: 0;
+        }
     }
 
     thead {
@@ -154,6 +160,10 @@
         display: flex;
         overflow-x: auto;
         align-items: stretch;
+
+        @include max(mobile) {
+            padding-right: 15px;
+        }
 
         &::-webkit-scrollbar {
             width: 9px;
@@ -179,6 +189,19 @@
     td {
         display: flex;
         align-items: center;
+        vertical-align: middle;
+    }
+
+    th {
+        min-width: auto;
+    }
+
+    td {
+        min-width: 380px;
+
+        @include max(mobile) {
+            min-width: 180px;
+        }
     }
 
     tr {

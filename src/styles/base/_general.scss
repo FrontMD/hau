@@ -201,6 +201,69 @@ table {
 		max-width: 590px;
 	}
 
+	&__text {
+		max-width: 750px;
+
+		a {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.02em;
+			text-decoration: underline;
+			color: $c-accent-light;
+		}
+	}
+
+}
+
+.e-program-header {
+	margin-bottom: 195px;
+	padding-top: 30px;
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+
+	@include max(laptop) {
+		margin-bottom: 100px;
+		gap: 20px;
+	}
+
+	@include max(mobile) {
+		flex-direction: column;
+		margin-bottom: 50px;
+		gap: 30px;
+	}
+
+	&__item {
+		flex: 0 1 50%;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.02em;
+		color: $c-accent-middle;
+
+		@include max(mobile) {
+			font-size: 20px;
+		}
+	}
+
+	&__text {
+		margin-top: 12px;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.55em;
+		color: $c-accent;
+
+		@include max(laptop) {
+			font-size: 20px;
+		}
+
+		@include max(mobile) {
+			font-size: 16px;
+			margin-top: 5px;
+		}
+	}
 }
 
 .text-editor {

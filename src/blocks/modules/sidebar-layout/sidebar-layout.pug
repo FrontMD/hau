@@ -1,5 +1,5 @@
-mixin sidebar-layout 
-    .sidebar-layout
+mixin sidebar-layout(aboutPage = false)
+    .sidebar-layout(class = aboutPage ? 'sidebar-layout--about' : '')
         .m-container.sidebar-layout__container
             .sidebar-layout__sidebar(data-js='sidebarLayoutsidebar')
                 .sidebar-toggle(data-js='sidebarToggle')
