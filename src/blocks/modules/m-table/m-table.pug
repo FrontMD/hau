@@ -63,13 +63,31 @@ mixin m-table(props= defaultMTableProps)
                         - while (countCell < checkProps.rows[countRows].length)
                             - if(checkProps.rows[countRows][countCell] === 'Перейти (ссылка)')
                                 td
-                                    a.m-table-link(href="javascript:void(0)")
-                                        span.m-table-link__text Перейти
-                                        span.m-table-link__icon
-                                            svg 
-                                                use(xlink:href=`img/sprites/sprite.svg#link`)
+                                    .m-table-link__wrap
+                                        a.m-table-link(href="javascript:void(0)" target="_blank")
+                                            span.m-table-link__text Перейти
+                                            span.m-table-link__icon
+                                                svg 
+                                                    use(xlink:href=`img/sprites/sprite.svg#link`)
+
+                            - else if(checkProps.rows[countRows][countCell].includes('Скачать документ (ссылка)'))
+                                -let docName = checkProps.rows[countRows][countCell].replace('Скачать документ (ссылка)', '').trim()
+
+                                td
+                                    .m-table-link__wrap
+                                        - if(docName.length > 0)
+                                            span.m-table-link__name!= docName
+                                        a.m-table-link.m-table-link--download(href="javascript:void(0)" target="_blank")
+                                            span.m-table-link__text Скачать документ
+                                            span.m-table-link__icon
+                                                svg 
+                                                    use(xlink:href=`img/sprites/sprite.svg#download`)
+
                             - else
-                                td!= checkProps.rows[countRows][countCell]
+                                - if(checkProps.rows[countRows].length === 1)
+                                    td.m-table__subtitle(colspan=checkProps.header.length)!= checkProps.rows[countRows][countCell]
+                                - else
+                                    td!= checkProps.rows[countRows][countCell]
 
                             - countCell += 1;
 

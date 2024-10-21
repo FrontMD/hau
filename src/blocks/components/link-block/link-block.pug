@@ -22,7 +22,7 @@ mixin link-block(props= defaultLinkBlockProps)
     .link-block(class= checkProps.classes + ' ' + `link-block--${checkProps.vMode}` + ' ' + `link-block--${checkProps.type}`)&attributes(attributes)
         .link-block__desc!= checkProps.text
         -if(checkProps.noLink === false)
-            a.link-block__link(href="javascript:void(0)")
+            a.link-block__link(href="javascript:void(0)" target="_blank")
                 span.link-block__text!= checkProps.linkText
                 span.link-block__icon
                     svg 

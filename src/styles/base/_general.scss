@@ -277,6 +277,14 @@ table {
 		margin-bottom: 0 !important;
 	}
 
+	.info-tag {
+		margin-bottom: 25px;
+
+		@include max(mobile) {
+			margin-bottom: 20px;
+		}
+	}
+
 	.text-items-list {
 		margin-bottom: 20px;
 
@@ -286,7 +294,7 @@ table {
 
 		&__note {
 			margin-top: 18px;
-			max-width: 380px;
+			max-width: 430px;
 			font-size: 16px;
 			font-weight: 500;
 			line-height: 1.02em;
@@ -485,6 +493,7 @@ table {
 	color: $c-accent;
 	transition: color 0.3s linear;
 	line-height: 1.02em;
+	min-height: 3.06em;
 }
 
 .pages-list__link:hover {
@@ -511,5 +520,9 @@ table {
 		grid-template-columns: 1fr;
 		grid-gap: 20px;
 		margin-top: 40px;
+	}
+
+	.pages-list__link {
+		min-height: auto;
 	}
 }

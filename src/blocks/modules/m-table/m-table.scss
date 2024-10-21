@@ -1,6 +1,7 @@
 .m-table {
     overflow-x: auto;
     margin-top: 34px;
+    margin-bottom: 50px;
 
     @include max(mobile) {
         margin-right: -15px;
@@ -71,6 +72,15 @@
         min-width: auto !important;
     }
 
+
+    &__subtitle {
+        text-align: center !important;
+    }
+
+    thead tr+tr {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
     &--haslinks {
         tr th:last-child {
             text-align: end;
@@ -89,9 +99,36 @@
         align-self: flex-start;
         gap: 13px;
         min-height: 54px;
+        min-width: 136px;
 
-        &__text {
-            white-space: nowrap;
+        @include max(mobile) {
+            min-width: 94px;
+            min-height: 30px;
+        }
+
+        &--download {
+            min-width: 212px;
+
+            @include max(mobile) {
+                min-width: 152px;
+            }
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 42px;
+
+            @include max(mobile) {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+            }
+        }
+
+        &__text,
+        &__name {
             font-size: 16px;
             font-weight: 500;
             line-height: 1.02em;
@@ -100,6 +137,15 @@
             @include max(mobile) {
                 font-size: 12px;
             }
+        }
+
+        &__text {
+            white-space: nowrap;
+        }
+
+        &__name {
+            min-width: 120px;
+            text-align: end;
         }
 
         &__icon {
