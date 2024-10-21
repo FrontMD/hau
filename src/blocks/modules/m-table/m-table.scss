@@ -81,6 +81,15 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    thead tr+tr>th {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th._subtitle {
+        text-align: center !important;
+        background-color: #01462D;
+    }
+
     &--haslinks {
         tr th:last-child {
             text-align: end;
