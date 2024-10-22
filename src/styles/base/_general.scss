@@ -273,15 +273,10 @@ table {
 	p,
 	a {
 		display: block;
-		margin-bottom: 36px;
-		font-size: 24px;
+		margin-bottom: 24px;
+		font-size: 20px;
 		font-weight: 400;
 		line-height: 1.55em;
-
-		@include max(laptop) {
-			font-size: 20px;
-			margin-bottom: 28px;
-		}
 
 		@include max(mobile) {
 			font-size: 16px;
@@ -307,7 +302,7 @@ table {
 	ul {
 		padding-left: 35px;
 		list-style: none;
-		margin-bottom: 36px;
+		margin-bottom: 24px;
 
 		@include max(mobile) {
 			margin-bottom: 20px;
@@ -317,13 +312,9 @@ table {
 
 	ul>li {
 		position: relative;
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 400;
 		line-height: 1.55em;
-
-		@include max(laptop) {
-			font-size: 20px;
-		}
 
 		@include max(mobile) {
 			font-size: 16px;
@@ -336,8 +327,8 @@ table {
 		top: 0.775em;
 		left: -22px;
 		transform: translateY(-50%);
-		width: 9px;
-		height: 9px;
+		width: 7px;
+		height: 7px;
 		background-color: rgba(1, 50, 32, 0.4);
 		border-radius: 100%;
 
@@ -356,13 +347,9 @@ table {
 		list-style: none;
 		counter-reset: num;
 		color: $c-accent;
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 400;
 		line-height: 1.55em;
-
-		@include max(laptop) {
-			font-size: 20px;
-		}
 
 		@include max(mobile) {
 			font-size: 16px;
@@ -371,10 +358,10 @@ table {
 
 	ol li {
 		position: relative;
-		padding: 20px 25px 20px 96px;
+		padding: 20px 25px 20px 88px;
 
 		@include max(laptop) {
-			padding: 20px 25px 20px 85px;
+			padding: 20px 25px 20px 78px;
 		}
 
 		@include max(mobile) {
@@ -443,19 +430,6 @@ table {
 
 	&__title {
 		max-width: 590px;
-
-		h2,
-		h3 {
-			font-size: 32px;
-
-			@include max(laptop) {
-				font-size: 22px;
-			}
-
-			@include max(mobile) {
-				font-size: 20px;
-			}
-		}
 	}
 
 	&__text {

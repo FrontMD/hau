@@ -46,7 +46,7 @@ mixin m-table(props= defaultMTableProps)
 
     - let hasLinksClass = checkProps.hasLinks === 'true' ? ' m-table--haslinks' : ''
 
-    .m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}` + hasLinksClass)&attributes(attributes)
+    .m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}` + hasLinksClass data-js="mTable")&attributes(attributes)
         table
             thead
                 tr
