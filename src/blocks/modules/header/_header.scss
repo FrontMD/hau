@@ -35,6 +35,10 @@
         }
     }
 
+    &--small {
+        box-shadow: 0px 5px 50px 25px rgba(0, 0, 0, 0.03);
+    }
+
     &--small &__container {
         min-height: 90px;
 

@@ -21,7 +21,7 @@ mixin m-columns(props= defaultMColumnsProps)
     .m-columns(class= `${checkProps.classes} ${columnDirClass} ${subtitleClass}`)&attributes(attributes)
         - if(checkProps.subtitle.length > 0)
             .m-columns__subtitle!= checkProps.subtitle
-        .m-columns__title.text-editor!= checkProps.title
+        .m-columns__header.text-editor!= checkProps.title
         .m-columns__main.text-editor
             block
 

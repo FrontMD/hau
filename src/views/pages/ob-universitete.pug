@@ -62,21 +62,18 @@ block content
 					+m-columns({
 						title: '<h3>Контактные телефоны</h3>'
 					})
-						p 
-							b 
-								a(href="tel:+74956078000") +7 (495) 607-80-00 
+						a(href="tel:+74956078000") 
+							b +7 (495) 607-80-00 
 					+m-columns({
 						title: '<h3>Адрес электронной почты</h3>'
 					})
-						p 
-							b
-								a(href="mailto:info@mcx.gov.ru") info@mcx.gov.ru
+						a(href="mailto:info@mcx.gov.ru") 
+							b info@mcx.gov.ru
 					+m-columns({
 						title: '<h3>Адрес сайта учредителя(ей) в сети «Интернет»</h3>'
 					})
-						p 
-							b
-								a(href="https://mcx.gov.ru/") https://mcx.gov.ru/
+						a(href="https://mcx.gov.ru/") 
+							b https://mcx.gov.ru/
 
 			.sidebar-layout__block
 				h2.sidebar-layout__block-title Информация о месте нахождения образовательной организации
@@ -121,9 +118,11 @@ block content
 				.sidebar-layout__content
 					.gost-section.gost-section--bordered.text-editor
 						p 
-							b Контактные телефоны: +79900595039
-								<br>Факс: +7 (499) 111-11-11
-								<br>Адреса электронной почты:  pk.khau@yandex.ru
+							b Контактные телефоны: 
+								a(href="tel:+79900595039") +79900595039
+								<br>Факс: +7 (499) 111-11-11
+								<br>Адреса электронной почты: 
+									a(href="mailto:pk.khau@yandex.ru") pk.khau@yandex.ru
 
 			.sidebar-layout__block
 				.sidebar-layout__content

@@ -1,0 +1,46 @@
+-
+    const defaultHistoryIntroProps = {
+        classes: '',
+        title: '<span>История</span> университета',
+        breadcrumbs: {
+            cMode: 'light', //dark - на светлом фоне, light - на тёмном фоне
+            items: [
+                {
+                    name: 'Главная',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'История университета',
+                    link: 'javascript:void(0);'
+                }
+            ],
+        },
+    }
+
+mixin history-intro(props = defaultHistoryIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHistoryIntroProps.classes,
+            title: props.title ? props.title : defaultHistoryIntroProps.title,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultHistoryIntroProps.breadcrumbs,
+        }
+
+    section.section.history-intro
+        .history-intro__bg
+            picture 
+                source(srcset="img/history/history_intro_mob.webp" media="(max-width: 768px)")
+                source(srcset="img/history/history_intro_tab.webp" media="(max-width: 1300px)")
+                img(src="img/history/history_intro.webp" alt="")
+        .m-container
+            .history-intro__content
+                .history-intro__header
+                    +breadcrumbs(checkProps.breadcrumbs)
+                .history-intro__body
+                    +title({
+                        classes: 'history-intro__title',
+                        tag: 'h1',
+                        text: checkProps.title,
+                        cMode: 'light'
+                    })
+                    .history-intro__text.text-editor.text-editor--light
+                        block

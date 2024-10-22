@@ -60,6 +60,13 @@
 
         a {
             transition: color $tr-time;
+            font-size: 16px;
+            margin: 0;
+
+            @include max(mobile) {
+                font-size: 12px;
+            }
+
         }
 
         a:hover {
@@ -101,7 +108,7 @@
         color: $c-white;
     }
 
-    &-link {
+    .m-table-link {
         display: flex;
         align-items: center;
         justify-content: flex-end;
