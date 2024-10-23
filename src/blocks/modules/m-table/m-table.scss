@@ -198,6 +198,11 @@
     tbody tr:nth-child(odd) td {
         background-color: $c-bg-main;
     }
+
+    &__cell-content {
+        overflow: hidden;
+        transition: max-height $tr-time;
+    }
 }
 
 .m-table.m-table--rows {
