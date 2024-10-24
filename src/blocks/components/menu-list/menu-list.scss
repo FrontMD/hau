@@ -1,0 +1,26 @@
+.menu-list {
+    position: absolute;
+    left: 0;
+    top: 37px;
+    width: calc(100% - 33px);
+    height: calc(100% - 37px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+
+        @include max(tablet) {
+            width: 3px;
+            height: 3px;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}

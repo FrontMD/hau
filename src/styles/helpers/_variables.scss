@@ -1,8 +1,12 @@
-//TODO: заменить шрифт на свой
+:root {
+    --m-table-max-rows: 5;
+}
+
+// шрифты
 $ff-main: 'Suisse Intl', sans-serif;
 $ff-second: 'Manrope', sans-serif;
 
-/* media */
+// media
 $media-list: (
     'xs': 500,
     'mobile': 768,
@@ -19,11 +23,15 @@ $c-accent-light: #4C9E50;
 $c-accent-dark: #013220;
 $c-text-light: #9BB3AA;
 $c-bg-main: #F0F7F0;
+$c-bg-menu: #0B5A3D;
 $c-bg-light: #E6F0EC;
 $c-border: #CCCCCC;
 $c-footer-text: #688D80;
 $c-text-grey: #D9D9D9;
 
 // переходы
-
 $tr-time: .3s;
+
+
+// другое
+$m-table-max-rows: var(--m-table-max-rows);

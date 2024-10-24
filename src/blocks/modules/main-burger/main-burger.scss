@@ -4,7 +4,7 @@
     top: 0;
     z-index: 90;
 
-    &__icon {
+    &__line {
         background-color: $c-accent;
         padding: 40px 35px;
         width: 100px;
@@ -25,14 +25,150 @@
         }
     }
 
-
-    &__icon {
+    &__open {
         cursor: pointer;
         color: $c-white;
+
+        svg {
+            width: 29px;
+            height: 21.82px;
+        }
     }
 
-    &__icon svg {
-        width: 29px;
-        height: 21.82px;
+    &__menu {
+        position: absolute;
+        left: -100vw;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        transition: left 0.6s;
+    }
+
+    &__menu.active {
+        left: 0;
+    }
+
+}
+
+.burger-menu {
+    background-color: $c-bg-menu;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: (100% / 3);
+        height: 100vw;
+        background-color: $c-accent;
+        z-index: 1;
+    }
+
+    &__content {
+        height: 100%;
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        padding: 16px 30px 16px 38px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 3;
+
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        flex: 0 0 calc(100vw / 3 - 38px);
+        z-index: 3;
+
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 18px;
+        flex: 0 0 calc(100vw / 3 * 2 - 30px);
+    }
+
+    &__main {
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        height: calc(100% - 86px);
+        padding: 0 30px 20px 38px;
+        z-index: 3;
+
+    }
+
+    &__sub {
+        position: relative;
+        flex: 0 0 calc((100vw - (100vw / 3) - 30px) / 2);
+        padding-top: 37px;
+        padding-right: 33px;
+
+        &--1 {
+
+            flex: 0 0 calc(100vw / 3 - 38px);
+        }
+
+        &--2 {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        &--3 {
+            padding-right: 0;
+        }
+
+    }
+
+    &__contacts {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: right;
+        color: $c-accent-light;
+
+        a {
+            display: block;
+            margin-top: 9px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.02em;
+            color: $c-white;
+            transition: color $tr-time;
+
+            &:hover {
+                color: $c-accent-light;
+            }
+        }
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: $c-white;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: left;
+        cursor: pointer;
+        transition: color $tr-time;
+
+        svg {
+            width: 23.33px;
+            height: 23.33px;
+        }
+
+        &:hover {
+            color: $c-accent-light;
+        }
     }
 }

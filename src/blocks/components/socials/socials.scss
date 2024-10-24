@@ -1,0 +1,53 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include max(laptop) {
+        padding: 3px 15px;
+    }
+
+    &__item {
+        width: 53px;
+        height: 53px;
+        border-radius: 100%;
+        color: $c-accent-middle;
+        border: 1px solid $c-border;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include max(laptop) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            max-width: 19.47px;
+            max-height: 17px;
+
+            @include max(laptop) {
+                max-width: 14.6px;
+                max-height: 12.75px;
+            }
+        }
+
+    }
+}
+
+.socials {
+    &--header {
+        padding: 3px 20px;
+        align-self: flex-start;
+        margin-left: auto;
+
+        @include max(xs) {
+            display: none;
+        }
+    }
+
+    &--burger &__item {
+        color: $c-white;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}

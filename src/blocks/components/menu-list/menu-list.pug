@@ -1,0 +1,35 @@
+-
+    const defaultMenuListProps = {
+        classes: '',
+        links: [
+            "Поступабщим",
+            "Обучающимся",
+            "Структура",
+            "Об университете",
+            "Кафедры",
+            "Довузовское образование",
+            "Наука",
+            "Международная деятельность",
+            "Общие сведения",
+            "Сведения об образовательной организации",
+            "Противодействие коррупции",
+            "Новости"
+        ]
+    }
+
+mixin menu-list(props= defaultMenuListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMenuListProps.classes,
+            links: props.links ? props.links : defaultSocialsProps.links,
+        }
+
+    ul.menu-list(class= checkProps.classes)&attributes(attributes)
+        -let count = 0
+        - while (count < checkProps.links.length)
+            .menu-list__item
+                != checkProps.links[count]
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+            - count++
