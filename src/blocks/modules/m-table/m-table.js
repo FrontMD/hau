@@ -1,6 +1,5 @@
 function mTable() {
     const linesCount = getComputedStyle(document.body).getPropertyValue('--m-table-max-rows');
-    console.log(linesCount)
     const tables = document.querySelectorAll('[data-js="mTable"]')
 
     if(tables.length < 1) return

@@ -1,10 +1,11 @@
 .menu-list {
     position: absolute;
-    left: 0;
-    top: 37px;
-    width: calc(100% - 33px);
-    height: calc(100% - 37px);
     overflow-y: auto;
+    direction: rtl;
+    padding-left: 7px;
+    margin-left: -14px;
+    opacity: 0;
+    visibility: hidden;
 
     &::-webkit-scrollbar {
         width: 7px;
@@ -22,5 +23,45 @@
 
     &::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__item {
+        direction: ltr;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 26px;
+        min-height: 74px;
+        padding: 10px 0;
+        font-family: $ff-second;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5em;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: color $tr-time;
+
+        svg {
+            transition: color $tr-time;
+            width: 12px;
+            height: 12px;
+            flex: 0 0 12px;
+        }
+
+        &.active,
+        &:hover {
+            color: $c-white;
+
+            svg {
+                color: $c-accent-light;
+            }
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
