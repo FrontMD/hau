@@ -273,8 +273,8 @@ table {
 	p,
 	a {
 		display: block;
-		margin-bottom: 24px;
-		font-size: 20px;
+		margin-bottom: 20px;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.55em;
 
@@ -300,19 +300,18 @@ table {
 	}
 
 	ul {
-		padding-left: 35px;
+		padding-left: 28px;
 		list-style: none;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 
 		@include max(mobile) {
-			margin-bottom: 20px;
 			padding-left: 15px;
 		}
 	}
 
 	ul>li {
 		position: relative;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.55em;
 
@@ -327,8 +326,8 @@ table {
 		top: 0.775em;
 		left: -22px;
 		transform: translateY(-50%);
-		width: 7px;
-		height: 7px;
+		width: 5px;
+		height: 5px;
 		background-color: rgba(1, 50, 32, 0.4);
 		border-radius: 100%;
 
@@ -347,7 +346,7 @@ table {
 		list-style: none;
 		counter-reset: num;
 		color: $c-accent;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.55em;
 
@@ -358,11 +357,7 @@ table {
 
 	ol li {
 		position: relative;
-		padding: 20px 25px 20px 88px;
-
-		@include max(laptop) {
-			padding: 20px 25px 20px 78px;
-		}
+		padding: 20px 25px 20px 78px;
 
 		@include max(mobile) {
 			padding: 10px 10px 10px 25px;
@@ -494,62 +489,5 @@ table {
 			font-size: 16px;
 			margin-top: 5px;
 		}
-	}
-}
-
-//страница со списком страниц
-.pages-list {
-	padding: 237px 0 60px 100px;
-}
-
-.pages-list__links {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-gap: 20px;
-	margin-top: 30px;
-}
-
-.pages-list__subtitle {
-	margin-top: 60px;
-	font-size: 32px !important;
-}
-
-.pages-list__link {
-	font-size: 26px;
-	text-decoration: none;
-	color: $c-accent;
-	transition: color 0.3s linear;
-	line-height: 1.02em;
-	min-height: 3.06em;
-}
-
-.pages-list__link:hover {
-	color: $c-accent-light;
-}
-
-@media (max-width: 1279px) {
-	.pages-list {
-		padding: 140px 0 50px;
-	}
-
-	.pages-list__links {
-		grid-gap: 15px;
-		margin-top: 40px;
-	}
-}
-
-@media (max-width: 767px) {
-	.pages-list {
-		padding: 85px 0 50px;
-	}
-
-	.pages-list__links {
-		grid-template-columns: 1fr;
-		grid-gap: 20px;
-		margin-top: 40px;
-	}
-
-	.pages-list__link {
-		min-height: auto;
 	}
 }

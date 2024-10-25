@@ -97,11 +97,11 @@
         background-color: #01462D;
     }
 
-    &--haslinks {
+    /*&--haslinks {
         tr th:last-child {
             text-align: end;
         }
-    }
+    }*/
 
     th {
         background-color: $c-accent-middle;
@@ -133,7 +133,7 @@
         &__wrap {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-between;
             gap: 42px;
 
             @include max(mobile) {
