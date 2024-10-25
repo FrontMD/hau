@@ -43,6 +43,16 @@
         cursor: pointer;
         transition: color $tr-time;
 
+        @include max(large) {
+            font-size: 18px;
+            min-height: 68px;
+        }
+
+        @include max(laptop) {
+            font-size: 16px;
+            min-height: 52px;
+        }
+
         svg {
             transition: color $tr-time;
             width: 12px;

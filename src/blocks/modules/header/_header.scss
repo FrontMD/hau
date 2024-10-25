@@ -16,15 +16,8 @@
         align-items: stretch;
         justify-content: space-between;
         padding-left: 20px;
-        min-height: 183px;
-        transition: min-height $tr-time linear;
-
-        @include max(laptop) {
-            min-height: 135px;
-        }
 
         @include max(tablet) {
-            min-height: 48px;
             align-items: center;
             padding-left: 85px;
         }
@@ -39,21 +32,11 @@
         box-shadow: 0px 5px 50px 25px rgba(0, 0, 0, 0.03);
     }
 
-    &--small &__container {
-        min-height: 90px;
-
-        @include max(laptop) {
-            min-height: 80px;
-        }
-
-        @include max(tablet) {
-            min-height: 48px;
-        }
-    }
-
     &__logo {
         flex: 0 0 236px;
         padding-top: 10px;
+        max-width: 236px;
+        transition: max-width $tr-time linear;
 
         @include max(laptop) {
             flex-basis: 150px;
@@ -69,10 +52,18 @@
         }
     }
 
+    &--small &__logo {
+        max-width: 192px;
+    }
+
     &__nav {
         display: flex;
         align-items: stretch;
         flex: 0 1 1065px;
+
+        @include max(laptop) {
+            flex: 0 1 730px;
+        }
 
         @include max(tablet) {
             display: none;
@@ -81,7 +72,8 @@
 
     .nav-link {
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
+        align-items: center;
         justify-content: space-between;
         flex: 0 0 calc(100%/3);
         padding: 3px 14px 11px 19px;
@@ -91,11 +83,20 @@
         border-left: 1px solid $c-border;
 
         @include max(laptop) {
-            padding: 3px 15px 11px;
+            padding: 3px 10px 11px;
         }
 
         @include max(laptop) {
             font-size: 20px;
+        }
+
+        &__text {
+            margin-top: 153px;
+            transition: margin-top $tr-time linear;
+
+            @include max(laptop) {
+                margin-top: 105px;
+            }
         }
 
         &__icon {
@@ -104,7 +105,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            align-self: flex-end;
+            margin-bottom: 130px;
+            transition: margin-bottom $tr-time linear;
             color: $c-accent-middle;
             border: 1px solid $c-border;
             border-radius: 100%;
@@ -112,6 +114,7 @@
             @include max(laptop) {
                 width: 40px;
                 height: 40px;
+                margin-bottom: 81px;
             }
 
             svg {
@@ -125,4 +128,38 @@
             }
         }
     }
+
+    /* @include max(laptop) {
+            min-height: 135px;
+        }
+
+        @include max(tablet) {
+            min-height: 48px;
+
+        }
+    
+    
+    &--small &__container {
+        min-height: 90px;
+
+        @include max(laptop) {
+            min-height: 80px;
+        }
+
+        @include max(tablet) {
+            min-height: 48px;
+        }
+    }*/
+
+    &--small .nav-link {
+
+        &__text {
+            margin-top: 0 !important;
+        }
+
+        &__icon {
+            margin-bottom: 0 !important;
+        }
+    }
+
 }

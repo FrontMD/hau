@@ -17,18 +17,35 @@ function menuList() {
             menuListItem.addEventListener('mouseenter', (e) => {
                 let targetItem = e.target
 
+                if(targetItem.classList.contains('active')) return
+
+                /*setTimeout(() => {
+
+                }, 100)*/
+
                 let currentLevelBlock = targetItem.closest('[data-js="multiMenuLevel"]')
                 let currentLevelIndex = currentLevelBlock.dataset.level
+                let currentMenuListItems = currentLevelBlock.querySelectorAll('[data-js="menuListItem"]')
 
-                menuListItems.forEach(item => {
-                    item.classList.remove('active')
-                })
+                if(currentLevelBlock.dataset.level != levelsCount) {
 
-                targetItem.classList.add('active')
+                    currentMenuListItems.forEach(item => {
+                        item.classList.remove('active')
+                    })
+    
+                    targetItem.classList.add('active')
+                }
+
 
                 for(let i = currentLevelIndex - 1; i < menuLists.length; i++) {
                     menuLists[i].forEach(list => {   
                         list.classList.remove('active')
+
+                        let activeItem = list.querySelector('.active[data-js="menuListItem"]')
+                        
+                        if(activeItem) {
+                            activeItem.classList.remove('active')
+                        }
                     })
                 }
 
