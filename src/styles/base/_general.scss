@@ -279,14 +279,15 @@ table {
 		line-height: 1.55em;
 
 		@include max(mobile) {
-			font-size: 16px;
-			margin-bottom: 20px;
+			font-size: 14px;
+			margin-bottom: 18px;
 		}
 	}
 
 	p a {
 		margin: 0;
 		display: inline;
+		text-decoration: none;
 	}
 
 	a:hover,
@@ -306,6 +307,7 @@ table {
 
 		@include max(mobile) {
 			padding-left: 15px;
+			margin-bottom: 18px;
 		}
 	}
 
@@ -316,7 +318,7 @@ table {
 		line-height: 1.55em;
 
 		@include max(mobile) {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
@@ -351,16 +353,16 @@ table {
 		line-height: 1.55em;
 
 		@include max(mobile) {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
 	ol li {
 		position: relative;
-		padding: 20px 25px 20px 78px;
+		padding: 15px 20px 15px 60px;
 
 		@include max(mobile) {
-			padding: 10px 10px 10px 25px;
+			padding: 10px 15px 10px 30px;
 		}
 
 		&:nth-child(odd) {
@@ -371,12 +373,12 @@ table {
 			content: counter(num) '';
 			counter-increment: num;
 			position: absolute;
-			top: 20px;
-			left: 25px;
+			top: 15px;
+			left: 20px;
 			font-weight: 500;
 
 			@include max(mobile) {
-				left: 5px;
+				left: 10px;
 				top: 10px;
 			}
 		}
@@ -427,6 +429,13 @@ table {
 		max-width: 590px;
 	}
 
+	&__title+h2,
+	&__title+h3,
+	&__title+p,
+	&__title+a {
+		margin-top: 60px;
+	}
+
 	&__text {
 		max-width: 750px;
 
@@ -442,21 +451,20 @@ table {
 }
 
 .e-program-header {
-	margin-bottom: 195px;
+	margin-bottom: 80px;
 	padding-top: 30px;
 	display: flex;
 	align-items: flex-start;
 	gap: 40px;
 
 	@include max(laptop) {
-		margin-bottom: 100px;
+		margin-bottom: 60px;
 		gap: 20px;
 	}
 
 	@include max(mobile) {
 		flex-direction: column;
 		margin-bottom: 50px;
-		gap: 30px;
 	}
 
 	&__item {

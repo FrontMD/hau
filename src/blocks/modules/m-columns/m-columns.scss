@@ -101,17 +101,13 @@
     }
 
     &__note {
-        padding-top: 186px;
+        padding-top: 10px;
         margin-top: auto;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.02em;
         opacity: 0.3;
         color: $c-accent;
-
-        @include max(laptop) {
-            padding-top: 30px;
-        }
 
         @include max(mobile) {
             font-size: 14px;

@@ -35,10 +35,9 @@ block content
                             text: 'Ссылка на страницу с официальной информацией об учреждении на ресурсе bus.gov.ru'
                         })
 
-                +m-columns({
-                    titlePosLeft: 'false',
-                    title: '<h2>Документы</h2>'
-                })
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__title
+                        h2 Документы 
                     .text-items-list
                         +link-block({
                             classes: '',

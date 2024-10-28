@@ -4,12 +4,12 @@ function mTable() {
 
     if(tables.length < 1) return
 
-    const showMoreBtnLayout = `
+    const showMoreBtnLayout = `                                
+                                <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.748341 9.86383L2.8571 12.1503L6.60429 8.69424L9.14477 6.35118L7.03605 4.06472L3.28711 0L0.746637 2.34306L4.49554 6.40782L0.748341 9.86383Z" fill="currentColor"/>
+                                </svg>
                                 <span class="show-more">
-                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.8112 6.1088V9.2192H8.7136V14.7488H5.2576V9.2192H0.16V6.1088H5.2576V0.579199H8.7136V6.1088H13.8112Z" fill="#015738"/>
-                                    </svg>
-                                    показать все
+                                показать все
                                 </span>
                                 <span class="show-less">
                                     скрыть
