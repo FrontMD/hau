@@ -2,10 +2,13 @@
     position: absolute;
     overflow-y: auto;
     direction: rtl;
-    padding-left: 7px;
-    margin-left: -14px;
     opacity: 0;
+    padding-left: 7px;
     visibility: hidden;
+
+    @include max(tablet) {
+        padding-left: 3px;
+    }
 
     &::-webkit-scrollbar {
         width: 7px;
@@ -28,11 +31,11 @@
     &__item {
         direction: ltr;
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
-        gap: 26px;
+        gap: 12px;
         min-height: 74px;
-        padding: 10px 0;
+        padding: 0;
         font-family: $ff-second;
         font-size: 22px;
         font-weight: 700;
@@ -53,11 +56,9 @@
             min-height: 52px;
         }
 
-        svg {
-            transition: color $tr-time;
-            width: 12px;
-            height: 12px;
-            flex: 0 0 12px;
+        @include max(tablet) {
+            font-size: 14px;
+            min-height: 48px;
         }
 
         &.active,
@@ -67,6 +68,26 @@
             svg {
                 color: $c-accent-light;
             }
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 25px;
+
+        svg {
+            transition: color $tr-time;
+            width: 12px;
+            height: 12px;
         }
     }
 

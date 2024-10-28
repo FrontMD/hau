@@ -8,9 +8,11 @@ function mainBurger() {
 
     menuOpenBtn.addEventListener('click', () => {
         menu.classList.add('active')
+        lockBody()
     })
 
     menuCloseBtn.addEventListener('click', () => {
         menu.classList.remove('active')
+        unlockBody()
     })
 }

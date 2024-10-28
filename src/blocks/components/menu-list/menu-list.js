@@ -15,6 +15,7 @@ function menuList() {
 
         menuListItems.forEach(menuListItem => {
             menuListItem.addEventListener('mouseenter', (e) => {
+                console.log(e.type)
                 let targetItem = e.target
 
                 if(targetItem.classList.contains('active')) return
@@ -56,6 +57,31 @@ function menuList() {
                     if(currentList) {
                         currentList.classList.add('active')
                     }
+                }
+
+                if(currentLevelIndex != levelsCount) {
+                    levels.forEach((level, index) => {
+                        if(index == currentLevelIndex) {
+                            level.classList.add('active')
+                        } else {
+                            level.classList.remove('active')
+                        }
+                    })
+                }
+            })
+
+            menuListItem.addEventListener('click', (e) => {
+                console.log(e.type)
+                let targetItem = e.target
+
+                console.log(targetItem)
+
+                let currentLevelBlock = targetItem.closest('[data-js="multiMenuLevel"]')
+                let currentLevelIndex = currentLevelBlock.dataset.level
+
+                if(targetItem.closest('[data-js="menuListIcon"]') && currentLevelIndex != levelsCount) {
+                    e.preventDefault()
+                    e.stopPropagation()
                 }
             })
         })

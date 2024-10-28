@@ -113,6 +113,10 @@ body {
 	background-color: $c-bg-main;
 }
 
+body.no-scroll {
+	overflow: hidden;
+}
+
 .main {
 	flex-grow: 1;
 }

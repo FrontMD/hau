@@ -46,6 +46,12 @@
         }
     }
 
+    &--burger {
+        @include max(mobile) {
+            display: none;
+        }
+    }
+
     &--burger &__item {
         color: $c-white;
         border-color: rgba(255, 255, 255, 0.2);

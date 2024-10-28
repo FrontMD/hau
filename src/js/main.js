@@ -16,8 +16,6 @@
 
 
 //my files
+@@include("./import/main.js")
 @@include("./import/components.js")
 @@include("./import/modules.js")
-@@include("./import/main.js")
-
-

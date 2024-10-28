@@ -27,9 +27,10 @@ mixin menu-list(props= defaultMenuListProps)
     ul.menu-list(class= checkProps.classes data-js="menuList")&attributes(attributes)
         -let count = 0
         - while (count < checkProps.links.length)
-            a.menu-list__item(href="https://yandex.ru/" data-js="menuListItem" data-index=count)
-                != checkProps.links[count]
-                svg 
-                    use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            a.menu-list__item(href="index.html" data-js="menuListItem" data-index=count)
+                span.menu-list__text!= checkProps.links[count]
+                span.menu-list__icon(data-js="menuListIcon")
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
             - count++
