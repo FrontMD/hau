@@ -15,66 +15,24 @@ function menuList() {
 
         menuListItems.forEach(menuListItem => {
             menuListItem.addEventListener('mouseenter', (e) => {
-                console.log(e.type)
-                let targetItem = e.target
+                let leaveTrigger = false
 
-                if(targetItem.classList.contains('active')) return
+                menuListItem.addEventListener('mouseleave', leaveTriggerToggle)
 
-                /*setTimeout(() => {
-
-                }, 100)*/
-
-                let currentLevelBlock = targetItem.closest('[data-js="multiMenuLevel"]')
-                let currentLevelIndex = currentLevelBlock.dataset.level
-                let currentMenuListItems = currentLevelBlock.querySelectorAll('[data-js="menuListItem"]')
-
-                if(currentLevelBlock.dataset.level != levelsCount) {
-
-                    currentMenuListItems.forEach(item => {
-                        item.classList.remove('active')
-                    })
-    
-                    targetItem.classList.add('active')
-                }
-
-
-                for(let i = currentLevelIndex - 1; i < menuLists.length; i++) {
-                    menuLists[i].forEach(list => {   
-                        list.classList.remove('active')
-
-                        let activeItem = list.querySelector('.active[data-js="menuListItem"]')
-                        
-                        if(activeItem) {
-                            activeItem.classList.remove('active')
-                        }
-                    })
-                }
-
-                if(menuLists[currentLevelIndex - 1]) {
-
-                    let currentList = Array.from(menuLists[currentLevelIndex - 1]).find(item => item.dataset.index == targetItem.dataset.index)
-
-                    if(currentList) {
-                        currentList.classList.add('active')
+                setTimeout(() => {
+                    if(!leaveTrigger) {
+                        slideMenu(e.target)
                     }
-                }
+                    menuListItem.removeEventListener('mouseleave', leaveTriggerToggle)
+                }, 200)
 
-                if(currentLevelIndex != levelsCount) {
-                    levels.forEach((level, index) => {
-                        if(index == currentLevelIndex) {
-                            level.classList.add('active')
-                        } else {
-                            level.classList.remove('active')
-                        }
-                    })
+                function leaveTriggerToggle() {
+                    leaveTrigger = true
                 }
-            })
+            }) 
 
-            menuListItem.addEventListener('click', (e) => {
-                console.log(e.type)
+            menuListItem.addEventListener('touchend', (e) => {
                 let targetItem = e.target
-
-                console.log(targetItem)
 
                 let currentLevelBlock = targetItem.closest('[data-js="multiMenuLevel"]')
                 let currentLevelIndex = currentLevelBlock.dataset.level
@@ -82,9 +40,60 @@ function menuList() {
                 if(targetItem.closest('[data-js="menuListIcon"]') && currentLevelIndex != levelsCount) {
                     e.preventDefault()
                     e.stopPropagation()
+                    slideMenu(targetItem.closest('[data-js="menuListItem"]'), true)
                 }
             })
         })
+
+        function slideMenu(targetItem) {
+
+            if(targetItem.classList.contains('active')) return
+
+            let currentLevelBlock = targetItem.closest('[data-js="multiMenuLevel"]')
+            let currentLevelIndex = currentLevelBlock.dataset.level
+            let currentMenuListItems = currentLevelBlock.querySelectorAll('[data-js="menuListItem"]')
+
+            if(currentLevelBlock.dataset.level != levelsCount) {
+
+                currentMenuListItems.forEach(item => {
+                    item.classList.remove('active')
+                })
+
+                targetItem.classList.add('active')
+            }
+
+
+            for(let i = currentLevelIndex - 1; i < menuLists.length; i++) {
+                menuLists[i].forEach(list => {   
+                    list.classList.remove('active')
+
+                    let activeItem = list.querySelector('.active[data-js="menuListItem"]')
+                    
+                    if(activeItem) {
+                        activeItem.classList.remove('active')
+                    }
+                })
+            }
+
+            if(menuLists[currentLevelIndex - 1]) {
+
+                let currentList = Array.from(menuLists[currentLevelIndex - 1]).find(item => item.dataset.index == targetItem.dataset.index)
+
+                if(currentList) {
+                    currentList.classList.add('active')
+                }
+            }
+
+            if(currentLevelIndex != levelsCount) {
+                levels.forEach((level, index) => {
+                    if(index == currentLevelIndex) {
+                        level.classList.add('active')
+                    } else {
+                        level.classList.remove('active')
+                    }
+                })
+            }
+        }
 
     })
 }

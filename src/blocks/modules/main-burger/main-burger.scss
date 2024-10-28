@@ -207,6 +207,9 @@
         overflow: hidden;
     }
 
+    &__back {
+        display: none;
+    }
 
     &__level {
         position: relative;

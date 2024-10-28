@@ -63,6 +63,7 @@
             transition: color $tr-time;
             font-size: 16px;
             margin: 0;
+            font-weight: 500;
 
             @include max(mobile) {
                 font-size: 12px;

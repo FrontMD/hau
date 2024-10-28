@@ -16,6 +16,10 @@
                         a(href="tel:+74921112222") +7 (492)111-22-22
             .main-burger__main
                 .burger-menu(data-js='multiMenu')
+                    .burger-menu__back(data-js='multiMenuBack')
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                        | Назад
                     .burger-menu__level.burger-menu__level--1.active(data-js="multiMenuLevel" data-level="1")
                         +menu-list({
                             classes: 'active'

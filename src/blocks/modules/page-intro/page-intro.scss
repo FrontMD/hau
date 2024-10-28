@@ -1,18 +1,19 @@
 .page-intro {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    min-height: 380px;
+    gap: 100px;
+    //min-height: 380px;
     padding: 24px 33px 40px;
 
     @include max(laptop) {
         padding: 24px 25px 40px;
-        min-height: 250px;
+        //min-height: 250px;
+        gap: 80px;
     }
 
     @include max(tablet) {
         gap: 50px;
-        min-height: 240px;
+        //min-height: 240px;
     }
 
     @include max(mobile) {

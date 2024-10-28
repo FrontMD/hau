@@ -18,7 +18,6 @@
 
     &__subtitle {
         max-width: 930px;
-        padding-top: 184px;
         font-size: 45px;
         font-weight: 500;
         line-height: 0.91em;
@@ -27,17 +26,14 @@
 
         @include max(laptop) {
             font-size: 40px;
-            padding-top: 160px;
         }
 
         @include max(tablet) {
             font-size: 30px;
-            padding-top: 60px;
         }
 
         @include max(mobile) {
             font-size: 22px;
-            padding-top: 30px;
         }
     }
 
