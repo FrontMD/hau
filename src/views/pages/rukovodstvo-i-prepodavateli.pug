@@ -39,7 +39,7 @@ block content
                                 "1",
                                 "Чернышова Евгения Олеговна",
                                 "Ректор",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
+                                "<a href='tel:+79900595039'>+7 (990) 059-50-39</a>",
                                 "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
                             ]
                         ]
@@ -62,57 +62,57 @@ block content
                                 "1",
                                 "Чернышова Евгения Олеговна",
                                 "Первый проректор",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "2",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по безопасности",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "3",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по международной деятельности",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "4",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по цифровому развитию и делопроизводству",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "5",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по научной работе",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "6",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по управлению кампусом",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "7",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по воспитательной и социальной работе",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ],
                             [
                                 "8",
                                 "Чернышова Евгения Олеговна",
                                 "Проректор по учебной работе",
-                                "<a href='tel:+79900595039'>+79900595039</a>",
-                                "<a href='mailto:pk.khau@yandex.ru'>pk.khau@yandex.ru</a>"
+                                "<a href='tel:+74952230523'>+7 (495) 223-05-23</a>",
+                                "<a href='mailto:y.chernyshova@yandex.ru'>y.chernyshova@yandex.ru</a>"
                             ]
                         ]
                     })
@@ -121,6 +121,7 @@ block content
                     .gost-section__title!= '<h2>Информация о&nbsp;персональном составе педагогических работников каждой реализуемой образовательной программы</h2>'
                     +info-tag
                     +m-table({
+                        hasLinks: 'true',
                         header: [								
                             "№",
                             "Код, наименование профессии, специальности, направления подготовки, наименование группы научных специальностей",
@@ -324,7 +325,12 @@ block content
                         ]
                     })  
 
-                .gost-section.gost-section--bordered.text-editor
-                    .gost-section__title!= '<h2>Численность иностранных педагогических и научных работников</h2>'
-                    p 
-                        b Количество: 5
+                +m-columns({
+                    title: '<h2>Численность иностранных педагогических и научных работников</h2>'
+                    })
+                        .text-items-list
+                            +count-block({
+                                text: 'Количество',
+                                num: '5',
+                                vMode: 'column'
+                            })

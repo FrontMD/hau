@@ -85,7 +85,13 @@ block content
                         ]
                     })
 
-                .gost-section.gost-section--bordered.text-editor
-                    .gost-section__title!= '<h2>Численность иностранных педагогических и научных работников</h2>'
-                    p 
-                        b Количество: 5
+
+                +m-columns({
+                    title: '<h2>Численность иностранных педагогических и научных работников</h2>'
+                    })
+                        .text-items-list
+                            +count-block({
+                                text: 'Количество',
+                                num: '5',
+                                vMode: 'column'
+                            })
