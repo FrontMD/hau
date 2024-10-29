@@ -229,7 +229,7 @@
     }
 
     &--about &__block-title {
-        padding: 30px 28px 110px;
+        padding: 30px 28px 80px;
         max-width: 710px;
         font-size: 32px;
         font-weight: 500;
@@ -240,7 +240,7 @@
         @include max(laptop) {
             font-size: 40px;
             max-width: 670px;
-            padding: 30px 25px 100px;
+            padding: 30px 25px 70px;
         }
 
         @include max(tablet) {

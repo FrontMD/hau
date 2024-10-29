@@ -102,13 +102,14 @@
     th._subtitle {
         text-align: center !important;
         background-color: #01462D;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /*&--haslinks {
-        tr th:last-child {
-            text-align: end;
+    &--haslinks {
+        tr td {
+            vertical-align: middle;
         }
-    }*/
+    }
 
     th {
         background-color: $c-accent-middle;

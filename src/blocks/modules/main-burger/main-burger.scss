@@ -209,6 +209,19 @@
 
     &__back {
         display: none;
+
+        @include max(mobile) {
+            display: flex;
+            align-items: center;
+            color: $c-white;
+            align-self: flex-start;
+
+
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
 
     &__level {
@@ -233,12 +246,13 @@
         @include max(mobile) {
             position: absolute;
             left: -100%;
-            top: 0;
-            height: 100%;
+            top: 30px;
+            height: calc(100% - 30px);
             width: 100%;
             transition: left $tr-time;
             padding-right: 0;
             padding-left: 0;
+            padding-top: 0;
             z-index: 1;
             background-color: $c-accent;
 
