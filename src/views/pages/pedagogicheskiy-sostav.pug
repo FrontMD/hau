@@ -1,0 +1,240 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Педагогический состав"
+
+block content
+    .page
+        +sidebar-layout
+            +page-intro({
+                title: '<span>Педагогический</span> состав',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: "Педагогический состав",
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                } 
+            })
+
+            .sidebar-layout__content
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__title!= '<h2>Информация о персональном составе педагогических работников каждой реализуемой образовательной программы</h2>'
+                    .m-table.m-table--columns(data-js="mTable")
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Код профессии, специальности, направления подготовки, научной специальности, шифр группы научных специальностей</th>
+                                    <th>Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей</th>
+                                    <th>Образовательная программа, направленность, профиль, шифр и наименование научной специальности</th>
+                                    <th>Уровень образования</th>
+                                    <th>Ссылка на страницу с информацией о ППС</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">1</td>
+                                    <td rowspan="2">01.03.02</td>
+                                    <td rowspan="2">Прикладная математика и информатика</td>
+                                    <td><a href="">Интеллектуальные системы управления транспортом (ИСУТ)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Математическое и компьютерное моделирование (МиКМ)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="2">2</td>
+                                    <td rowspan="2">08.03.01</td>
+                                    <td rowspan="2">Строительство</td>
+                                    <td><a href="">Промышленное и гражданское строительство (ПГС)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Теплогазоснабжение, вентиляция, водоснабжение и водоотведение (ТГВВиВ)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="6">3</td>
+                                    <td rowspan="6">09.03.01</td>
+                                    <td rowspan="6">Информатика и вычислительная техника</td>
+                                    <td><a href="">Интеграция и программирование в САПР (ИиП САПР)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Программное обеспечение информационных систем (ПОИС)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Веб-технологии (ВТ)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Системная и программная инженерия (СиПИ)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Киберфизические системы (КС)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Кибербезопасность автоматизированных систем (КАС)</a></td>
+                                    <td>Высшее образование&nbsp;- бакалавриат</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--link" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Перейти</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#link"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table> 
+
+                +m-columns({
+                    title: '<h2>Численность иностранных педагогических и научных работников</h2>'
+                })
+                    .text-items-list
+                        +count-block({
+                            text: 'Количество:',
+                            num: '5',
+                            vMode: 'column'
+                        })
+
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__title!= '<h2>Информация о представителях работодателей</h2>'
+                    +m-table({
+                        header: [
+                            "№",
+                            "ФИО",
+                            "Должность",
+                            "Преподаваемые дисциплины",
+                            "Место работы"
+                        ],
+
+                        rows: [
+                            [
+                                "1",
+                                "Гридчина Александра Владимировна",
+                                "Председатель участковой избирательной комиссии муниципального округа Алексеевский города Москвы",
+                                "История России<br>Современные проблемы управленческой науки<br>Искусство презентации в сфере профессиональной деятельности<br>Управление развитием организации<br>Современные организационные структуры и механизмы управления<br>Системы поддержки принятия управленческих решений<br>Социальная политика государства<br>Технологии электронного правительства<br>Менеджмент в высокотехнологичных отраслях<br>Производственная практика (технологическая)",
+                                "Администрация муниципального округа Алексеевский СВАО города Москвы, стаж 4 года 7 месяцев"
+                            ],
+                            [
+                                "2",
+                                "Коротун Ольга Николаевна",
+                                "Аналитик проектов",
+                                "Информационно-аналитические технологии управления бизнес-системами<br>Сетевые модели и матрицы в управлении проектами<br>Регулирование процессов менеджмента качества<br>Основы методологии менеджмента качества<br>Методы принятия управленческих решений<br>Самоменеджмент<br>Методы и модели принятия управленческих решений<br>Менеджмент качества (Quality Management)<br>Методы принятия управленческих решений (Methods of Making Management Decisions)<br>Менеджмент профессиональной траектории (Professional trajectory management)<br>Менеджмент распределенных сообществ<br>Производственная практика (преддипломная)<br>Управление малым бизнесом<br>Адаптивный менеджмент<br>Корпоративный менеджмент<br>Перспективный менеджмент<br>Венчурный менеджмент",
+                                "ООО «Техномаркет НПП», стаж 4 года 8 месяцев"
+                            ],
+                            [
+                                "3",
+                                "Никулин Ярослав Владимирович",
+                                "Директор по обеспечению организации информационными технологиями",
+                                "Основы управления проектами<br>Креативность в инновации: создание новых идей<br>Антикоррупционное регулирование (Corruption Prevention)<br>Международный менеджмент<br>Менеджмент распределенных сообществ (Management of distributed communities)<br>Социальная политика государства (State Social Policy)<br>Управление жизненным циклом организации<br>Корпоративный менеджмент<br>Современные организационные структуры управления бизнесом<br>Управление маркетингом в сфере информационных технологий<br>Менеджмент в высокотехнологичных отраслях<br>Основы российской государственности",
+                                'ООО "АЛЛЕГРО 23", стаж 5 лет 8 месяцев'
+                            ]
+                        ]
+                    })
