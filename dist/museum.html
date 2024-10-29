@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <header class="site-header" data-js="siteHeader">
@@ -54,40 +54,155 @@
     </header>
     <main class="site-main">
       <div class="page">
-            <section class="section history-intro">
-              <div class="history-intro__bg">
-                <picture> 
-                  <source srcset="img/history/history_intro_mob.webp" media="(max-width: 768px)">
-                  <source srcset="img/history/history_intro_tab.webp" media="(max-width: 1300px)"><img src="img/history/history_intro.webp" alt="">
-                </picture>
-              </div>
-              <div class="m-container">
-                <div class="history-intro__content">
-                  <div class="history-intro__header">
-                        <div class="breadcrumbs  breadcrumbs--light">
-                          <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
-                            </li>
-                            <li class="breadcrumbs__item breadcrumbs__item--current"><span>Музей при университете</span>
-                            </li>
-                          </ul>
-                        </div>
-                  </div>
-                  <div class="history-intro__body">
-                        <div class="title history-intro__title title--light">
-                          <div class="title__h1">
-                            <h1><span>Музей</span> <br>при университете</h1>
+        <div class="sidebar-layout">
+              <section class="history-intro">
+                <div class="history-intro__bg">
+                  <picture> 
+                    <source srcset="img/history/history_intro_mob.webp" media="(max-width: 768px)">
+                    <source srcset="img/history/history_intro_tab.webp" media="(max-width: 1300px)"><img src="img/history/history_intro.webp" alt="">
+                  </picture>
+                </div>
+                <div class="m-container">
+                  <div class="history-intro__content">
+                    <div class="history-intro__header">
+                          <div class="breadcrumbs  breadcrumbs--light">
+                            <ul class="breadcrumbs__list">
+                              <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
+                              </li>
+                              <li class="breadcrumbs__item breadcrumbs__item--current"><span>Музей при университете</span>
+                              </li>
+                            </ul>
                           </div>
-                        </div>
-                    <div class="history-intro__text text-editor text-editor--light">
-                      <p>Музей истории при аграрном университете повествует об основных вехах в истории развития высшего учебного заведения. Он будет интересен для всех, кто интересуется сельским хозяйством, потому что именно оно является сферой научного интереса всех, кто учится и преподает в вузе.</p>
-                      <p>Роль университета исключительно велика и с каждым годом все более возрастает. Репрезентативная функция музейной экспозиции в этом смысле является лучшей иллюстрацией достижений вуза.</p>
-                      <p>Для удобства восприятия огромного потока информации посетителями музея, вся история университета разделена на тематические комплексы, которые выстроены в хронологическом порядке.</p>
+                    </div>
+                    <div class="history-intro__body">
+                          <div class="title history-intro__title title--light">
+                            <div class="title__h1">
+                              <h1><span>Музей</span> <br>при университете</h1>
+                            </div>
+                          </div>
+                      <div class="history-intro__text text-editor text-editor--light">
+                        <p>Музей истории при аграрном университете повествует об основных вехах в истории развития высшего учебного заведения. Он будет интересен для всех, кто интересуется сельским хозяйством, потому что именно оно является сферой научного интереса всех, кто учится и преподает в вузе.</p>
+                        <p>Роль университета исключительно велика и с каждым годом все более возрастает. Репрезентативная функция музейной экспозиции в этом смысле является лучшей иллюстрацией достижений вуза.</p>
+                        <p>Для удобства восприятия огромного потока информации посетителями музея, вся история университета разделена на тематические комплексы, которые выстроены в хронологическом порядке.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </section>
+              <div class="tabs-block tabs-block--mini history-timeline" data-js="tabsBlock">
+                <div class="tabs-block__tabs">
+                  <div class="tabs-block__tab tabs-block__tab--active" data-index="0" data-js="tabsBlockTab">Материально-техническое обеспечение и оснащённость образовательного процесса</div>
+                  <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab"> Индивидуальная работа с обучающимися</div>
+                </div>
+                <div class="tabs-block__slides">
+                  <div class="tabs-block__slide tabs-block__slide--active" data-js="tabsBlockSlide">
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1874</h2></div>
+                          <div class="m-columns__main text-editor"><img src="img/museum/museum1.jpg">
+                            <p>В январе вышел приказ «О составлении истории Херсонского земского сельско-хозяйственного училища» для написания и издания очерка по истории, охватывающего период</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1975</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ № 27 6/3 от 30.10.75  об организации Комнаты-музея боевой и трудовой славы</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1976</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>9 мая 1976 г. в День Победы состоялось торжественное открытие Комнаты–музея боевой и трудовой славы</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1977</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Комната-музей боевой и трудовой славы за участие в смотре-конкурсе, посвященном 60-летию Великого Октября награждена грамотой и вымпелом Минвуза РСФСР</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1978</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ № 288/3 от 06.12.78  «О переименовании Комнаты-музея в музей трудовой славы института». Создан Совет музея под председательством ректора П.А. Андреева. Разработано Положение о работе музея. Руководить музеем поручено ассистенту Г.Г. Андрееву.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1979</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>9 мая 1976 г. в День Победы состоялось торжественное открытие Комнаты–музея боевой и трудовой славы</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1980</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ  № 74/3 от 07.04.80. о создании при Музее трудовой славы фото-кино-фонотеки</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1981</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>В феврале создана рабочая группа по оформлению Музея истории и трудовой славы по проекту художественного фонда, в апреле 5 студентов Аграрного факультета награждены денежной премией за переоборудование музея</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1982</h2></div>
+                          <div class="m-columns__main text-editor"><img src="img/museum/museum2.jpg">
+                            <p>В феврале Музей трудовой славы переименован в&nbsp;Музей истории института</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1983</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>В январе-апреле завершалось переустройство музея. Открыт зал истории института (Красный зал) и зал, посвященный ветеранам, преподавателям, выпускникам института (Зеленый зал). Руководителю музея Г.Г. Андрееву за создание музея объявлена благодарность.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1984</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Г.Г. Андреев начал проводить занятия со студентами первых курсов по дисциплине «Введение в специальность».</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1985</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышло распоряжение № 167 от 06.10.85. «О проведении занятий по дисциплине «Введение в специальность» в Музее истории  института Г.Г. Андреевым.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1986</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Составлен паспорт музея по запросу Минвуза РСФСР. Полезная площадь музея 286 кв.м., из них экспозиция 250 кв.м ,состоит из 3-х экспозиционных залов.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1987</h2></div>
+                          <div class="m-columns__main text-editor"><img src="img/museum/museum3.jpg">
+                            <p>Открыт третий экспозиционный зал – Зал науки.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1988</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>14-24 ноября в музее организована выставка «Фронтовое письмо».</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1989</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ № 198/1958 от 5.07.89. «О комплектовании фондов музея истории института» для глубокого и полного отражения учебной, научной и общественной жизни института, об издании к сентябрю 1985 г. «Памятки по комплектованию фондов музея института»</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1990</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ № 135/3 от 4.05.90. «О передаче экспонатов выставки НТТ-87 в музей института» в целях профориентации и пропаганды научно-технических достижений института, для обновления экспозиции.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="tabs-block__slide tabs-block__slide" data-js="tabsBlockSlide">тест2</div>
+                </div>
               </div>
-            </section>
+        </div>
       </div>
     </main>
     <footer class="site-footer">
@@ -1232,6 +1347,6 @@
         <!--код модалок сюда-->
       </div>
     </noindex>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
