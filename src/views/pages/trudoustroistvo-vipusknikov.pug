@@ -1,0 +1,376 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Информация о трудоустройстве выпускников"
+
+block content
+    .page
+        +sidebar-layout
+            +page-intro({
+                title: '<span>Информация</span> <br>о трудоустройстве <br>выпускников',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Информация о трудоустройстве выпускников',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                } 
+            })
+            .sidebar-layout__content
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__text
+                        p 
+                            b Сведения о трудоустройстве выпускников в виде численности трудоустроенных выпускников прошлого учебного года, освоивших основные профессиональные образовательные программы среднего профессионального и высшего образования, по каждой профессии, специальности, в том числе научной, направлению подготовки или укрупненной группе профессий, специальностей и направлений подготовки
+                    .gost-section__title!= '<h2>Бакалавриат</h2>'
+                    +info-tag
+                    .m-table.m-table--columns.m-table--haslinks
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">№</th>
+                                    <th rowspan="2">Код профессии, специальности, направления подготовки, научной специальности, шифр группы научных специальностей</th>
+                                    <th rowspan="2">Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей</th>
+                                    <th rowspan="2">Образовательная программа, направленность, профиль, шифр и наименование научной специальности</th>
+                                    <th  class="_subtitle" colspan="3">2022-2023 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2021-2022 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2020-2021 учебный год</th>
+                                    <th rowspan="2">Информация о местах трудоустройства выпускников за последние 3 года</th>
+                                </tr>
+                                <tr>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                <tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="_rowtitle">1</td>
+                                    <td class="_rowtitle">01.03.02</td>
+                                    <td class="_rowtitle">Прикладная математика и информатика</td>
+                                    <td class="_rowtitle">Интеллектуальные системы управления транспортом (ИСУТ)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="_rowtitle">2</td>
+                                    <td class="_rowtitle">08.03.01</td>
+                                    <td class="_rowtitle">Строительство</td>
+                                    <td class="_rowtitle">Промышленное и гражданское строительство (ПГС)</td>
+                                    <td>32</td>
+                                    <td>19</td>
+                                    <td>19</td>
+                                    <td>61</td>
+                                    <td>51</td>
+                                    <td>51</td>
+                                    <td>22</td>
+                                    <td>21</td>
+                                    <td>21</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">3</td>
+                                    <td class="_rowtitle">09.03.01</td>
+                                    <td class="_rowtitle">Информатика и вычислительная техника</td>
+                                    <td class="_rowtitle">Программное обеспечение информационных систем (ПОИС)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">4</td>
+                                    <td class="_rowtitle">09.03.02</td>
+                                    <td class="_rowtitle">Информационные системы и технологии</td>
+                                    <td class="_rowtitle">Веб-технологии (ВТ)</td>
+                                    <td>43</td>
+                                    <td>33</td>
+                                    <td>33</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__title!= '<h2>Магистратура</h2>'
+                    +info-tag
+                    .m-table.m-table--columns.m-table--haslinks
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">№</th>
+                                    <th rowspan="2">Код профессии, специальности, направления подготовки, научной специальности, шифр группы научных специальностей</th>
+                                    <th rowspan="2">Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей</th>
+                                    <th rowspan="2">Образовательная программа, направленность, профиль, шифр и наименование научной специальности</th>
+                                    <th  class="_subtitle" colspan="3">2022-2023 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2021-2022 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2020-2021 учебный год</th>
+                                    <th rowspan="2">Информация о местах трудоустройства выпускников за последние 3 года</th>
+                                </tr>
+                                <tr>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                <tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="_rowtitle">1</td>
+                                    <td class="_rowtitle">01.03.02</td>
+                                    <td class="_rowtitle">Прикладная математика и информатика</td>
+                                    <td class="_rowtitle">Интеллектуальные системы управления транспортом (ИСУТ)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="_rowtitle">2</td>
+                                    <td class="_rowtitle">08.03.01</td>
+                                    <td class="_rowtitle">Строительство</td>
+                                    <td class="_rowtitle">Промышленное и гражданское строительство (ПГС)</td>
+                                    <td>32</td>
+                                    <td>19</td>
+                                    <td>19</td>
+                                    <td>61</td>
+                                    <td>51</td>
+                                    <td>51</td>
+                                    <td>22</td>
+                                    <td>21</td>
+                                    <td>21</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">3</td>
+                                    <td class="_rowtitle">09.03.01</td>
+                                    <td class="_rowtitle">Информатика и вычислительная техника</td>
+                                    <td class="_rowtitle">Программное обеспечение информационных систем (ПОИС)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">4</td>
+                                    <td class="_rowtitle">09.03.02</td>
+                                    <td class="_rowtitle">Информационные системы и технологии</td>
+                                    <td class="_rowtitle">Веб-технологии (ВТ)</td>
+                                    <td>43</td>
+                                    <td>33</td>
+                                    <td>33</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+                .gost-section.gost-section--bordered.text-editor
+                    .gost-section__title!= '<h2>Аспирантура</h2>'
+                    +info-tag
+                    .m-table.m-table--columns.m-table--haslinks
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">№</th>
+                                    <th rowspan="2">Код профессии, специальности, направления подготовки, научной специальности, шифр группы научных специальностей</th>
+                                    <th rowspan="2">Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей</th>
+                                    <th rowspan="2">Образовательная программа, направленность, профиль, шифр и наименование научной специальности</th>
+                                    <th  class="_subtitle" colspan="3">2022-2023 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2021-2022 учебный год</th>
+                                    <th  class="_subtitle" colspan="3">2020-2021 учебный год</th>
+                                    <th rowspan="2">Информация о местах трудоустройства выпускников за последние 3 года</th>
+                                </tr>
+                                <tr>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                    <th>Численность выпускников</th>
+                                    <th>Направлено на&nbsp;места трудоустройства</th>
+                                    <th>Численность трудоустроенных выпускников</th>
+                                <tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="_rowtitle">1</td>
+                                    <td class="_rowtitle">01.03.02</td>
+                                    <td class="_rowtitle">Прикладная математика и информатика</td>
+                                    <td class="_rowtitle">Интеллектуальные системы управления транспортом (ИСУТ)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="_rowtitle">2</td>
+                                    <td class="_rowtitle">08.03.01</td>
+                                    <td class="_rowtitle">Строительство</td>
+                                    <td class="_rowtitle">Промышленное и гражданское строительство (ПГС)</td>
+                                    <td>32</td>
+                                    <td>19</td>
+                                    <td>19</td>
+                                    <td>61</td>
+                                    <td>51</td>
+                                    <td>51</td>
+                                    <td>22</td>
+                                    <td>21</td>
+                                    <td>21</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">3</td>
+                                    <td class="_rowtitle">09.03.01</td>
+                                    <td class="_rowtitle">Информатика и вычислительная техника</td>
+                                    <td class="_rowtitle">Программное обеспечение информационных систем (ПОИС)</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="_rowtitle">4</td>
+                                    <td class="_rowtitle">09.03.02</td>
+                                    <td class="_rowtitle">Информационные системы и технологии</td>
+                                    <td class="_rowtitle">Веб-технологии (ВТ)</td>
+                                    <td>43</td>
+                                    <td>33</td>
+                                    <td>33</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>47</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>37</td>
+                                    <td>
+                                        <a class="m-table-link m-table-link--download" href="javascript:void(0)" target="_blank">
+                                            <span class="m-table-link__text">Скачать документ</span>
+                                            <span class="m-table-link__icon">
+                                                <svg> 
+                                                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>

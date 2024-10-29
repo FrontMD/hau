@@ -99,10 +99,18 @@
         border-left: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    thead tr+tr>th:last-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
     th._subtitle {
         text-align: center !important;
         background-color: #01462D;
         border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th._subtitle:last-of-type {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     td._rowtitle {
