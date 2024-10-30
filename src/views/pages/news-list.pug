@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Новости"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: 'Новости',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Новости',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                } 
+            })
+            +news-list

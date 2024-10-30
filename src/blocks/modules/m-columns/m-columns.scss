@@ -110,3 +110,32 @@
         }
     }
 }
+
+.m-columns {
+    &--history {
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 28px;
+        margin-right: 28px;
+
+        @include max(laptop) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        @include max(mobile) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    &--history &__main {
+        max-width: 731px;
+        padding-bottom: 85px;
+
+        @include max(mobile) {
+            padding-bottom: 0;
+        }
+    }
+}

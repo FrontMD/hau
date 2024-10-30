@@ -196,6 +196,42 @@
 
 }
 
+.main-burger {
+    &--header &__menu {
+        position: relative;
+        left: auto;
+        height: 90%;
+        width: 1086px;
+        max-width: calc(100% - 100px);
+    }
+
+    &--header &__menu:after {
+        width: 50%;
+    }
+
+    &--header &__main {
+        height: 100%;
+        padding: 0;
+    }
+
+
+    &--header .burger-menu {
+        border-top: 0;
+
+        &__level {
+            flex: 0 0 50%;
+            padding: 30px 30px 25px;
+        }
+
+        .menu-list {
+            top: 30px;
+            left: 30px;
+            width: calc(100% - 60px);
+            height: calc(100% - 55px);
+        }
+    }
+}
+
 .burger-menu {
     display: flex;
     align-items: stretch;

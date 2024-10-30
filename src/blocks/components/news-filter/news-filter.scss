@@ -1,0 +1,44 @@
+.news-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 125px;
+        min-height: 49px;
+        background-color: rgba(51, 93, 152, 0.1);
+        padding: 10px 21px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 550;
+        line-height: 1em;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: $c-accent;
+        border-right: 1px solid #B2BCBC;
+        border-color: #B2BCBC;
+        transition: all $tr-time;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:hover,
+        &.active {
+            color: $c-white;
+            background-color: $c-accent;
+            border-color: $c-accent;
+        }
+    }
+}

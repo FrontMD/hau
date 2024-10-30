@@ -25,7 +25,7 @@ mixin menu-list(props= defaultMenuListProps)
         }
 
     ul.menu-list(class= checkProps.classes data-js="menuList")&attributes(attributes)
-        -let count = 0
+        -let count = 0 + checkProps.coef
         - while (count < checkProps.links.length)
             a.menu-list__item(href="index.html" data-js="menuListItem" data-index=count)
                 span.menu-list__text!= checkProps.links[count]

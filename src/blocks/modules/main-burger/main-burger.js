@@ -11,8 +11,10 @@ function mainBurger() {
         lockBody()
     })
 
-    menuCloseBtn.addEventListener('click', () => {
-        menu.classList.remove('active')
-        unlockBody()
-    })
+    if(menuCloseBtn) {
+        menuCloseBtn.addEventListener('click', () => {
+            menu.classList.remove('active')
+            unlockBody()
+        })
+    }
 }

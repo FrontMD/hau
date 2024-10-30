@@ -1,0 +1,29 @@
+-
+    const defaultNewsFilterProps = {
+        classes: '',
+        items: [
+            'Все новости',
+            'Общие',
+            'Практика',
+            'Дни открытых дверей',
+            'Конференции',
+            'Достижения'
+        ],
+    }
+
+mixin news-filter(props = defaultNewsFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsFilterProps.classes,
+            items: props.items ? props.items : defaultNewsFilterProps.items,
+        }
+
+    .news-filter(class=checkProps.classes)
+        ul.news-filter__list
+            each val, index in checkProps.items
+                li.news-filter__item(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
+        .period-select
+            .period-select__text Выбрать период
+            .period-select__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#`)
