@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <header class="site-header" data-js="siteHeader">
@@ -54,7 +54,7 @@
     </header>
     <main class="site-main">
       <div class="page">
-        <div class="sidebar-layout">
+        <div class="page-layout">
               <section class="history-intro">
                 <div class="history-intro__bg">
                   <picture> 
@@ -91,8 +91,12 @@
               </section>
               <div class="tabs-block tabs-block--mini history-timeline" data-js="tabsBlock">
                 <div class="tabs-block__tabs">
-                  <div class="tabs-block__tab tabs-block__tab--active" data-index="0" data-js="tabsBlockTab">Материально-техническое обеспечение и оснащённость образовательного процесса</div>
-                  <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab"> Индивидуальная работа с обучающимися</div>
+                  <div class="tabs-block__tab tabs-block__tab--active" data-index="0" data-js="tabsBlockTab">1970-1979</div>
+                  <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab">1980-1989</div>
+                  <div class="tabs-block__tab" data-index="2" data-js="tabsBlockTab">1990-1999</div>
+                  <div class="tabs-block__tab" data-index="3" data-js="tabsBlockTab">2000-2009</div>
+                  <div class="tabs-block__tab" data-index="4" data-js="tabsBlockTab">2010-2019</div>
+                  <div class="tabs-block__tab" data-index="5" data-js="tabsBlockTab">2020-2024</div>
                 </div>
                 <div class="tabs-block__slides">
                   <div class="tabs-block__slide tabs-block__slide--active" data-js="tabsBlockSlide">
@@ -199,7 +203,14 @@
                           </div>
                         </div>
                   </div>
-                  <div class="tabs-block__slide tabs-block__slide" data-js="tabsBlockSlide">тест2</div>
+                  <div class="tabs-block__slide tabs-block__slide" data-js="tabsBlockSlide">
+                        <div class="m-columns   ">
+                          <div class="m-columns__header text-editor"><h2>1990</h2></div>
+                          <div class="m-columns__main text-editor">
+                            <p>Вышел приказ № 135/3 от 4.05.90. «О передаче экспонатов выставки НТТ-87 в музей института» в целях профориентации и пропаганды научно-технических достижений института, для обновления экспозиции.</p><br><br><br><br><br><br>
+                          </div>
+                        </div>
+                  </div>
                 </div>
               </div>
         </div>
@@ -1347,6 +1358,6 @@
         <!--код модалок сюда-->
       </div>
     </noindex>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

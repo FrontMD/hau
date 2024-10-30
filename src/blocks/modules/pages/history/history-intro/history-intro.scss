@@ -26,6 +26,14 @@
     &__header,
     &__body {
         padding: 24px 78px 24px 35px;
+        @include max(mobile){
+            padding: 20px;
+        }
+    }
+    &__header{
+        @include max(mobile){
+            display: none;
+        }
     }
     &__body{
         padding-bottom: 100px;
@@ -40,6 +48,9 @@
         margin-bottom: 36px;
         .title__h1{
             font-size: 0.625em;
+            @include max(tablet) {
+                font-size: 1em;
+            }
         }
     }
 
@@ -57,25 +68,70 @@
 }
 
 .history-timeline{
+    .tabs-block__slides{
+        border:0;
+
+    }
     .m-columns{
         justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 28px;
+        margin-right: 28px;
+        @include max(laptop){
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @include max(mobile){
+            margin-left: 15px;
+            margin-right: 15px;
+        }
         &__main{
             max-width: 731px;
+            @include max(mobile){
+                padding-bottom: 0;
+            }
             &.text-editor p{
                 font-size: 24px;
                 line-height: 1.34em;
                 max-width: 621px;
+                @include max(mobile){
+                    font-size:1em;
+                }
             }
             padding-bottom: 85px;
         }
         &__header{
-            flex: 0 0 413px;
+
             h2{
                 font-size: 80px;
+                @include max(mobile){
+                    font-size:2em;
+                }
             }
         }
     }
     img{
         margin-bottom: 28px;
+    }
+}
+
+
+.page-layout{
+    padding: 220px 0 40px 100px;
+    @include max(laptop) {
+
+            padding: 159px 0 40px 70px;
+
+    }
+    @include max(tablet) {
+
+            padding: 71px 0 40px;
+
+    }
+    @include max(mobile) {
+
+        padding: 63px 0 40px;
+
     }
 }
