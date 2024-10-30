@@ -70,7 +70,6 @@
 
     &__slides {
         margin-top: 35px;
-        border-top: 1px solid $c-border;
     }
 
     &__slide {
@@ -81,12 +80,13 @@
         }
     }
 
-    &--mini{
-        .tabs-block__tab{
+    &--mini {
+        .tabs-block__tab {
             font-size: 14px;
             width: auto;
             line-height: 1em;
             min-height: 1em;
+
             @include max(mobile) {
                 min-width: 120px;
             }
