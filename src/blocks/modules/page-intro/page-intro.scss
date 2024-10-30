@@ -3,10 +3,10 @@
     flex-direction: column;
     gap: 100px;
     //min-height: 380px;
-    padding: 24px 33px 40px;
+    padding: 24px 28px 40px;
 
     @include max(laptop) {
-        padding: 24px 25px 40px;
+        padding: 24px 20px 40px;
         //min-height: 250px;
         gap: 80px;
     }
@@ -14,6 +14,7 @@
     @include max(tablet) {
         gap: 50px;
         //min-height: 240px;
+        padding: 24px 15px 40px;
     }
 
     @include max(mobile) {

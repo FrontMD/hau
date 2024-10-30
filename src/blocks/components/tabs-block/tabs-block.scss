@@ -82,14 +82,12 @@
 
     &--mini {
         .tabs-block__tab {
+            min-width: 126px;
             font-size: 14px;
             width: auto;
             line-height: 1em;
             min-height: 1em;
 
-            @include max(mobile) {
-                min-width: 120px;
-            }
         }
     }
 }

@@ -1,0 +1,442 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Противодействие коррупции"
+
+block content
+    .page
+        .page-layout.page-layout--white
+            +page-intro({
+                title: '<span>Противодействие </span><br> коррупции',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Противодействие коррупции',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+                .after-page-intro
+                    +m-columns({
+                        classes: "m-columns--no-plpr m-columns--after-page-intro",
+                        title: '<h2>Антикоррупционная деятельность</h2>'
+                    })
+                        ul
+                            li Нормативные и иные акты в сфере противодействия коррупции
+                            li Методические материалы
+                            li Формы документов, связанных с противодействием коррупции, для заполнения
+                            li Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера
+                            li Комиссия по противодействию коррупции университета
+                            li Обратная связь для сообщений о фактах коррупции
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    titlePosLeft: 'false',
+                    title: '<h2>Нормативные и иные акты в сфере противодействия коррупции</h2>'
+                })
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Федеральные <br>законы</h2>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 3 декабря 2012 г. № 230-ФЗ «О контроле за соответствием расходов лиц, замещающих государственные должности, и иных лиц их доходам»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 7 мая 2013 г. № 79-ФЗ «О запрете отдельным категориям лиц открывать и иметь счета (вклады), хранить наличные денежные средства и ценности в иностранных банках, расположенных за пределами территории Российской Федерации, владеть и (или) пользоваться иностранными финансовыми инструментами»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 17 июля 2009 г. № 172-ФЗ «Об антикоррупционной экспертизе нормативных правовых актов и проектов нормативных правовых актов»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Указы Президента Российской Федерации</h2>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента РФ от 16 августа 2021 г. № 478 «О Национальном плане противодействия коррупции на 2021 - 2024 годы»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 12 августа 2002 г. № 885 «Об утверждении общих принципов служебного поведения государственных служащих»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 19 мая 2008 г. № 815 «О мерах по противодействию коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 18 мая 2009 г. № 557 «Об утверждении перечня должностей федеральной государственной службы, при назначении на которые граждане и при замещении которых федеральные государственные служащие обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 18 мая 2009 г. № 559 «О представлении гражданами, претендующими на замещение должностей федеральной государственной службы, и федеральными государственными служащими сведений о доходах, об имуществе и обязательствах имущественного характера» </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 21 сентября 2009 г. № 1065 «О проверке достоверности и полноты сведений, представляемых гражданами, претендующими на замещение должностей федеральной государственной службы, и федеральными государственными служащими, и соблюдения федеральными государственными служащими требований к служебному поведению» </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 1 июля 2010 г. № 821 «О комиссиях по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 21 июля 2010 г. № 925 «О мерах по реализации отдельных положений Федерального закона «О противодействии коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 2 апреля 2013 г. № 310 «О мерах по реализации отдельных положений Федерального закона «О контроле за соответствием расходов лиц, замещающих государственные должности, и иных лиц их доходам»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 2 апреля 2013 г. № 310 «О мерах по реализации отдельных положений Федерального закона «О контроле за соответствием расходов лиц, замещающих государственные должности, и иных лиц их доходам»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 23 июня 2014 г. № 460 «Об утверждении формы справки о доходах, расходах, об имуществе и обязательствах имущественного характера и внесении изменений в некоторые акты Президента Российской Федерации»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 08 марта 2015 г. № 120 «О некоторых вопросах противодействия коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 22 декабря 2015 г. № 650 «О порядке сообщения лицами, замещающими отдельные государственные должности Российской Федерации, должности федеральной государственной службы, и иными лицами о возникновении личной заинтересованности при исполнении должностных обязанностей, которая приводит или может привести к конфликту интересов, и о внесении изменений в некоторые акты Президента Российской Федерации»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Указ Президента Российской Федерации от 29 июня 2018 г. № 378 «О Национальном плане противодействия коррупции на 2020 — 2024 годы»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 5 марта 2018 г. № 228 «О реестре лиц, уволенных в связи с утратой доверия» коррупции на 2020 — 2024 годы»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Постановления Правительства Российской Федерации</h2>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 12 октября 2015 г. № 1088 «Об утверждении Правил уведомления о получении подарка Председателем Правительства Российской Федерации, заместителями Председателя Правительства Российской Федерации, Министром Российской Федерации, на которого возложена организация работы Правительственной комиссии по координации деятельности открытого правительства, руководителями федеральных министерств, федеральных служб и федеральных агентств, руководство деятельностью которых осуществляет Правительство Российской Федерации, федеральных служб и федеральных агентств, подведомственных этим федеральным министерствам, в связи с протокольными мероприятиями, служебными командировками и другими официальными мероприятиями, участие в которых связано с выполнением ими служебных (должностных) обязанностей, а также сдачи подарка, подачи заявления о его выкупе, рассмотрения вопросов об использовании подарка»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 21 января 2015 г. № 29 «Об утверждении Правил сообщения работодателем о заключении трудового или гражданско-правового договора на выполнение работ (оказание услуг) с гражданином, замещавшим должности государственной или муниципальной службы, перечень которых устанавливается нормативными правовыми актами Российской Федерации»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 9 января 2014 г. № 10 «О порядке сообщения отдельными категориями лиц о получении подарка в связи с их должностным положением или исполнением ими служебных (должностных) обязанностей, сдачи и оценки подарка, реализации (выкупа) и зачисления средств, вырученных от его реализации»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 5 июля 2013 г. № 568 «О распространении на отдельные категории граждан ограничений, запретов и обязанностей, установленных Федеральным законом „О противодействии коррупции“ и другими федеральными законами в целях противодействия  коррупционного характера своих супруга (супруги) и несовершеннолетних детей»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 13 марта 2013 г. № 208 «Об утверждении Правил представления лицом, поступающим на работу на должность руководителя федерального государственного учреждения, а также руководителем федерального государственногоучреждения сведений о своих доходах, об имуществе и обязательствах имущественного характера и о доходах, об имуществе и обязательствах имущественного характера и о доходах, об имуществе и обязательствах имущественного характера своих супруга (супруги) и несовершеннолетних детей»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 13 марта 2013 г. № 207 «Об утверждении Правил проверки достоверности и полноты сведений о доходах, об имуществе и обязательствах имущественного характера, представляемых гражданами, претендующими на замещение должностей руководителей федеральных государственных учреждений, и лицами, замещающими эти должности»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Иные акты</h2>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Национальный план противодействия коррупции на 2021-2024 годы, утвержденный Указом Президента Российской Федерации от 16.08.2021 № 478</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">План противодействия коррупции Минобрнауки России, утвержденный приказом Минобрнауки от 27.09.2021 № 885</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">План противодействия коррупции университета на 2021-2024 годы</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Изменения и дополнения в план противодействия коррупции университета на 2021-2024 годы</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ Минобрнауки России от 17.01.2022 № 31 «Об утверждении перечня должностей в организациях, созданных для выполнения задач, поставленных перед министерством науки и высшего образования российской федерации, при назначении на которые граждане и при замещении которых работники обязаны представлять сведения о своих доходах, расходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, расходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ Минобрнауки России от 26.07.2018 № 12н «Об утверждении порядка представления гражданами, претендующими на замещение должностей, и работниками, замещающими должности в организациях, созданных для выполнения задач, поставленных перед министерством науки и высшего образования российской федерации, сведений о своих доходах, расходах, об имуществе и обязательствах имущественного характера, а также сведений о доходах, расходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ Минобрнауки России от 28.11.2018 № 66н «Об утверждении порядка уведомления работодателя о фактах обращения в целях склонения работников, замещающих отдельные должности на основании трудового договора в организациях, созданных для выполнения задач, поставленных перед министерством науки и высшего образования российской федерации, к совершению коррупционных правонарушений»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о порядке сообщения должностными лицами университета о получении подарка в связи с их должностным положением или исполнением ими должностных обязанностей, сдаче и оценке подарка, реализации (выкупе) и зачислении средств, вырученных от его реализации</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ Минобрнауки России от 03.06.2019 № 51н «Об утверждении перечня должностей в организациях, созданных для выполнения задач, поставленных перед министерством науки и высшего образования российской федерации, при замещении которых работникам запрещается открывать и иметь счета (вклады), хранить наличные денежные средства и ценности в иностранных банках, расположенных за пределами территории российской федерации, владеть и (или) пользоваться иностранными финансовыми инструментами»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Кодекс этики и служебного поведения работников</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Концепция антикоррупционной политики в университете</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение об антикоррупционной политике университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Правила обмена деловыми подарками и знаками делового гостеприимства в университете</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о закупке товаров, работ, услуг для нужд университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ от 15.11.2023 № 1371-ОД «О мерах по исключению нарушений антимонопольного законодательства в университете»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение об организации системы внутреннего обеспечения соответствия требованиям антимонопольного законодательства (антимонопольный комплекс) в университете</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о выявлении и урегулировании конфликта интересов в университете</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                +m-columns({
+                    classes: "m-columns--no-plprm m-columns--width-green-border",
+                    titlePosLeft: 'false',
+                    title: '<h2>Методические материалы</h2>'
+                })
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: ' '
+                })
+
+                    .text-items-list
+                        +link-block({
+                            classes: '',
+                            text: 'Методические материалы по вопросам противодействия коррупции',
+                            linkText: 'Перейти',
+                            vMode: 'table',
+                            type: 'link'
+                        })
+                        +link-block({
+                            classes: '',
+                            text: 'Специализированный информационно-методический ресурс по вопросам противодействия коррупции на базе федеральной государственной информационной системы «Единая информационная система управления кадровым составом государственной гражданской службы Российской Федерации» (с возможностью перехода к информационной системе «Единая информационная система управления кадровым составом государственной гражданской службы Российской Федерации»',
+                            linkText: 'Перейти',
+                            vMode: 'table',
+                            type: 'link'
+                        })
+                        +link-block({
+                            classes: '',
+                            text: 'Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»',
+                            linkText: 'Перейти',
+                            vMode: 'table',
+                            type: 'link'
+                        })
+
+                +m-columns({
+                    classes: "m-columns--no-plpr m-columns--width-green-border",
+                    titlePosLeft: 'false',
+                    title: '<h2>Сведения о доходах</h2>'
+                })
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: ' '
+                })
+
+                    .text-items-list
+                        +link-block({
+                            classes: '',
+                            text: 'Перейти в подраздел «Сведения о доходах»',
+                            linkText: 'Перейти',
+                            vMode: 'table',
+                            type: 'link'
+                        })
+
+                +m-columns({
+                    classes: "m-columns--no-plpr m-columns--width-green-border",
+                    titlePosLeft: 'false',
+                    title: '<h2>Комиссия по противодействию коррупции университета</h2>'
+                })
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: ' '
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о комиссии по противодействию коррупции университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ о создании комиссии по противодействию коррупции</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+

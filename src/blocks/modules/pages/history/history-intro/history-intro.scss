@@ -76,7 +76,8 @@
         justify-content: space-between;
         padding-left: 0;
         padding-right: 0;
-        margin-left: 28px;
+        /*margin-left: 28px;
+        /*margin-left: 28px;
         margin-right: 28px;
         @include max(laptop){
             margin-left: 25px;
@@ -85,7 +86,7 @@
         @include max(mobile){
             margin-left: 15px;
             margin-right: 15px;
-        }
+        }*/
         &__main{
             max-width: 731px;
             @include max(mobile){
@@ -142,7 +143,15 @@
 .text-block-width-img{
     &--history{
         background: #fff;
-        padding: 50px 25px 35px;
+        padding: 50px 28px 35px;
+        @include max(laptop){
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @include max(mobile){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         .text-block-width-img__block .m-columns:first-child{
             border:0;
         }
@@ -158,7 +167,7 @@
         }
     }
     .m-columns{
-        padding: 36px 0;
+        padding: 0;
         justify-content: space-between;
         /*.text-editor h2{
             font-size: 45px;
