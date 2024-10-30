@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Музей при университете"
+
+block content
+    .page
+        .page-layout.page-layout--white
+            +page-intro({
+                title: '<span>Дополнительная</span><br> информация',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Поступающим',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Приемная комиссия',
+                            link: 'javascript:void(0);'
+                        }
+                        ,
+                        {
+                            name: 'Дополнительная информация',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })

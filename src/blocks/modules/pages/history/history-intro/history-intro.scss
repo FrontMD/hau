@@ -118,20 +118,61 @@
 
 
 .page-layout{
-    padding: 220px 0 40px 100px;
+    padding: 220px 0 0 100px;
     @include max(laptop) {
 
-            padding: 159px 0 40px 70px;
+            padding: 159px 0 0 70px;
 
     }
     @include max(tablet) {
 
-            padding: 71px 0 40px;
+            padding: 71px 0 0;
 
     }
     @include max(mobile) {
 
-        padding: 63px 0 40px;
+        padding: 63px 0 0;
 
+    }
+    &--white{
+        background: #fff;
+    }
+}
+
+.text-block-width-img{
+    &--history{
+        background: #fff;
+        padding: 50px 25px 35px;
+        .text-block-width-img__block .m-columns:first-child{
+            border:0;
+        }
+    }
+    &__block{
+        .m-columns__main{
+            max-width: 731px;
+        }
+        .m-columns__header{
+            max-width: 1000px;
+            flex: 0 0 calc(100% - 731px - 45px);
+            img + img{margin-top: 20px}
+        }
+    }
+    .m-columns{
+        padding: 36px 0;
+        justify-content: space-between;
+        .text-editor h2{
+            font-size: 45px;
+            @include max(mobile){
+                font-size: 2em;
+            }
+        }
+        .text-editor p{
+            font-size:24px;
+            line-height: 134%;
+            max-width: 550px;
+            @include max(mobile){
+                font-size: 1em;
+            }
+        }
     }
 }
