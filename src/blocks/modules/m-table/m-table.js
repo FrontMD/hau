@@ -2,7 +2,7 @@ function mTable() {
     const linesCount = getComputedStyle(document.body).getPropertyValue('--m-table-max-rows');
     const tables = document.querySelectorAll('[data-js="mTable"]')
     const textSegment = 200 // на каждые textSegment символов ячейки
-    const textCoef = 70 // прибавляем textCoef пикселей минимальной ширины на каждые textSegment символов ячейки
+    const textCoef = 150 // прибавляем textCoef пикселей минимальной ширины на каждые textSegment символов ячейки
     const titleSegment = 100 // на каждые textSegment символов заголовка
     const titleCoef = 200 // прибавляем headCoef пикселей минимальной ширины на каждые textSegment символов заголовка
 
@@ -38,8 +38,12 @@ function mTable() {
             let cellLineHeight = parseFloat(styles["line-height"].replace(/[a-zA-Z]/g, ""))
             let cellContent = cell.innerHTML
 
-            if(cellContent.length > textSegment) {
-                cell.style.minWidth = Math.round(parseInt(cellContent.length / textSegment * textCoef)) + 'px'
+            if(cellContent.length > textSegment && !cellContent.includes('m-table-link')) {
+                if(cellContent.length > 1000) {
+                    cell.style.minWidth = Math.round(parseInt(cellContent.length / textSegment * (textCoef * 0.5))) + 'px'    
+                } else {
+                    cell.style.minWidth = Math.round(parseInt(cellContent.length / textSegment * textCoef)) + 'px'
+                }
             }
 
             let cellContentWrap = document.createElement('div')

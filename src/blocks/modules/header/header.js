@@ -9,7 +9,7 @@ function headerHeight() {
     $(window).scroll(function() {
         const scroll = $(window).scrollTop();
 
-        if(scroll > 50) {
+        if(scroll > 110) {
             header.addClass("site-header--small");
         } else {
             header.removeClass("site-header--small");

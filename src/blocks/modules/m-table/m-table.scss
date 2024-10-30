@@ -65,6 +65,7 @@
             margin: 0;
             line-height: 1.02em;
             font-weight: 500;
+            color: $c-accent-light;
 
             @include max(mobile) {
                 font-size: 12px;
@@ -73,7 +74,7 @@
         }
 
         a:hover {
-            color: $c-accent-light;
+            color: $c-accent-middle;
         }
     }
 
