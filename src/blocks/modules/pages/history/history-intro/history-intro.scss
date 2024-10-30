@@ -92,12 +92,12 @@
                 padding-bottom: 0;
             }
             &.text-editor p{
-                font-size: 24px;
-                line-height: 1.34em;
+                /*font-size: 24px;
+                line-height: 1.34em;*/
                 max-width: 621px;
-                @include max(mobile){
+                /*@include max(mobile){
                     font-size:1em;
-                }
+                }*/
             }
             padding-bottom: 85px;
         }
@@ -160,7 +160,7 @@
     .m-columns{
         padding: 36px 0;
         justify-content: space-between;
-        .text-editor h2{
+        /*.text-editor h2{
             font-size: 45px;
             @include max(mobile){
                 font-size: 2em;
@@ -173,6 +173,6 @@
             @include max(mobile){
                 font-size: 1em;
             }
-        }
+        }*/
     }
 }
