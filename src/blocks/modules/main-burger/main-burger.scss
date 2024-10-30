@@ -205,6 +205,7 @@
     @include max(mobile) {
         position: relative;
         overflow: hidden;
+        padding-top: 15px;
     }
 
     &__back {
@@ -213,13 +214,17 @@
         @include max(mobile) {
             display: flex;
             align-items: center;
-            color: $c-white;
             align-self: flex-start;
-
+            gap: 10px;
+            color: $c-white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.02em;
 
             svg {
-                width: 25px;
-                height: 25px;
+                width: 15px;
+                height: 15px;
+                transform: rotate(180deg);
             }
         }
     }
@@ -246,13 +251,12 @@
         @include max(mobile) {
             position: absolute;
             left: -100%;
-            top: 30px;
-            height: calc(100% - 30px);
+            height: calc(100% - 15px);
             width: 100%;
             transition: left $tr-time;
             padding-right: 0;
             padding-left: 0;
-            padding-top: 0;
+            padding-top: 10px;
             z-index: 1;
             background-color: $c-accent;
 
@@ -281,7 +285,9 @@
 
             @include max(mobile) {
                 width: 100%;
+                height: calc(100% - 50px);
                 left: 0;
+                top: 50px;
             }
         }
 
@@ -299,6 +305,10 @@
                 flex: 0 0 calc(100vw / 3 - 15px);
             }
 
+            @include max(mobile) {
+                padding-top: 0;
+            }
+
             .menu-list {
                 width: calc(100% - 33px);
                 left: 0;
@@ -312,7 +322,13 @@
                     width: calc(100% - 10px);
                     left: 0;
                 }
+
+                @include max(mobile) {
+                    height: 100%;
+                    top: 0;
+                }
             }
+
         }
 
         &--2 {

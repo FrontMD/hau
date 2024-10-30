@@ -16,15 +16,15 @@
                         a(href="tel:+74921112222") +7 (492)111-22-22
             .main-burger__main
                 .burger-menu(data-js='multiMenu')
-                    .burger-menu__back(data-js='multiMenuBack')
-                        svg 
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                        | Назад
                     .burger-menu__level.burger-menu__level--1.active(data-js="multiMenuLevel" data-level="1")
                         +menu-list({
                             classes: 'active'
                         })
                     .burger-menu__level.burger-menu__level--2(data-js="multiMenuLevel" data-level="2")
+                        .burger-menu__back(data-js='multiMenuBack')
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                            | Назад
                         - let count1 = 12
                         -while (count1 > 0)
                             +menu-list({
@@ -47,6 +47,10 @@
 
                             - count1--
                     .burger-menu__level.burger-menu__level--3(data-js="multiMenuLevel" data-level="3")
+                        .burger-menu__back(data-js='multiMenuBack')
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                            | Назад
                         - let count2 = 12
                         -while (count2 > 0)
                             +menu-list({
