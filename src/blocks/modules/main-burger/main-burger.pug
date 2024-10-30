@@ -26,6 +26,7 @@
                                 use(xlink:href=`img/sprites/sprite.svg#link_angle`)
                             | Назад
                         - let count1 = 12
+                        - let counts1 = 1
                         -while (count1 > 0)
                             +menu-list({
                                 links: [
@@ -51,11 +52,11 @@
                             svg 
                                 use(xlink:href=`img/sprites/sprite.svg#link_angle`)
                             | Назад
-                        - let count2 = 12
+                        - let count2 = 39
                         -while (count2 > 0)
                             +menu-list({
                                 links: [
-                                    `Индекс 3-${12 - count2}`,
+                                    `Индекс 3-${39 - count2}`,
                                     "Поступающим",
                                     "Обучающимся",
                                     "Структура",
@@ -69,7 +70,7 @@
                                     "Противодействие коррупции",
                                     "Новости"
                                 ]
-                            })(data-index= 12 - count2)
+                            })(data-index= 39 - count2)
 
                             - count2--
     .main-burger__line

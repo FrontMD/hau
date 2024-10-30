@@ -6,6 +6,7 @@
     padding: 12px 0;
     background-color: $c-white;
     z-index: 80;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     @include max(mobile) {
         padding: 8px 0;
@@ -129,27 +130,18 @@
         }
     }
 
-    /* @include max(laptop) {
-            min-height: 135px;
-        }
-
-        @include max(tablet) {
-            min-height: 48px;
-
-        }
-    
-    
-    &--small &__container {
-        min-height: 90px;
-
-        @include max(laptop) {
-            min-height: 80px;
-        }
-
-        @include max(tablet) {
-            min-height: 48px;
-        }
-    }*/
+    &__menu {
+        display: none !important;
+        position: absolute;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: calc(100vh - 220px);
+        background-color: rgba(0, 0, 0, 0.54);
+    }
 
     &--small .nav-link {
 
@@ -160,6 +152,10 @@
         &__icon {
             margin-bottom: 0 !important;
         }
+    }
+
+    &--small &__menu {
+        height: calc(100vh - 94px);
     }
 
 }

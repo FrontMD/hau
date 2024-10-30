@@ -1,0 +1,18 @@
+-
+    const defaultNewsListProps = {
+        classes: '',
+    }
+
+mixin news-list(props = defaultNewsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsListProps.classes,
+        }
+
+    section.news-list
+        .m-container
+            +news-filter
+            .news-list__items
+
+
+
