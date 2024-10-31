@@ -22,8 +22,4 @@ mixin news-filter(props = defaultNewsFilterProps)
         ul.news-filter__list
             each val, index in checkProps.items
                 li.news-filter__item(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
-        .period-select
-            .period-select__text Выбрать период
-            .period-select__icon
-                svg
-                    use(xlink:href=`img/sprites/sprite.svg#`)
+        +period-select

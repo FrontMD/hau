@@ -1,0 +1,16 @@
+-
+    const defaultPeriodSelectProps = {
+        classes: '',
+    }
+
+mixin period-select(props = defaultPeriodSelectProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPeriodSelectProps.classes
+        }
+
+    .period-select
+        .period-select__text Выбрать период
+        .period-select__icon
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#date`)

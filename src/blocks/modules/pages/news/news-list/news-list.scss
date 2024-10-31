@@ -1,1 +1,29 @@
-.news-list {}
+.news-list {
+    padding-bottom: 140px;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 0.91em;
+        letter-spacing: -0.044em;
+        color: $c-accent;
+    }
+
+    &__pagination {
+        margin-top: 28px;
+        margin-left: auto;
+    }
+}

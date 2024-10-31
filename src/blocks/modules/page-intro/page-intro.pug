@@ -10,10 +10,10 @@ mixin page-intro(props = defaultPageIntroProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultPageIntroProps.classes,
             title: props.title ? props.title : defaultPageIntroProps.title,
-            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPageIntroProps.breadcrumbs,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPageIntroProps.breadcrumbs
         }
 
-    section.page-intro
+    section.page-intro(class= classes)
         +breadcrumbs(checkProps.breadcrumbs)
         .page-intro__content
             +title({

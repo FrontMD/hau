@@ -1,12 +1,28 @@
 -
     const defaultNewsCardProps = {
         classes: '',
+        img: 'img/news/news_1.webp',
+        title: 'Студентам университета рассказали о&nbsp;противодействии коррупции',
+        date: '04 сентября 2024',
+        desc: 'Работа семинара осуществлялась в дистанционном формате на платформе zoom, что позволило посетить мероприятие всем желающим. Участниками семинара стали более 100 студентов и преподавателей.'
     }
 
 mixin news-card(props = defaultNewsCardProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultNewsCardProps.classes,
+            img: props.img ? props.img : defaultNewsCardProps.img,
+            title: props.title ? props.title : defaultNewsCardProps.title,
+            date: props.date ? props.date : defaultNewsCardProps.date,
+            desc: props.desc ? props.desc : defaultNewsCardProps.desc,
         }
 
     .news-card(class=checkProps.classes)
+        .news-card__img 
+            img(src=checkProps.img alt="")
+        .news-card__content
+            .news-card__title!= checkProps.title
+            .news-card__date!= checkProps.date
+            .news-card__footer 
+                .news-card__desc.text-editor!= checkProps.desc
+                +btn-plus

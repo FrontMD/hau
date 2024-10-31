@@ -1,0 +1,19 @@
+-
+    const defaultBtnPlusProps = {
+        classes: '',
+        name: 'Подробнее',
+    }
+
+mixin btn-plus(props = defaultBtnPlusProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBtnPlusProps.classes,
+            name: props.name ? props.name : defaultNewsCardProps.name,
+        }
+
+    a.btn-plus(class=checkProps.classes href="#")
+        span.btn-plus__text!= checkProps.name
+        span.btn-plus__icon 
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#plus`)
+

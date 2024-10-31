@@ -1,18 +1,50 @@
 -
     const defaultNewsListProps = {
         classes: '',
+        titleMode: false,
+        title: 'Наши <br>мероприятия',
     }
 
 mixin news-list(props = defaultNewsListProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultNewsListProps.classes,
+            titleMode: props.titleMode ? props.titleMode : defaultNewsListProps.titleMode,
+            title: props.title ? props.title : defaultNewsListProps.title
         }
 
     section.news-list
         .m-container
-            +news-filter
+            - if(checkProps.titleMode)
+                .news-list__header
+                    h2.news-list__title!= checkProps.title
+                    +period-select
+            - else
+                +news-filter
             .news-list__items
+                +news-card()
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_2.webp',
+                    title: 'Объявлены победители Международного конкурса социальной антикоррупционной рекламы «Всем миром против коррупции»',
+                    date: '16 октября 2024',
+                    desc: 'Свои работы на конкурс прислали более 120 человек. Это школьники и студенты из разных стран мира: России, Китая, Белоруссии, Казахстана.'
+                })
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_3.webp',
+                    title: 'Международная антикоррупционная научно-образовательная конференция «Правда, доверие, прозрачность»',
+                    date: '18 ноября 2024',
+                    desc: 'Приглашаем студентов и преподавателей российских и зарубежных вузов, принять участие в Международной антикоррупционной научно-образовательной конференции «Правда, доверие, прозрачность»'
+                })
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_4.webp',
+                    title: 'Выбраны победители отборочного тура Международного молодежного конкурса социальной антикоррупционной рекламы «Вместе против коррупции!»',
+                    date: '26 декабря  2024',
+                    desc: 'Работа семинара осуществлялась в дистанционном формате на платформе zoom, что позволило посетить мероприятие всем желающим. Участниками семинара стали более 100 студентов и преподавателей.'
+                })
+            +pagination({classes: 'news-list__pagination'})
 
 
 

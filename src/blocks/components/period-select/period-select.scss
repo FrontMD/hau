@@ -1,0 +1,27 @@
+.period-select {
+    display: flex;
+    background-color: $c-white;
+    align-items: center;
+    gap: 42px;
+    padding-left: 19px;
+    color: $c-accent;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.02em;
+    cursor: pointer;
+
+    &__icon {
+        width: 53px;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $c-white;
+        background-color: $c-accent-dark;
+
+        svg {
+            width: 20px;
+            height: 17.63px;
+        }
+    }
+}
