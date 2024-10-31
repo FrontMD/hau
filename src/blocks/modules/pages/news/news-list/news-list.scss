@@ -1,6 +1,14 @@
 .news-list {
     padding-bottom: 140px;
 
+    @include max(laptop) {
+        padding-bottom: 100px;
+    }
+
+    @include max(tablet) {
+        padding-bottom: 60px;
+    }
+
     &__items {
         display: flex;
         flex-direction: column;
@@ -12,6 +20,12 @@
         display: flex;
         justify-content: space-between;
 
+        @include max(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
     }
 
     &__title {
@@ -20,13 +34,21 @@
         line-height: 0.91em;
         letter-spacing: -0.044em;
         color: $c-accent;
+
+        @include max(laptop) {
+            font-size: 40px;
+        }
+
+        @include max(mobile) {
+            font-size: 22px;
+        }
     }
 
     &__pagination {
         margin-top: 28px;
-        margin-left: auto;
     }
-    &--section{
+
+    &--section {
         padding-top: 40px;
     }
 }

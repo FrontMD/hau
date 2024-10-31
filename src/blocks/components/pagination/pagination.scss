@@ -1,9 +1,15 @@
 .pagination {
     width: fit-content;
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
     gap: 5px;
+    width: 100%;
+
+    @include max(mobile) {
+        justify-content: center;
+    }
 
     &__page {
         display: flex;
@@ -20,6 +26,12 @@
         transition: 0.3s;
         text-decoration: none;
 
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+        }
+
         &.active,
         &:hover {
             background-color: $c-accent;
@@ -35,6 +47,11 @@
         height: 49px;
         background-color: #C1D3C9;
         color: $c-blue;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+        }
 
         svg {
             width: 5px;
