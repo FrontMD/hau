@@ -176,6 +176,32 @@ table {
 	cursor: pointer;
 }
 
+.page-layout {
+	padding: 220px 0 0 100px;
+
+	@include max(laptop) {
+
+		padding: 159px 0 0 70px;
+
+	}
+
+	@include max(tablet) {
+
+		padding: 71px 0 0;
+
+	}
+
+	@include max(mobile) {
+
+		padding: 63px 0 0;
+
+	}
+
+	&--white {
+		background: #fff;
+	}
+}
+
 .text-editor {
 	color: rgba(1, 50, 32, 0.4);
 

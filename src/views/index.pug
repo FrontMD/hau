@@ -137,16 +137,27 @@ block content
                     tag: 'h1',
                     text: 'Страницы'
                 })
+
                 +title({
                     classes: 'pages-list__subtitle',
                     tag: 'h2',
                     text: 'Университет'
                 })
                 .pages-list__links
-                    a.pages-list__link.pages-list__link--check(href="history.html" target="_blank") История университета
-                    a.pages-list__link.pages-list__link--check(href="museum.html" target="_blank") Музей при университете
+                    a.pages-list__link.pages-list__link--ready(href="history.html" target="_blank") История университета
+                    a.pages-list__link.pages-list__link--ready(href="museum.html" target="_blank") Музей при университете
                     a.pages-list__link.pages-list__link--work(href="news-list.html" target="_blank") Новости
                     a.pages-list__link.pages-list__link--postponed(href="news-detailed.html" target="_blank") Новости (детальная)
+                    a.pages-list__link.pages-list__link--work(href="antiterror.html" target="_blank") Антитеррористическая и антиэкстремистская деятельность
+                    a.pages-list__link.pages-list__link--work(href="corruption.html" target="_blank") Противодействие коррупции
+
+                +title({
+                    classes: 'pages-list__subtitle',
+                    tag: 'h2',
+                    text: 'Абитуриенту / Поступающему'
+                })
+                .pages-list__links
+                    a.pages-list__link.pages-list__link--check(href="dop-info.html" target="_blank") Дополнительная информация
 
                 +title({
                     classes: 'pages-list__subtitle',
@@ -176,10 +187,8 @@ block content
                     a.pages-list__link.pages-list__link--ready(href="opisanie-programmi.html" target="_blank") Об описании образовательной программы
                     a.pages-list__link.pages-list__link--ready(href="vakantnie-mesta.html" target="_blank") Вакантные места для приёма (перевода) обучающихся
                     a.pages-list__link.pages-list__link--ready(href="struktura.html" target="_blank") Структура и органы управления образовательной организацией
-
-
-                    a.pages-list__link.pages-list__link--check(href="trudoustroistvo-vipusknikov.html" target="_blank") О трудоустройстве выпускников
-                    a.pages-list__link.pages-list__link--check(href="pedagogicheskiy-sostav.html" target="_blank") Педагогический состав
+                    a.pages-list__link.pages-list__link--ready(href="trudoustroistvo-vipusknikov.html" target="_blank") О трудоустройстве выпускников
+                    a.pages-list__link.pages-list__link--ready(href="pedagogicheskiy-sostav.html" target="_blank") Педагогический состав
 
                 +title({
                     classes: 'pages-list__subtitle',

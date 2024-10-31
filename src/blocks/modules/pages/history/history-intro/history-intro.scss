@@ -4,7 +4,7 @@
     padding-bottom: 35px;
     margin-bottom: 40px;
 
-    .m-container{
+    .m-container {
         margin-left: 0;
     }
 
@@ -26,16 +26,19 @@
     &__header,
     &__body {
         padding: 24px 78px 24px 35px;
-        @include max(mobile){
+
+        @include max(mobile) {
             padding: 20px;
         }
     }
-    &__header{
-        @include max(mobile){
+
+    &__header {
+        @include max(mobile) {
             display: none;
         }
     }
-    &__body{
+
+    &__body {
         padding-bottom: 100px;
     }
 
@@ -46,15 +49,17 @@
     &__title {
         position: relative;
         margin-bottom: 36px;
-        .title__h1{
+
+        .title__h1 {
             font-size: 0.625em;
+
             @include max(tablet) {
                 font-size: 1em;
             }
         }
     }
 
-    &__text p{
+    &__text p {
         font-size: 24px;
         line-height: 134%;
         margin-bottom: 24px;
@@ -67,15 +72,17 @@
     }
 }
 
-.history-timeline{
-    .tabs-block__slides{
-        border:0;
+.history-timeline {
+    .tabs-block__slides {
+        border: 0;
 
     }
-    .m-columns{
+
+    .m-columns {
         justify-content: space-between;
         padding-left: 0;
         padding-right: 0;
+
         /*margin-left: 28px;
         /*margin-left: 28px;
         margin-right: 28px;
@@ -87,12 +94,14 @@
             margin-left: 15px;
             margin-right: 15px;
         }*/
-        &__main{
+        &__main {
             max-width: 731px;
-            @include max(mobile){
+
+            @include max(mobile) {
                 padding-bottom: 0;
             }
-            &.text-editor p{
+
+            &.text-editor p {
                 /*font-size: 24px;
                 line-height: 1.34em;*/
                 max-width: 621px;
@@ -100,73 +109,72 @@
                     font-size:1em;
                 }*/
             }
+
             padding-bottom: 85px;
         }
-        &__header{
 
-            h2{
+        &__header {
+
+            h2 {
                 font-size: 80px;
-                @include max(mobile){
-                    font-size:2em;
+
+                @include max(mobile) {
+                    font-size: 2em;
                 }
             }
         }
     }
-    img{
+
+    img {
         margin-bottom: 28px;
     }
 }
 
-
-.page-layout{
-    padding: 220px 0 0 100px;
-    @include max(laptop) {
-
-            padding: 159px 0 0 70px;
-
-    }
-    @include max(tablet) {
-
-            padding: 71px 0 0;
-
-    }
-    @include max(mobile) {
-
-        padding: 63px 0 0;
-
-    }
-    &--white{
+.text-block-width-img {
+    &--history {
         background: #fff;
-    }
-}
+        padding: 0 28px 35px;
 
-.text-block-width-img{
-    &--history{
-        background: #fff;
-        padding: 50px 28px 35px;
-        @include max(laptop){
+        @include max(laptop) {
             padding-left: 25px;
             padding-right: 25px;
         }
-        @include max(mobile){
+
+        @include max(mobile) {
             padding-left: 15px;
             padding-right: 15px;
         }
-        .text-block-width-img__block .m-columns:first-child{
-            border:0;
+
+        .text-block-width-img__block .m-columns {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .text-block-width-img__block .m-columns:first-child {
+            border: 0;
         }
     }
-    &__block{
-        .m-columns__main{
+
+    &__block {
+        .m-columns__main {
             max-width: 731px;
         }
-        .m-columns__header{
+
+        .m-columns__header {
             max-width: 1000px;
             flex: 0 0 calc(100% - 731px - 45px);
-            img + img{margin-top: 20px}
+
+            img {
+                margin-bottom: 0;
+            }
+
+            img+img {
+                margin-top: 20px
+            }
         }
     }
-    .m-columns{
+
+    .m-columns {
         padding: 0;
         justify-content: space-between;
         /*.text-editor h2{
