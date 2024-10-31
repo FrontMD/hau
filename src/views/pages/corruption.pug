@@ -7,6 +7,7 @@ block content
     .page
         .page-layout
             +page-intro({
+                classes: 'white-bg',
                 title: '<span>Противодействие </span><br> коррупции',
                 breadcrumbs: {
                     items: [
@@ -21,7 +22,8 @@ block content
                     ],
                 }
             })
-                .after-page-intro
+            .after-page-intro.white-bg
+                .m-container
                     +m-columns({
                         classes: "m-columns--no-plpr m-columns--after-page-intro",
                         title: '<h2>Антикоррупционная деятельность</h2>'
@@ -33,11 +35,19 @@ block content
                             li Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера
                             li Комиссия по противодействию коррупции университета
                             li Обратная связь для сообщений о фактах коррупции
-                +m-columns({
-                    classes: "m-columns--no-plpr",
-                    titlePosLeft: 'false',
-                    title: '<h2>Нормативные и иные акты в сфере противодействия коррупции</h2>'
-                })
+                        br
+                        br
+            +news-list({
+                titleMode: true,
+                classes: "news-list--section"
+            })
+            .m-container.white-bg
+                .after-page-intro.white-bg
+                    +m-columns({
+                        classes: "m-columns--no-plpr m-columns--after-page-intro",
+                        title: '<h2>Нормативные и иные акты в сфере противодействия коррупции<br><br><br><br></h2>'
+                    })
+
                 +m-columns({
                     classes: "m-columns--no-plpr",
                     title: '<h2>Федеральные <br>законы</h2>'
@@ -362,11 +372,11 @@ block content
                     </svg></span></a>
                     </div>
 
-                +m-columns({
-                    classes: "m-columns--no-plprm m-columns--width-green-border",
-                    titlePosLeft: 'false',
-                    title: '<h2>Методические материалы</h2>'
-                })
+                .after-page-intro.white-bg
+                    +m-columns({
+                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
+                        title: '<h2>Методические <br>материалы<br><br><br><br></h2>'
+                    })
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
@@ -396,11 +406,11 @@ block content
                             type: 'link'
                         })
 
-                +m-columns({
-                    classes: "m-columns--no-plpr m-columns--width-green-border",
-                    titlePosLeft: 'false',
-                    title: '<h2>Сведения о доходах</h2>'
-                })
+                .after-page-intro.white-bg
+                    +m-columns({
+                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
+                        title: '<h2>Сведения о доходах<br><br><br><br></h2>'
+                    })
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
@@ -415,12 +425,11 @@ block content
                             vMode: 'table',
                             type: 'link'
                         })
-
-                +m-columns({
-                    classes: "m-columns--no-plpr m-columns--width-green-border",
-                    titlePosLeft: 'false',
-                    title: '<h2>Комиссия по противодействию коррупции университета</h2>'
-                })
+                .after-page-intro.white-bg
+                    +m-columns({
+                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
+                        title: '<h2>Комиссия по противодействию коррупции университета<br><br><br><br></h2>'
+                    })
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
