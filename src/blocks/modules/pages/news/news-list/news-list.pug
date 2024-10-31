@@ -13,7 +13,7 @@ mixin news-list(props = defaultNewsListProps)
             title: props.title ? props.title : defaultNewsListProps.title
         }
 
-    section.news-list
+    section.news-list(class=checkProps.classes)
         .m-container
             - if(checkProps.titleMode)
                 .news-list__header

@@ -13,7 +13,7 @@ mixin page-intro(props = defaultPageIntroProps)
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPageIntroProps.breadcrumbs
         }
 
-    section.page-intro(class= classes)
+    section.page-intro(class= checkProps.classes)
         +breadcrumbs(checkProps.breadcrumbs)
         .page-intro__content
             +title({

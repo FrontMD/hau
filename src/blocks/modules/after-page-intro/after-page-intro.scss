@@ -1,13 +1,6 @@
 
 
 .after-page-intro{
-    margin-bottom:1px;
     border-top:1px solid #ccc;
 }
 
-.inner-page{
-    padding: 0 28px;
-    @include max(laptop){
-        padding: 0 20px;
-    }
-}

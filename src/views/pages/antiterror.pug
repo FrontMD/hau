@@ -5,9 +5,10 @@ block variables
 
 block content
     .page
-        .page-layout.page-layout--white
+        .page-layout
             +page-intro({
                 title: '<span>Антитеррористическая</span><br> и антиэкстремистская деятельность',
+                classes: "white-bg",
                 breadcrumbs: {
                     items: [
                         {
@@ -21,7 +22,7 @@ block content
                     ],
                 }
             })
-            .after-page-intro
+            .after-page-intro.white-bg
                 .m-container
                     +m-columns({
                         classes: "m-columns--after-page-intro m-columns--no-plpr",
@@ -36,7 +37,7 @@ block content
                         classes: "m-columns--after-page-intro m-columns--no-plpr",
                         title: '<h2>Информация о противодействии терроризму и экстремизму</h2>'
                     })
-            .m-container
+            .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
@@ -69,4 +70,7 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-            +news-list({titleMode: true})
+            +news-list({
+                titleMode: true,
+                classes: "news-list--section"
+            })
