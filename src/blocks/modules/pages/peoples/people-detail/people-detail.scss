@@ -1,0 +1,50 @@
+.people-detail{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: stretch;
+    @include max(laptop){
+        margin-top: 45px;
+    }
+    @include max(tablet){
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    @include max(mobile){
+        margin-top: 0;
+    }
+    &__img{
+        flex: 0 0 851px;
+        @include max(large){
+            flex: 1 1 auto;
+            max-width: 851px;
+        }
+        @include max(tablet){
+            max-width: 600px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex: 1 1 auto;
+        max-width: 1044px;
+        padding: 22px 30px 54px 40px;
+        @include max(large){
+            flex: 0 0 700px;
+        }
+        @include max(laptop){
+            flex: 0 0 600px;
+            padding: 25px;
+        }
+        @include max(tablet){
+            max-width: 600px;
+        }
+        @include max(mobile){
+            padding: 15px;
+        }
+        .text-editor{
+            max-width: 500px;
+        }
+    }
+}

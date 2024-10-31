@@ -14,6 +14,15 @@
         flex-direction: column;
         gap: 28px;
         margin-top: 20px;
+        @include max(tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 3.2%;
+        }
+        @include max(mobile){
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__header {

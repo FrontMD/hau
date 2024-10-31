@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Инвалидам и лицам с ОВЗ"
+
+block content
+    .page
+        .page-layout
+            <section class="page-intro">
+                <div class="breadcrumbs  breadcrumbs--dark">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span></li>
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Преподаватели</a><span class="breadcrumbs__separator"></span></li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Мищенко Сергей Сергеевич</span></li>
+                    </ul>
+                </div>
+
+            </section>
+            +people-detail({classes: 'white-bg'})
