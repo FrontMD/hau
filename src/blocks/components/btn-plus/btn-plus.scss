@@ -7,6 +7,10 @@
     line-height: 1.02em;
     color: $c-accent;
 
+    @include max(laptop) {
+        gap: 16px;
+    }
+
     &__icon {
         display: flex;
         align-items: center;
@@ -16,9 +20,19 @@
         border: 1px solid rgba(4, 65, 43, 0.2);
         border-radius: 100%;
 
+        @include max(laptop) {
+            width: 40px;
+            height: 40px;
+        }
+
         svg {
             width: 14px;
             height: 14px;
+
+            @include max(laptop) {
+                width: 10.566px;
+                height: 10.566px;
+            }
         }
     }
 }

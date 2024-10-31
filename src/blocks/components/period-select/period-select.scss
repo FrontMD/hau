@@ -1,5 +1,6 @@
 .period-select {
     display: flex;
+    flex: 0 0 244px;
     background-color: $c-white;
     align-items: center;
     gap: 42px;
@@ -10,6 +11,16 @@
     line-height: 1.02em;
     cursor: pointer;
 
+    @include max(laptop) {
+        flex-basis: auto;
+    }
+
+    @include max(mobile) {
+        gap: 20px;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+
     &__icon {
         width: 53px;
         height: 53px;
@@ -19,9 +30,15 @@
         color: $c-white;
         background-color: $c-accent-dark;
 
+        @include max(mobile) {
+            width: 45px;
+            height: 45px;
+
+        }
+
         svg {
-            width: 20px;
-            height: 17.63px;
+            width: 17px;
+            height: 14.9855px;
         }
     }
 }

@@ -2,11 +2,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
+
+    @include max(laptop) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 
     &__list {
         list-style-type: none;
         display: flex;
         align-items: center;
+        flex: 1 1 auto;
+        overflow-y: auto;
+
+        @include max(laptop) {
+            margin-right: -20px;
+            width: calc(100% + 20px);
+        }
     }
 
     &__item {
@@ -14,6 +28,7 @@
         align-items: center;
         justify-content: center;
         width: fit-content;
+        flex-shrink: 0;
         min-width: 125px;
         min-height: 49px;
         background-color: rgba(51, 93, 152, 0.1);
