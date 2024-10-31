@@ -1,24 +1,31 @@
 .period-select {
-    display: flex;
+    position: relative;
     flex: 0 0 244px;
     background-color: $c-white;
-    align-items: center;
-    gap: 42px;
     padding-left: 19px;
     color: $c-accent;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.02em;
-    cursor: pointer;
 
     @include max(laptop) {
         flex-basis: auto;
     }
 
     @include max(mobile) {
-        gap: 20px;
         padding-left: 15px;
         font-size: 14px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        cursor: pointer;
+
+        @include max(mobile) {
+            gap: 20px;
+        }
     }
 
     &__icon {
@@ -41,4 +48,40 @@
             height: 14.9855px;
         }
     }
+
+    &__calendar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: $c-white;
+        padding: 0px 0px 10px;
+        box-shadow: 0px 5px 50px 25px rgba(0, 0, 0, 0.03);
+
+        .air-datepicker {
+            order: -1;
+            border-radius: 0;
+        }
+    }
+
+    &__input {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+}
+
+.air-datepicker {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

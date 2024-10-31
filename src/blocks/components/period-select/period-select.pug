@@ -9,8 +9,14 @@ mixin period-select(props = defaultPeriodSelectProps)
             classes: props.classes ? props.classes : defaultPeriodSelectProps.classes
         }
 
-    .period-select
-        .period-select__text Выбрать период
-        .period-select__icon
-            svg
-                use(xlink:href=`img/sprites/sprite.svg#date`)
+    .period-select(class = checkProps.classes data-js="periodSelect")
+        .period-select__header
+            .period-select__text Выбрать период
+            .period-select__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#date`)
+        .period-select__calendar
+            input.period-select__input(data-js="periodSelectInput")
+            .period-select__btns
+                button.period-select__btn Закрыть
+                button.period-select__btn Применить

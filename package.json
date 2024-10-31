@@ -86,5 +86,8 @@
         "*.js": [
             "eslint --fix"
         ]
+    },
+    "dependencies": {
+        "air-datepicker": "^3.5.3"
     }
 }

@@ -135,12 +135,21 @@
                           <li class="news-filter__item  ">Конференции</li>
                           <li class="news-filter__item  ">Достижения</li>
                         </ul>
-                            <div class="period-select">
-                              <div class="period-select__text">Выбрать период</div>
-                              <div class="period-select__icon">
-                                <svg>
-                                  <use xlink:href="img/sprites/sprite.svg#date"></use>
-                                </svg>
+                            <div class="period-select" data-js="periodSelect">
+                              <div class="period-select__header">
+                                <div class="period-select__text">Выбрать период</div>
+                                <div class="period-select__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#date"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="period-select__calendar">
+                                <input class="period-select__input" data-js="periodSelectInput">
+                                <div class="period-select__btns">
+                                  <button class="period-select__btn">Закрыть</button>
+                                  <button class="period-select__btn">Применить</button>
+                                </div>
                               </div>
                             </div>
                       </div>

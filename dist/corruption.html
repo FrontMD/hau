@@ -145,12 +145,21 @@
                 <div class="m-container">
                   <div class="news-list__header">
                     <h2 class="news-list__title">Наши <br>мероприятия</h2>
-                        <div class="period-select">
-                          <div class="period-select__text">Выбрать период</div>
-                          <div class="period-select__icon">
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#date"></use>
-                            </svg>
+                        <div class="period-select" data-js="periodSelect">
+                          <div class="period-select__header">
+                            <div class="period-select__text">Выбрать период</div>
+                            <div class="period-select__icon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#date"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="period-select__calendar">
+                            <input class="period-select__input" data-js="periodSelectInput">
+                            <div class="period-select__btns">
+                              <button class="period-select__btn">Закрыть</button>
+                              <button class="period-select__btn">Применить</button>
+                            </div>
                           </div>
                         </div>
                   </div>
@@ -208,17 +217,13 @@
                           </div>
                         </div>
                   </div>
-                      <div class="pagination news-list__pagination">
-                        <div class="pagination__btn pagination__btn--prev">
+                      <div class="pagination news-list__pagination"><a class="pagination__btn pagination__btn--prev">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#angle_arrow"></use>
-                          </svg>
-                        </div><a class="pagination__page active" href="javascript:void(0);">1</a><a class="pagination__page" href="javascript:void(0);">2</a><a class="pagination__page" href="javascript:void(0);">3</a><a class="pagination__page" href="javascript:void(0);">4</a><a class="pagination__page" href="javascript:void(0);">5</a>
-                        <div class="pagination__btn pagination__btn--next">
+                          </svg></a><a class="pagination__page active" href="javascript:void(0);">1</a><a class="pagination__page" href="javascript:void(0);">2</a><a class="pagination__page" href="javascript:void(0);">3</a><a class="pagination__page" href="javascript:void(0);">4</a><a class="pagination__page" href="javascript:void(0);">5</a><a class="pagination__btn pagination__btn--next">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#angle_arrow"></use>
-                          </svg>
-                        </div>
+                          </svg></a>
                       </div>
                 </div>
               </section>
