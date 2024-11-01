@@ -1,0 +1,188 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Программа развития"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Программа </span><br> развития',
+                classes: "white-bg",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Программа развития',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            .after-page-intro.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--after-page-intro m-columns--no-plpr",
+                        title: '<h2>О программе</h2>'
+                    })
+                        p
+                         b Основой Программы развития университета до 2030 года является стратегия, разработанная коллективом университета в 2024 году с учётом национальных целей и стратегических задач развития России.
+                    +m-columns({
+                        classes: "m-columns--after-page-intro m-columns--no-plpr",
+                        title: '<h2>Миссия</h2>'
+                    })
+            .m-container.white-bg
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<p><b>Наша миссия — создавать умные системы и работающие механизмы для «зелёной» экономики, раскрывать таланты каждого в атмосфере единства технических наук и творчества.</b></p>'
+                })
+                    p Университет привлекает таланты и успешно соединяет творческие и технические направления, совмещает в обучении теорию и практику и учит студентов работать в командах — даёт навыки, действительно востребованные на рынке труда. Научная и инженерная работа вуза — воплощение в жизнь идей, которые полезны обществу и будут востребованы в «зелёной» экономике.<br><br>
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<p><b>Ценности университета</b></p><p>Командная работа, опережающее развитие, проектный подход, бережливое отношение к ресурсам, профессионализм, готовность к трансформациям, стремление сделать мир вокруг лучше, экологичнее и безопаснее.</p>'
+                })
+                    p
+                        b Стратегическая цель
+                    p Стратегическая цель — построить цифровой университет и новые инженерные школы для достижения лидерских позиций в подготовке кадров массовых профессий индустрии 4.0.
+
+                    p Университет сконцентрируется на развитии существующих, а также новых научных и технологических направлениях — экологическом инжиниринге и снижении углеродного следа, технологиях перспективного транспорта, создании систем транспортировки новых видов топлива, развитии систем адаптивной оптики для лазерных технологий, разработке перспективных аудиовизуальных технологий и новых видов цифровых изданий.<br><br>
+            .text-block-width-img
+                .text-block-width-img__block
+                    .m-columns
+                        .m-columns__header.text-editor
+                            img(src="img/programma-razvitia/1.jpg")
+                        .m-columns__main.text-editor
+                            h2 Стратегические проекты университета
+                            p В рамках Программы развития университет концентрируется на ключевых вызовах автомобильной и машиностроительной отраслей и инициирует стратегический проект «Доступный электромобиль» для «зелёной экономики».
+                    .m-columns
+                        .m-columns__header.text-editor
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NtGa5SF1NY4?si=76hupyno1p4ge3b5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        .m-columns__main.text-editor
+                            h2 Проект «Цифровые кафедры»
+                            p
+                                b Проект «Цифровые кафедры» направлен на получение студентами новых цифровых компетенций.
+
+                            p По итогам обучения студенты получают вторую квалификацию в сфере ИТ, дополнительно к квалификации по основной специальности.
+
+                            p Университет в рамках реализации проекта приглашает на обучение на «цифровой кафедре» студентов, в том числе и других университетов, очной и очно-заочной формы обучения бакалавриата 2-4 курсов, студентов специалитета 3-4 курсов и магистратуры 1 курса.
+                            p Студенты могут на безвозмездной основе пройти обучение на базе «цифровой кафедры» университета  по программам профессиональной переподготовки для ИТ-специальностей: «Разработка на платформе 1С: Предприятие», «Нейросетевые технологии», «3D моделирование» и для обучающихся не ИТ-специальностей: «Программирование 1С» и «Программирование на языке Python».
+
+                            p Объем всех программ профессиональной переподготовки составляет 252 часа, срок обучения - 9 месяцев. В ходе учебного процесса обучающиеся проходят 3 ассесмента (входной, промежуточный и итоговый) на платформе Университета Иннополис. После успешного прохождения итоговой аттестации обучающиеся получают новую квалификацию и диплом о профессиональной переподготовке.<br>Мы реализуем пять программ профессиональной переподготовки, на которых обучается 1962 студента университета, его филиалов и вузов-партнеров.
+            .after-page-intro.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--after-page-intro m-columns--no-plpr",
+                        title: '<h2>Партнеры программы</h2>'
+                    })
+            .m-container.white-bg
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<p>Заключены соглашения с организациями реального сектора экономики, обеспечивающих сотрудничество в рамках программ профессиональной переподготовки:</p><ul><li>Публичное акционерное общество «КАМАЗ»</li><li>ООО «АВТОТОР Холдинг Менеджмент»</li><li>Государственное унитарное предприятие города Москвы «Мосгортранс» (ГУП «Мосгортранс»)</li><li>Акционерное общество «Объединенная двигателестроительная корпорация (АО «ОДК»)</li><li>Публичное акционерное общество «Московская объединенная энергетическая компания» (ПАО «МОЭК)</li><li>АО «МПП имени В.В. Чернышева»</li><li>Акционерное общество «Турбокомплект»</li><li>ООО «Сеть дата-центров «Селектел»</li></ul>'
+                })
+                    p Заключены соглашения с организациями реального сектора экономики, обеспечивающих сотрудничество в рамках программ профессиональной переподготовки:
+                    ul
+                        li ООО «Аксиома-Софт»
+                        li ООО НПФ «Промавтоматика»
+                        li ООО «Гранд Проект»
+                        li ООО «Кодерлайн»
+                        li ООО «Софт-Юнити»
+                        li Федеральное государственное унитарное предприятие «Главный радиочастотный центр» (ПАО «ГРЧЦ»)
+                        li Акционерное общество «Лаборатория Касперского»
+                        li ООО «РЭДМЭДРОБОТ МСК»
+            .after-page-intro.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--after-page-intro m-columns--no-plpr",
+                        title: '<h2>Руководитель цифровой кафедры</h2>'
+                    })
+            .m-container.white-bg
+                .m-columns.m-columns--no-plpr
+                    +people-detail
+            +news-list({
+                titleMode: true,
+                classes: "news-list--section"
+            })
+            .after-page-intro.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--after-page-intro m-columns--no-plpr",
+                        title: '<h2>Дирекция по реализации программы развития</h2>'
+                    })
+                        p <span style="color:#99ADA6;">Адрес:</span> Сретенская ул., 23, Херсон <br><span style="color:#99ADA6;">E-mail:</span> <a href="mailto:programmrazvitia@xay.ru">programmrazvitia@xay.ru
+                        p <span style="color:#99ADA6;">Директор:</span> Мищенко Сергей Сергеевич <br><span style="color:#99ADA6;">Телефон:</span> <a href="tel:+79900595039">+7 (990) 059 50 39</a>
+                        br
+            .m-container.white-bg
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<p><b>Кураторы направлений в рамках программы развития</b></p>'
+                })
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
+                    br
+
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Документы</h2>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о комиссии по противодействию коррупции университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о Дирекции по реализации программы развития университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Положение о проведении конкурса на получение грантов имени В.Е. Фортова, направленных на поддержку лучших молодежных научных проектов</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 13.05.2021 № 729</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Приказ Министерства науки и высшего образования Российской Федерации от 31.05.2021 № 432</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Отчет о реализации Программы в 2022 году</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Рекомендации по итогам заседания Совета по поддержке программ развития университетов – участников программы стратегического академического лидерства 9-11 декабря 2022 г.</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+                    br
+                    br
+                    br

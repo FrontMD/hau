@@ -131,24 +131,25 @@
 }
 
 .text-block-width-img {
+    background: #fff;
+    padding: 0 28px 35px;
+
+    @include max(laptop) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @include max(mobile) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .text-block-width-img__block .m-columns {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     &--history {
-        background: #fff;
-        padding: 0 28px 35px;
 
-        @include max(laptop) {
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        @include max(mobile) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .text-block-width-img__block .m-columns {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
 
         .text-block-width-img__block .m-columns:first-child {
             border: 0;

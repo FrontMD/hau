@@ -1,21 +1,25 @@
 .people-detail {
-    margin-top: 80px;
-    margin-bottom: 40px;
+
     display: flex;
     align-items: stretch;
+    &--single{
+        margin-top: 80px;
+        margin-bottom: 40px;
+        @include max(laptop) {
+            margin-top: 45px;
+        }
 
-    @include max(laptop) {
-        margin-top: 45px;
+        @include max(tablet) {
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        @include max(mobile) {
+            margin-top: 0;
+        }
     }
 
-    @include max(tablet) {
-        flex-direction: column;
-        margin-top: 15px;
-    }
 
-    @include max(mobile) {
-        margin-top: 0;
-    }
 
     &__img {
         flex: 0 0 851px;
