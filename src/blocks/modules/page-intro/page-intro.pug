@@ -1,7 +1,7 @@
 -
     const defaultPageIntroProps = {
         classes: '',
-        title: '<span>Материально-техническое</span> обеспечение и оснащённость образовательного процесса',
+        title: '',
         breadcrumbs: {} 
     }
 
@@ -15,9 +15,10 @@ mixin page-intro(props = defaultPageIntroProps)
 
     section.page-intro(class= checkProps.classes)
         +breadcrumbs(checkProps.breadcrumbs)
-        .page-intro__content
-            +title({
-                tag: 'h1',
-                text: checkProps.title
-            })
-            block
+        - if(checkProps.title.length > 0)
+            .page-intro__content
+                +title({
+                    tag: 'h1',
+                    text: checkProps.title
+                })
+                block

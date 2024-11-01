@@ -1,0 +1,29 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Мищенко Сергей Сергеевич"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Преподаватели',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Мищенко Сергей Сергеевич',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            +people-detail({classes: 'white-bg'})

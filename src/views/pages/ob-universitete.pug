@@ -116,13 +116,24 @@ block content
 				h2.sidebar-layout__block-title Информация о контактных телефонах образовательной организации, об адресах электронной почты образовательной организации
 
 				.sidebar-layout__content
-					.gost-section.gost-section--bordered.text-editor
+					+m-columns({
+						title: '<h3>Контактные телефоны:</h3>'
+					})
 						p 
-							b Контактные телефоны: 
-								a(href="tel:+79900595039") +79900595039
-								<br>Факс: +7 (499) 111-11-11
-								<br>Адреса электронной почты: 
-									a(href="mailto:pk.khau@yandex.ru") pk.khau@yandex.ru
+							a(href="tel:+79900595039") 
+								b +7 (990) 059-50-39
+					+m-columns({
+						title: '<h3>Факс:</h3>'
+					})
+						p 
+							b +7 (499) 111-11-11
+					+m-columns({
+						title: '<h3>Адреса электронной почты:</h3>'
+					})
+						p 
+							a(href="mailto:pk.khau@yandex.ru")  
+								b pk.khau@yandex.ru
+
 
 			.sidebar-layout__block
 				h2.sidebar-layout__block-title Информация о филиалах образовательной организации (в том числе находящихся за пределами Российской Федерации)
