@@ -10,13 +10,20 @@ mixin period-select(props = defaultPeriodSelectProps)
         }
 
     .period-select(class = checkProps.classes data-js="periodSelect")
-        .period-select__header
+        .period-select__header(data-js="periodSelectHeader")
             .period-select__text Выбрать период
             .period-select__icon
                 svg
                     use(xlink:href=`img/sprites/sprite.svg#date`)
-        .period-select__calendar
-            input.period-select__input(data-js="periodSelectInput")
+        .period-select__calendar(data-js="periodSelectCalendar")
+            input.period-select__input(data-js="periodSelectInput" readonly)
             .period-select__btns
-                button.period-select__btn Закрыть
-                button.period-select__btn Применить
+                +btn({
+                    name: 'Закрыть',
+                    type: 'button',
+                    cMode: 'transparent'
+                })(data-js="periodSelectClose")
+                +btn({
+                    classes: 'period-select__btn',
+                    name: 'Показать'
+                })(data-js="periodSelectSubmit")

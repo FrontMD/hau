@@ -1,0 +1,30 @@
+-
+    const defaultBtnProps = {
+        classes: '',
+        name: 'Кнопка',
+        cMode: 'green',
+        type: 'link',
+        link: '#',
+        buttonType: 'button'
+    }
+
+mixin btn(props = defaultBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBtnProps.classes,
+            name: props.name ? props.name : defaultBtnProps.name,
+            cMode: props.cMode ? props.cMode : defaultBtnProps.cMode,
+            type: props.type ? props.type : defaultBtnProps.type,
+            link: props.link ? props.link : defaultBtnProps.link,
+            buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
+        }
+
+        let colorClass = ` btn--${checkProps.cMode}`
+
+    - if(checkProps.type == 'link')
+        a.btn(class=checkProps.classes + colorClass href= checkProps.link)&attributes(attributes)!= checkProps.name
+    - else if(checkProps.type == 'button')
+        button.btn(class=checkProps.classes + colorClass type= checkProps.buttonType)&attributes(attributes)!= checkProps.name
+    - else 
+        | ошибка: type кнопки не найден!
+

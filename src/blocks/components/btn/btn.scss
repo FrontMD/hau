@@ -1,0 +1,29 @@
+.btn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.02em;
+    color: $c-accent;
+    padding: 32px 24px;
+    cursor: pointer;
+
+    &--transparent {
+        padding: 5px;
+        transition: all $tr-time;
+
+        &:hover {
+            color: $c-accent-light;
+        }
+    }
+
+    &--green {
+        color: $c-white;
+        background-color: $c-accent-light;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
+    }
+}

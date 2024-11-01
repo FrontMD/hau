@@ -85,7 +85,8 @@ mixin multi-menu(props= defaultmultiMenuProps)
                     svg
                         use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--2.active(data-js='multiMenuLevel' data-level="2" data-index="1")
+        //-.multi-menu__list.multi-menu__list--2.active(data-js='multiMenuLevel' data-level="2" data-index="1")
+        .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="1")
             a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
                 span.multi-menu__text Уровень 2-1
                 span.multi-menu__icon(data-js="multiMenuIcon")
@@ -304,7 +305,8 @@ mixin multi-menu(props= defaultmultiMenuProps)
                     svg
                         use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--3.active(data-js='multiMenuLevel' data-level="3" data-index="1")
+        //-.multi-menu__list.multi-menu__list--3.active(data-js='multiMenuLevel' data-level="3" data-index="1")
+        .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="1")
             a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
                 span.multi-menu__text Уровень 3-1
                 span.multi-menu__icon(data-js="multiMenuIcon")

@@ -50,15 +50,27 @@
     }
 
     &__calendar {
+        opacity: 0;
+        visibility: hidden;
         display: flex;
         flex-direction: column;
-        gap: 10px;
         position: absolute;
         top: 100%;
         right: 0;
         background-color: $c-white;
-        padding: 0px 0px 10px;
+        padding: 0px 15px 15px;
         box-shadow: 0px 5px 50px 25px rgba(0, 0, 0, 0.03);
+        transition: $tr-time;
+
+        @include max(laptop) {
+            right: auto;
+            left: 0;
+        }
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
 
         .air-datepicker {
             order: -1;
@@ -67,13 +79,26 @@
     }
 
     &__input {
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: center;
+        color: $c-accent;
+        //border: 1px solid rgba(0, 0, 0, 0.2);
+        pointer-events: none;
     }
 
     &__btns {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 10px;
+        margin-top: 10px;
+    }
+
+    &__btn.btn {
+        padding: 12px 16px;
     }
 
 
@@ -84,8 +109,27 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    border: none;
 }
 
 .air-datepicker {
-    --adp-z-index: 5;
+    --adp-z-index: 5; // z-index календаря 
+    --adp-cell-border-radius: 0; // радиус скругления дней
+    --adp-border-radius: 0; // радиус скругления стрелок
+    --adp-nav-arrow-color: rgba(1, 50, 32, 0.4); // стрелки
+    --adp-nav-color-secondary: rgba(1, 50, 32, 0.4); // светлый текст
+    --adp-color-other-month: rgba(1, 50, 32, 0.4); // цвет текста в другом месяце
+    --adp-color: var(--c-accent); // основной текст
+    --adp-day-name-color: #006aff; //цвет текста дней недели
+    --adp-color-current-date: #4C9E50; // текущий день
+    --adp-cell-background-color-selected: #4C9E50; //фон выбранного дня
+    --adp-background-color-selected-other-month: #4C9E50; //фон выбранного дня в другом месяце
+    --adp-cell-background-color-selected-hover: var(--c-accent); // наведение на выбранный день
+    --adp-background-color-selected-other-month-focused: var(--c-accent); // наведение на выбранный день в другом месяце
+    --adp-cell-background-color-hover: rgba(1, 50, 32, 0.1); // наведение на день
+    --adp-background-color-hover: rgba(1, 50, 32, 0.1); // наведение на стрелку
+    --adp-cell-background-color-in-range: #E6F0EC; // фон ячейки в периоде
+    --adp-background-color-in-range: #E6F0EC; // фон ячейки в периоде в другом месяце
+    --adp-cell-background-color-in-range-hover: #E6FFEC; // наведение на ячейки в периоде
+    --adp-background-color-in-range-focused: #E6FFEC; // наведение на ячейки в периоде в другом месяце
 }
