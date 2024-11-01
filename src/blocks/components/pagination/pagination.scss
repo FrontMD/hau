@@ -18,8 +18,8 @@
         width: 49px;
         height: 49px;
         background-color: transparent;
-        border: 1px solid $c-blue--light;
-        color: $c-blue;
+        border: 1px solid $c-bg-light;
+        color: $c-accent;
         font-size: 14px;
         font-weight: 500;
         line-height: 1em;
@@ -46,7 +46,7 @@
         width: 49px;
         height: 49px;
         background-color: #C1D3C9;
-        color: $c-blue;
+        color: $c-accent;
 
         @include max(mobile) {
             width: 30px;
@@ -78,6 +78,6 @@
         padding: 0 10px;
         font-weight: 700;
         line-height: 1;
-        color: $c-blue;
+        color: $c-accent;
     }
 }

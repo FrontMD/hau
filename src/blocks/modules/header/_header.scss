@@ -6,7 +6,7 @@
     padding: 12px 0;
     background-color: $c-white;
     z-index: 80;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid $c-border-op;
 
     @include max(mobile) {
         padding: 8px 0;
