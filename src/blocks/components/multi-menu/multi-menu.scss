@@ -1,31 +1,56 @@
-.menu-list {
-    position: absolute;
-    overflow-y: auto;
-    direction: rtl;
-    opacity: 0;
-    padding-left: 7px;
-    visibility: hidden;
+.multi-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
 
-    @include max(tablet) {
-        padding-left: 3px;
-    }
+    &__list {
+        position: absolute;
+        top: 0;
+        width: calc(100% / 3);
+        height: 100%;
+        overflow-y: auto;
+        direction: rtl;
+        opacity: 0;
+        padding-left: 7px;
+        visibility: hidden;
 
-    &::-webkit-scrollbar {
-        width: 7px;
-        height: 7px;
+        &::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
 
-        @include max(tablet) {
-            width: 3px;
-            height: 3px;
+            @include max(tablet) {
+                width: 3px;
+                height: 3px;
+            }
         }
-    }
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.1);
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--1 {
+            left: 0;
+            padding: 0 20px 0 0;
+        }
+
+        &--2 {
+            left: calc(100% / 3);
+            padding: 0 20px 0 15px;
+        }
+
+        &--3 {
+            left: calc(100% / 3 * 2);
+            padding: 0 0 0 15px;
+        }
     }
 
     &__item {
@@ -89,10 +114,5 @@
             width: 12px;
             height: 12px;
         }
-    }
-
-    &.active {
-        opacity: 1;
-        visibility: visible;
     }
 }

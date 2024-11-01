@@ -1,4 +1,4 @@
-function menuList() {
+function multiMenu() {
     const menus = document.querySelectorAll('[data-js="multiMenu"]')
 
     if(menus.length < 1) return

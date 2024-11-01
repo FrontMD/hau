@@ -23,60 +23,7 @@ header.site-header(data-js="siteHeader")
                             use(xlink:href=`img/sprites/sprite.svg#plus`)
                     span.nav-link__text Студентам
 
-    .site-header__menu.main-burger--header
-        .main-burger__menu(data-js='headerMenu')
-            .main-burger__main
-                .burger-menu(data-js='multiMenu')
-                    .burger-menu__level.burger-menu__level--1.active(data-js="multiMenuLevel" data-level="1")
-                        .burger-menu__back(data-js='multiMenuBack')
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                            | Назад
-                        - let counth1 = 3
-                        -while (counth1 > 0)
-                            +menu-list({
-                                classes: `${counth1 == 3 ? "active" : ""}`,
-                                links: [
-                                    `Вкладка ${3 - counth1}`,
-                                    "Поступающим",
-                                    "Обучающимся",
-                                    "Структура",
-                                    "Об университете",
-                                    "Кафедры",
-                                    "Довузовское образование",
-                                    "Наука",
-                                    "Международная деятельность",
-                                    "Общие сведения",
-                                    "Сведения об образовательной организации",
-                                    "Противодействие коррупции",
-                                    "Новости"
-                                ]
-                            })(data-index= 3 - counth1)
+    .site-header__menu 
+        +multi-menu({
 
-                            - counth1--
-                    .burger-menu__level.burger-menu__level--2(data-js="multiMenuLevel" data-level="2")
-                        .burger-menu__back(data-js='multiMenuBack')
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                            | Назад
-                        - let counth2 = 12
-                        -while (counth2 > 0)
-                            +menu-list({
-                                links: [
-                                    `Индекс 2-${12 - counth2}`,
-                                    "Поступающим",
-                                    "Обучающимся",
-                                    "Структура",
-                                    "Об университете",
-                                    "Кафедры",
-                                    "Довузовское образование",
-                                    "Наука",
-                                    "Международная деятельность",
-                                    "Общие сведения",
-                                    "Сведения об образовательной организации",
-                                    "Противодействие коррупции",
-                                    "Новости"
-                                ]
-                            })(data-index= 12 - counth2)
-
-                            - counth2--
+        })

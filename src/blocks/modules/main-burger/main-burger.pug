@@ -15,64 +15,7 @@
                         | Приемная комиссия
                         a(href="tel:+74921112222") +7 (492)111-22-22
             .main-burger__main
-                .burger-menu(data-js='multiMenu')
-                    .burger-menu__level.burger-menu__level--1.active(data-js="multiMenuLevel" data-level="1")
-                        +menu-list({
-                            classes: 'active'
-                        })
-                    .burger-menu__level.burger-menu__level--2(data-js="multiMenuLevel" data-level="2")
-                        .burger-menu__back(data-js='multiMenuBack')
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                            | Назад
-                        - let count1 = 12
-                        - let counts1 = 1
-                        -while (count1 > 0)
-                            +menu-list({
-                                links: [
-                                    `Индекс 2-${12 - count1}`,
-                                    "Поступающим",
-                                    "Обучающимся",
-                                    "Структура",
-                                    "Об университете",
-                                    "Кафедры",
-                                    "Довузовское образование",
-                                    "Наука",
-                                    "Международная деятельность",
-                                    "Общие сведения",
-                                    "Сведения об образовательной организации",
-                                    "Противодействие коррупции",
-                                    "Новости"
-                                ]
-                            })(data-index= 12 - count1)
-
-                            - count1--
-                    .burger-menu__level.burger-menu__level--3(data-js="multiMenuLevel" data-level="3")
-                        .burger-menu__back(data-js='multiMenuBack')
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                            | Назад
-                        - let count2 = 39
-                        -while (count2 > 0)
-                            +menu-list({
-                                links: [
-                                    `Индекс 3-${39 - count2}`,
-                                    "Поступающим",
-                                    "Обучающимся",
-                                    "Структура",
-                                    "Об университете",
-                                    "Кафедры",
-                                    "Довузовское образование",
-                                    "Наука",
-                                    "Международная деятельность",
-                                    "Общие сведения",
-                                    "Сведения об образовательной организации",
-                                    "Противодействие коррупции",
-                                    "Новости"
-                                ]
-                            })(data-index= 39 - count2)
-
-                            - count2--
+                +multi-menu
     .main-burger__line
         .main-burger__open(data-js='mainBurgerOpen')
             svg 
