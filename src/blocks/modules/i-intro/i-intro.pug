@@ -1,0 +1,36 @@
+-
+    const defaultIIntroProps = {
+        classes: '',
+        breadcrumbs: {},
+        img: '',
+        title: '',
+        small: false,
+        date: '',
+    }
+
+mixin i-intro(props = defaultIIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultIIntroProps.classes,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultIIntroProps.breadcrumbs,
+            img: props.img ? props.img : defaultIIntroProps.img,
+            title: props.title ? props.title : defaultIIntroProps.title,
+            small: props.small ? props.small : defaultIIntroProps.small,
+            date: props.date ? props.date : defaultIIntroProps.date
+        }
+
+    section.page-intro(class= checkProps.classes)
+        .page-intro__img
+            img(src=checkProps.img alt="")
+        .m-container.page-intro__container
+            +breadcrumbs(checkProps.breadcrumbs)
+            .page-intro__top
+            .page-intro__bottom
+                +title({
+                    classes: 'i-intro__title',
+                    tag: 'h1',
+                    text: checkProps.title
+                })
+                - if(checkProps.date.length > 0)
+                    .page-intro__date!= checkProps.date
+

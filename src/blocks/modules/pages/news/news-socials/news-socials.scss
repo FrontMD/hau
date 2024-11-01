@@ -75,6 +75,10 @@
             background-color: $c-accent;
         }
 
+        &:hover svg .handset {
+            fill: $c-accent;
+        }
+
         svg {
             width: 52px;
             height: auto;
