@@ -85,7 +85,6 @@
         line-height: 1.02em;
         text-align: center;
         color: $c-accent;
-        //border: 1px solid rgba(0, 0, 0, 0.2);
         pointer-events: none;
     }
 
@@ -120,7 +119,7 @@
     --adp-nav-color-secondary: rgba(1, 50, 32, 0.4); // светлый текст
     --adp-color-other-month: rgba(1, 50, 32, 0.4); // цвет текста в другом месяце
     --adp-color: var(--c-accent); // основной текст
-    --adp-day-name-color: #006aff; //цвет текста дней недели
+    --adp-day-name-color: #4C9E50; //цвет текста дней недели
     --adp-color-current-date: #4C9E50; // текущий день
     --adp-cell-background-color-selected: #4C9E50; //фон выбранного дня
     --adp-background-color-selected-other-month: #4C9E50; //фон выбранного дня в другом месяце

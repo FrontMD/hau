@@ -6,7 +6,7 @@
 mixin people-detail(props = defaultPeopleDetailProps)
     -
         const checkProps = {
-        classes: props.classes ? props.classes : defaultNewsListProps.classes
+        classes: props.classes ? props.classes : defaultPeopleDetailProps.classes
         }
     .m-container
         section.people-detail(class=checkProps.classes)
@@ -16,32 +16,36 @@ mixin people-detail(props = defaultPeopleDetailProps)
                 .title.title--dark
                     .title__h1
                         h1 <span>Мищенко</span><br> Сергей Сергеевич
-                .text-editor
-                    p Должность <br>
-                        b Профессор
 
-                    p Образование<br>
-                        b МГУ им.М.В.Ломоносова, географический факультет, кафедра геоморфологии, 1976 г.
+                .people-detail__info
+                    .people-detail__item
+                        .people-detail__param Должность
+                        .people-detail__val Профессор
+                    .people-detail__item
+                        .people-detail__param Образование
+                        .people-detail__val МГУ им.М.В.Ломоносова, географический факультет, кафедра геоморфологии, 1976 г.
+                    .people-detail__item
+                        .people-detail__param Ученая степень
+                        .people-detail__val Доктор географических наук (2003)
 
-                    p Ученая степень<br>
-                        b Доктор географических наук (2003)
+                    .people-detail__item
+                        .people-detail__param Ученое звание 
+                        .people-detail__val Профессор
+                    .people-detail__item
+                        .people-detail__param Область научных интересов
+                        .people-detail__val Биогенное рельефообразование, овражная эрозия, стационарные наблюдения за динамикой рельефа, экологическая геоморфология, городская геоморфология, субрельеф, методология и методика геоморфологических исследований и геоморфологического картографирования, школьная физическая география.
+                    .people-detail__item
+                        .people-detail__param Тема кандидатской диссертации
+                        .people-detail__val История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
 
-                    p Ученое звание<br>
-                        b Профессор
-
-                    p Область научных интересов<br>
-                        b Биогенное рельефообразование, овражная эрозия, стационарные наблюдения за динамикой рельефа, экологическая геоморфология, городская геоморфология, субрельеф, методология и методика геоморфологических исследований и геоморфологического картографирования, школьная физическая география.
-
-                    p Тема кандидатской диссертации<br>
-                        b История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
-
-                    p Тема докторской диссертации<br>
-                        b История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
-
-                    p Телефон:<br>
-                        a(href="tel:+74959395469")
-                            b +7 (495) 939 54 69
-
-                    p E-mail:<br>
-                        a(href="mailto:sibol1954@bk.ru")
-                            b sibol1954@bk.ru
+                    .people-detail__item
+                        .people-detail__param Тема докторской диссертации
+                        .people-detail__val  История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
+                    .people-detail__item
+                        .people-detail__param Телефон:
+                        .people-detail__val
+                            a(href="tel:+74959395469") +7 (495) 939 54 69
+                    .people-detail__item
+                        .people-detail__param E-mail:
+                        .people-detail__val 
+                            a(href="mailto:sibol1954@bk.ru") sibol1954@bk.ru

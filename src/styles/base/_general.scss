@@ -216,8 +216,21 @@ table {
 	}
 }
 
+iframe {
+	width: 100%;
+	display: block;
+	aspect-ratio: 16 / 9;
+}
+
 .text-editor {
 	color: rgba(1, 50, 32, 0.4);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.55em;
+
+	@include max(mobile) {
+		font-size: 14px;
+	}
 
 	&--light {
 		color: rgba(255, 255, 255, 0.45);

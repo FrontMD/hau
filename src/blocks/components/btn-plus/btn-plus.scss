@@ -18,7 +18,11 @@
         width: 53px;
         height: 53px;
         border: 1px solid rgba(4, 65, 43, 0.2);
+        border-color: rgba(4, 65, 43, 0.2);
+        background-color: transparent;
         border-radius: 100%;
+        transition: all $tr-time;
+
 
         @include max(laptop) {
             width: 40px;
@@ -34,5 +38,11 @@
                 height: 10.566px;
             }
         }
+    }
+
+    &:hover &__icon {
+        color: $c-white;
+        background-color: $c-accent;
+        border-color: $c-accent;
     }
 }

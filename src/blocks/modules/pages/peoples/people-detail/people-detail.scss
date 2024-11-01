@@ -1,50 +1,88 @@
-.people-detail{
+.people-detail {
     margin-top: 80px;
     margin-bottom: 40px;
     display: flex;
     align-items: stretch;
-    @include max(laptop){
+
+    @include max(laptop) {
         margin-top: 45px;
     }
-    @include max(tablet){
+
+    @include max(tablet) {
         flex-direction: column;
         margin-top: 15px;
     }
-    @include max(mobile){
+
+    @include max(mobile) {
         margin-top: 0;
     }
-    &__img{
+
+    &__img {
         flex: 0 0 851px;
-        @include max(large){
+
+        @include max(large) {
             flex: 1 1 auto;
             max-width: 851px;
         }
-        @include max(tablet){
+
+        @include max(tablet) {
             max-width: 600px;
         }
     }
-    &__content{
+
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 30px;
         flex: 1 1 auto;
         max-width: 1044px;
         padding: 22px 30px 54px 40px;
-        @include max(large){
+
+        @include max(large) {
             flex: 0 0 700px;
         }
-        @include max(laptop){
+
+        @include max(laptop) {
             flex: 0 0 600px;
             padding: 25px;
         }
-        @include max(tablet){
+
+        @include max(tablet) {
             max-width: 600px;
         }
-        @include max(mobile){
+
+        @include max(mobile) {
             padding: 15px;
         }
-        .text-editor{
-            max-width: 500px;
+
+    }
+
+    &__info {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__item {
+        color: $c-accent;
+        font-size: 16px;
+
+        @include max(mobile) {
+            font-size: 14px;
         }
     }
+
+    &__param {
+        font-weight: 400;
+        line-height: 1.17em;
+        opacity: 0.4;
+    }
+
+    &__val {
+        margin-top: 9px;
+        font-weight: 500;
+        line-height: 1.02em;
+    }
+
 }
