@@ -52,6 +52,10 @@
         padding: 20px 0;
         gap: 5px;
 
+        &:first-child {
+            padding: 0 0 20px;
+        }
+
         @include max(mobile) {
             padding: 10px 0;
         }

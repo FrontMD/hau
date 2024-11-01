@@ -176,16 +176,16 @@ table {
 	cursor: pointer;
 }
 
-.white-bg{
+.white-bg {
 	background: $c-white;
 }
 
-.top-border-block{
+.top-border-block {
 	border-top: 1px solid #ccc;
 	padding-top: 20px;
 	padding-bottom: 40px;
 
-	& > *{
+	&>* {
 		max-width: 1160px;
 	}
 }
@@ -470,9 +470,18 @@ table {
 	}
 
 	&__title {
-		max-width: 590px;
+		max-width: 500px;
+
+		&--sup {
+
+			h2,
+			h3 {
+				font-size: 32px;
+			}
+		}
 	}
 
+	&__title+&__title,
 	&__title+h2,
 	&__title+h3,
 	&__title+p,

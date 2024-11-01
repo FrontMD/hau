@@ -38,7 +38,7 @@
     }
 
     &__header {
-        flex: 0 0 413px;
+        flex: 0 0 500px;
         display: flex;
         flex-direction: column;
         align-self: stretch;
@@ -184,9 +184,11 @@
 
         color: #04412B;
     }
-    &.m-columns--after-page-intro{
-        border:0;
+
+    &.m-columns--after-page-intro {
+        border: 0;
     }
+
     &+.m-columns--after-page-intro .m-columns__header {
         margin-top: 240px;
         max-width: 650px;
@@ -194,6 +196,7 @@
         @include max(tablet) {
             margin-top: 100px;
         }
+
         @include max(mobile) {
             margin-top: 50px;
         }
