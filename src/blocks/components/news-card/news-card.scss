@@ -66,6 +66,11 @@
         line-height: 1.14em;
         letter-spacing: -0.03em;
         color: $c-accent;
+        transition: color $tr-time;
+
+        &:hover {
+            color: $c-accent-light;
+        }
 
         @include max(laptop) {
             font-size: 40px;
