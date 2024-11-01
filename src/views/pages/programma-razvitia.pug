@@ -94,14 +94,15 @@ block content
                         li Федеральное государственное унитарное предприятие «Главный радиочастотный центр» (ПАО «ГРЧЦ»)
                         li Акционерное общество «Лаборатория Касперского»
                         li ООО «РЭДМЭДРОБОТ МСК»
-            .after-page-intro.white-bg
-                .m-container
-                    +m-columns({
-                        classes: "m-columns--after-page-intro m-columns--no-plpr",
-                        title: '<h2>Руководитель цифровой кафедры</h2>'
-                    })
+
             .m-container.white-bg
-                .m-columns.m-columns--no-plpr
+                .m-columns.m-columns--no-plpr.m-columns--column
+                    .after-page-intro.white-bg
+                        <div class="m-columns m-columns--after-page-intro m-columns--no-plpr  ">
+                        <div class="m-columns__header text-editor"><h2>Руководитель цифровой кафедры</h2></div>
+
+                        </div>
+
                     +people-detail
             +news-list({
                 titleMode: true,
@@ -133,7 +134,7 @@ block content
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Документы</h2>'
+                    title: '<h2>Документы</h2><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
                 })
                     <div class="link-block  link-block--note link-block--download">
                     <div class="link-block__desc">Положение о комиссии по противодействию коррупции университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">

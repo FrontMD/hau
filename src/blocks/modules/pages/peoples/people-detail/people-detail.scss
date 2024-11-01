@@ -2,6 +2,9 @@
 
     display: flex;
     align-items: stretch;
+    @include max(tablet) {
+        flex-direction: column;
+    }
     &--single{
         margin-top: 80px;
         margin-bottom: 40px;
@@ -10,7 +13,6 @@
         }
 
         @include max(tablet) {
-            flex-direction: column;
             margin-top: 15px;
         }
 
