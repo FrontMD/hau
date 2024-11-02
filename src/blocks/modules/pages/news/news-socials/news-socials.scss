@@ -22,16 +22,16 @@
         color: $c-accent;
 
         @include max(laptop) {
-            font-size: 40px;
-        }
+			font-size: 28px;
+		}
 
-        @include max(tablet) {
-            font-size: 22px;
-        }
+		@include max(tablet) {
+			font-size: 26px;
+		}
 
-        @include max(mobile) {
-            font-size: 20px;
-        }
+		@include max(mobile) {
+			font-size: 20px;
+		}
     }
 
     &__list {

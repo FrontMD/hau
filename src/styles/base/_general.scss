@@ -310,11 +310,11 @@ iframe {
 		color: $c-accent-middle;
 
 		@include max(laptop) {
-			font-size: 40px;
+			font-size: 28px;
 		}
 
 		@include max(tablet) {
-			font-size: 22px;
+			font-size: 26px;
 		}
 
 		@include max(mobile) {
@@ -333,8 +333,12 @@ iframe {
 			font-size: 22px;
 		}
 
-		@include max(mobile) {
+		@include max(tablet) {
 			font-size: 20px;
+		}
+
+		@include max(mobile) {
+			font-size: 18px;
 		}
 	}
 
@@ -504,18 +508,6 @@ iframe {
 
 	&__header &__text {
 		max-width: 380px;
-	}
-
-	&__title {
-		max-width: 500px;
-
-		&--sup {
-
-			h2,
-			h3 {
-				font-size: 32px;
-			}
-		}
 	}
 
 	&__title+&__title,
