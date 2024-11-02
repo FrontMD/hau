@@ -111,12 +111,16 @@
     }
 
     &.m-columns--no-plpr {
-        justify-content: space-between;
         padding-left: 0;
         padding-right: 0;
+        @include min(large){
+            .m-columns__header {
+                flex: 0 0 690px;
+            }
+        }
 
         .m-columns__main {
-            max-width: 1040px;
+            max-width: 1215px;
         }
     }
 }
@@ -151,67 +155,6 @@
 
         @include max(mobile) {
             padding-bottom: 0;
-        }
-    }
-}
-
-.m-columns.m-columns--after-page-intro {
-    justify-content: space-between;
-
-    .m-columns__header {
-        max-width: 650px;
-        flex: 0 0 650px;
-
-        @include max(laptop) {
-            flex: 0;
-        }
-
-        h2 {
-            font-size: 32px;
-            line-height: 91%;
-
-            @include max(laptop) {
-                font-size: 40px;
-            }
-
-            @include max(tablet) {
-                font-size: 22px;
-            }
-        }
-    }
-
-    .m-columns__main {
-
-        color: #04412B;
-    }
-
-    &.m-columns--after-page-intro {
-        border: 0;
-    }
-
-    &+.m-columns--after-page-intro .m-columns__header {
-        margin-top: 240px;
-        max-width: 650px;
-
-        @include max(tablet) {
-            margin-top: 100px;
-        }
-
-        @include max(mobile) {
-            margin-top: 50px;
-        }
-
-        h2 {
-            font-size: 32px;
-            line-height: 91%;
-
-            @include max(laptop) {
-                font-size: 40px;
-            }
-
-            @include max(tablet) {
-                font-size: 22px;
-            }
         }
     }
 }
