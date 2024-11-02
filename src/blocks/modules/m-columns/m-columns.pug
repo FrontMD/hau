@@ -3,7 +3,8 @@
         classes: '',
         title: '<h2>Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий</h2>',
         titlePosLeft: 'true',
-        subtitle: ''
+        subtitle: '',
+        noContent: false
     }
 
 mixin m-columns(props= defaultMColumnsProps)
@@ -13,6 +14,7 @@ mixin m-columns(props= defaultMColumnsProps)
             title: props.title ? props.title : defaultMColumnsProps.title,
             titlePosLeft: props.titlePosLeft ? props.titlePosLeft : defaultMColumnsProps.titlePosLeft,
             subtitle: props.subtitle ? props.subtitle : defaultMColumnsProps.subtitle,
+            noContent: props.noContent ? props.noContent : defaultMColumnsProps.noContent,
         }
 
         let columnDirClass = checkProps.titlePosLeft == 'true' ? '' : ' m-columns--column'
@@ -22,7 +24,8 @@ mixin m-columns(props= defaultMColumnsProps)
         - if(checkProps.subtitle.length > 0)
             .m-columns__subtitle!= checkProps.subtitle
         .m-columns__header.text-editor!= checkProps.title
-        .m-columns__main.text-editor
-            block
+        - if(checkProps.noContent !== true)
+            .m-columns__main.text-editor
+                block
 
 

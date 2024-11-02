@@ -1,358 +1,362 @@
 -
     const defaultmultiMenuProps = {
         classes: '',
-        isBurger: true
+        isHeader: false
     }
 
 mixin multi-menu(props= defaultmultiMenuProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultmultiMenuProps.classes,
-            isBurger: props.isBurger ? props.isBurger : defaultmultiMenuProps.isBurger,
+            isHeader: props.isHeader ? props.isHeader : defaultmultiMenuProps.isHeader,
         }
 
-    .multi-menu(class= checkProps.classes data-js="multiMenu")&attributes(attributes)
-        .multi-menu__list.multi-menu__list--1.active(data-js='multiMenuLevel' data-level="1")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Поступающим
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+        let isHeaderClass = checkProps.isHeader === true ? ' multi-menu--header' : '' 
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+    - if (checkProps.isHeader === true)
+        | fdlghikjdrt'
+    - else
+        .multi-menu(class= checkProps.classes + isHeaderClass data-js="multiMenu")&attributes(attributes)
+            .multi-menu__list.multi-menu__list--1.active(data-js='multiMenuLevel' data-level="1")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Поступающим
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4')
-                span.multi-menu__text Об университете
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5')
-                span.multi-menu__text Кафедры
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4')
+                    span.multi-menu__text Об университете
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6')
-                span.multi-menu__text Довузовское образование
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5')
+                    span.multi-menu__text Кафедры
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7')
-                span.multi-menu__text Наука
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6')
+                    span.multi-menu__text Довузовское образование
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8')
-                span.multi-menu__text Международная деятельность
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7')
+                    span.multi-menu__text Наука
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                span.multi-menu__text Общие сведения
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8')
+                    span.multi-menu__text Международная деятельность
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                span.multi-menu__text Сведения об образовательной организации
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
+                    span.multi-menu__text Общие сведения
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                span.multi-menu__text Противодействие коррупции
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
+                    span.multi-menu__text Сведения об образовательной организации
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                span.multi-menu__text Новости
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
+                    span.multi-menu__text Противодействие коррупции
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        //-.multi-menu__list.multi-menu__list--2.active(data-js='multiMenuLevel' data-level="2" data-index="1")
-        .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="1")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 2-1
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
+                    span.multi-menu__text Новости
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="1")
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 2-1
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
-                span.multi-menu__text Об университете
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
-                span.multi-menu__text Кафедры
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
-                span.multi-menu__text Довузовское образование
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
+                    span.multi-menu__text Об университете
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
-                span.multi-menu__text Наука
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
+                    span.multi-menu__text Кафедры
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
-                span.multi-menu__text Международная деятельность
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
+                    span.multi-menu__text Довузовское образование
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                span.multi-menu__text Общие сведения
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
+                    span.multi-menu__text Наука
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                span.multi-menu__text Сведения об образовательной организации
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
+                    span.multi-menu__text Международная деятельность
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                span.multi-menu__text Противодействие коррупции
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
+                    span.multi-menu__text Общие сведения
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                span.multi-menu__text Новости
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
+                    span.multi-menu__text Сведения об образовательной организации
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="2")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 2-2
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
+                    span.multi-menu__text Противодействие коррупции
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
+                    span.multi-menu__text Новости
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="2")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 2-2
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
-                span.multi-menu__text Об университете
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
-                span.multi-menu__text Кафедры
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
-                span.multi-menu__text Довузовское образование
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
+                    span.multi-menu__text Об университете
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
-                span.multi-menu__text Наука
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
+                    span.multi-menu__text Кафедры
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
-                span.multi-menu__text Международная деятельность
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
+                    span.multi-menu__text Довузовское образование
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                span.multi-menu__text Общие сведения
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
+                    span.multi-menu__text Наука
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                span.multi-menu__text Сведения об образовательной организации
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
+                    span.multi-menu__text Международная деятельность
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                span.multi-menu__text Противодействие коррупции
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
+                    span.multi-menu__text Общие сведения
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                span.multi-menu__text Новости
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
+                    span.multi-menu__text Сведения об образовательной организации
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="3")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 2-1
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
+                    span.multi-menu__text Противодействие коррупции
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
+                    span.multi-menu__text Новости
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            .multi-menu__list.multi-menu__list--2(data-js='multiMenuLevel' data-level="2" data-index="3")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 2-1
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
-                span.multi-menu__text Об университете
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
-                span.multi-menu__text Кафедры
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
-                span.multi-menu__text Довузовское образование
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
+                    span.multi-menu__text Об университете
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
-                span.multi-menu__text Наука
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
+                    span.multi-menu__text Кафедры
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
-                span.multi-menu__text Международная деятельность
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
+                    span.multi-menu__text Довузовское образование
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                span.multi-menu__text Общие сведения
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
+                    span.multi-menu__text Наука
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                span.multi-menu__text Сведения об образовательной организации
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
+                    span.multi-menu__text Международная деятельность
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                span.multi-menu__text Противодействие коррупции
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
+                    span.multi-menu__text Общие сведения
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                span.multi-menu__text Новости
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
+                    span.multi-menu__text Сведения об образовательной организации
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        //-.multi-menu__list.multi-menu__list--3.active(data-js='multiMenuLevel' data-level="3" data-index="1")
-        .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="1")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 3-1
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
+                    span.multi-menu__text Противодействие коррупции
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="2")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 3-2
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
+                    span.multi-menu__text Новости
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
-        .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="3")
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                span.multi-menu__text Уровень 3-3
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                span.multi-menu__text Обучающимся
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-            a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                span.multi-menu__text Структура
-                span.multi-menu__icon(data-js="multiMenuIcon")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="1")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 3-1
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+            .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="2")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 3-2
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+            .multi-menu__list.multi-menu__list--3(data-js='multiMenuLevel' data-level="3" data-index="3")
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
+                    span.multi-menu__text Уровень 3-3
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
+                    span.multi-menu__text Обучающимся
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
+                    span.multi-menu__text Структура
+                    span.multi-menu__icon(data-js="multiMenuIcon")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)

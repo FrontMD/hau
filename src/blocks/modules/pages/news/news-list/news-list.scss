@@ -14,12 +14,14 @@
         flex-direction: column;
         gap: 28px;
         margin-top: 20px;
-        @include max(tablet){
+
+        @include max(tablet) {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 3.2%;
         }
-        @include max(mobile){
+
+        @include max(mobile) {
             flex-direction: column;
             gap: 20px;
         }
@@ -28,6 +30,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         @include max(laptop) {
             flex-direction: column;

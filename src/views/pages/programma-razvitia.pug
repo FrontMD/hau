@@ -29,24 +29,24 @@ block content
                         title: '<h2>О программе</h2>'
                     })
                         p
-                         b Основой Программы развития университета до 2030 года является стратегия, разработанная коллективом университета в 2024 году с учётом национальных целей и стратегических задач развития России.
+                            b Основой Программы развития университета до 2030 года является стратегия, разработанная коллективом университета в 2024 году с учётом национальных целей и стратегических задач развития России.
                     +m-columns({
                         classes: "m-columns--after-page-intro m-columns--no-plpr",
-                        title: '<h2>Миссия</h2>'
+                        title: '<h2>Миссия</h2>',
+                        noContent: true
                     })
             .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<p><b>Наша миссия — создавать умные системы и работающие механизмы для «зелёной» экономики, раскрывать таланты каждого в атмосфере единства технических наук и творчества.</b></p>'
+                    title: '<h3>Наша миссия — создавать умные системы и работающие механизмы для «зелёной» экономики, раскрывать таланты каждого в атмосфере единства технических наук и творчества.</h3>'
                 })
                     p Университет привлекает таланты и успешно соединяет творческие и технические направления, совмещает в обучении теорию и практику и учит студентов работать в командах — даёт навыки, действительно востребованные на рынке труда. Научная и инженерная работа вуза — воплощение в жизнь идей, которые полезны обществу и будут востребованы в «зелёной» экономике.<br><br>
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<p><b>Ценности университета</b></p><p>Командная работа, опережающее развитие, проектный подход, бережливое отношение к ресурсам, профессионализм, готовность к трансформациям, стремление сделать мир вокруг лучше, экологичнее и безопаснее.</p>'
+                    title: '<h3>Ценности университета</h3><p>Командная работа, опережающее развитие, проектный подход, бережливое отношение к ресурсам, профессионализм, готовность к трансформациям, стремление сделать мир вокруг лучше, экологичнее и безопаснее.</p>'
                 })
-                    p
-                        b Стратегическая цель
+                    h3 Стратегическая цель
                     p Стратегическая цель — построить цифровой университет и новые инженерные школы для достижения лидерских позиций в подготовке кадров массовых профессий индустрии 4.0.
 
                     p Университет сконцентрируется на развитии существующих, а также новых научных и технологических направлениях — экологическом инжиниринге и снижении углеродного следа, технологиях перспективного транспорта, создании систем транспортировки новых видов топлива, развитии систем адаптивной оптики для лазерных технологий, разработке перспективных аудиовизуальных технологий и новых видов цифровых изданий.<br><br>
@@ -76,7 +76,8 @@ block content
                 .m-container
                     +m-columns({
                         classes: "m-columns--after-page-intro m-columns--no-plpr",
-                        title: '<h2>Партнеры программы</h2>'
+                        title: '<h2>Партнеры программы</h2>',
+                        noContent: true
                     })
             .m-container.white-bg
 
@@ -106,7 +107,8 @@ block content
                     +people-detail
             +news-list({
                 titleMode: true,
-                classes: "news-list--section"
+                classes: "news-list--section",
+                title: 'Новости',
             })
             .after-page-intro.white-bg
                 .m-container
@@ -121,7 +123,7 @@ block content
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<p><b>Кураторы направлений в рамках программы развития</b></p>'
+                    title: '<h2>Кураторы направлений в рамках программы развития</h2>'
                 })
                     p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
                     p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
@@ -136,53 +138,55 @@ block content
                     classes: "m-columns--no-plpr",
                     title: '<h2>Документы</h2><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
                 })
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Положение о комиссии по противодействию коррупции университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                    <div class="text-items-list">
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Положение о комиссии по противодействию коррупции университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Положение о Дирекции по реализации программы развития университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Положение о Дирекции по реализации программы развития университета</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Положение о проведении конкурса на получение грантов имени В.Е. Фортова, направленных на поддержку лучших молодежных научных проектов</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Положение о проведении конкурса на получение грантов имени В.Е. Фортова, направленных на поддержку лучших молодежных научных проектов</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Постановление Правительства Российской Федерации от 13.05.2021 № 729</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Постановление Правительства Российской Федерации от 13.05.2021 № 729</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Приказ Министерства науки и высшего образования Российской Федерации от 31.05.2021 № 432</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Приказ Министерства науки и высшего образования Российской Федерации от 31.05.2021 № 432</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Отчет о реализации Программы в 2022 году</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
-                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Отчет о реализации Программы в 2022 году</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
 
-                    <div class="link-block  link-block--note link-block--download">
-                    <div class="link-block__desc">Рекомендации по итогам заседания Совета по поддержке программ развития университетов – участников программы стратегического академического лидерства 9-11 декабря 2022 г.</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                    <svg>
-                    <use xlink:href="img/sprites/sprite.svg#download"></use>
-                    </svg></span></a>
+                        <div class="link-block  link-block--note link-block--download">
+                        <div class="link-block__desc">Рекомендации по итогам заседания Совета по поддержке программ развития университетов – участников программы стратегического академического лидерства 9-11 декабря 2022 г.</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                        <svg>
+                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                        </svg></span></a>
+                        </div>
                     </div>
                     br
                     br

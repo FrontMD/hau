@@ -5,14 +5,14 @@ function multiMenu() {
     
     menus.forEach(menu => {
         const menuListItems = menu.querySelectorAll('[data-js="menuListItem"]')
-        const levels = menu.querySelectorAll('[data-js="multiMenuLevel"]')
-        const levelsCount = levels.length
+        //const levels = menu.querySelectorAll('[data-js="multiMenuLevel"]')
+        //const levelsCount = levels.length
         const backBtns = menu.querySelectorAll('[data-js="multiMenuBack"]')
-        let menuLists = []
+        //let menuLists = []
 
-        for(let i = 1; i <= levelsCount - 1; i++) {
+        /*for(let i = 1; i <= levelsCount - 1; i++) {
             menuLists.push(levels[i].querySelectorAll('[data-js="menuList"]'))
-        }
+        }*/
 
         menuListItems.forEach(menuListItem => {
             menuListItem.addEventListener('mouseenter', (e) => {
