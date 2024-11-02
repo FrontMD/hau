@@ -1,0 +1,111 @@
+-
+    const defaultNewsDetailedProps = {
+        classes: '',
+    }
+
+mixin news-detailed(props = defaultNewsDetailedProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsDetailedProps.classes
+        }
+
+    section.news-detailed
+        .m-container.news-detailed__container
+            .news-detailed__main.text-editor 
+                p 24 сентября в университете презентуют Всероссийский студенческий проект «Твой ход». В четвертом сезоне участников ждет трек «Первопроходец». На встрече организаторы расскажут о возможностях самой платформы проекта, основных конкурсных испытаниях и проведут мастер-классы, часть которых специально предназначена для первокурсников.
+
+                +quote({
+                    classes: 'quote--text',
+                    text: `<p>Трек «Первопроходец»</p>
+                        <p>Трек создан, чтобы первокурсники могли раскрыть свой потенциал, окунуться в студенческую жизнь и познакомиться с молодежной политикой страны.</p>`
+                })
+
+                //-<iframe width="560" height="315" src="https://www.youtube.com/embed/NtGa5SF1NY4?si=76hupyno1p4ge3b5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                p За годы проведения, по словам организаторов, проект «Твой ход» стал площадкой для обмена опытом и знаний, где обучающиеся могут учиться друг у друга, находить единомышленников и строить полезные связи.
+
+                h2 Презентация пройдет 24 сентября в корпусе на Большой Семеновской, 38 (А-200 и Б-303). 
+
+                ul 
+                    li Сбор гостей: 16:30
+                    li Начало: 17:00
+                    li 
+                        b Регистрация
+
+                +media-slider({
+                    classes: 'media-slider--news media-slider--text',
+                    fancyGroup: 'news1',
+                    slides: [
+                        {
+                            image: 'img/news/news_slide_1.webp',
+                            video: '',
+                            title: '',
+                            text: '',
+                            mMode: 'image'
+                        },
+                        {
+                            image: 'img/news/news_slide_2.webp',
+                            video: '',
+                            title: '',
+                            text: '',
+                            mMode: 'image'
+                        },
+                        {
+                            image: 'img/news/news_slide_3.webp',
+                            video: '',
+                            title: '',
+                            text: '',
+                            mMode: 'image'
+                        },
+                    ],
+                })
+
+            .news-detailed__sidebar
+                +form({
+                    classes: '',
+                    title: 'Задать вопрос',
+                    text: '',
+                    btnText: 'Задать вопрос'
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: 'Имя',
+                        placeholder: '',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: 'Телефон',
+                        placeholder: 'Номер телефона',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: 'Email',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: 'Текст вопроса',
+                    })

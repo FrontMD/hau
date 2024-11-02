@@ -27,3 +27,33 @@ function getScrollbarWidth() {
 
     return scrollWidth
 }
+
+//Инициализация фансибокса
+document.addEventListener('DOMContentLoaded', () => {
+    Fancybox.bind("[data-fancybox]", {
+        placeFocusBack: false,
+        mainClass: 'my-fancybox',
+        idle: false,
+        Carousel: {
+            transition: "crossfade",
+            Navigation: {
+                prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#angle_arrow></use></svg>',
+                nextTpl: '<svg><use xlink:href=img/sprites/sprite.svg#angle_arrow></use></svg>',
+              },
+        },
+        Thumbs: {
+            type: "classic",
+        },
+        Toolbar: {
+            enabled: true,
+            display: {
+                left: [],
+                middle: [],
+                right: [
+                  "close",
+                ],
+            },
+        }
+
+    });
+})

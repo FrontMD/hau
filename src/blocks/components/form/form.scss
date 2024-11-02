@@ -1,0 +1,211 @@
+.form {
+    width: 100%;
+    min-height: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 24px 30px 30px;
+
+    @include max(tablet) {
+        padding: 24px 30px 30px;
+    }
+
+    @include max(mobile) {
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    &__content,
+    &__thanks {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: opacity 0.3s linear;
+        overflow: hidden;
+    }
+
+    &__content {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+
+    &__thanks {
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2B3940;
+
+        @include max(tablet) {
+            font-size: 24px;
+        }
+
+        @include max(mobile) {
+            font-size: 22px;
+            padding: 17px 57px 17px 20px;
+            box-shadow: 0px 15px 20px 0px rgba(34, 29, 55, 0.04);
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: black;
+        margin-top: 10px;
+
+        @include max(tablet) {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        @include max(mobile) {
+            font-size: 16px;
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+    }
+
+    &__image-success {
+        width: 48px;
+        height: 48px;
+        color: lightgreen;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 24px;
+        margin-bottom: 15px;
+
+        @include max(tablet) {
+            gap: 15px;
+            margin-top: 24px;
+            margin-bottom: 15px;
+        }
+
+        @include max(mobile) {
+            padding: 0 20px;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .field {
+        &__input {
+            padding: 11px 15px;
+            font-size: 13px;
+            line-height: 1.2;
+            min-height: 40px;
+
+            @include max(tablet) {
+                padding: 11px 15px;
+                font-size: 13px;
+                min-height: 40px;
+            }
+
+            @include max(mobile) {
+                padding: 11px 15px;
+                font-size: 13px;
+                min-height: 40px;
+            }
+        }
+
+        &__textarea {
+            padding: 16px 15px;
+            font-size: 13px;
+            line-height: 1.2;
+            min-height: 80px;
+
+            @include max(tablet) {
+                padding: 16px 15px;
+                font-size: 13px;
+                min-height: 80px;
+            }
+
+            @include max(mobile) {
+                padding: 16px 15px;
+                font-size: 13px;
+                min-height: 80px;
+            }
+        }
+    }
+
+    &__submit {
+        margin-top: auto;
+        width: 100%;
+        border-radius: 11px;
+
+        @include max(mobile) {
+            border-radius: 11px;
+        }
+
+        @include max(mobile) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 335px;
+            min-width: auto;
+            border-radius: 11px;
+        }
+    }
+
+    &__privacy {
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #B0B2B7;
+
+        a {
+            transition: color 0.3s linear;
+
+            &:hover {
+                color: $c-accent-light;
+            }
+        }
+
+        @include max(tablet) {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        @include max(mobile) {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+.form {
+    &--sent &__content {
+        opacity: 0;
+        height: 0;
+        visibility: visible;
+    }
+
+    &--sent &__thanks {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+}

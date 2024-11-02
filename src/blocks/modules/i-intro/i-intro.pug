@@ -19,18 +19,19 @@ mixin i-intro(props = defaultIIntroProps)
             date: props.date ? props.date : defaultIIntroProps.date
         }
 
-    section.page-intro(class= checkProps.classes)
-        .page-intro__img
+    section.i-intro(class= checkProps.classes)
+        .i-intro__img
             img(src=checkProps.img alt="")
-        .m-container.page-intro__container
+        .m-container.i-intro__container
             +breadcrumbs(checkProps.breadcrumbs)
-            .page-intro__top
-            .page-intro__bottom
+            .i-intro__top
+            .i-intro__bottom
                 +title({
                     classes: 'i-intro__title',
                     tag: 'h1',
-                    text: checkProps.title
+                    text: checkProps.title,
+                    cMode: 'light',
                 })
                 - if(checkProps.date.length > 0)
-                    .page-intro__date!= checkProps.date
+                    .i-intro__date!= checkProps.date
 

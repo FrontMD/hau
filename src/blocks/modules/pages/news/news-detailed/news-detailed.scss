@@ -1,0 +1,21 @@
+.news-detailed {
+    &__container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__main {
+        flex: 1 1 auto;
+        background-color: $c-white;
+        padding: 50px;
+        overflow: hidden;
+    }
+
+    &__sidebar {
+        flex: 0 0 575px;
+    }
+}

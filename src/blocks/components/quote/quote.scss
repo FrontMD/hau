@@ -1,0 +1,13 @@
+.quote {
+    padding: 55px 62px 143px;
+    background-color: $c-bg-main;
+    border-left: 12px solid $c-accent-light;
+    background-image: url(../img/quotes.svg);
+    background-repeat: no-repeat;
+    background-position: right 25px bottom 16px;
+    background-size: 113px 103px;
+
+    &--text {
+        margin-bottom: 50px;
+    }
+}

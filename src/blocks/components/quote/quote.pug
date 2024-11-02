@@ -1,0 +1,18 @@
+-
+    const defaultQuoteProps = {
+        classes: '',
+        text: ''
+    }
+
+mixin quote(props= defaultQuoteProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultQuoteProps.classes,
+            text: props.text ? props.text : defaultQuoteProps.text
+        }
+
+    .quote(class= checkProps.classes)&attributes(attributes)
+        .quote__text.text-editor!= checkProps.text
+
+
+

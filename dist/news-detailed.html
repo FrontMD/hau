@@ -56,9 +56,9 @@
     <main class="site-main">
       <div class="page">
         <div class="page-layout">
-              <section class="page-intro">
-                <div class="page-intro__img"><img src="img/news/news_detailed_intro.webp" alt=""></div>
-                <div class="m-container page-intro__container">
+              <section class="i-intro">
+                <div class="i-intro__img"><img src="img/news/news_detailed_intro.webp" alt=""></div>
+                <div class="m-container i-intro__container">
                       <div class="breadcrumbs  breadcrumbs--dark">
                         <ul class="breadcrumbs__list">
                           <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
@@ -67,14 +67,81 @@
                           </li>
                         </ul>
                       </div>
-                  <div class="page-intro__top"></div>
-                  <div class="page-intro__bottom">
-                        <div class="title i-intro__title title--dark">
+                  <div class="i-intro__top"></div>
+                  <div class="i-intro__bottom">
+                        <div class="title i-intro__title title--light">
                           <div class="title__h1">
                             <h1>В университете пройдет презентация Всероссийского проекта «Твой ход»</h1>
                           </div>
                         </div>
-                    <div class="page-intro__date"><span>01<span> <br>сентября <br>2024</div>
+                    <div class="i-intro__date"><span>01</span> <br>сентября <br>2024</div>
+                  </div>
+                </div>
+              </section>
+              <section class="news-detailed">
+                <div class="m-container news-detailed__container">
+                  <div class="news-detailed__main text-editor"> 
+                    <p>24 сентября в университете презентуют Всероссийский студенческий проект «Твой ход». В четвертом сезоне участников ждет трек «Первопроходец». На встрече организаторы расскажут о возможностях самой платформы проекта, основных конкурсных испытаниях и проведут мастер-классы, часть которых специально предназначена для первокурсников.</p>
+                        <div class="quote quote--text">
+                          <div class="quote__text text-editor"><p>Трек «Первопроходец»</p>
+                        <p>Трек создан, чтобы первокурсники могли раскрыть свой потенциал, окунуться в студенческую жизнь и познакомиться с молодежной политикой страны.</p></div>
+                        </div>
+                    <p>За годы проведения, по словам организаторов, проект «Твой ход» стал площадкой для обмена опытом и знаний, где обучающиеся могут учиться друг у друга, находить единомышленников и строить полезные связи.</p>
+                    <h2>Презентация пройдет 24 сентября в корпусе на Большой Семеновской, 38 (А-200 и Б-303). </h2>
+                    <ul> 
+                      <li>Сбор гостей: 16:30</li>
+                      <li>Начало: 17:00</li>
+                      <li> <b>Регистрация</b></li>
+                    </ul>
+                        <div class="media-slider media-slider--news media-slider--text media-slider--horizontal" data-js="imageSlider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="img/news/news_slide_1.webp" data-fancybox="news1" data-thumb="img/news/news_slide_1.webp"><img src="img/news/news_slide_1.webp" alt="">
+                                <div class="media-slider__zoom">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#search"></use>
+                                  </svg>
+                                </div></a>
+                            </div>
+                            <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="img/news/news_slide_2.webp" data-fancybox="news1" data-thumb="img/news/news_slide_2.webp"><img src="img/news/news_slide_2.webp" alt="">
+                                <div class="media-slider__zoom">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#search"></use>
+                                  </svg>
+                                </div></a>
+                            </div>
+                            <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="img/news/news_slide_3.webp" data-fancybox="news1" data-thumb="img/news/news_slide_3.webp"><img src="img/news/news_slide_3.webp" alt="">
+                                <div class="media-slider__zoom">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#search"></use>
+                                  </svg>
+                                </div></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="news-detailed__sidebar">
+                        <form class="form" action="#" data-validate novalidate>
+                          <div class="form__content" data-js="form-content">
+                            <div class="form__title">Задать вопрос</div>
+                            <div class="form__fields">
+                                  <label class="field  " data-js="formField"><span class="field__title">Имя<span>*</span></span>
+                                    <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
+                                    <input class="field__input" type="tel" placeholder="Номер телефона" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                                    <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field  " data-js="textarea"><span class="field__title">Текст вопроса</span>
+                                    <textarea class="field__textarea" rows="3"></textarea>
+                                  </label>
+                            </div><a class="btn form__submit btn--green" href="#">Задать вопрос</a>
+                            <div class="form__privacy">
+                              <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+                            </div>
+                          </div>
+                        </form>
                   </div>
                 </div>
               </section>
