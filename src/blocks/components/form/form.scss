@@ -1,9 +1,9 @@
 .form {
     width: 100%;
-    min-height: 100%;
-    border: 1px solid lightgrey;
     border-radius: 15px;
     padding: 24px 30px 30px;
+    background-color: $c-accent;
+    transition: height $tr-time;
 
     @include max(tablet) {
         padding: 24px 30px 30px;

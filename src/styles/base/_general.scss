@@ -302,7 +302,26 @@ iframe {
 		}
 	}
 
-	h2,
+	h2 {
+		margin-bottom: 20px;
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 1.02em;
+		color: $c-accent-middle;
+
+		@include max(laptop) {
+			font-size: 40px;
+		}
+
+		@include max(tablet) {
+			font-size: 22px;
+		}
+
+		@include max(mobile) {
+			font-size: 20px;
+		}
+	}
+
 	h3 {
 		margin-bottom: 20px;
 		font-size: 24px;
