@@ -5,9 +5,10 @@ block variables
 
 block content
     .page
-        .page-layout.page-layout--white
+        .page-layout
             +page-intro({
                 title: '<span>Дополнительная</span><br> информация',
+                classes: 'white-bg border-bottom',
                 breadcrumbs: {
                     items: [
                         {
@@ -33,32 +34,31 @@ block content
                 br
                 br
                 +info-tag
-                br
-                br
-                .m-columns.m-columns--no-plpr
+            .m-container.white-bg
+                .m-columns.m-columns--no-plpr.no-border
                     .m-columns__header.text-editor
-                        h2 Проходные баллы
+                        h3 Проходные баллы
                         p Минимальные баллы и контрольные цифры приёма смотрите в Приложениях к Правилам приема и на страницах <a href="#"><b>программ обучения</b></a>
                     .m-columns__main.text-editor
                         .text-items-list
                             h3 2023
                             <div class="link-block  link-block--note link-block--download">
-                                <div class="link-block__desc">Отчет приемной комиссии за 2023 год (бакалавриат, специалитет)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                <svg>
-                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                </svg></span></a>
+                            <div class="link-block__desc">Отчет приемной комиссии за 2023 год (бакалавриат, специалитет)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
                             </div>
                             <div class="link-block  link-block--note link-block--download">
-                                <div class="link-block__desc">Отчет приемной комиссии за 2023 год (магистратура)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                <svg>
-                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                </svg></span></a>
+                            <div class="link-block__desc">Отчет приемной комиссии за 2023 год (магистратура)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
                             </div>
                             <div class="link-block  link-block--note link-block--download">
-                                <div class="link-block__desc">Отчет приемной комиссии за 2023 год (аспирантура)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
-                                <svg>
-                                <use xlink:href="img/sprites/sprite.svg#download"></use>
-                                </svg></span></a>
+                            <div class="link-block__desc">Отчет приемной комиссии за 2023 год (аспирантура)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
                             </div>
                             br
                             br
@@ -81,10 +81,10 @@ block content
                             <use xlink:href="img/sprites/sprite.svg#download"></use>
                             </svg></span></a>
                             </div>
-
+            .m-container.white-bg
                 .m-columns.m-columns--no-plpr
                     .m-columns__header.text-editor
-                        h2 Списки зачисленных абитуриентов
+                        h3 Списки зачисленных абитуриентов
                     .m-columns__main.text-editor
                         .text-items-list
                             <div class="link-block  link-block--note link-block--download">

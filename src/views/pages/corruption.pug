@@ -7,7 +7,7 @@ block content
     .page
         .page-layout
             +page-intro({
-                classes: 'white-bg',
+                classes: 'white-bg border-bottom',
                 title: '<span>Противодействие </span><br> коррупции',
                 breadcrumbs: {
                     items: [
@@ -22,36 +22,35 @@ block content
                     ],
                 }
             })
-            .after-page-intro.white-bg
-                .m-container
-                    +m-columns({
-                        classes: "m-columns--no-plpr m-columns--after-page-intro",
-                        title: '<h2>Антикоррупционная деятельность</h2>'
-                    })
-                        ul
-                            li Нормативные и иные акты в сфере противодействия коррупции
-                            li Методические материалы
-                            li Формы документов, связанных с противодействием коррупции, для заполнения
-                            li Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера
-                            li Комиссия по противодействию коррупции университета
-                            li Обратная связь для сообщений о фактах коррупции
-                        br
-                        br
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Антикоррупционная деятельность</h2>'
+                })
+                    ul
+                        li Нормативные и иные акты в сфере противодействия коррупции
+                        li Методические материалы
+                        li Формы документов, связанных с противодействием коррупции, для заполнения
+                        li Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера
+                        li Комиссия по противодействию коррупции университета
+                        li Обратная связь для сообщений о фактах коррупции
+                    br
+
             +news-list({
                 titleMode: true,
                 classes: "news-list--section"
             })
             .m-container.white-bg
-                .after-page-intro.white-bg
-                    +m-columns({
-                        classes: "m-columns--no-plpr m-columns--after-page-intro",
-                        title: '<h2>Нормативные и иные акты в сфере противодействия коррупции<br><br><br><br></h2>',
-                        noContent: true
-                    })
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Нормативные и иные акты в сфере противодействия коррупции<br><br><br><br></h2>',
+                    noContent: true
+                })
 
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Федеральные <br>законы</h2>'
+                    title: '<h3>Федеральные <br>законы</h3>'
                 })
                     <div class="link-block  link-block--note link-block--download">
                     <div class="link-block__desc">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
@@ -80,10 +79,10 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Указы Президента Российской Федерации</h2>'
+                    title: '<h3>Указы Президента Российской Федерации</h3>'
                 })
                     <div class="link-block  link-block--note link-block--download">
                     <div class="link-block__desc">Указ Президента РФ от 16 августа 2021 г. № 478 «О Национальном плане противодействия коррупции на 2021 - 2024 годы»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">

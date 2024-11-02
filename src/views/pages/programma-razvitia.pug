@@ -38,7 +38,7 @@ block content
             .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h3>Наша миссия — создавать умные системы и работающие механизмы для «зелёной» экономики, раскрывать таланты каждого в атмосфере единства технических наук и творчества.</h3>'
+                    title: '<p><b>Наша миссия — создавать умные системы и работающие механизмы для «зелёной» экономики, раскрывать таланты каждого в атмосфере единства технических наук и творчества.</b></p>'
                 })
                     p Университет привлекает таланты и успешно соединяет творческие и технические направления, совмещает в обучении теорию и практику и учит студентов работать в командах — даёт навыки, действительно востребованные на рынке труда. Научная и инженерная работа вуза — воплощение в жизнь идей, которые полезны обществу и будут востребованы в «зелёной» экономике.<br><br>
             .m-container.white-bg
@@ -94,6 +94,7 @@ block content
                     <ul><li>Публичное акционерное общество «КАМАЗ»</li><li>ООО «АВТОТОР Холдинг Менеджмент»</li><li>Государственное унитарное предприятие города Москвы «Мосгортранс» (ГУП «Мосгортранс»)</li><li>Акционерное общество «Объединенная двигателестроительная корпорация (АО «ОДК»)</li><li>Публичное акционерное общество «Московская объединенная энергетическая компания» (ПАО «МОЭК)</li><li>АО «МПП имени В.В. Чернышева»</li><li>Акционерное общество «Турбокомплект»</li><li>ООО «Сеть дата-центров «Селектел»</li></ul>
                     br
                     br
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
                     title: '<p><b>Заключены соглашения с организациями реального сектора экономики, обеспечивающих сотрудничество в рамках программ профессиональной переподготовки:</b></p>'
@@ -109,14 +110,13 @@ block content
                         li ООО «РЭДМЭДРОБОТ МСК»
                     br
                     br
-
             .m-container.white-bg
-                .m-columns.m-columns--no-plpr.m-columns--column
-                    .after-page-intro.white-bg
-                        <div class="m-columns m-columns--after-page-intro m-columns--no-plpr  ">
-                        <div class="m-columns__header text-editor"><h2>Руководитель цифровой кафедры</h2></div>
+                +m-columns({
+                    classes: "m-columns--no-plpr ",
+                    title: '<h2>Руководитель цифровой кафедры</h2>',
+                    noContent: true
+                })
 
-                        </div>
             .m-container.white-bg
                 +people-detail
             +news-list({
@@ -127,17 +127,17 @@ block content
 
             .m-container.white-bg
                 +m-columns({
-                    classes: "m-columns--after-page-intro m-columns--no-plpr no-border",
+                    classes: "m-columns--no-plpr no-border",
                     title: '<h2>Дирекция по реализации программы развития</h2>'
                 })
-                    p <span style="color:#99ADA6;">Адрес:</span> Сретенская ул., 23, Херсон <br><span style="color:#99ADA6;">E-mail:</span> <a href="mailto:programmrazvitia@xay.ru">programmrazvitia@xay.ru
-                    p <span style="color:#99ADA6;">Директор:</span> Мищенко Сергей Сергеевич <br><span style="color:#99ADA6;">Телефон:</span> <a href="tel:+79900595039">+7 (990) 059 50 39</a>
+                    p Адрес: <b>Сретенская ул., 23, Херсон </b><br>E-mail:</span> <a href="mailto:programmrazvitia@xay.ru"><b>programmrazvitia@xay.ru</b></a>
+                    p Директор: <b>Мищенко Сергей Сергеевич</b> <br>Телефон:</span> <a href="tel:+79900595039"><b>+7 (990) 059 50 39</b></a>
                     br
             .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Кураторы направлений в рамках программы развития</h2>'
+                    title: '<p><b>Кураторы направлений в рамках программы развития</b></p>'
                 })
                     p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
                     p <b>Мищенко Сергей Сергеевич</b> <br> проректор по учебной работе, курирует реализацию образовательной политики
@@ -150,7 +150,7 @@ block content
             .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Документы</h2><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                    title: '<h3>Документы</h3><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
                 })
                     <div class="text-items-list">
                         <div class="link-block  link-block--note link-block--download">
@@ -202,6 +202,5 @@ block content
                         </svg></span></a>
                         </div>
                     </div>
-                    br
                     br
                     br

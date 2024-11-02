@@ -43,11 +43,6 @@
         flex-direction: column;
         align-self: stretch;
 
-        h2,
-        h3 {
-            font-size: 24px;
-        }
-
         @include max(laptop) {
             flex-basis: auto;
         }
@@ -116,6 +111,12 @@
         @include min(large){
             .m-columns__header {
                 flex: 0 0 690px;
+                p, ul{
+                    max-width: 500px;
+                }
+                h2, h3{
+                    max-width: 600px;
+                }
             }
         }
 

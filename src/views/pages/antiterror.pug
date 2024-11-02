@@ -8,7 +8,7 @@ block content
         .page-layout
             +page-intro({
                 title: '<span>Антитеррористическая</span><br> и антиэкстремистская деятельность',
-                classes: "white-bg",
+                classes: "white-bg border-bottom",
                 breadcrumbs: {
                     items: [
                         {
@@ -22,27 +22,29 @@ block content
                     ],
                 }
             })
-            .after-page-intro.white-bg
-                .m-container
-                    +m-columns({
-                        classes: "m-columns--after-page-intro m-columns--no-plpr",
-                        title: '<h2>О мерах противодействия терроризму и экстремизму в университете</h2>'
-                    })
-                        ul
-                            li разработка и реализация комплексного плана противодействия;
-                            li занятия в рамках адаптивного курса для поступающих;
-                            li фестиваль международных культур и конкурсы плакатов;
-                            li лекции и научно-практические конференции о профилактике идей терроризма и экстремизма.
-                    +m-columns({
-                        classes: "m-columns--after-page-intro m-columns--no-plpr",
-                        title: '<h2>Информация о противодействии терроризму и экстремизму</h2>',
-                        noContent: true
-                    })
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>О мерах противодействия терроризму и экстремизму в университете</h2>'
+                })
+                    ul
+                        li разработка и реализация комплексного плана противодействия;
+                        li занятия в рамках адаптивного курса для поступающих;
+                        li фестиваль международных культур и конкурсы плакатов;
+                        li лекции и научно-практические конференции о профилактике идей терроризма и экстремизма.
+                    br
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Информация о противодействии терроризму и экстремизму</h2>',
+                    noContent: true
+                })
+
             .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
-                    title: '<h2>Всё о проводимых мероприятиях и безопасности</h2>'
+                    title: '<h3>Всё о проводимых мероприятиях и безопасности</h3>'
                 })
                     <div class="link-block  link-block--note link-block--download">
                     <div class="link-block__desc">Комплексный план противодействия идеологии терроризма в Российской Федерации на 2019-2023 гг.</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
