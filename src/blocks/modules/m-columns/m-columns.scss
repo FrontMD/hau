@@ -162,26 +162,6 @@
 }
 
 .m-columns.m-columns--width-green-border {
-    position: relative;
-    margin-top: 50px;
+    margin-top: 30px;
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: -28px;
-        top: -30px;
-        width: calc(100% + 56px);
-        background: #F0F7F0;
-        height: 30px;
-
-        @include max(laptop) {
-            left: -20px;
-            width: calc(100% + 40px);
-        }
-
-        @include max(tablet) {
-            left: -15px;
-            width: calc(100% + 30px);
-        }
-    }
 }

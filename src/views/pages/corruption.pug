@@ -188,7 +188,7 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
                     title: '<h2>Постановления Правительства Российской Федерации</h2>'
@@ -241,7 +241,7 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
                     title: '<h2>Иные акты</h2>'
@@ -371,13 +371,13 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-
-                .after-page-intro.white-bg
-                    +m-columns({
-                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
-                        title: '<h2>Методические <br>материалы<br><br><br><br></h2>',
-                        noContent: true
-                    })
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr m-columns--width-green-border no-border",
+                    title: '<h2>Методические <br>материалы</h2><br><br><br>',
+                    noContent: true
+                })
+            .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
@@ -406,13 +406,13 @@ block content
                             vMode: 'table',
                             type: 'link'
                         })
-
-                .after-page-intro.white-bg
-                    +m-columns({
-                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
-                        title: '<h2>Сведения о доходах<br><br><br><br></h2>',
-                        noContent: true
-                    })
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr m-columns--width-green-border no-border",
+                    title: '<h2>Сведения о доходах</h2><br><br><br>',
+                    noContent: true
+                })
+            .m-container.white-bg
 
                 +m-columns({
                     classes: "m-columns--no-plpr",
@@ -427,13 +427,13 @@ block content
                             vMode: 'table',
                             type: 'link'
                         })
-                .after-page-intro.white-bg
-                    +m-columns({
-                        classes: "m-columns--no-plpr m-columns--after-page-intro m-columns--width-green-border",
-                        title: '<h2>Комиссия по противодействию коррупции университета<br><br><br><br></h2>',
-                        noContent: true
-                    })
-
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr m-columns--width-green-border no-border",
+                    title: '<h2>Комиссия по противодействию коррупции университета</h2><br><br><br>',
+                    noContent: true
+                })
+            .m-container.white-bg
                 +m-columns({
                     classes: "m-columns--no-plpr",
                     title: ' '
@@ -451,4 +451,9 @@ block content
                     <use xlink:href="img/sprites/sprite.svg#download"></use>
                     </svg></span></a>
                     </div>
-
+            +form({
+                classes: "white-bg",
+                title: 'title ',
+                text: 'текст',
+                btnText: 'Отправить'
+            })
