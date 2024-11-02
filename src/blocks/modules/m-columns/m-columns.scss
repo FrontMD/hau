@@ -43,11 +43,6 @@
         flex-direction: column;
         align-self: stretch;
 
-        h2,
-        h3 {
-            font-size: 24px;
-        }
-
         @include max(laptop) {
             flex-basis: auto;
         }
@@ -113,7 +108,8 @@
     &.m-columns--no-plpr {
         padding-left: 0;
         padding-right: 0;
-        @include min(large){
+
+        @include min(large) {
             .m-columns__header {
                 flex: 0 0 690px;
             }
