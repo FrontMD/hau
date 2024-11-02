@@ -108,7 +108,8 @@
     &.m-columns--no-plpr {
         padding-left: 0;
         padding-right: 0;
-        @include min(large){
+
+        @include min(large) {
             .m-columns__header {
                 flex: 0 0 690px;
                 p, ul{

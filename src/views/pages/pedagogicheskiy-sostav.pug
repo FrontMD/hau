@@ -24,7 +24,7 @@ block content
 
             .sidebar-layout__content
                 .gost-section.gost-section--bordered.text-editor
-                    .gost-section__title!= '<h2>Информация о персональном составе педагогических работников каждой реализуемой образовательной программы</h2>'
+                    .gost-section__title!= '<h3>Информация о персональном составе педагогических работников каждой реализуемой образовательной программы</h3>'
                     .m-table.m-table--columns(data-js="mTable")
                         <table>
                             <thead>
@@ -194,7 +194,7 @@ block content
                         </table> 
 
                 +m-columns({
-                    title: '<h2>Численность иностранных педагогических и научных работников</h2>'
+                    title: '<h3>Численность иностранных педагогических и научных работников</h3>'
                 })
                     .text-items-list
                         +count-block({
@@ -204,7 +204,7 @@ block content
                         })
 
                 .gost-section.gost-section--bordered.text-editor
-                    .gost-section__title!= '<h2>Информация о представителях работодателей</h2>'
+                    .gost-section__title!= '<h3>Информация о представителях работодателей</h3>'
                     +m-table({
                         header: [
                             "№",
