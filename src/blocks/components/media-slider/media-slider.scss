@@ -4,10 +4,6 @@
 
     &__slide {
         width: auto;
-
-        @include max(mobile) {
-            width: 335px;
-        }
     }
 
     &__zoom {
@@ -26,7 +22,7 @@
         opacity: 0;
         transition: opacity 0.3s linear;
 
-        @include max(mobile) {
+        @include max(tablet) {
             display: none;
         }
 
@@ -89,16 +85,6 @@
             opacity: 0;
             z-index: 5;
             transition: background-color 0.3s linear;
-        }
-
-        @include max(tablet) {
-            height: 400px;
-            border-radius: 20px;
-        }
-
-        @include max(mobile) {
-            height: 203px;
-            border-radius: 20px;
         }
 
         img,
@@ -238,11 +224,25 @@
 .media-slider {
     &--text {
         margin-bottom: 50px;
+
+        @include max(mobile) {
+            margin-bottom: 30px;
+        }
     }
 
     &--news {
         margin-right: -50px;
         padding-right: 50px;
+
+        @include max(tablet) {
+            margin-right: -30px;
+            padding-right: 30px;
+        }
+
+        @include max(mobile) {
+            margin-right: -15px;
+            padding-right: 15px;
+        }
     }
 }
 

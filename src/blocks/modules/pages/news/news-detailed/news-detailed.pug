@@ -20,7 +20,7 @@ mixin news-detailed(props = defaultNewsDetailedProps)
                         <p>Трек создан, чтобы первокурсники могли раскрыть свой потенциал, окунуться в студенческую жизнь и познакомиться с молодежной политикой страны.</p>`
                 })
 
-                //-<iframe width="560" height="315" src="https://www.youtube.com/embed/NtGa5SF1NY4?si=76hupyno1p4ge3b5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NtGa5SF1NY4?si=76hupyno1p4ge3b5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                 p За годы проведения, по словам организаторов, проект «Твой ход» стал площадкой для обмена опытом и знаний, где обучающиеся могут учиться друг у друга, находить единомышленников и строить полезные связи.
 
@@ -62,16 +62,16 @@ mixin news-detailed(props = defaultNewsDetailedProps)
 
             .news-detailed__sidebar
                 +form({
-                    classes: '',
+                    classes: 'news-detailed__form',
                     title: 'Задать вопрос',
                     text: '',
-                    btnText: 'Задать вопрос'
+                    btnText: 'Задать вопрос',
                 })
                     +field({
                         classes: '',
                         type: 'text',
-                        title: 'Имя',
-                        placeholder: '',
+                        title: '',
+                        placeholder: 'Имя',
                         inputAttr: {
                             'required': ''
                         },
@@ -81,8 +81,8 @@ mixin news-detailed(props = defaultNewsDetailedProps)
                     +field({
                         classes: '',
                         type: 'tel',
-                        title: 'Телефон',
-                        placeholder: 'Номер телефона',
+                        title: '',
+                        placeholder: '+7 (___) ___-__-__',
                         inputAttr: {
                             'data-type': 'phoneNumber',
                             'required': '',
@@ -94,7 +94,7 @@ mixin news-detailed(props = defaultNewsDetailedProps)
                     +field({
                         classes: '',
                         type: 'email',
-                        title: 'Email',
+                        title: '',
                         placeholder: 'Email',
                         inputAttr: {
                             'required': '',
@@ -107,5 +107,39 @@ mixin news-detailed(props = defaultNewsDetailedProps)
                     +field({
                         classes: '',
                         tag: 'textarea',
-                        title: 'Текст вопроса',
+                        title: '',
+                        placeholder: 'Текст вопроса',
                     })
+
+                .news-detailed__rec.rec-news
+                    .h2.rec-news__title Другие новости
+                    .rec-news__items
+                        .rec-news__item
+                            .rec-news__content
+                                a.h3.rec-news__name(href='#') Акция «День донора» пройдет в университете
+                                .rec-news__date 16 сентября 2024
+                            +btn-plus({
+                                noText: true
+                            })
+                        .rec-news__item
+                            .rec-news__content
+                                a.h3.rec-news__name(href='#') «С одной стороны — технический, а с другой — гуманитарный»: интервью с директором Музея истории полиграфии, книгоиздания и МГУП им.И.Федорова
+                                .rec-news__date 20 сентября 2024
+                            +btn-plus({
+                                noText: true
+                            })
+                        .rec-news__item
+                            .rec-news__content
+                                a.h3.rec-news__name(href='#') Именную стипендию от Selectel могут получить студенты университета
+                                .rec-news__date 1 октября 2024
+                            +btn-plus({
+                                noText: true
+                            })
+                        .rec-news__item
+                            .rec-news__content
+                                a.h3.rec-news__name(href='#') Старт нового сезона Дней открытых дверей в университете
+                                .rec-news__date 16 октября 2024
+                            +btn-plus({
+                                noText: true
+                            })
+

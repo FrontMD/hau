@@ -93,6 +93,13 @@ function validation() {
                                     error(input, 'Поле обязательно для заполнения').set()
                                 }
                                 break
+                            case 'checkbox':
+                                if (field.checked) {
+                                    error(input).remove()
+                                } else {
+                                    error(input, 'Нужно обязательно согласиться').set()
+                                }
+                                break                            
                             default:
                                 if (valueField.length !== 0) {
                                     error(input).remove()
@@ -158,6 +165,7 @@ function validation() {
 
                     //порверяем какой тип благодарности в форме и показываем его
                     if(form.querySelector("[data-js='form-thanks']") !== null) {
+                        form.style.minHeight = form.offsetHeight + 'px'
                         form.classList.add("form--sent")
                     } else {
                         thanksMessageShow();

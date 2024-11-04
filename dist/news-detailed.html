@@ -85,7 +85,7 @@
                         <div class="quote quote--text">
                           <div class="quote__text text-editor"><p>Трек «Первопроходец»</p>
                         <p>Трек создан, чтобы первокурсники могли раскрыть свой потенциал, окунуться в студенческую жизнь и познакомиться с молодежной политикой страны.</p></div>
-                        </div>
+                        </div><iframe width="560" height="315" src="https://www.youtube.com/embed/NtGa5SF1NY4?si=76hupyno1p4ge3b5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <p>За годы проведения, по словам организаторов, проект «Твой ход» стал площадкой для обмена опытом и знаний, где обучающиеся могут учиться друг у друга, находить единомышленников и строить полезные связи.</p>
                     <h2>Презентация пройдет 24 сентября в корпусе на Большой Семеновской, 38 (А-200 и Б-303). </h2>
                     <ul> 
@@ -120,28 +120,75 @@
                         </div>
                   </div>
                   <div class="news-detailed__sidebar">
-                        <form class="form" action="#" data-validate novalidate>
+                        <form class="form news-detailed__form" action="#" data-validate novalidate>
                           <div class="form__content" data-js="form-content">
-                            <div class="form__title">Задать вопрос</div>
+                            <div class="h2 form__title">Задать вопрос</div>
                             <div class="form__fields">
-                                  <label class="field  " data-js="formField"><span class="field__title">Имя<span>*</span></span>
-                                    <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
+                                  <label class="field  " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="Имя" required=""><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
-                                    <input class="field__input" type="tel" placeholder="Номер телефона" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                  <label class="field  " data-js="formField">
+                                    <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                                  <label class="field  " data-js="formField">
                                     <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field  " data-js="textarea"><span class="field__title">Текст вопроса</span>
-                                    <textarea class="field__textarea" rows="3"></textarea>
+                                  <label class="field  " data-js="textarea">
+                                    <textarea class="field__textarea" rows="7" placeholder="Текст вопроса"></textarea>
                                   </label>
-                            </div><a class="btn form__submit btn--green" href="#">Задать вопрос</a>
-                            <div class="form__privacy">
-                              <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
                             </div>
+                                <button class="btn form__submit btn--green" type="submit">Задать вопрос</button>
+                            <label class="form__privacy form-privacy" data-js="formField">
+                              <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                            </label>
+                          </div>
+                          <div class="form__thanks" data-js="form-thanks">
+                            <div class="form__image-success">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#success"></use>
+                              </svg>
+                            </div>
+                            <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                            <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
                           </div>
                         </form>
+                    <div class="news-detailed__rec rec-news">
+                      <div class="h2 rec-news__title">Другие новости</div>
+                      <div class="rec-news__items">
+                        <div class="rec-news__item">
+                          <div class="rec-news__content"><a class="h3 rec-news__name" href="#">Акция «День донора» пройдет в университете</a>
+                            <div class="rec-news__date">16 сентября 2024</div>
+                          </div><a class="btn-plus" href="#"><span class="btn-plus__icon"> 
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span></a>
+                        </div>
+                        <div class="rec-news__item">
+                          <div class="rec-news__content"><a class="h3 rec-news__name" href="#">«С одной стороны — технический, а с другой — гуманитарный»: интервью с директором Музея истории полиграфии, книгоиздания и МГУП им.И.Федорова</a>
+                            <div class="rec-news__date">20 сентября 2024</div>
+                          </div><a class="btn-plus" href="#"><span class="btn-plus__icon"> 
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span></a>
+                        </div>
+                        <div class="rec-news__item">
+                          <div class="rec-news__content"><a class="h3 rec-news__name" href="#">Именную стипендию от Selectel могут получить студенты университета</a>
+                            <div class="rec-news__date">1 октября 2024</div>
+                          </div><a class="btn-plus" href="#"><span class="btn-plus__icon"> 
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span></a>
+                        </div>
+                        <div class="rec-news__item">
+                          <div class="rec-news__content"><a class="h3 rec-news__name" href="#">Старт нового сезона Дней открытых дверей в университете</a>
+                            <div class="rec-news__date">16 октября 2024</div>
+                          </div><a class="btn-plus" href="#"><span class="btn-plus__icon"> 
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -240,184 +287,228 @@
           </div>
           <div class="main-burger__main">
                 <div class="multi-menu" data-js="multiMenu">
-                  <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuLevel" data-level="1"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuLevel" data-level="2" data-index="1"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuLevel" data-level="2" data-index="2"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuLevel" data-level="2" data-index="3"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuLevel" data-level="3" data-index="1"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuLevel" data-level="3" data-index="2"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
-                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuLevel" data-level="3" data-index="3"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
-                        </svg></span></a></div>
+                  <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="13">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-13</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
                 </div>
           </div>
         </div>

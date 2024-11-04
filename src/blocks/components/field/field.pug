@@ -1,46 +1,46 @@
 -
-    const defaultFieldProps = {
-        classes: '',
-        tag: 'input',
-        type: 'text',
-        title: '',
-        placeholder: '',
-        inputAttr: {},
-        resetBtn: false,
-        isRequired: false
-    }
+  const defaultFieldProps = {
+    classes: '',
+    tag: 'input',
+    type: 'text',
+    title: '',
+    placeholder: '',
+    inputAttr: {},
+    resetBtn: false,
+    isRequired: false
+  }
 
 mixin field(props = defaultFieldProps)
-    -
-        const checkProps = {
-            classes: props.classes ? props.classes : defaultFieldProps.classes,
-            tag: props.tag ? props.tag : defaultFieldProps.tag,
-            type: props.type ? props.type : defaultFieldProps.type,
-            title: props.title ? props.title : defaultFieldProps.title,
-            placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
-            inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
-            resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
-            isRequired: props.isRequired ? props.isRequired : defaultFieldProps.isRequired,
-        }
+  -
+    const checkProps = {
+      classes: props.classes ? props.classes : defaultFieldProps.classes,
+      tag: props.tag ? props.tag : defaultFieldProps.tag,
+      type: props.type ? props.type : defaultFieldProps.type,
+      title: props.title ? props.title : defaultFieldProps.title,
+      placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
+      inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
+      resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
+      isRequired: props.isRequired ? props.isRequired : defaultFieldProps.isRequired,
+    }
 
-    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
-        - if(checkProps.title)
-            span.field__title
-                != checkProps.title
-                - if(checkProps.isRequired)
-                    span!= "*"
-        - if(checkProps.tag === 'input')
-            input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
-            - if(checkProps.resetBtn)
-                span.field__reset(data-js='fieldResetBtn')
-                    svg 
-                        use(xlink:href=`img/sprites/sprite.svg#close`)
-            span.field__error(data-js='fieldError')
-        - if(checkProps.tag === 'textarea')
-            textarea.field__textarea(rows="3")
-        - if(checkProps.tag === 'select')
-            select.field__select(data-js='formSelect')
-                option
-                option Высшее
-                option Средне-специальное
-                option Среднее
+  label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
+    - if(checkProps.title)
+      span.field__title
+        != checkProps.title
+        - if(checkProps.isRequired)
+          span!= "*"
+    - if(checkProps.tag === 'input')
+      input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+      - if(checkProps.resetBtn)
+        span.field__reset(data-js='fieldResetBtn')
+          svg 
+            use(xlink:href=`img/sprites/sprite.svg#close`)
+      span.field__error(data-js='fieldError')
+    - if(checkProps.tag === 'textarea')
+      textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)
+    - if(checkProps.tag === 'select')
+      select.field__select(data-js='formSelect')
+        option
+        option Высшее
+        option Средне-специальное
+        option Среднее

@@ -223,6 +223,42 @@ iframe {
 	height: auto;
 }
 
+.h2 {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1.02em;
+
+	@include max(laptop) {
+		font-size: 28px;
+	}
+
+	@include max(tablet) {
+		font-size: 26px;
+	}
+
+	@include max(mobile) {
+		font-size: 20px;
+	}
+}
+
+.h3 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.02em;
+
+	@include max(laptop) {
+		font-size: 22px;
+	}
+
+	@include max(tablet) {
+		font-size: 20px;
+	}
+
+	@include max(mobile) {
+		font-size: 18px;
+	}
+}
+
 .text-editor {
 	color: rgba(1, 50, 32, 0.4);
 	font-size: 16px;
@@ -467,6 +503,10 @@ iframe {
 
 	iframe {
 		margin-bottom: 50px;
+
+		@include max(mobile) {
+			margin-bottom: 30px;
+		}
 	}
 }
 
@@ -604,19 +644,16 @@ iframe {
 		.fancybox__content {
 			max-width: 1200px;
 			max-height: 800px;
-			border-radius: 15px;
 			overflow: hidden;
 
 			@include max(tablet) {
 				max-width: 840px;
 				max-height: 560px;
-				border-radius: 15px;
 			}
 
 			@include max(mobile) {
 				max-width: 335px;
 				max-height: none;
-				border-radius: 15px;
 			}
 		}
 

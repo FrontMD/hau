@@ -1,8 +1,12 @@
 .form {
     width: 100%;
-    padding: 30px 25px 45px;
+    padding: 30px 25px;
     background-color: $c-accent;
     transition: height $tr-time;
+
+    @include max(mobile) {
+        padding: 30px 15px;
+    }
 
     &__content,
     &__thanks {
@@ -29,38 +33,22 @@
     }
 
     &__title {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1.2;
         color: $c-white;
-
-        @include max(laptop) {
-			font-size: 28px;
-		}
-
-		@include max(tablet) {
-			font-size: 26px;
-		}
-
-		@include max(mobile) {
-			font-size: 20px;
-		}
+        letter-spacing: -0.03125em;
     }
 
     &__text {
         font-size: 16px;
         font-weight: 500;
-        line-height: 1.3;
-        color: black;
+        line-height: 1.02em;
+        color: $c-white;
         margin-top: 10px;
 
         @include max(tablet) {
-            font-size: 16px;
             margin-top: 10px;
         }
 
         @include max(mobile) {
-            font-size: 16px;
             margin-top: 10px;
             padding: 0 20px;
         }
@@ -69,7 +57,7 @@
     &__image-success {
         width: 48px;
         height: 48px;
-        color: lightgreen;
+        color: $c-accent-light;
 
         svg {
             width: 100%;
@@ -80,60 +68,73 @@
     &__fields {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        margin-top: 24px;
-        margin-bottom: 15px;
+        gap: 20px;
+        margin-top: 96px;
+        margin-bottom: 20px;
 
         @include max(tablet) {
-            gap: 15px;
-            margin-top: 24px;
-            margin-bottom: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         @include max(mobile) {
-            padding: 0 20px;
-            gap: 15px;
             margin-top: 20px;
             margin-bottom: 15px;
         }
     }
 
-    .field {
-        &__input {
-            padding: 11px 15px;
-            font-size: 13px;
-            line-height: 1.2;
-            min-height: 40px;
+    &__privacy {
+        margin-top: 14px;
+    }
 
-            @include max(tablet) {
-                padding: 11px 15px;
-                font-size: 13px;
-                min-height: 40px;
-            }
+    .form-privacy {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        cursor: pointer;
+        margin-bottom: 15px;
 
-            @include max(mobile) {
-                padding: 11px 15px;
-                font-size: 13px;
-                min-height: 40px;
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        &__fake {
+            position: relative;
+            width: 13px;
+            height: 13px;
+            background-color: $c-text-grey;
+            flex-shrink: 0;
+            flex-grow: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $c-white;
             }
         }
 
-        &__textarea {
-            padding: 16px 15px;
-            font-size: 13px;
-            line-height: 1.2;
-            min-height: 80px;
+        input:checked+.form-privacy__fake::after {
+            background-color: $c-accent-light;
+        }
 
-            @include max(tablet) {
-                padding: 16px 15px;
-                font-size: 13px;
-                min-height: 80px;
-            }
+        &__text {
+            max-width: 350px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1em;
+            color: $c-white;
 
-            @include max(mobile) {
-                padding: 16px 15px;
-                font-size: 13px;
-                min-height: 80px;
+            a {
+                color: $c-accent-light;
             }
         }
     }
@@ -141,52 +142,22 @@
     &__submit {
         margin-top: auto;
         width: 100%;
-        border-radius: 11px;
 
-        @include max(mobile) {
-            border-radius: 11px;
-        }
-
-        @include max(mobile) {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 335px;
-            min-width: auto;
-            border-radius: 11px;
-        }
+        @include max(mobile) {}
     }
 
-    &__privacy {
-        display: block;
-        margin-top: 10px;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1.2;
-        color: #B0B2B7;
-
-        a {
-            transition: color 0.3s linear;
-
-            &:hover {
-                color: $c-accent-light;
-            }
-        }
-
-        @include max(tablet) {
-            margin-top: 10px;
-            font-size: 12px;
-        }
-
-        @include max(mobile) {
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: 10px;
-            font-size: 12px;
-        }
-    }
 }
 
 .form {
+
+    &--sent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
     &--sent &__content {
         opacity: 0;
         height: 0;

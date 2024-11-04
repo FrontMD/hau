@@ -7,7 +7,23 @@
     background-position: right 25px bottom 16px;
     background-size: 113px 103px;
 
+    @include max(tablet) {
+        background-size: 80px 73px;
+        padding: 35px 35px 105px;
+    }
+
+    @include max(mobile) {
+        border-width: 6px;
+        background-size: 50px 46px;
+        padding: 30px 20px 70px 15px;
+        background-position: right 20px bottom 15px;
+    }
+
     &--text {
         margin-bottom: 50px;
+
+        @include max(mobile) {
+            margin-bottom: 30px;
+        }
     }
 }

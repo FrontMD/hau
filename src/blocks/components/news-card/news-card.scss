@@ -61,8 +61,6 @@
 
     &__title {
         max-width: 650px;
-        font-size: 32px;
-        font-weight: 500;
         line-height: 1.14em;
         letter-spacing: -0.03em;
         color: $c-accent;
@@ -71,18 +69,6 @@
         &:hover {
             color: $c-accent-light;
         }
-
-        @include max(laptop) {
-			font-size: 28px;
-		}
-
-		@include max(tablet) {
-			font-size: 26px;
-		}
-
-		@include max(mobile) {
-			font-size: 20px;
-		}
     }
 
     &__date {

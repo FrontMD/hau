@@ -21,7 +21,7 @@ mixin news-card(props = defaultNewsCardProps)
         .news-card__img 
             img(src=checkProps.img alt="")
         .news-card__content
-            a.news-card__title(href="#")!= checkProps.title
+            a.h2.news-card__title(href="#")!= checkProps.title
             .news-card__date!= checkProps.date
             .news-card__footer 
                 .news-card__desc.text-editor!= checkProps.desc

@@ -41,23 +41,9 @@
     }
 
     &__title {
-        font-size: 32px;
-        font-weight: 500;
         line-height: 0.91em;
         letter-spacing: -0.044em;
         color: $c-accent;
-
-        @include max(laptop) {
-			font-size: 28px;
-		}
-
-		@include max(tablet) {
-			font-size: 26px;
-		}
-
-		@include max(mobile) {
-			font-size: 20px;
-		}
     }
 
     &__pagination {

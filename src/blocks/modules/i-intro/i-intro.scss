@@ -32,6 +32,23 @@
         min-height: calc(100vh - 220px);
         padding-top: 20px;
         padding-bottom: 45px;
+
+        @include max(laptop) {
+            min-height: calc(100vh - 158px);
+            padding-top: 20px;
+            padding-bottom: 45px;
+        }
+
+        @include max(tablet) {
+            min-height: calc(100vh - 70px);
+            padding-top: 20px;
+            padding-bottom: 45px;
+        }
+
+        @include max(tablet) {
+            min-height: calc(100vh - 62px);
+            padding-bottom: 30px;
+        }
     }
 
     &__top {
@@ -39,6 +56,10 @@
         position: relative;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         margin-top: 24px;
+
+        @include max(mobile) {
+            border-top: none;
+        }
     }
 
     &__bottom {
@@ -49,6 +70,11 @@
         justify-content: space-between;
         padding: 8px 0 0;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__title {
@@ -62,11 +88,31 @@
         line-height: 1.02em;
         text-align: right;
 
+        @include max(tablet) {
+            font-size: 14px;
+        }
+
+        @include max(mobile) {
+            opacity: 0.7;
+
+            br {
+                display: none;
+            }
+        }
+
         span {
             font-size: 80px;
             font-weight: 500;
             line-height: 0.91em;
             letter-spacing: -0.025em;
+
+            @include max(tablet) {
+                font-size: 52px;
+            }
+
+            @include max(mobile) {
+                font-size: 20px;
+            }
         }
     }
 }

@@ -64,65 +64,51 @@
         }
     }
 
-    &__input {
+    &__input,
+    &__textarea {
         width: 100%;
-        padding: 10px 54px 9.2px 15px;
-        border: 1px solid #E6E6EA;
-        border-radius: 8px;
+        padding: 32px 23px;
+        font-family: $ff-main;
         font-size: 16px;
         font-weight: 500;
-        line-height: 1.3em;
-        background-color: white;
+        line-height: 1.02em;
+        background-color: $c-input-bg;
         outline: none;
-        color: black;
-
-        @include max(tablet) {
-            border-radius: 8px;
-        }
+        color: $c-white;
+        border: 1px solid transparent;
 
         @include max(mobile) {
-            border-radius: 8px;
+            padding: 20px 15px;
         }
+    }
+
+    &--invalid &__input,
+    &--invalid &__textarea {
+        border-color: $c-error;
+    }
+
+    &__input {
+
+        @include max(mobile) {}
 
     }
 
     &__textarea {
-        width: 100%;
-        padding: 16px 15px;
-        border: 1px solid #E6E6EA;
-        border-radius: 8px;
-        background-color: white;
-        outline: none;
         resize: none;
 
-        @include max(tablet) {
-            padding: 16px 15px;
-            border-radius: 8px;
-        }
-
-        @include max(mobile) {
-            padding: 16px 15px;
-            border-radius: 8px;
-        }
+        @include max(mobile) {}
     }
 
     &__error {
-        font-size: 11px;
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 100%;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.18em;
-        color: red;
-        margin-top: 4px;
+        color: $c-error;
         display: none;
-
-        @include max(tablet) {
-            font-size: 11px;
-            margin-top: 4px;
-        }
-
-        @include max(mobile) {
-            font-size: 11px;
-            margin-top: 4px;
-        }
     }
 
     &__reset {

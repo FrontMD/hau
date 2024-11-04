@@ -6,6 +6,15 @@
         gap: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
+
+        @include max(laptop) {
+            flex-direction: column;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &__main {
@@ -13,9 +22,118 @@
         background-color: $c-white;
         padding: 50px;
         overflow: hidden;
+
+        @include max(tablet) {
+            padding: 30px;
+        }
+
+        @include max(mobile) {
+            padding: 30px 15px;
+        }
     }
 
     &__sidebar {
         flex: 0 0 575px;
+
+        @include max(large) {
+            flex-basis: 480px;
+        }
+
+        @include max(laptop) {
+            flex-basis: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 30px;
+
+        }
+    }
+
+    &__form {
+        @include max(laptop) {
+            flex: 0 0 550px;
+        }
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+        }
+    }
+
+    &__rec {
+        margin: 54px 0;
+
+        @include max(laptop) {
+            margin: 0 0 30px;
+        }
+    }
+}
+
+.rec-news {
+
+    @include max(mobile) {
+        padding: 0 15px;
+    }
+
+    &__title {
+        color: $c-accent;
+        line-height: 1.14em;
+        letter-spacing: -0.03125em;
+    }
+
+    &__items {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid $c-border;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        padding-top: 14px;
+    }
+
+    &__name {
+        color: $c-accent-middle;
+        line-height: 1.02em;
+        margin: 0;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: color $tr-time;
+
+        &:hover {
+            color: $c-accent-light;
+        }
+    }
+
+    &__date {
+        margin-top: 14px;
+        font-size: 16px;
+        font-weight: 450;
+        line-height: 1.17em;
+        text-align: left;
+        color: $c-accent;
+        opacity: 0.4;
+    }
+
+    .btn-plus {
+        flex-shrink: 0;
+        flex-grow: 0;
     }
 }
