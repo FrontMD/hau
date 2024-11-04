@@ -2,5 +2,120 @@
     display: flex;
     align-items: center;
     background-color: $c-white;
+    border-left: 4px solid $c-accent-light;
+    padding: 32px 26px 32px 40px;
+    margin-top: 20px;
+
+    @include max(large) {
+        padding: 25px 15px 25px 25px;
+    }
+
+    @include max(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    a {
+        margin-bottom: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        display: inherit;
+        color: inherit;
+
+        @include max(mobile) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-right: auto;
+        color: $c-accent;
+    }
+
+    &__phone,
+    &__email,
+    &__number {
+        padding: 0 20px;
+        width: fit-content;
+        font-size: 16px;
+        line-height: 1.02em;
+        color: $c-accent;
+        font-weight: 400;
+
+        @include max(tablet) {
+            padding: 0 10px;
+        }
+
+        @include max(mobile) {
+            padding: 10px 0;
+            font-size: 14px;
+            max-width: calc(100% - 53px);
+        }
+
+    }
+
+    &__number {
+        font-weight: 500;
+        border-left: 1px solid $c-border-op;
+
+        @include max(mobile) {
+            border-left: none;
+        }
+    }
+
+    &__param {
+        opacity: 0.2;
+    }
+
+    &__val {
+        margin-top: 14px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+        width: 53px;
+        height: 53px;
+        flex: 0 0 53px;
+        border-radius: 100%;
+        border: 1px solid $c-bg-light;
+        border-color: $c-bg-light;
+        transition: all $tr-time;
+        color: $c-accent;
+
+        @include max(large) {
+            margin-left: 0;
+        }
+
+        @include max(laptop) {
+            margin-left: 50px;
+        }
+
+        @include max(tablet) {
+            margin-left: 0;
+        }
+
+        @include max(mobile) {
+            width: 40px;
+            height: 40px;
+            flex-basis: auto;
+            align-self: flex-end;
+            margin-top: -40px;
+        }
+
+        svg {
+            width: 7px;
+            height: 12px;
+        }
+
+        &:hover {
+            background-color: $c-accent;
+            border-color: $c-accent;
+            color: $c-white;
+        }
+    }
 
 }
