@@ -19,6 +19,10 @@
         border-left: 4px solid $c-accent-light;
         margin-top: 10px;
 
+        &.white-bg {
+            background-color: $c-white;
+        }
+
         @include max(mobile) {
             padding: 10px;
             border-left-width: 2px;

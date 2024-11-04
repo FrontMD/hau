@@ -1,0 +1,28 @@
+-
+    const defaultCMapProps = {
+        classes: '',
+        coords: [],
+        breadcrumbs: {},
+        title: '',
+        items: []
+    }
+
+mixin c-map(props = defaultCMapProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCMapProps.classes,
+            coords: props.coords ? props.coords : defaultCMapProps.coords,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultCMapProps.breadcrumbs,
+            title: props.title ? props.title : defaultCMapProps.title,
+            items: props.items ? props.items : defaultCMapProps.items,
+        }
+
+    section.c-map(class= checkProps.classes)
+        .c-map__map(data-js="cMap")
+        .m-container
+            .c-map__content.white-bg
+                - if(checkProps.breadcrumbs.items)
+                    +breadcrumbs(checkProps.breadcrumbs)
+                - if(checkProps.title.length > 0)
+                    != checkProps.title
+                block

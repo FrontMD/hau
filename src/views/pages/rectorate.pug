@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Ректорат"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: 'Ректорат',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Ректорат',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            +rectorate-list
+            +m-docs

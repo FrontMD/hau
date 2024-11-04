@@ -32,4 +32,15 @@
             background-color: $c-accent-dark;
         }
     }
+
+    &--lightGreen {
+        color: $c-accent;
+        background-color: #D8E8DE;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent-dark;
+            color: $c-white;
+        }
+    }
 }

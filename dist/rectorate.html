@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>Ректорат</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -54,170 +54,125 @@
       <div class="site-header__menu"> </div>
     </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 237px 0 60px 100px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-            font-size: 32px !important;
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            color: var(--c-accent-light);
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding: 180px 0 50px 70px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
       <div class="page">
-        <section class="section pages-list">
-          <div class="m-container">
-                <div class="title pages-list__title title--dark">
-                  <div class="title__h1">
-                    <h1>Страницы</h1>
-                  </div>
+        <div class="page-layout">
+              <section class="page-intro">
+                    <div class="breadcrumbs  breadcrumbs--dark">
+                      <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Ректорат</span>
+                        </li>
+                      </ul>
+                    </div>
+                <div class="page-intro__content">
+                      <div class="title  title--dark">
+                        <div class="title__h1">
+                          <h1>Ректорат</h1>
+                        </div>
+                      </div>
                 </div>
-                <div class="title pages-list__subtitle title--dark">
-                  <div class="title__h2">
-                    <h2>Университет</h2>
-                  </div>
+              </section>
+              <section class="rectorate-list">
+                <div class="m-container">
+                  <div class="rectorate-list__items">
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_1.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Ректор</div>
+                        <div class="h3 rectorate-list__name">Чернышова Евгения Олеговна</div>
+                        <div class="rectorate-list__resp">академик РАН, профессор</div>
+                      </div>
+                    </div>
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_2.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Первый проректор</div>
+                        <div class="h3 rectorate-list__name">Чернышова Евгения Олеговна</div>
+                        <div class="rectorate-list__resp">Составление расписания учебных групп очного и очно-заочного отделения</div>
+                      </div>
+                    </div>
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_2.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Проректор по международной деятельности</div>
+                        <div class="h3 rectorate-list__name">Иванов Иван Иванович</div>
+                        <div class="rectorate-list__resp">Проректор по международной деятельности</div>
+                      </div>
+                    </div>
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_2.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Проректор по учебной работе, и.о. проректора по развитию доп.проф.образования и взаимодействию с партнерами</div>
+                        <div class="h3 rectorate-list__name">Чернышова Евгения Олеговна</div>
+                        <div class="rectorate-list__resp">Составление расписания учебных групп очного и очно-заочного отделения</div>
+                      </div>
+                    </div>
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_2.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Проректор по цифровому развитию</div>
+                        <div class="h3 rectorate-list__name">Чернышова Евгения Олеговна</div>
+                        <div class="rectorate-list__resp">Составление расписания учебных групп очного и очно-заочного отделения</div>
+                      </div>
+                    </div>
+                    <div class="rectorate-list__item">
+                      <div class="rectorate-list__photo"><img src="img/peoples/rector_2.webp"></div>
+                      <div class="rectorate-list__content">
+                        <div class="h3 rectorate-list__position">Проректор по научной работе</div>
+                        <div class="h3 rectorate-list__name">Чернышова Евгения Олеговна</div>
+                        <div class="rectorate-list__resp">Составление расписания учебных групп очного и очно-заочного отделения</div>
+                      </div>
+                    </div>
+                  </div><a class="btn rectorate-list__more btn--lightGreen" href="#">Загрузить еще</a>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--ready" href="history.html" target="_blank">История университета</a><a class="pages-list__link pages-list__link--ready" href="museum.html" target="_blank">Музей при университете</a><a class="pages-list__link pages-list__link--ready" href="news-list.html" target="_blank">Новости</a><a class="pages-list__link pages-list__link--check" href="news-detailed.html" target="_blank">Новости (детальная)</a><a class="pages-list__link pages-list__link--work" href="contacts.html" target="_blank">Контакты</a><a class="pages-list__link pages-list__link--ready" href="antiterror.html" target="_blank">Антитеррористическая и антиэкстремистская деятельность</a><a class="pages-list__link pages-list__link--postponed" href="corruption.html" target="_blank">Противодействие коррупции <span>(ожидает форму обратной связи)</span></a><a class="pages-list__link pages-list__link--ready" href="prepod-detailed.html" target="_blank">Преподаватели (детальная)</a><a class="pages-list__link pages-list__link--check" href="admin-signatures.html" target="_blank">Административные подразделения</a><a class="pages-list__link pages-list__link--postponed" href="rectorate.html" target="_blank">Ректорат <span>вопрос по дизайну блока "документы"</span></a><a class="pages-list__link pages-list__link--check" href="programma-razvitia.html" target="_blank">Программа развития</a></div>
-                <div class="title pages-list__subtitle title--dark">
-                  <div class="title__h2">
-                    <h2>Абитуриенту / Поступающему</h2>
-                  </div>
+              </section>
+              <section class="m-docs">
+                <div class="m-container">
+                  <h2 class="h2 m-docs__title">Документы</h2>
+                      <div class="m-columns m-columns--no-plpr no-border  ">
+                        <div class="m-columns__header text-editor"><div class="white-bg">
+                    <p>Режим приема по личным вопросам</p>
+                    <p><a href="#">О временном режиме приема по личным вопросам граждан, работников и учащихся университета ректором и проректорами Московского Политеха (от 17.03.2020)</a></p>
+                    </div></div>
+                        <div class="m-columns__main text-editor">
+                          <div class="text-items-list">
+                                <div class="link-block white-bg link-block--note link-block--download">
+                                  <div class="link-block__desc">Об утверждении состава ректората (приказ от 13.05.2022 г. № 460-ОД)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                      </svg></span></a>
+                                </div>
+                                <div class="link-block white-bg link-block--note link-block--download">
+                                  <div class="link-block__desc">Приказ от 31.01.2020 № 155-ОД «О назначении ученого секретаря Ученого совета»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                      </svg></span></a>
+                                </div>
+                                <div class="link-block white-bg link-block--note link-block--download">
+                                  <div class="link-block__desc">Приказ от 31.01.2020 № 156-ОД «О назначении заместителя председателя Ученого совета»</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                      </svg></span></a>
+                                </div>
+                                <div class="link-block white-bg link-block--note link-block--download">
+                                  <div class="link-block__desc">Положение об организации управления деятельностью (утверждено приказом от 24.04.2017 г. № 311-ОД)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                      </svg></span></a>
+                                </div>
+                                <div class="link-block white-bg link-block--note link-block--download">
+                                  <div class="link-block__desc">О внесении изменений в Положение об организации управления деятельностью</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                      </svg></span></a>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--postponed" href="in-abiturientam.html" target="_blank">Иностранным абитуриентам <span>(ожидает карту и блок ЧАВО)</span></a><a class="pages-list__link pages-list__link--ready" href="invalid.html" target="_blank">Инвалидам и лицам с ОВЗ</a><a class="pages-list__link pages-list__link--ready" href="dop-info.html" target="_blank">Дополнительная информация</a></div>
-                <div class="title pages-list__subtitle title--dark">
-                  <div class="title__h2">
-                    <h2>ГОСТ / Сведения</h2>
-                  </div>
-                </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--ready" href="mto.html" target="_blank">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="pages-list__link pages-list__link--ready" href="platnoe-obrazovanie.html" target="_blank">Платные образовательные услуги</a><a class="pages-list__link pages-list__link--ready" href="rukovodstvo-i-prepodavateli.html" target="_blank">Руководство. Педагогический (научно-педагогический) состав</a><a class="pages-list__link pages-list__link--ready" href="dostupnaya-sreda.html" target="_blank">Доступная среда</a><a class="pages-list__link pages-list__link--ready" href="ob-universitete.html" target="_blank">Об университете</a><a class="pages-list__link pages-list__link--ready" href="dokumenti.html" target="_blank">Документы</a><a class="pages-list__link pages-list__link--ready" href="obrazovanie.html" target="_blank">Образование</a><a class="pages-list__link pages-list__link--ready" href="fin-hoz-deyatelnost.html" target="_blank">Финансово-хозяйственная деятельность</a><a class="pages-list__link pages-list__link--ready" href="stipendii.html" target="_blank">Стипендии и меры поддержки обучающихся</a><a class="pages-list__link pages-list__link--ready" href="obrazovatelnie-programmi.html" target="_blank">Информация о реализуемых образовательных программах</a><a class="pages-list__link pages-list__link--ready" href="perevodi-vosstanovleniya-otchisleniya.html" target="_blank">Информация о результатах перевода, о результатах восстановления и отчисления</a><a class="pages-list__link pages-list__link--ready" href="nauchnaya-deyatelnost.html" target="_blank">Информация о направлениях и результатах научной (научно-исследовательской) деятельности и научно-исследовательской базе для ее осуществления</a><a class="pages-list__link pages-list__link--ready" href="sostav-rabotnikov-programm.html" target="_blank">Информация о персональном составе педагогических работников каждой реализуемой образовательной программы</a><a class="pages-list__link pages-list__link--ready" href="dohodi.html" target="_blank">Сведения о доходах</a><a class="pages-list__link pages-list__link--ready" href="zakonodatelnaya-karta.html" target="_blank">Законодательная карта</a><a class="pages-list__link pages-list__link--ready" href="rezultati-priema.html" target="_blank">Информация о результатах приема</a><a class="pages-list__link pages-list__link--ready" href="obrazovatelnie-standarti.html" target="_blank">Образовательные стандарты и требования</a><a class="pages-list__link pages-list__link--ready" href="mezhdunarodnoe-sotrudnichestvo.html" target="_blank">Международное сотрудничество</a><a class="pages-list__link pages-list__link--ready" href="chislennost-obuchayushchihsya.html" target="_blank">Информация о численности обучающихся</a><a class="pages-list__link pages-list__link--ready" href="opisanie-programmi.html" target="_blank">Об описании образовательной программы</a><a class="pages-list__link pages-list__link--ready" href="vakantnie-mesta.html" target="_blank">Вакантные места для приёма (перевода) обучающихся</a><a class="pages-list__link pages-list__link--ready" href="struktura.html" target="_blank">Структура и органы управления образовательной организацией</a><a class="pages-list__link pages-list__link--ready" href="trudoustroistvo-vipusknikov.html" target="_blank">О трудоустройстве выпускников</a><a class="pages-list__link pages-list__link--ready" href="pedagogicheskiy-sostav.html" target="_blank">Педагогический состав</a></div>
-                <div class="title pages-list__subtitle title--dark">
-                  <div class="title__h2">
-                    <h2>Компоненты</h2>
-                  </div>
-                </div>
-            <div class="pages-list__links"><a class="pages-list__link" href="left-table-title.html" target="_blank">Таблица с заголовками слева</a></div>
-          </div>
-        </section>
+              </section>
+        </div>
       </div>
     </main>
     <footer class="site-footer">

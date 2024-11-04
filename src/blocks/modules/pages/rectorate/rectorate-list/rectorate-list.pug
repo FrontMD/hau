@@ -1,0 +1,70 @@
+-
+    const defaultRectorateListProps = {
+        classes: '',
+        items: [
+            {
+                img: 'img/peoples/rector_1.webp',
+                position: 'Ректор',
+                name: 'Чернышова Евгения Олеговна',
+                resp: 'академик РАН, профессор'
+            },
+            {
+                img: 'img/peoples/rector_2.webp',
+                position: 'Первый проректор',
+                name: 'Чернышова Евгения Олеговна',
+                resp: 'Составление расписания учебных групп очного и очно-заочного отделения'
+            },
+            {
+                img: 'img/peoples/rector_2.webp',
+                position: 'Проректор по международной деятельности',
+                name: 'Иванов Иван Иванович',
+                resp: 'Проректор по международной деятельности'
+            },
+            {
+                img: 'img/peoples/rector_2.webp',
+                position: 'Проректор по учебной работе, и.о. проректора по развитию доп.проф.образования и взаимодействию с партнерами',
+                name: 'Чернышова Евгения Олеговна',
+                resp: 'Составление расписания учебных групп очного и очно-заочного отделения'
+            },
+            {
+                img: 'img/peoples/rector_2.webp',
+                position: 'Проректор по цифровому развитию',
+                name: 'Чернышова Евгения Олеговна',
+                resp: 'Составление расписания учебных групп очного и очно-заочного отделения'
+            },
+            {
+                img: 'img/peoples/rector_2.webp',
+                position: 'Проректор по научной работе',
+                name: 'Чернышова Евгения Олеговна',
+                resp: 'Составление расписания учебных групп очного и очно-заочного отделения'
+            }
+        ]
+    }
+
+mixin rectorate-list(props = defaultRectorateListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultRectorateListProps.classes,
+            items: props.items ? props.items : defaultRectorateListProps.items
+        }
+
+    section.rectorate-list
+        .m-container
+            .rectorate-list__items
+                - let itemsCount = 0
+                - while (itemsCount < checkProps.items.length)
+                    .rectorate-list__item
+                        .rectorate-list__photo
+                            img(src=checkProps.items[itemsCount].img)
+                        .rectorate-list__content
+                            .h3.rectorate-list__position!= checkProps.items[itemsCount].position
+                            .h3.rectorate-list__name!= checkProps.items[itemsCount].name
+                            .rectorate-list__resp!= checkProps.items[itemsCount].resp
+
+                    - itemsCount++
+
+            +btn({
+                classes: 'rectorate-list__more',
+                name: 'Загрузить еще',
+                cMode: 'lightGreen',
+            })
