@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Административные подразделения"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Административные</span><br> подразделения',
+                classes: "border-bottom",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Структурные подразделения',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Административные подразделения',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            +admin-signatures

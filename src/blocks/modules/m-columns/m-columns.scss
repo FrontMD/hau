@@ -112,10 +112,14 @@
         @include min(large) {
             .m-columns__header {
                 flex: 0 0 690px;
-                p, ul{
+
+                p,
+                ul {
                     max-width: 500px;
                 }
-                h2, h3{
+
+                h2,
+                h3 {
                     max-width: 600px;
                 }
             }
@@ -123,6 +127,42 @@
 
         .m-columns__main {
             max-width: 1215px;
+        }
+    }
+
+    .title-download {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            background-color: $c-accent;
+            border-radius: 100%;
+            color: $c-white;
+            transition: color $tr-time;
+
+            svg {
+                width: 15.67px;
+                height: 17.69px;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16.32px;
+            color: $c-accent;
+            transition: color $tr-time;
+        }
+
+        &:hover &__icon,
+        &:hover &__text {
+            color: $c-accent-light;
         }
     }
 }
