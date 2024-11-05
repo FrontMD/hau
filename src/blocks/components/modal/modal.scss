@@ -1,0 +1,67 @@
+.modal.hystmodal {
+    .hystmodal__window {
+        transition: all 0.3s linear;
+        transform: scale(0);
+        opacity: 0;
+        width: auto;
+        background-color: transparent;
+    }
+}
+
+.modal.hystmodal--active {
+    .hystmodal__window {
+        margin: 50px 0 0;
+        transition: all 0.3s linear;
+        transform: scale(1);
+        opacity: 1;
+
+        @include max(tablet) {
+            margin: 20px 0 0;
+        }
+    }
+}
+
+.modal {
+    box-sizing: border-box;
+
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        min-height: auto;
+        min-width: auto;
+        background: transparent;
+        cursor: pointer;
+        z-index: 20;
+        color: $c-accent;
+        transition: color $tr-time;
+
+        &:hover {
+            color: $c-accent-light;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        position: relative;
+        background: $c-white;
+        width: 100%;
+        max-width: 736px;
+        z-index: 9999;
+        padding: 20px 30px 40px;
+
+        @include max(tablet) {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+    }
+}
