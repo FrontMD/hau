@@ -4,6 +4,7 @@
 @@include("./libs/fancybox.umd.min.js")
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/inputmask.min.js")
+@@include("./libs/hystmodal.min.js")
 
 //если желаете подключить библиотеку - раскомментируйте и добавьте @@
 // include("./libs/nouislider.min.js")

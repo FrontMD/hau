@@ -1,0 +1,58 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Факультеты"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: 'Факультеты',
+                classes: "border-bottom",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Факультеты',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            section.faculties
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: `<h3>Выберите, что подходит именно Вам и подайте документы!</h3>
+                        <a href="#" class="title-link title-link--plus"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#plus></use></svg></span><span class="title-link__text">Отправить документы</span></a>`
+                    })
+                        .text-items-list
+                            +link-unit({
+                                title: 'Факультет экономики и управления',
+                                employeesNumber: '4',
+                                numberTitle: 'Направлений'
+                            })
+                            +link-unit({
+                                title: 'Факультет информационных технологий',
+                                employeesNumber: '2',
+                                numberTitle: 'Направлений'
+                            })
+                            +link-unit({
+                                title: 'Транспортный факультет',
+                                employeesNumber: '14',
+                                numberTitle: 'Направлений'
+                            })
+                            +link-unit({
+                                title: 'Факультет машиностроения',
+                                employeesNumber: '39',
+                                numberTitle: 'Направлений'
+                            })
+                            +link-unit({
+                                title: '​​​​Факультет химической технологии и биотехнологии',
+                                employeesNumber: '400',
+                                numberTitle: 'Направлений'
+                            })

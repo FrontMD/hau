@@ -1,8 +1,28 @@
 .c-map {
     position: relative;
-    min-height: 1350px;
-    padding-top: 25px;
-    padding-bottom: 40px;
+
+    @include max(tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__container {
+        height: calc(100vh - 222px);
+        padding-top: 25px;
+        padding-bottom: 40px;
+
+        @include max(laptop) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            height: calc(100vh - 160px);
+        }
+
+        @include max(tablet) {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: auto;
+        }
+    }
 
     &__map {
         position: absolute;
@@ -10,12 +30,46 @@
         top: 0;
         width: 100%;
         height: 100%;
+
+        @include max(tablet) {
+            position: relative;
+            height: auto;
+            aspect-ratio: 1 / 0.8;
+        }
     }
 
     &__content {
         position: relative;
-        max-width: 872px;
+        max-width: 50%;
         padding: 25px 30px;
+        max-height: 100%;
+        overflow-y: auto;
+
+        @include max(laptop) {
+            max-width: 60%;
+        }
+
+        @include max(tablet) {
+            width: calc(100% + 30px);
+            max-width: none;
+            margin-left: -15px;
+            margin-right: -15px;
+            padding: 20px 15px;
+            overflow: hidden;
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-light;
+        }
     }
 
     &__breadcrumbs {
@@ -26,6 +80,7 @@
 
     &__title {
         margin-bottom: 25px;
+        color: $c-accent;
     }
 
     &__row {
@@ -34,6 +89,12 @@
         padding: 35px 0;
         gap: 54px;
         border-top: 1px solid $c-border-op;
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px 0;
+        }
     }
 
     &__block {
@@ -44,6 +105,11 @@
         color: $c-accent-middle;
         min-height: 2.04em;
         margin-bottom: 25px;
+
+        @include max(mobile) {
+            min-height: auto;
+            margin-bottom: 20px;
+        }
     }
 
     &__params {
@@ -70,10 +136,11 @@
 
         a {
             transition: color $tr-time;
+
+            &:hover {
+                color: $c-accent-light;
+            }
         }
 
-        &:hover a {
-            color: $c-accent-light;
-        }
     }
 }

@@ -131,6 +131,93 @@
                   </div>
                 </div>
           </div>
+              <section class="c-map" data-js="cMap">
+                <div class="c-map__map" data-js="cMapContainer"></div>
+                <div class="m-container c-map__container">
+                  <div class="c-map__content white-bg">
+                    <div class="h2 c-map__title">Контактная информация</div>
+                    <div class="c-map__row no-border">
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.642435, 32.584581">
+                        <div class="h3 c-map__subtitle">Отдел по&nbsp;работе с&nbsp;иностранными обучающимися</div>
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74959328836">+7 (495) 932 88 36</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Факс:</div>
+                            <div class="c-map__val">+7 (495) 932 88 36</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Telegram</div>
+                            <div class="c-map__val"><a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.640548, 32.585375">
+                        <div class="h3 c-map__subtitle">Подготовительное отделение для иностранных граждан</div>
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74959328836">+7 (495) 932 88 36</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Факс:</div>
+                            <div class="c-map__val">+7 (495) 932 88 36</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Telegram</div>
+                            <div class="c-map__val"><a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-map__row">
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.642528, 32.587303">
+                        <div class="h3 c-map__subtitle">Отдел консульско-визового обеспечения и миграционного учета</div>
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74959328836">+7 (495) 932 88 36</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Факс:</div>
+                            <div class="c-map__val">+7 (495) 932 88 36</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Telegram</div>
+                            <div class="c-map__val"><a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
         </div>
       </div>
     </main>
@@ -461,8 +548,23 @@
       </div>
     </div>
     <noindex>
-      <div style="display:none;">
+      <div>
         <!--код модалок сюда-->
+            <div class="modal hystmodal c-map-modal" id="myModal" aria-hidden="true" data-js="cMapAddressModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
     </noindex>
     <script src="js/main.min.js"></script>

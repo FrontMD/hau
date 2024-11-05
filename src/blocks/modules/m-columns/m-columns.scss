@@ -130,7 +130,7 @@
         }
     }
 
-    .title-download {
+    .title-link {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -150,6 +150,19 @@
                 width: 15.67px;
                 height: 17.69px;
             }
+        }
+
+        &--plus .title-link__icon {
+            background-color: transparent;
+            color: $c-accent;
+            border: 1px solid $c-border-op;
+            transition: all $tr-time;
+        }
+
+        &--plus:hover .title-link__icon {
+            background-color: $c-accent;
+            color: $c-accent-light;
+            border: 1px solid $c-accent;
         }
 
         &__text {
