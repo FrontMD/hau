@@ -1,0 +1,16 @@
+-
+    const defaultCallbackFormProps = {
+        classes: '',
+    }
+
+mixin callback-form(props = defaultCallbackFormProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCallbackFormProps.classes,
+        }
+
+    section.callback-form
+        .m-container
+
+
+

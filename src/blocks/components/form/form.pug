@@ -33,9 +33,10 @@ mixin form(props = defaultFormProps)
                 name: checkProps.btnText,
                 cMode: 'green',
             })
-            label.form__privacy.form-privacy(data-js="formField")
-                input(type="checkbox" data-v-name='checkbox' required)
-                span.form-privacy__fake
+            .form__privacy.form-privacy(data-js="formField")
+                label
+                    input(type="checkbox" data-v-name='checkbox' required)
+                    span.form-privacy__fake
                 span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')
         - if(checkProps.innerThanks === true)

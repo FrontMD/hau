@@ -1,5 +1,5 @@
 .quote {
-    padding: 55px 62px 143px;
+    padding: 55px 62px;
     background-color: $c-bg-main;
     border-left: 12px solid $c-accent-light;
     background-image: url(../img/quotes.svg);
@@ -9,13 +9,13 @@
 
     @include max(tablet) {
         background-size: 80px 73px;
-        padding: 35px 35px 105px;
+        padding: 35px;
     }
 
     @include max(mobile) {
         border-width: 6px;
         background-size: 50px 46px;
-        padding: 30px 20px 70px 15px;
+        padding: 30px 20px;
         background-position: right 20px bottom 15px;
     }
 

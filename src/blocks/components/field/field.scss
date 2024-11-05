@@ -80,6 +80,11 @@
         @include max(mobile) {
             padding: 20px 15px;
         }
+
+        &::placeholder {
+            color: $c-white;
+            opacity: 1;
+        }
     }
 
     &--invalid &__input,
