@@ -136,10 +136,11 @@
 
         a {
             transition: color $tr-time;
+
+            &:hover {
+                color: $c-accent-light;
+            }
         }
 
-        &:hover a {
-            color: $c-accent-light;
-        }
     }
 }

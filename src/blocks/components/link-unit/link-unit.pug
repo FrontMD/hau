@@ -4,7 +4,8 @@
         title: 'Служба охраны труда',
         phone: '',
         email: '',
-        employeesNumber: '4'
+        employeesNumber: '',
+        numberTitle: 'Сотрудников'
     }
 
 mixin link-unit(props= defaultLinkUnitProps)
@@ -14,7 +15,8 @@ mixin link-unit(props= defaultLinkUnitProps)
             title: props.title ? props.title : defaultLinkUnitProps.title,
             phone: props.phone ? props.phone : defaultLinkUnitProps.phone,
             email: props.email ? props.email : defaultLinkUnitProps.email,
-            employeesNumber: props.employeesNumber ? props.employeesNumber : defaultLinkUnitProps.employeesNumber
+            employeesNumber: props.employeesNumber ? props.employeesNumber : defaultLinkUnitProps.employeesNumber,
+            numberTitle: props.numberTitle ? props.numberTitle : defaultLinkUnitProps.numberTitle
         }
 
     .link-unit(class= checkProps.classes)&attributes(attributes)
@@ -31,8 +33,9 @@ mixin link-unit(props= defaultLinkUnitProps)
                 .link-unit__val
                     a(href=`mailto:${checkProps.email}`)!= checkProps.email
         .link-unit__number
-            .link-unit__param Сотрудников
-            .link-unit__val!= checkProps.employeesNumber
+            .link-unit__param!= checkProps.numberTitle
+            -if(checkProps.employeesNumber.length > 0)
+                .link-unit__val!= checkProps.employeesNumber
         a.link-unit__link(href="javascript:void(0)" target="_blank")
             svg 
                 use(xlink:href=`img/sprites/sprite.svg#link_angle`)
