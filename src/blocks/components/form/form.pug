@@ -21,7 +21,8 @@ mixin form(props = defaultFormProps)
 
     form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
         .form__content(data-js='form-content')
-            .h2.form__title!= checkProps.title 
+            - if(checkProps.title.length > 0)
+                .h2.form__title!= checkProps.title 
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
             .form__fields

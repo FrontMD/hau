@@ -538,7 +538,57 @@
                 </div>
           </div>
               <section class="callback-form">
-                <div class="m-container"></div>
+                <div class="m-container">
+                  <div class="callback-form__content"> 
+                    <div class="callback-form__left">
+                      <div class="h2 callback-form__title"><span>Обратная связь</span> для сообщений о&nbsp;фактах коррупции</div><a class="callback-form__link" href="#">Обратная связь для сообщений о&nbsp;фактах коррупции в&nbsp;Минсельхоз России<span class="icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a>
+                    </div>
+                        <form class="form callback-form__form" action="#" data-validate novalidate>
+                          <div class="form__content" data-js="form-content">
+                            <div class="form__text">Здесь Вы можете сообщить об известных Вам фактах коррупции. Каждое сообщение будет тщательно проверено, поэтому мы рекомендуем оставлять контактную информацию. Конфиденциальность гарантируем. <br><br>Помните об уголовной ответственности за клевету!</div>
+                            <div class="form__fields">
+                              <div class="form__flex">
+                                    <label class="field  " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field  " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__flex">
+                                    <label class="field  " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field  " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Тема обращения"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <label class="field  " data-js="textarea">
+                                    <textarea class="field__textarea" rows="7" placeholder="Текст обращения"></textarea>
+                                  </label>
+                            </div>
+                                <button class="btn form__submit btn--green" type="submit">Отправить</button>
+                            <div class="form__privacy form-privacy" data-js="formField">
+                              <label>
+                                <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                              </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                            </div>
+                          </div>
+                          <div class="form__thanks" data-js="form-thanks">
+                            <div class="form__image-success">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#success"></use>
+                              </svg>
+                            </div>
+                            <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                            <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                          </div>
+                        </form>
+                  </div>
+                </div>
               </section>
         </div>
       </div>

@@ -11,6 +11,65 @@ mixin callback-form(props = defaultCallbackFormProps)
 
     section.callback-form
         .m-container
+            .callback-form__content 
+                .callback-form__left
+                    .h2.callback-form__title <span>Обратная связь</span> для сообщений о&nbsp;фактах коррупции
+                    a.callback-form__link(href="#")
+                        | Обратная связь для сообщений о&nbsp;фактах коррупции в&nbsp;Минсельхоз России
+                        span.icon
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                +form({
+                    classes: 'callback-form__form',
+                    title: '',
+                    text: 'Здесь Вы можете сообщить об известных Вам фактах коррупции. Каждое сообщение будет тщательно проверено, поэтому мы рекомендуем оставлять контактную информацию. Конфиденциальность гарантируем. <br><br>Помните об уголовной ответственности за клевету!',
+                    btnText: 'Отправить',
+                })
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'ФИО',
+                            resetBtn: false
+                        })
+                        +field({
+                            classes: '',
+                            type: 'tel',
+                            title: '',
+                            placeholder: '+7 (___) ___-__-__',
+                            inputAttr: {
+                                'data-type': 'phoneNumber',
+                                'data-v-name': 'phone'
+                            },
+                            resetBtn: false
+                        })
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'email',
+                            title: '',
+                            placeholder: 'Email',
+                            inputAttr: {
+                                'data-v-name': 'email'
+                            },
+                            resetBtn: false
+                        })
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Тема обращения',
+                            resetBtn: false
+                        })
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Текст обращения',
+                    })
 
 
 
