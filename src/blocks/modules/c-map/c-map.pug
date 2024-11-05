@@ -1,10 +1,6 @@
 -
     const defaultCMapProps = {
         classes: '',
-        coords: [],
-        breadcrumbs: {},
-        title: '',
-        items: []
     }
 
 mixin c-map(props = defaultCMapProps)
@@ -17,12 +13,8 @@ mixin c-map(props = defaultCMapProps)
             items: props.items ? props.items : defaultCMapProps.items,
         }
 
-    section.c-map(class= checkProps.classes)
-        .c-map__map(data-js="cMap")
+    section.c-map(class= checkProps.classes data-js="cMap")
+        .c-map__map(data-js="cMapContainer")
         .m-container
             .c-map__content.white-bg
-                - if(checkProps.breadcrumbs.items)
-                    +breadcrumbs(checkProps.breadcrumbs)
-                - if(checkProps.title.length > 0)
-                    != checkProps.title
                 block

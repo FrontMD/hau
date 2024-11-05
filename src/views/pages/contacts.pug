@@ -6,8 +6,9 @@ block variables
 block content
     .page
         .page-layout
-            +c-map({
-                breadcrumbs: {
+            +c-map()
+                +breadcrumbs({
+                    classes: 'c-map__breadcrumbs',
                     items: [
                         {
                             name: 'Главная',
@@ -18,11 +19,98 @@ block content
                             link: 'javascript:void(0);'
                         }
                     ],  
-                },
-                title: `<div class="title  title--dark">
-                    <div class="title__h1">
-                        <h1>Контакты</h1>
-                    </div>
-                        </div>`,
-                items: []
-            })
+                })
+                +title({
+                    classes: 'c-map__title',
+                    tag: 'h1',
+                    text: 'Контакты'
+                })
+                .c-map__row.no-border
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642435, 32.584581")
+                        .h3.c-map__subtitle Контакты главного корпуса
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.640548, 32.585375")
+                        .h3.c-map__subtitle Приемная комиссия
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                .c-map__row
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Для корреспонденции
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name юр. адрес:
+                                .c-map__val Сретенская ул., 23, Херсон
+
+                .c-map__row
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name ИНН:
+                                .c-map__val 999999999999
+                            .c-map__param
+                                .c-map__name огрн:
+                                .c-map__val 999999999999
+                            .c-map__param
+                                .c-map__name КПП:
+                                .c-map__val 999999999999
+                            .c-map__param
+                                .c-map__name окпо:
+                                .c-map__val 999999999999
+
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Наименование банка:
+                                .c-map__val Филиал «Центральный»
+                            .c-map__param
+                                .c-map__name Расчетный счет:
+                                .c-map__val 999999999999
+                            .c-map__param
+                                .c-map__name Корр. счет:
+                                .c-map__val 999999999999
+                            .c-map__param
+                                .c-map__name БИК:
+                                .c-map__val 999999999999
+
+                +link-block({
+                    text: 'Учетная карточка организации'
+                })
+                +link-block({
+                    text: 'Образец заполнения платежного поручения (версия в формате pdf)'
+                })

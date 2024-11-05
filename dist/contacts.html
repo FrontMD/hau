@@ -24,6 +24,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
+    <!-- лучше добавлять только на те страницы где есть блок с картой-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
   </head>
   <body>
     <header class="site-header" data-js="siteHeader">
@@ -56,21 +58,146 @@
     <main class="site-main">
       <div class="page">
         <div class="page-layout">
-              <section class="c-map">
-                <div class="c-map__map" data-js="cMap"></div>
+              <section class="c-map" data-js="cMap">
+                <div class="c-map__map" data-js="cMapContainer"></div>
                 <div class="m-container">
                   <div class="c-map__content white-bg">
-                        <div class="breadcrumbs  breadcrumbs--dark">
+                        <div class="breadcrumbs c-map__breadcrumbs breadcrumbs--dark">
                           <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
                             </li>
                             <li class="breadcrumbs__item breadcrumbs__item--current"><span>Контакты</span>
                             </li>
                           </ul>
-                        </div><div class="title  title--dark">
-                    <div class="title__h1">
-                        <h1>Контакты</h1>
+                        </div>
+                        <div class="title c-map__title title--dark">
+                          <div class="title__h1">
+                            <h1>Контакты</h1>
+                          </div>
+                        </div>
+                    <div class="c-map__row no-border">
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.642435, 32.584581">
+                        <div class="h3 c-map__subtitle">Контакты главного корпуса</div>
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74959328836">+7 (495) 932 88 36</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Факс:</div>
+                            <div class="c-map__val">+7 (495) 932 88 36</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Telegram</div>
+                            <div class="c-map__val"><a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.640548, 32.585375">
+                        <div class="h3 c-map__subtitle">Приемная комиссия</div>
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74959328836">+7 (495) 932 88 36</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Факс:</div>
+                            <div class="c-map__val">+7 (495) 932 88 36</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Telegram</div>
+                            <div class="c-map__val"><a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <div class="c-map__row">
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Для корреспонденции</div>
+                            <div class="c-map__val">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">юр. адрес:</div>
+                            <div class="c-map__val">Сретенская ул., 23, Херсон</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-map__row">
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">ИНН:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">огрн:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">КПП:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">окпо:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Наименование банка:</div>
+                            <div class="c-map__val">Филиал «Центральный»</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Расчетный счет:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Корр. счет:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">БИК:</div>
+                            <div class="c-map__val">999999999999</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="link-block  link-block--note link-block--download">
+                          <div class="link-block__desc">Учетная карточка организации</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#download"></use>
+                              </svg></span></a>
+                        </div>
+                        <div class="link-block  link-block--note link-block--download">
+                          <div class="link-block__desc">Образец заполнения платежного поручения (версия в формате pdf)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#download"></use>
+                              </svg></span></a>
                         </div>
                   </div>
                 </div>
