@@ -1,0 +1,19 @@
+-
+    const defaultPeopleListProps = {
+    classes: ''
+    }
+
+mixin people-list(props = defaultPeopleListProps)
+    -
+        const checkProps = {
+        classes: props.classes ? props.classes : defaultPeopleListProps.classes
+        }
+
+    section.people-list(class=checkProps.classes)
+        .people-list__search
+            input(placeholder="Начните набирать имя")
+            button Поиск
+        +link-unit({
+            title: 'Мищенко Сергей Сергеевич',
+            employeesNumber: ''
+        })

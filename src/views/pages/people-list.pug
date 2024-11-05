@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Преподаватели и сотрудники"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Преподаватели </span><br> и сотрудники',
+                classes: "white-bg",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Преподаватели и сотрудники',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            .m-container
+                +people-list

@@ -1,0 +1,29 @@
+.people-list {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    &__search{
+        margin-bottom: 130px;
+        display: flex;
+        align-items: flex-start;
+        input{
+            flex: 1 1 auto;
+            font-size: 24px;
+            line-height: 28px;
+            padding: 38px;
+            background: #fff;
+            &::placeholder{
+                color:#CCDDD7;
+            }
+        }
+        button{
+            flex: 0 0 366px;
+            background: $c-accent;
+            font-size: 24px;
+            line-height: 28px;
+            padding: 38px;
+            cursor: pointer;
+            color: $c-white;
+        }
+    }
+
+}
