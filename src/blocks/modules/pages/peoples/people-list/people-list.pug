@@ -10,9 +10,9 @@ mixin people-list(props = defaultPeopleListProps)
         }
 
     section.people-list(class=checkProps.classes)
-        .people-list__search
+        form.people-list__search(action="#")
             input(placeholder="Начните набирать имя")
-            button Поиск
+            button(type='submit') Поиск
         +link-unit({
             classes:'link-unit--people-list',
             title: 'Мищенко Сергей Сергеевич',

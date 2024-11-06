@@ -1,0 +1,29 @@
+.video {
+    &__video {}
+
+    &__btn {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        display: none;
+
+        svg {
+            width: 40px;
+            height: 40px;
+
+            @include max(1024) {
+                width: 28px;
+                height: 28px;
+            }
+
+            @include max(768) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &hover {
+            border-width: 0;
+        }
+    }
+}

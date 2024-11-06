@@ -44,7 +44,7 @@ mixin faculty-programms(props = defaultfacultyProgrammsProps)
                         .faculty-programms__list
                             +programm-card({
                                 classes: '',
-                                    faculty: 'Факультет экономики и управления',
+                                    faculty: 'Факультет экономики и управления 1',
                                     name: 'Управление бизнес-процессами (Менеджмент)',
                                     params: [
                                         {
@@ -293,7 +293,7 @@ mixin faculty-programms(props = defaultfacultyProgrammsProps)
                         .faculty-programms__list
                             +programm-card({
                                 classes: '',
-                                    faculty: 'Факультет экономики и управления',
+                                    faculty: 'Факультет экономики и управления 2',
                                     name: 'Управление бизнес-процессами (Менеджмент)',
                                     params: [
                                         {
@@ -532,12 +532,18 @@ mixin faculty-programms(props = defaultfacultyProgrammsProps)
                                     isRow: true
                             })
 
+                        +btn({
+                            classes: 'faculty-programms__more',
+                            name: 'Загрузить еще',
+                            cMode: 'lightGreen',
+                        })
+
                 .tabs-block__slide(data-js="tabsBlockSlide")
                     .m-container
                         .faculty-programms__list
                             +programm-card({
                                 classes: '',
-                                    faculty: 'Факультет экономики и управления',
+                                    faculty: 'Факультет экономики и управления 3',
                                     name: 'Управление бизнес-процессами (Менеджмент)',
                                     params: [
                                         {
@@ -775,3 +781,9 @@ mixin faculty-programms(props = defaultfacultyProgrammsProps)
                                     ],
                                     isRow: true
                             })
+
+                        +btn({
+                            classes: 'faculty-programms__more',
+                            name: 'Загрузить еще',
+                            cMode: 'lightGreen',
+                        })

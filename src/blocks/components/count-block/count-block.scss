@@ -9,6 +9,10 @@
         margin-top: 18px;
         gap: 50px;
 
+        &.count-block--reverse {
+            flex-direction: row-reverse;
+        }
+
         @include max(mobile) {
             padding: 10px 15px;
             gap: 10px;
@@ -22,6 +26,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 1.17em;
+        opacity: 0.6;
 
         @include max(mobile) {
             font-size: 14px;
@@ -29,14 +34,7 @@
     }
 
     &__num {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.02em;
         color: $c-accent-middle;
-
-        @include max(mobile) {
-            font-size: 16px;
-        }
     }
 
     &--row &__num {
@@ -50,7 +48,11 @@
     &--column {
         flex-direction: column;
         padding: 20px 0;
-        gap: 5px;
+        gap: 10px;
+
+        &.count-block--reverse {
+            flex-direction: column-reverse;
+        }
 
         &:first-child {
             padding: 0 0 20px;

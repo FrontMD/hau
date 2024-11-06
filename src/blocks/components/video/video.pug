@@ -1,0 +1,24 @@
+-
+    const defaultVideoProps = {
+        classes: '',
+        video: '',
+        poster: '',
+    }
+
+mixin video(props = defaultVideoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVideoProps.classes
+            video: props.video ? props.video : defaultVideoProps.video,
+            poster: props.poster ? props.poster : defaultVideoProps.poster
+        }
+
+    .video(data-js='video')
+        .video__video
+            .video__img(data-js='videoImg')
+                img(src="" alt="")
+            .video__frame(data-js='videoFrame')
+        button.video__btn(type="button" data-js="videoBtnPlay")
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#play`)
+

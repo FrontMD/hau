@@ -17,7 +17,7 @@ mixin count-block(props= defaultCountBlockProps)
 
     .count-block(class= checkProps.classes + ' ' + `count-block--${checkProps.vMode}`)&attributes(attributes)
         .count-block__desc!= checkProps.text
-        .count-block__num!= checkProps.num
+        .h3.count-block__num!= checkProps.num
 
 
 

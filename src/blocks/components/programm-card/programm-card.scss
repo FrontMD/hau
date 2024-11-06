@@ -1,11 +1,51 @@
 .programm-card {
     display: flex;
     flex-direction: column;
-    color: $c-accent;
+    color: $c-accent-middle;
+    background-color: $c-white;
+
+    &__param {
+        opacity: 0.4;
+        color: $c-accent;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17em;
+    }
+
+    &__suptitle {
+        color: $c-accent-light;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+    }
+
+    &__title {
+        margin-top: 8px;
+    }
+
+    &__val {
+        margin-top: 10px;
+    }
+
 }
 
 .programm-card {
     &--row {
         flex-direction: row;
+        align-items: center;
+        border-left: 4px solid $c-accent-light;
+        padding: 30px 25px;
     }
+
+    &--row &__header {
+        flex: 0 0 380px;
+        margin-right: auto;
+    }
+
+    &--row &__item {
+        flex: 0 1 253px;
+        padding: 0 20px;
+        border-left: 1px solid $c-border-op;
+    }
+
 }
