@@ -118,4 +118,12 @@
         }
     }
 
+    &--people-list{
+        .link-unit__title{
+            margin-right: 32px;
+        }
+        .link-unit__number{
+            margin-right: auto;
+        }
+    }
 }
