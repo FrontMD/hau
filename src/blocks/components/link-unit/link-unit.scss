@@ -109,12 +109,16 @@
         svg {
             width: 7px;
             height: 12px;
+            transition: color $tr-time;
         }
 
         &:hover {
             background-color: $c-accent;
             border-color: $c-accent;
-            color: $c-white;
+
+            svg {
+                color: $c-white;
+            }
         }
     }
 

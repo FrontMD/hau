@@ -29,7 +29,7 @@ mixin link-unit(props= defaultLinkUnitProps)
                     a(href=`tel:+79999999999`)!= checkProps.phone
         -if(checkProps.email.length > 0)
             .link-unit__email
-                .link-unit__param почта
+                .link-unit__param Почта
                 .link-unit__val
                     a(href=`mailto:${checkProps.email}`)!= checkProps.email
         .link-unit__number
