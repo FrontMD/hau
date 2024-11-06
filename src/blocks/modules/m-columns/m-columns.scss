@@ -149,6 +149,7 @@
             svg {
                 width: 15.67px;
                 height: 17.69px;
+                transition: color $tr-time;
             }
         }
 
@@ -161,8 +162,11 @@
 
         &--plus:hover .title-link__icon {
             background-color: $c-accent;
-            color: $c-accent-light;
             border: 1px solid $c-accent;
+
+            svg {
+                color: $c-white;
+            }
         }
 
         &__text {
@@ -173,9 +177,13 @@
             transition: color $tr-time;
         }
 
-        &:hover &__icon,
-        &:hover &__text {
+        &:hover .title-link__icon,
+        &:hover .title-link__text {
             color: $c-accent-light;
+
+            svg {
+                color: $c-white;
+            }
         }
     }
 }

@@ -53,7 +53,7 @@ mixin rectorate-list(props = defaultRectorateListProps)
             .rectorate-list__items
                 - let itemsCount = 0
                 - while (itemsCount < checkProps.items.length)
-                    .rectorate-list__item
+                    a.rectorate-list__item(href="")
                         .rectorate-list__photo
                             img(src=checkProps.items[itemsCount].img)
                         .rectorate-list__content
