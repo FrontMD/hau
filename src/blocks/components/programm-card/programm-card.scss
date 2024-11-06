@@ -1,0 +1,11 @@
+.programm-card {
+    display: flex;
+    flex-direction: column;
+    color: $c-accent;
+}
+
+.programm-card {
+    &--row {
+        flex-direction: row;
+    }
+}

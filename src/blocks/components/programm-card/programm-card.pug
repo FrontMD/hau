@@ -1,0 +1,44 @@
+-
+    const defaultProgrammCardProps = {
+        classes: '',
+        faculty: 'Название факультета',
+        name: 'Название программы',
+        params: [
+            {
+                name: 'Название параметра',
+                value: 'Значение параметра'
+            }
+        ],
+        isRow: false
+    }
+
+mixin programm-card(props= defaultProgrammCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProgrammCardProps.classes,
+            faculty: props.faculty ? props.faculty : defaultProgrammCardProps.faculty,
+            name: props.name ? props.name : defaultProgrammCardProps.name,
+            params: props.params ? props.params : defaultProgrammCardProps.params,
+            isRow: props.isRow ? props.isRow : defaultProgrammCardProps.isRow
+        }
+
+        isRowClass = checkProps.isRow === true ? ' programm-card--row' : ''
+
+    .programm-card(class= checkProps.classes + isRowClass)&attributes(attributes)
+        .programm-card__header
+            .programm-card__suptitle!= checkProps.faculty
+            .h3.programm-card__title
+                a(href="#")!= checkProps.name
+
+        - let paramsCount = 0
+        - while(paramsCount < checkProps.params.length)
+            .programm-card__item
+                .programm-card__param!= checkProps.params[paramsCount].name
+                .h3.programm-card__val!= checkProps.params[paramsCount].value
+
+            - paramsCount++
+
+
+
+
+

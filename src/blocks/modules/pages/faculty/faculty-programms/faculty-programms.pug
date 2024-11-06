@@ -1,0 +1,777 @@
+-
+    const defaultfacultyProgrammsProps = {
+        classes: '',
+        title: '<span>История</span> университета',
+        breadcrumbs: {
+            cMode: 'light', //dark - на светлом фоне, light - на тёмном фоне
+            items: [
+                {
+                    name: 'Главная',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'История университета',
+                    link: 'javascript:void(0);'
+                }
+            ],
+        },
+    }
+
+mixin faculty-programms(props = defaultfacultyProgrammsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultfacultyProgrammsProps.classes,
+            title: props.title ? props.title : defaultfacultyProgrammsProps.title,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultfacultyProgrammsProps.breadcrumbs,
+        }
+
+    section.faculty-programms
+        +tabs-block({
+            tabs: [
+                {
+                    name: 'Бакалавриат и специалитет',
+                },
+                {
+                    name: 'Магистратура',
+                },
+                {
+                    name: 'Аспирантура',
+                },
+                    ],
+            })
+                .tabs-block__slide.tabs-block__slide--active(data-js="tabsBlockSlide")
+                    .m-container
+                        .faculty-programms__list
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                        +btn({
+                            classes: 'faculty-programms__more',
+                            name: 'Загрузить еще',
+                            cMode: 'lightGreen',
+                        })
+
+                .tabs-block__slide(data-js="tabsBlockSlide")
+                    .m-container
+                        .faculty-programms__list
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+
+                .tabs-block__slide(data-js="tabsBlockSlide")
+                    .m-container
+                        .faculty-programms__list
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })

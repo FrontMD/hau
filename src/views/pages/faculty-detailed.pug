@@ -8,7 +8,7 @@ block content
         .page-layout
             +i-intro({
                 title: 'Факультет экономики и управления',
-                img: 'img/news/news_detailed_intro.webp',
+                img: 'img/faculties/faculty_intro.webp',
                 breadcrumbs: {
                     items: [
                         {
@@ -27,3 +27,106 @@ block content
                 },
             })
 
+            +m-columns({
+                title: '<h2>Факультет экономики и управления (ФЭиУ) готовит специалистов в области экономики, управления и рекламы нового поколения, обладающих стратегическим мышлением, аналитическими навыками, практическими знаниями. Все образовательные программы факультета разрабатываются совместно с индустриальными партнёрами.</h2>'
+                })
+                    p 
+                        b Обучаясь на нашем факультете, вы не только получите теоретические знания, <br>прикладные навыки, приобретете управленческие компетенции, но и станете <br>обладателями незаурядных знаний, научитесь командной работе, <br>приобретете лидерские и организаторские качества.
+
+            +faculty-programms
+
+            +media-slider({
+                isSection: true,
+                fancyGroup: 'facultyDetailed',
+                slides: [
+                    {
+                        image: 'img/news/news_slide_1.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_2.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_3.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                ],
+            })
+
+            +c-map()
+                .h2.c-map__title Руководство и контакты
+                .c-map__row.no-border
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Декан факультета:
+                                .c-map__val Иванов Антон Владимирович, д.э.н., доцент
+                            .c-map__param
+                                .c-map__val Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Приемная:
+                                .c-map__val Дронова Виктория Алексеевна, Волошина Мария Валерьевна
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74951111111">+7 (495) 111-11-11 доб. 33</a>
+
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Заместитель декана по учебной работе:
+                                .c-map__val Иванова Нина Эдуардовна
+                            .c-map__param
+                                .c-map__val г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74951111111">+7 (495) 111-11-11 доб. 35</a>
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:n.e.ivanova@khay.ru">n.e.ivanova@khay.ru</a>
+
+                .c-map__row
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642528, 32.587303")
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Деканат:
+                                .c-map__val Петрова Анастасия Ильинична г.&nbsp;Херсон, ул.&nbsp;Сретенская, д.&nbsp;23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74951111111">+7 (495) 111-11-11 доб. 46</a>
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:fem@khay.ru"> fem@khay.ru</a>
+
+                    .c-map__block
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Заместитель декана по воспитательной и социальной работе:
+                                .c-map__val Петрова Наталья Николаевна
+                            .c-map__param
+                                .c-map__val г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74951111111">+7 (495) 111-11-11 доб. 35</a>
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:n.e.ivanova@khay.ru">n.e.ivanova@khay.ru</a>
+
+                .c-map__row
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.640548, 32.585375")
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес учебного корпуса
+                                .c-map__val г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Проезд:
+                                .c-map__val от станции метро «Херсон» (выход №4 и №5) на автобусах 378, 286 до ост. «Гимназия», далее пешком меньше 5 минут; <br><br>от станции метро «Херсон» (выход №1) на трамваях 11, 25 до ост. «Пл. Академика Люльки», далее пешком 8 минут; <br><br>от станции метро «Херсон» пройти до остановки на ул. Мытищинская 3-я пешком 6 минут, сесть на автобус 714 до ост. «Гимназия», далее пешком 3 минуты.

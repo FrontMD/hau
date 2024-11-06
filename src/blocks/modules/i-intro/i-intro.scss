@@ -29,24 +29,28 @@
     &__container {
         display: flex;
         flex-direction: column;
-        min-height: calc(100vh - 220px);
+        min-height: 700px;
         padding-top: 20px;
         padding-bottom: 45px;
 
+        @include max(large) {
+            min-height: 540px;
+        }
+
         @include max(laptop) {
-            min-height: calc(100vh - 158px);
+            min-height: 560px;
             padding-top: 20px;
             padding-bottom: 45px;
         }
 
         @include max(tablet) {
-            min-height: calc(100vh - 70px);
+            min-height: 500px;
             padding-top: 20px;
             padding-bottom: 45px;
         }
 
         @include max(tablet) {
-            min-height: calc(100vh - 62px);
+            min-height: 250px;
             padding-bottom: 30px;
         }
     }

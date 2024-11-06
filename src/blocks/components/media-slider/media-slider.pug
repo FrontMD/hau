@@ -1,6 +1,7 @@
 -
     const defaultImageSliderProps = {
         classes: '',
+        isSection: false,
         vMode: 'horizontal',
         fancyGroup: '', 
         slides: [
@@ -20,41 +21,68 @@ mixin media-slider(props= defaultImageSliderProps)
             classes: props.classes ? props.classes : defaultImageSliderProps.classes,
             vMode: props.vMode ? props.vMode : defaultImageSliderProps.vMode,
             fancyGroup: props.fancyGroup ? props.fancyGroup : defaultImageSliderProps.fancyGroup,
-            slides: props.slides ? props.slides : defaultImageSliderProps.slides
+            slides: props.slides ? props.slides : defaultImageSliderProps.slides,
+            isSection: props.isSection ? props.isSection : defaultImageSliderProps.isSection
         }
 
-    .media-slider(class= `${checkProps.classes} media-slider--${checkProps.vMode}` data-js="imageSlider")&attributes(attributes)
-        .swiper-wrapper
-            - let count = 0 
-            - while (count < checkProps.slides.length)
-                .swiper-slide.media-slider__slide
 
-                    - if(checkProps.slides[count].mMode == 'image')
-                        a.media-slider__media(href= checkProps.slides[count].image data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
-                            img(src= checkProps.slides[count].image alt='')
-                            .media-slider__zoom
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#search`)
+    - if(checkProps.isSection === true)
+        .media-slider-section.white-bg
+            .m-container
+                .media-slider(class= `${checkProps.classes} media-slider--${checkProps.vMode}` data-js="imageSlider")&attributes(attributes)
+                    .swiper-wrapper
+                        - let count = 0 
+                        - while (count < checkProps.slides.length)
+                            .swiper-slide.media-slider__slide
 
-                    - if(checkProps.slides[count].mMode == 'video')
-                        a.media-slider__media(href= `${checkProps.slides[count].video}.mp4` data-type="html5video" data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
-                            img(src= checkProps.slides[count].image alt='')
-                            .media-slider__zoom.media-slider__zoom--video
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#play`)
+                                - if(checkProps.slides[count].mMode == 'image')
+                                    a.media-slider__media(href= checkProps.slides[count].image data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
+                                        img(src= checkProps.slides[count].image alt='')
+                                        .media-slider__zoom
+                                            svg 
+                                                use(xlink:href=`img/sprites/sprite.svg#search`)
 
-                    - if(checkProps.slides[count].title)
-                        .media-slider__title!= checkProps.slides[count].title
+                                - if(checkProps.slides[count].mMode == 'video')
+                                    a.media-slider__media(href= `${checkProps.slides[count].video}.mp4` data-type="html5video" data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
+                                        img(src= checkProps.slides[count].image alt='')
+                                        .media-slider__zoom.media-slider__zoom--video
+                                            svg 
+                                                use(xlink:href=`img/sprites/sprite.svg#play`)
 
-                    - if(checkProps.slides[count].text)                        
-                        .media-slider__text!= checkProps.slides[count].text
+                                - if(checkProps.slides[count].title)
+                                    .media-slider__title!= checkProps.slides[count].title
 
-                - count += 1;
+                                - if(checkProps.slides[count].text)                        
+                                    .media-slider__text!= checkProps.slides[count].text
 
-        //-button.media-slider__btn.media-slider__prev
-            svg 
-                use(xlink:href=`img/sprites/sprite.svg#card_arrow`)
-        //-button.media-slider__btn.media-slider__next
-            svg 
-                use(xlink:href=`img/sprites/sprite.svg#card_arrow`)
+                            - count += 1;
+
+    - else
+        .media-slider(class= `${checkProps.classes} media-slider--${checkProps.vMode}` data-js="imageSlider")&attributes(attributes)
+            .swiper-wrapper
+                - let count = 0 
+                - while (count < checkProps.slides.length)
+                    .swiper-slide.media-slider__slide
+
+                        - if(checkProps.slides[count].mMode == 'image')
+                            a.media-slider__media(href= checkProps.slides[count].image data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
+                                img(src= checkProps.slides[count].image alt='')
+                                .media-slider__zoom
+                                    svg 
+                                        use(xlink:href=`img/sprites/sprite.svg#search`)
+
+                        - if(checkProps.slides[count].mMode == 'video')
+                            a.media-slider__media(href= `${checkProps.slides[count].video}.mp4` data-type="html5video" data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
+                                img(src= checkProps.slides[count].image alt='')
+                                .media-slider__zoom.media-slider__zoom--video
+                                    svg 
+                                        use(xlink:href=`img/sprites/sprite.svg#play`)
+
+                        - if(checkProps.slides[count].title)
+                            .media-slider__title!= checkProps.slides[count].title
+
+                        - if(checkProps.slides[count].text)                        
+                            .media-slider__text!= checkProps.slides[count].text
+
+                    - count += 1;
 

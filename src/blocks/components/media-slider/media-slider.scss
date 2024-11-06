@@ -1,3 +1,29 @@
+.media-slider-section {
+    padding: 35px 0;
+
+    .media-slider {
+
+        margin-right: -28px;
+        margin-left: -28px;
+        padding-right: 28px;
+        padding-left: 28px;
+
+        @include max(laptop) {
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        @include max(tablet) {
+            margin-right: -15px;
+            margin-left: -15px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
 .media-slider {
     position: relative;
     overflow: hidden;

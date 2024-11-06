@@ -1,0 +1,13 @@
+.faculty-programms {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__more {
+        margin-top: 10px;
+    }
+}

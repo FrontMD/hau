@@ -40,7 +40,7 @@
         font-weight: 700;
         line-height: 1.366em;
         color: $c-accent;
-        background-color: $c-bg-light;
+        background-color: #D8E8DE;
         transition: color $tr-time, background-color $tr-time;
 
         @include max(laptop) {
@@ -60,7 +60,9 @@
             }
         }
 
-
+        +.tabs-block__tab {
+            border-left: 1px solid #ADCEBE;
+        }
 
         &--active {
             color: $c-white;
