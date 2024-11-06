@@ -1,0 +1,29 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Факультет"
+
+block content
+    .page
+        .page-layout
+            +i-intro({
+                title: 'Факультет экономики и управления',
+                img: 'img/news/news_detailed_intro.webp',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Факультеты',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Название факультета',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                },
+            })
+
