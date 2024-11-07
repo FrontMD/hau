@@ -3,6 +3,8 @@
 @@include("../../blocks/components/period-select/period-select.js")
 @@include("../../blocks/components/media-slider/media-slider.js")
 @@include("../../blocks/components/form/form.js")
+@@include("../../blocks/components/video/video.js")
+@@include("../../blocks/components/select/select.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     tabsBlockInit()
@@ -10,4 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     periodSelect()
     mediaSlider()
     validation()
+    videos()
+    selects()
 })

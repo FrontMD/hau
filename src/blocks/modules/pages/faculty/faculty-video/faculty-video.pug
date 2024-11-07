@@ -1,0 +1,23 @@
+-
+    const defaultfacultyVideoProps = {
+        classes: '',
+        title: '',
+    }
+
+mixin faculty-video(props = defaultfacultyVideoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultfacultyVideoProps.classes,
+            title: props.title ? props.title : defaultfacultyVideoProps.title
+        }
+
+    section.faculty-video
+        .m-container
+            .h2.faculty-video__title!= checkProps.title
+            +video({
+                video: '<iframe width="720" height="405" src="https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf/?skinColor=43a047" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+                poster: 'img/video-poster.webp'
+            })
+
+
+
