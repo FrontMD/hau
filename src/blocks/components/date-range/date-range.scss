@@ -1,0 +1,11 @@
+.date-range {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    &__block{
+        width: 48%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
