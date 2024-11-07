@@ -6,9 +6,8 @@ block variables
 block content
     .page
         .page-layout
-            +i-intro({
+            +page-intro({
                 title: 'Вопрос-ответ',
-                img: 'img/faculties/faculty_intro.webp',
                 breadcrumbs: {
                     items: [
                         {
@@ -20,5 +19,6 @@ block content
                             link: 'javascript:void(0);'
                         }
                     ],
-                },
+                }
             })
+            +m-questions

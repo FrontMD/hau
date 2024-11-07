@@ -13,11 +13,37 @@ mixin faculty-video(props = defaultfacultyVideoProps)
 
     section.faculty-video
         .m-container
-            .h2.faculty-video__title!= checkProps.title
-            +video({
-                video: '<iframe width="720" height="405" src="https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf/?skinColor=43a047" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
-                poster: 'img/video-poster.webp'
+            +m-columns({
+                classes: "m-columns--no-plpr no-border",
+                title: `<div class="video" data-js="video">
+                    <div class="video__video">
+                        <div class="video__img" data-js="videoPoster"><img src="img/video-poster.webp" alt=""></div>
+                        <div class="video__frame" data-js="videoFrame" data-video="<iframe width=&quot;720&quot; height=&quot;405&quot; src=&quot;https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf/?skinColor=43a047&quot; frameBorder=&quot;0&quot; allow=&quot;clipboard-write; autoplay&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>"></div>
+                    </div>
+                    <button class="video__btn" type="button" data-js="videoBtnPlay">
+                        <svg>
+                            <use xlink:href="img/sprites/sprite.svg#play"></use>
+                        </svg>
+                    </button>
+                    </div>`
             })
+                h2!= checkProps.title
+                p 
+                    b Рассказываем и показываем возможности при поступлении на наш факультет:
+
+                ul 
+                    li Чем уникален наш факультет. Какие возможности мы предоставляем студентам.
+                    li Почему стоит выбрать именно нас.
+                    li Что вы получите, выбрав наш факультет?
+                    li Как поступить на наш факультет?
+                    li Какие перспективы открываются перед выпускниками факультета экономики и управления?
+                    li Какие знания и навыки можно получить на факультете экономики и управления?
+                    li Как преподаватели факультета помогают студентам в раскрытии их потенциала?
+                    li Почему важно выбирать факультет, который постоянно обновляет учебные программы?
+                    li Как практико-ориентированное обучение помогает студентам подготовиться к будущей работе?
+                    li Почему международная кооперация важна для будущих экономистов и управленцев?
+                    li Какие специализации можно выбрать на факультете экономики и управления?
+                    li Как факультет помогает студентам в карьерном росте?
 
 
 

@@ -1,0 +1,24 @@
+-
+    const defaultMQuestionsProps = {
+        classes: '',
+        title: ''
+    }
+
+mixin m-questions(props = defaultMQuestionsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMQuestionsProps.classes,
+            title: props.title ? props.title : defaultMQuestionsProps.title,
+        }
+
+    section.m-questions(class= checkProps.classes)
+        .m-container 
+            - if (checkProps.title.lenght > 0)
+                .h2.m-question__title!= checkProps.title 
+            +news-filter({
+                items: [
+                    'Общие',
+                    'Общежитие',
+                    'Приемная комиссия',
+                ]
+            })

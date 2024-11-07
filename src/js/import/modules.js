@@ -4,6 +4,7 @@
 @@include("../../blocks/modules/m-table/m-table.js")
 @@include("../../blocks/modules/c-map/c-map.js")
 @@include("../../blocks/modules/modals/modals.js")
+@@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     mTable()
     mainBurger()
     cMap()
+    facultyAdvantagesSliders()
 })

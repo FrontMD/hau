@@ -5,15 +5,14 @@ function mediaSlider() {
 
     imageSliders.forEach(imageSlider => {
         let imageSliderEx = new Swiper(imageSlider, {
-            slidesPerView: 2.5,
+            slidesPerView: 1.5,
             spaceBetween: 0,
-            /*navigation: {
-                nextEl: '.media-slider__next',
-                prevEl: '.media-slider__prev',
-            },*/
             breakpoints: {
                 501: {
-                    spaceBetween: 0,   
+                    slidesPerView: 2.1,   
+                },
+                1024: {
+                    slidesPerView: 2.9,   
                 }
             }
         })

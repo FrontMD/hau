@@ -92,4 +92,14 @@
 
         }
     }
+
+
+    &--middle {
+        .tabs-block__tab {
+            min-width: 220px;
+            width: auto;
+            font-size: 16px;
+            min-height: 60px;
+        }
+    }
 }

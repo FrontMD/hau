@@ -8,25 +8,19 @@
 
     &__cards {
         margin-top: 40px;
-        display: flex;
-        align-items: stretch;
-        gap: 20px;
-
-        @include max(laptop) {
-            flex-wrap: wrap;
-        }
 
         @include max(mobile) {
-            flex-direction: column;
-            flex-wrap: 0;
-            gap: 10px;
             margin-top: 20px
         }
     }
 
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
     &__card {
-        flex: 0 0 calc((100% - 60px) / 4);
         min-height: 335px;
+        height: auto;
         display: flex;
         flex-direction: column;
         padding: 30px 20px 20px;
@@ -34,14 +28,12 @@
         color: $c-white;
 
         @include max(laptop) {
-            flex: 0 0 calc((100% - 20px) / 2);
-            min-height: 250px;
+            min-height: 270px;
         }
 
         @include max(mobile) {
-            flex-basis: auto;
-            width: 100%;
             min-height: auto;
+            width: 300px;
         }
     }
 
