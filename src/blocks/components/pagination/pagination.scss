@@ -12,7 +12,7 @@
     }
 
     &__page {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         width: 49px;
@@ -25,6 +25,8 @@
         line-height: 1em;
         transition: 0.3s;
         text-decoration: none;
+        margin: 0 !important;
+        padding: 0 !important;
 
         @include max(mobile) {
             width: 30px;
@@ -40,13 +42,15 @@
     }
 
     &__btn {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         width: 49px;
         height: 49px;
         background-color: #C1D3C9;
         color: $c-accent;
+        margin: 0 !important;
+        padding: 0 !important;
 
         @include max(mobile) {
             width: 30px;
