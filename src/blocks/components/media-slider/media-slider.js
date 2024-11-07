@@ -13,6 +13,9 @@ function mediaSlider() {
                 },
                 1024: {
                     slidesPerView: 2.9,   
+                },
+                1921: {
+                    slidesPerView: 4.9,   
                 }
             }
         })

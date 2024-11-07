@@ -1,1 +1,7 @@
-.m-questions {}
+.m-questions {
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
