@@ -43,4 +43,14 @@
             color: $c-white;
         }
     }
+
+    &--darkGreen {
+        color: $c-white;
+        background-color: $c-accent;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
+    }
 }
