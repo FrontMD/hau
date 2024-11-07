@@ -30,13 +30,14 @@ mixin programm-card(props= defaultProgrammCardProps)
             .h3.programm-card__title
                 a(href="#")!= checkProps.name
 
-        - let paramsCount = 0
-        - while(paramsCount < checkProps.params.length)
-            .programm-card__item
-                .programm-card__param!= checkProps.params[paramsCount].name
-                .h3.programm-card__val!= checkProps.params[paramsCount].value
+        .programm-card__items
+            - let paramsCount = 0
+            - while(paramsCount < checkProps.params.length)
+                .programm-card__item
+                    .programm-card__param!= checkProps.params[paramsCount].name
+                    .h3.programm-card__val!= checkProps.params[paramsCount].value
 
-            - paramsCount++
+                - paramsCount++
 
 
 

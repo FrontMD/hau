@@ -35,17 +35,72 @@
         align-items: center;
         border-left: 4px solid $c-accent-light;
         padding: 30px 25px;
+
+        @include max(tablet) {
+            padding: 20px 10px;
+        }
+
+        @include max(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include max(mobile) {
+            border-left: none;
+            padding: 20px;
+        }
     }
 
     &--row &__header {
         flex: 0 0 380px;
         margin-right: auto;
+
+        @include max(laptop) {
+            flex-basis: auto;
+            margin-right: 0;
+        }
+    }
+
+    &--row &__items {
+        display: flex;
+        align-items: center;
+        flex: 0 1 1012px;
+
+        @include max(laptop) {
+            flex-basis: auto;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
     }
 
     &--row &__item {
-        flex: 0 1 253px;
+        flex: 0 1 25%;
         padding: 0 20px;
         border-left: 1px solid $c-border-op;
+
+        @include max(large) {
+            padding: 0 10px;
+        }
+
+        @include max(laptop) {
+            &:first-child {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+
+
+        @include max(mobile) {
+            flex-basis: auto;
+            padding: 0;
+            border: none;
+        }
     }
 
 }

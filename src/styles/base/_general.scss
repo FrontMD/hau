@@ -501,7 +501,8 @@ iframe {
 		}
 	}
 
-	iframe {
+	>iframe,
+	.video {
 		margin-bottom: 50px;
 
 		@include max(mobile) {
