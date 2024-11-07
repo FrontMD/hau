@@ -54,3 +54,15 @@
         padding-right: 0;
     }
 }
+
+.open-doors-block__modal{
+    border-top:1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 120px;
+    @include max(tablet){
+        margin-top: 80px;
+    }
+    @include max(mobile){
+        margin-top: 10px;
+    }
+}

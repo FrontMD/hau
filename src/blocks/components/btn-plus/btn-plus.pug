@@ -13,7 +13,7 @@ mixin btn-plus(props = defaultBtnPlusProps)
             noText: props.noText ? props.noText : defaultNewsCardProps.noText
         }
 
-    a.btn-plus(class=checkProps.classes href="#")
+    a.btn-plus(class=checkProps.classes href="#")&attributes(attributes)
         if(checkProps.noText !== true)
             span.btn-plus__text!= checkProps.name
         span.btn-plus__icon 
