@@ -21,7 +21,10 @@ mixin news-detailed(props = defaultNewsDetailedProps)
                         <p><b>Трек создан, чтобы первокурсники могли раскрыть свой потенциал, окунуться в студенческую жизнь и познакомиться с молодежной политикой страны.</b></p>`
                 })
 
-                <iframe width="720" height="405" src="https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                +video({
+                video: '<iframe width="720" height="405" src="https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf/?skinColor=43a047" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+                poster: 'img/video-poster.webp'
+                })
 
                 p 
                     b За годы проведения, по словам организаторов, проект «Твой ход» стал площадкой для обмена опытом и знаний, где обучающиеся могут учиться друг у друга, находить единомышленников и строить полезные связи.

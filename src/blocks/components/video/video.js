@@ -12,6 +12,18 @@ function videos() {
             videoPlayBtn.remove()
             videoPoster.remove()
             videoFrame.innerHTML = videoFrame.dataset.video
+
+            let player = videoFrame.querySelector('iframe')
+            let playerSrc = player.getAttribute('src')
+
+            if(playerSrc.includes('rutube')) {
+                player.addEventListener("load", function() {
+                    player.contentWindow.postMessage(JSON.stringify({
+                        type: 'player:play',
+                        data: {}
+                    }), '*');
+                })
+            }
         })
     })
  

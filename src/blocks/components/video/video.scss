@@ -36,16 +36,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 137px;
-        height: 137px;
+        width: 7.762%;
+        aspect-ratio: 1 / 1;
         background-color: $c-accent-light;
         cursor: pointer;
         color: $c-white;
         transition: background-color $tr-time;
 
         svg {
-            width: 33px;
-            height: 33px;
+            width: 24%;
+            aspect-ratio: 1 / 1;
         }
 
         &:hover {

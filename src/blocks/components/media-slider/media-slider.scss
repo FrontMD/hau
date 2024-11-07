@@ -1,6 +1,10 @@
 .media-slider-section {
     padding: 35px 0;
 
+    @include max(mobile) {
+        padding: 25px 0;
+    }
+
     .media-slider {
 
         margin-right: -28px;

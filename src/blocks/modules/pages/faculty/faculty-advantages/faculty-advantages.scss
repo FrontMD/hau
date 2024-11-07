@@ -11,24 +11,52 @@
         display: flex;
         align-items: stretch;
         gap: 20px;
+
+        @include max(laptop) {
+            flex-wrap: wrap;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            flex-wrap: 0;
+            gap: 10px;
+            margin-top: 20px
+        }
     }
 
     &__card {
-        flex: 0 1 25%;
+        flex: 0 0 calc((100% - 60px) / 4);
+        min-height: 335px;
         display: flex;
         flex-direction: column;
         padding: 30px 20px 20px;
         background-color: $c-accent;
         color: $c-white;
+
+        @include max(laptop) {
+            flex: 0 0 calc((100% - 20px) / 2);
+            min-height: 250px;
+        }
+
+        @include max(mobile) {
+            flex-basis: auto;
+            width: 100%;
+            min-height: auto;
+        }
     }
 
     &__subtitle {
         margin-bottom: 60px;
+
+        @include max(mobile) {
+            margin-bottom: 35px;
+        }
     }
 
     &__text {
         margin-top: auto;
         opacity: 0.45;
         line-height: 1.34em;
+        font-size: 16px;
     }
 }

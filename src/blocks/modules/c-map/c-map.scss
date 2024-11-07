@@ -81,6 +81,10 @@
     &__title {
         margin-bottom: 25px;
         color: $c-accent;
+
+        @include max(mobile) {
+            margin-bottom: 10px;
+        }
     }
 
     &__row {
@@ -92,13 +96,26 @@
 
         @include max(mobile) {
             flex-direction: column;
-            gap: 40px;
-            padding: 20px 0;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: none;
+        }
+    }
+
+    &__row+&__row {
+        @include max(mobile) {
+            padding-top: 0;
         }
     }
 
     &__block {
         flex: 0 1 50%;
+
+        @include max(mobile) {
+            border-top: 1px solid $c-border-op;
+            flex-basis: auto;
+            padding-top: 10px;
+        }
     }
 
     &__subtitle {
@@ -116,6 +133,10 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        @include max(mobile) {
+            gap: 10px;
+        }
     }
 
     &__param {

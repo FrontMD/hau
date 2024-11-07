@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Вопрос-ответ"
+
+block content
+    .page
+        .page-layout
+            +i-intro({
+                title: 'Вопрос-ответ',
+                img: 'img/faculties/faculty_intro.webp',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Вопрос-ответ',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                },
+            })
