@@ -1,0 +1,30 @@
+-
+    const defaultSelectProps = {
+        activeIndex: 0,
+        classes: '',
+        options: [
+            'За всё время',
+            '2024 г.',
+            '2023 г.',
+            '2022 г.',
+            '2021 г.',
+            '2020 г.',
+            '2019 г.',
+            '2018 г.',
+            '2017 г.',
+            '2016 г.',                                                                                                         
+        ]
+    }
+
+mixin select(props = defaultSelectProps, ...dataset)
+    -
+        const checkProps = {
+            name: props.name ? props.name : defaultSelectProps.name,
+            activeIndex: props.activeIndex ? props.activeIndex : defaultSelectProps.activeIndex,
+            classes: props.classes ? props.classes : defaultSelectProps.classes,
+            options: props.options ? props.options : defaultSelectProps.options,
+        }
+
+    select.select(class= checkProps.classes data-js="select" name="" preloader="За всё время")&attributes(attributes)
+        each val, index in checkProps.options
+            option!= val
