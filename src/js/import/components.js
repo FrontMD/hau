@@ -5,6 +5,7 @@
 @@include("../../blocks/components/form/form.js")
 @@include("../../blocks/components/video/video.js")
 @@include("../../blocks/components/select/select.js")
+@@include("../../blocks/components/spoiler/spoiler.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     tabsBlockInit()
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     validation()
     videos()
     selects()
+    spoilers()
 })

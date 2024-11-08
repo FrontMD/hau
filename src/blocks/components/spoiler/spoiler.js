@@ -1,44 +1,46 @@
 function spoilers() {
     const accordions = document.querySelectorAll("[data-js='accordion']");
 
-	const openSpoiler = (spoiler) => {
-		let headerHeight = 0;
-		if (window.innerWidth > 1100){
-			headerHeight = 100;
+	if(accordions.length < 1) return
+
+	accordions.forEach(accordion => {
+
+		let firstSpoiler = accordion.querySelector('[data-js="spoiler"]')
+
+		if(firstSpoiler) {
+			openSpoiler(firstSpoiler)
 		}
-		const content = spoiler.querySelector(".accordion__content");
-		spoiler.classList.add("active");
 
-		let accordionActiveHeaight = $("active .accordion__content").height();
-		if(typeof(accordionActiveHeaight) === "undefined") {
-			accordionActiveHeaight = 0;
-		}
-		content.style.maxHeight = content.scrollHeight + "px";
-		ScrollTrigger.refresh();
-	};
+		accordion.addEventListener('click', (e) => {
+			let eventTarget = e.target
 
-	const closeSpoiler = (accordion) => {
-		const content = accordion.querySelector(".accordion__content");
-		accordion.classList.remove("accordion__active");
+			if(eventTarget.closest('[data-js="spoiler"]')) {
+				let clickedSpoiler = eventTarget.closest('[data-js="spoiler"]')
 
-		content.style.maxHeight = null;
-	};
+				if(clickedSpoiler.classList.contains('active')) {
+					return
+				}
 
+				let spoilers = accordion.querySelectorAll('[data-js="spoiler"]')
 
-	spoilers.forEach((spoiler) => {
-		const intro = spoiler.querySelector(".accordion__intro");
-		const content = spoiler.querySelector(".accordion__content");
+				spoilers.forEach(spoiler => {
+					closeSpoiler(spoiler)
+				})
 
-		intro.onclick = () => {
-			if (content.style.maxHeight) {
-				closeSpoiler(spoiler);
-			} else {
-				openSpoiler(spoiler);
-				$(spoilers).not($(spoiler)).each(function(){
-					closeSpoiler($(this)[0]);
-				});
+				openSpoiler(clickedSpoiler)
 			}
-		};
+		})
+	})
 
-	});
+	function openSpoiler(spoiler) {
+		const content = $(spoiler).find('[data-js="spoilerContent"]');
+		spoiler.classList.add("active");
+		$(content).slideDown(400);
+	};
+
+	function closeSpoiler(spoiler) {
+		const content = $(spoiler).find('[data-js="spoilerContent"]');
+		spoiler.classList.remove("active");
+		$(content).slideUp(400);
+	};
 }

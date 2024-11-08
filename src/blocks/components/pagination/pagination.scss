@@ -37,7 +37,7 @@
         &.active,
         &:hover {
             background-color: $c-accent;
-            color: $c-white;
+            color: $c-white !important;
         }
     }
 
@@ -65,7 +65,10 @@
         &.active,
         &:hover {
             background-color: $c-accent;
-            color: $c-white;
+
+            svg {
+                color: $c-white !important;
+            }
         }
     }
 

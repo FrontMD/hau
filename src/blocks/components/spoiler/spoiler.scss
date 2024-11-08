@@ -6,6 +6,10 @@
     padding: 0 35px 5px;
     background-color: $c-white;
 
+    @include max(tablet) {
+        padding: 0 15px 5px;
+    }
+
     &__intro {
         position: relative;
         display: flex;
@@ -13,6 +17,11 @@
         align-items: flex-start;
         cursor: pointer;
         padding: 35px 0 30px;
+
+        @include max(tablet) {
+            padding: 20px 0 15px;
+            gap: 10px;
+        }
 
     }
 
@@ -23,6 +32,10 @@
         font-weight: 500;
         line-height: 1.02em;
 
+        @include max(mobile) {
+            font-size: 14px;
+            max-width: none;
+        }
     }
 
     &__icon {
@@ -46,6 +59,11 @@
             height: 12px;
             transition: all $tr-time;
         }
+
+        @include max(tablet) {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__intro:hover &__icon,
@@ -64,9 +82,9 @@
         overflow: hidden;
         padding-top: 25px;
         border-top: 1px solid $c-border;
-    }
 
-    &.active &__content {
-        display: block;
+        @include max(tablet) {
+            padding-top: 15px;
+        }
     }
 }

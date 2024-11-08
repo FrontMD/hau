@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Горячая линия"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Горячая</span> линия',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Горячая линия',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })

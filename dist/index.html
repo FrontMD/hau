@@ -58,131 +58,131 @@
     <main class="site-main">
       <style type="text/css">
         .pages-list {
-            padding: 237px 0 60px 100px;
+          padding: 237px 0 60px 100px;
         }
         
         .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: 20px;
+          margin-top: 30px;
         }
         
         .pages-list__subtitle {
-            margin-top: 60px;
-            font-size: 32px !important;
+          margin-top: 60px;
+          font-size: 32px !important;
         }
         
         .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
+          position: relative;
+          font-size: 26px;
+          text-decoration: none;
+          color: var(--c-accent);
+          transition: color 0.3s linear;
+          line-height: 1.02em;
+          min-height: 3.06em;
+          padding-right: 160px;
         
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
+          span {
+            font-size: 0.7em;
+            opacity: 0.7;
+          }
         }
         
         .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 14px;
+          line-height: 1.02em;
+          padding: 5px 10px;
+          border-radius: 3px;
+          width: fit-content;
         }
         
         .pages-list__link--check {
-            padding-right: 155px;
+          padding-right: 155px;
         }
         
         .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
+          content: "проверка / правки";
+          background-color: #ffffcc;
+          color: #ff6a00;
         }
         
         
         .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
+          content: "отложено / очередь";
+          background-color: #dedede;
+          color: #212121;
         }
         
         .pages-list__link--work {
-            padding-right: 85px;
+          padding-right: 85px;
         }
         
         .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
+          content: "в работе";
+          background-color: #9FC5F8;
+          color: #000044;
         }
         
         .pages-list__link--ready {
-            padding-right: 85px;
+          padding-right: 85px;
         }
         
         .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
+          content: "натяжка";
+          background-color: #93C47D;
+          color: var(--c-accent)
         }
         
         .pages-list__link:hover {
-            color: var(--c-accent-light);
+          color: var(--c-accent-light);
         }
         
         @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
+          .pages-list__link {
+            padding-right: 0;
+            padding-top: 30px;
+          }
         
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
+          .pages-list__link:after {
+            left: 0;
+            right: auto;
+          }
         }
         
         @media (max-width: 1340px) {
-            .pages-list {
-                padding: 180px 0 50px 70px;
-            }
+          .pages-list {
+            padding: 180px 0 50px 70px;
+          }
         
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
+          .pages-list__links {
+            grid-gap: 15px;
+            margin-top: 40px;
+          }
         
-            .pages-list__link {
-                font-size: 20px;
-            }
+          .pages-list__link {
+            font-size: 20px;
+          }
         }
         
         @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
+          .pages-list {
+            padding: 85px 0 50px;
+          }
         
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
+          .pages-list__links {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            margin-top: 40px;
+          }
         
-            .pages-list__link {
-                min-height: auto;
-            }
+          .pages-list__link {
+            min-height: auto;
+          }
         }
         
       </style>
@@ -199,13 +199,13 @@
                     <h2>Университет</h2>
                   </div>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--ready" href="history.html" target="_blank">История университета</a><a class="pages-list__link pages-list__link--ready" href="museum.html" target="_blank">Музей при университете</a><a class="pages-list__link pages-list__link--ready" href="news-list.html" target="_blank">Новости</a><a class="pages-list__link pages-list__link--ready" href="news-detailed.html" target="_blank">Новости (детальная)</a><a class="pages-list__link pages-list__link--ready" href="contacts.html" target="_blank">Контакты</a><a class="pages-list__link pages-list__link--ready" href="antiterror.html" target="_blank">Антитеррористическая и антиэкстремистская деятельность</a><a class="pages-list__link pages-list__link--ready" href="corruption.html" target="_blank">Противодействие коррупции</a><a class="pages-list__link pages-list__link--ready" href="dohodi.html" target="_blank">Сведения о доходах</a><a class="pages-list__link pages-list__link--ready" href="admin-signatures.html" target="_blank">Административные подразделения</a><a class="pages-list__link pages-list__link--ready" href="rectorate.html" target="_blank">Ректорат</a><a class="pages-list__link pages-list__link--ready" href="people-list.html" target="_blank">Преподаватели и сотрудники</a><a class="pages-list__link pages-list__link--ready" href="prepod-detailed.html" target="_blank">Преподаватели (детальная)</a><a class="pages-list__link pages-list__link--work" href="faq.html" target="_blank">Вопрос-ответ</a><a class="pages-list__link pages-list__link--ready" href="faculties.html" target="_blank">Факультеты</a><a class="pages-list__link pages-list__link--ready" href="faculty-detailed.html" target="_blank">Факультет детальная</a><a class="pages-list__link pages-list__link--ready" href="programma-razvitia.html" target="_blank">Программа развития</a></div>
+            <div class="pages-list__links"><a class="pages-list__link pages-list__link--ready" href="history.html" target="_blank">История университета</a><a class="pages-list__link pages-list__link--ready" href="museum.html" target="_blank">Музей при университете</a><a class="pages-list__link pages-list__link--ready" href="news-list.html" target="_blank">Новости</a><a class="pages-list__link pages-list__link--ready" href="news-detailed.html" target="_blank">Новости (детальная)</a><a class="pages-list__link pages-list__link--ready" href="contacts.html" target="_blank">Контакты</a><a class="pages-list__link pages-list__link--work" href="hotline.html" target="_blank">Горячая линия</a><a class="pages-list__link pages-list__link--ready" href="antiterror.html" target="_blank">Антитеррористическая и антиэкстремистская деятельность</a><a class="pages-list__link pages-list__link--ready" href="corruption.html" target="_blank">Противодействие коррупции</a><a class="pages-list__link pages-list__link--ready" href="dohodi.html" target="_blank">Сведения о доходах</a><a class="pages-list__link pages-list__link--ready" href="admin-signatures.html" target="_blank">Административные подразделения</a><a class="pages-list__link pages-list__link--ready" href="rectorate.html" target="_blank">Ректорат</a><a class="pages-list__link pages-list__link--ready" href="people-list.html" target="_blank">Преподаватели и сотрудники</a><a class="pages-list__link pages-list__link--ready" href="prepod-detailed.html" target="_blank">Преподаватели (детальная)</a><a class="pages-list__link pages-list__link--check" href="faq.html" target="_blank">Вопрос-ответ</a><a class="pages-list__link pages-list__link--ready" href="faculties.html" target="_blank">Факультеты</a><a class="pages-list__link pages-list__link--ready" href="faculty-detailed.html" target="_blank">Факультет детальная</a><a class="pages-list__link pages-list__link--ready" href="programma-razvitia.html" target="_blank">Программа развития</a></div>
                 <div class="title pages-list__subtitle title--dark">
                   <div class="title__h2">
                     <h2>Абитуриенту / Поступающему</h2>
                   </div>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--postponed" href="in-abiturientam.html" target="_blank">Иностранным абитуриентам <span>(ожидает блок ЧАВО)</span></a><a class="pages-list__link pages-list__link--ready" href="invalid.html" target="_blank">Инвалидам и лицам с ОВЗ</a><a class="pages-list__link pages-list__link--ready" href="dop-info.html" target="_blank">Дополнительная информация</a><a class="pages-list__link pages-list__link--ready" href="open-doors.html" target="_blank">Дни открытых дверей</a></div>
+            <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="in-abiturientam.html" target="_blank">Иностранным абитуриентам</a><a class="pages-list__link pages-list__link--ready" href="invalid.html" target="_blank">Инвалидам и лицам с ОВЗ</a><a class="pages-list__link pages-list__link--ready" href="dop-info.html" target="_blank">Дополнительная информация</a><a class="pages-list__link pages-list__link--ready" href="open-doors.html" target="_blank">Дни открытых дверей</a></div>
                 <div class="title pages-list__subtitle title--dark">
                   <div class="title__h2">
                     <h2>Студентам</h2>
