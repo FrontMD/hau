@@ -1,0 +1,26 @@
+-
+    const defaultSalaryProps = {
+        classes: '',
+        text: '',
+        title: '',
+        reverse: false
+    }
+
+mixin salary(props= defaultSalaryProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSalaryProps.classes,
+            text: props.text ? props.text : defaultSalaryProps.text,
+            title: props.title ? props.title : defaultSalaryProps.title,
+            reverse: props.reverse ? props.reverse : defaultSalaryProps.reverse,
+        }
+
+        let dirClass = checkProps.reverse === true ? " salary--reverse" : ''
+
+    .salary(class= checkProps.classes + dirClass)&attributes(attributes)
+        .salary__text!= checkProps.text
+        .salary__title!= checkProps.title
+
+
+
+

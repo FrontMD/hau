@@ -4,41 +4,86 @@ mixin vacancy-category
             +m-columns({
                 classes: "m-columns--no-plpr",
                 title: `<h1>Учебно-вспомогательный персонал</h1>
-                <a href="#" class="title-link title-link--plus"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#plus></use></svg></span><span class="title-link__text">Отправить резюме</span></a>`
-            })
-                form.vacancy-filter(action="#")
-                .text-items-list
-                    +vacancy-card
-                    +vacancy-card({
-                        title: 'Руководитель мастерских'
-                    })
-                    +vacancy-card({
-                        title: 'Сотрудник PR-отдела'
-                    })
-                    +vacancy-card({
-                        title: 'Монтажер'
-                    })
-                    +vacancy-card({
-                        title: 'Заведующий отделением'
-                    })
-                    +vacancy-card({
-                        title: 'Лаборант (преподаватель)'
-                    })
-                    +vacancy-card({
-                        title: 'Лаборант (волонтер)'
-                    })
-                    +vacancy-card({
-                        title: 'Волонтер на дни открытых дверей'
-                    })
-                    +vacancy-card({
-                        title: 'Региональный эксперт по направлениям'
-                    })
-                    +vacancy-card({
-                        title: 'Старший диспетчер по расписанию'
-                    })
-                    +vacancy-card({
-                        title: 'Специалист по методической работе'
-                    })
-                    +vacancy-card({
-                        title: 'Сотрудник в отдел учебного процесса'
+                <a href="#" class="title-link title-link--plus"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#plus></use></svg></span><span class="title-link__text">Отправить резюме</span></a><form class="vacancy-filter" action="#">
+                    <div class="vacancy-filter__block">
+                        <div class="h3 vacancy-filter__title">Опыт</div>
+                        <div class="vacancy-filter__fieldset">
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Без опыта</span>
+                            </label>
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Опыт от 3 мес.</span>
+                            </label>
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Опыт от 6 мес.</span>
+                            </label>
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Опыт от 1 года</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="vacancy-filter__block">
+                        <div class="h3 vacancy-filter__title">Тип занятости</div>
+                        <div class="vacancy-filter__fieldset">
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Полный день</span>
+                            </label>
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">На пол ставки</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="vacancy-filter__block">
+                        <div class="h3 vacancy-filter__title">Образование</div>
+                        <div class="vacancy-filter__fieldset">
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">Высшее</span>
+                            </label>
+                            <label class="vacancy-filter__field checkbox">
+                                <input type="checkbox" checked value=""><span class="checkbox__fake"></span><span class="checkbox__text">СПО</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>`
+                })
+                    .text-items-list
+                        +vacancy-card
+                        +vacancy-card({
+                            title: 'Руководитель мастерских'
+                        })
+                        +vacancy-card({
+                            title: 'Сотрудник PR-отдела'
+                        })
+                        +vacancy-card({
+                            title: 'Монтажер'
+                        })
+                        +vacancy-card({
+                            title: 'Заведующий отделением'
+                        })
+                        +vacancy-card({
+                            title: 'Лаборант (преподаватель)'
+                        })
+                        +vacancy-card({
+                            title: 'Лаборант (волонтер)'
+                        })
+                        +vacancy-card({
+                            title: 'Волонтер на дни открытых дверей'
+                        })
+                        +vacancy-card({
+                            title: 'Региональный эксперт по направлениям'
+                        })
+                        +vacancy-card({
+                            title: 'Старший диспетчер по расписанию'
+                        })
+                        +vacancy-card({
+                            title: 'Специалист по методической работе'
+                        })
+                        +vacancy-card({
+                            title: 'Сотрудник в отдел учебного процесса'
+                        })
+
+                    +btn({
+                        classes: 'vacancy-category__more',
+                        name: 'Загрузить еще',
+                        cMode: 'lightGreen',
                     })

@@ -1,11 +1,26 @@
 .vacancy-card {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 25px;
+    min-height: 117px;
     margin-top: 20px;
     padding-left: 45px;
     color: $c-accent;
     background-color: $c-white;
+    border-left: 4px solid $c-accent-light;
+
+    @include max(large) {
+        gap: 20px;
+        padding-left: 20px;
+    }
+
+    @include max(mobile) {
+        flex-wrap: wrap;
+        border-left: none;
+        padding: 0;
+        gap: 15px;
+        padding-top: 15px;
+    }
 
     a {
         margin-bottom: 0;
@@ -22,12 +37,22 @@
 
     &__title {
         margin-bottom: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @include max(mobile) {
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0;
+            flex-basis: calc(100% - 120px);
+        }
     }
 
     &__link {
         display: flex !important;
         align-items: center;
         width: fit-content;
+        flex: 0 0 auto;
         gap: 10px;
         color: $c-accent;
         font-size: 16px;
@@ -36,6 +61,14 @@
         transition: all $tr-time;
         margin-bottom: 0;
         margin-left: auto;
+
+        @include max(mobile) {
+            margin-right: 15px;
+
+            .text {
+                display: none;
+            }
+        }
 
         .icon {
             width: 53px;
@@ -48,6 +81,11 @@
             border-radius: 100%;
             transition: all $tr-time;
             border: 1px solid rgba(4, 65, 43, 0.1);
+
+            @include max(mobile) {
+                width: 40px;
+                height: 40px;
+            }
 
             svg {
                 width: 9px;
@@ -62,6 +100,19 @@
                 background-color: $c-accent;
                 color: $c-white;
             }
+        }
+    }
+
+    &__btn {
+        flex: 0 0 276px;
+        align-self: stretch;
+
+        @include max(large) {
+            flex: 0 0 200px;
+        }
+
+        @include max(mobile) {
+            flex-basis: 100%;
         }
     }
 }

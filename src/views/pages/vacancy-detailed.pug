@@ -7,8 +7,7 @@ block content
     .page
         .page-layout
             +page-intro({
-                classes: 'white-bg',
-                title: 'Вакансия',
+                title: '',
                 breadcrumbs: {
                     items: [
                         {
@@ -20,9 +19,10 @@ block content
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: 'Вакансия',
+                            name: 'Название вакансии',
                             link: 'javascript:void(0);'
                         }
                     ],
                 }
             })
+            +vacancy-detailed

@@ -1,0 +1,82 @@
+mixin vacancy-detailed
+    section.vacancy-detailed 
+        .m-container.vacancy-detailed__container
+            .vacancy-detailed__main
+                .vacancy-detailed__header
+                    h1.h2.vacancy-detailed__title Волонтер на дни открытых дверей
+                    +salary({
+                        title: 'от 40 000 ₽',
+                        text: 'до вычета НДФЛ'
+                    })
+                .vacancy-detailed__middle
+                    +count-block({
+                        classes: 'count-block--bordered',
+                        text: 'Опыт работы:',
+                        num: '1–3 года',
+                        vMode: 'column'
+                    })
+                    +count-block({
+                        classes: 'count-block--bordered',
+                        text: 'График работы:',
+                        num: 'понедельник- пятница с 9:00 до 18:00',
+                        vMode: 'column'
+                    })
+                .vacancy-detailed__body
+                    .vacancy-detailed__desc.text-editor
+                        h3 Обязанности:
+                        ul
+                            li Составление расписания учебных групп очного и очно-заочного отделения
+                            li Корректировка расписания учебных групп
+
+                        h3 Требования:
+                        ul
+                            li Высшее (среднее профессиональное) образование
+                            li Опыт работы в подобной должности от 1 года
+                            li Опыт работы с программой 1С
+                            li Умение работать с большим объёмом информации
+                            li Коммуникабельность, стрессоустойчивость
+                            li Грамотная речь, презентабельный внешний вид
+                            li Владение компьютером на уровне продвинутого пользователя
+
+                        h3 Условия:
+                        ul
+                            li 5-дневная рабочая неделя
+                            li График работы 9.00-18.00
+                            li Перерыв на обед с 13.00 до 14.00
+                            li Отпуск 28 календарных дней
+
+                    .vacancy-detailed__skills.text-editor
+                        h3 Ключевые навыки
+                        .tags
+                            +info-tag({
+                                text: 'Пользователь ПК'
+                            })
+                            +info-tag({
+                                text: 'Грамотность'
+                            })
+                            +info-tag({
+                                text: 'Грамотная речь'
+                            })
+                            +info-tag({
+                                text: 'Работа в команде'
+                            })
+                            +info-tag({
+                                text: 'Работа с большим объемом информации'
+                            })
+
+            .vacancy-detailed__sidebar
+                .vacancy-detailed__sideblock.text-editor
+                    .h3.vacancy-detailed__subtitle Контактная информация:
+                    .vacancy-detailed__contact тел.: <a href="tel:+7800000000">8 (800) 000-00-00</a>
+                    .vacancy-detailed__contact e-mail: <a href="mailto:info@khay.ru">info@khay.ru</a>
+                .vacancy-detailed__sideblock
+                    .h3.vacancy-detailed__subtitle Адрес:
+                    .vacancy-detailed__contact Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                .vacancy-detailed__sideblock
+                    .h3.vacancy-detailed__subtitle Стать частью коллектива университета
+                    +btn({
+                        classes: 'btn--darkGreen',
+                        name: 'Отправить резюме'
+                    })
+
+

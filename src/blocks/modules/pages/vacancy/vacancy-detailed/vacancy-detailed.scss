@@ -1,0 +1,57 @@
+.vacancy-detailed {
+    &__container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include max(laptop) {
+            flex-direction: column;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__main {
+        flex: 1 1 auto;
+        background-color: $c-white;
+        padding: 50px;
+        overflow: hidden;
+
+        @include max(tablet) {
+            padding: 30px;
+        }
+
+        @include max(mobile) {
+            padding: 30px 15px;
+        }
+    }
+
+    &__sidebar {
+        flex: 0 0 422px;
+
+        @include max(large) {
+            flex-basis: 422px;
+        }
+
+        @include max(laptop) {
+            flex-basis: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 30px;
+
+        }
+    }
+}

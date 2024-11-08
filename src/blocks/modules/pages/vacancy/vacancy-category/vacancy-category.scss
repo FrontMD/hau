@@ -1,1 +1,93 @@
-.vacancy-category {}
+.vacancy-filter {
+
+    @include max(laptop) {
+        display: flex;
+        gap: 50px;
+    }
+
+    @include max(mobile) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 35px;
+
+        @include max(laptop) {
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        @include max(mobile) {
+            gap: 15px;
+        }
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+
+        @include max(mobile) {
+            gap: 8px;
+        }
+    }
+
+    &__title {
+        color: $c-accent-middle;
+    }
+
+    &__field {
+        color: $c-accent;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.02em;
+
+        @include max(mobile) {
+            font-size: 14px;
+        }
+    }
+
+    .checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        cursor: pointer;
+        width: fit-content;
+
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 1;
+        }
+
+        &__fake {
+            position: relative;
+            width: 21px;
+            height: 21px;
+            background-color: $c-white;
+        }
+
+        &__fake:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 11px;
+            height: 11px;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            transition: background-color $tr-time;
+        }
+
+        input:checked+.checkbox__fake:before {
+            background-color: $c-accent;
+        }
+
+    }
+}
