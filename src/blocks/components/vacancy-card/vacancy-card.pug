@@ -1,0 +1,27 @@
+-
+    const defaultVacancyCardProps = {
+        classes: '',
+        title: 'Диспетчер по расписанию',
+    }
+
+mixin vacancy-card(props= defaultVacancyCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVacancyCardProps.classes,
+            title: props.title ? props.title : defaultVacancyCardProps.title,
+        }
+
+    .vacancy-card(class= checkProps.classes)&attributes(attributes)
+        .h3.vacancy-card__title
+            a(href="#")!= checkProps.title
+        a.vacancy-card__link(href="javascript:void(0)" target="_blank")
+            | Подробнее
+            span.icon
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+        +btn({
+            name: 'Отправить резюме',
+            cMode: 'lightGreen',
+        })
+
+

@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Вакансии (категория)"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '',
+                backBtn: true,
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Вакансии',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Категория вакансий',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            +vacancy-category

@@ -2,7 +2,8 @@
     const defaultPageIntroProps = {
         classes: '',
         title: '',
-        breadcrumbs: {} 
+        breadcrumbs: {},
+        backBtn: false
     }
 
 mixin page-intro(props = defaultPageIntroProps)
@@ -10,7 +11,8 @@ mixin page-intro(props = defaultPageIntroProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultPageIntroProps.classes,
             title: props.title ? props.title : defaultPageIntroProps.title,
-            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPageIntroProps.breadcrumbs
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPageIntroProps.breadcrumbs,
+            backBtn: props.backBtn ? props.backBtn : defaultPageIntroProps.backBtn
         }
 
     section.page-intro(class= checkProps.classes)
@@ -22,3 +24,11 @@ mixin page-intro(props = defaultPageIntroProps)
                     text: checkProps.title
                 })
                 block
+        - if(checkProps.backBtn === true)
+            a.page-intro__back(href="#")
+                span.icon
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                | Назад
+
+

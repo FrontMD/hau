@@ -7,6 +7,7 @@ block content
     .page
         .page-layout
             +page-intro({
+                classes: 'white-bg',
                 title: '<span>Горячая</span> линия',
                 breadcrumbs: {
                     items: [
@@ -21,3 +22,62 @@ block content
                     ],
                 }
             })
+
+            .m-container
+                +m-columns({
+                    classes: 'm-columns--no-plpr no-border',
+                    title: '<h2>Колл-центр для информационной поддержки</h2>'
+                })
+                    .text-items-list
+                        +count-block({
+                            classes: '',
+                            text: 'Телефон',
+                            num: '<a href="tel:+79999999999">+7 (999) 999 99 99</a>',
+                            vMode: 'column'
+                        })
+                        +count-block({
+                            classes: '',
+                            text: 'Время работы',
+                            num: 'В выходные и рабочие дни с 9:00 до 21:00. В пятницу до 20:00',
+                            vMode: 'column'
+                        })
+                +m-columns({
+                    classes: 'm-columns--no-plpr',
+                    title: '<h2>Служба психологической помощи</h2>'
+                })
+                    .text-items-list
+                        +count-block({
+                            classes: '',
+                            text: 'Телефон',
+                            num: '<a href="tel:+79999999999">+7 (999) 999 99 99</a>',
+                            vMode: 'column'
+                        })
+                        +count-block({
+                            classes: '',
+                            text: 'Время работы',
+                            num: 'В выходные и рабочие дни с 9:00 до 21:00. В пятницу до 20:00',
+                            vMode: 'column'
+                        })
+                +m-columns({
+                    classes: 'm-columns--no-plpr',
+                    title: '<h2>Центр психологической помощи МЧС России</h2>'
+                })
+                    .text-items-list
+                        +count-block({
+                            classes: '',
+                            text: 'Телефон',
+                            num: '<a href="tel:+79999999999">+7 (999) 999 99 99</a>',
+                            vMode: 'column'
+                        })
+
+                +m-columns({
+                    classes: 'm-columns--no-plpr',
+                    title: '<h2> «Горячая линия» МЧС России</h2>'
+                })
+                    .text-items-list
+                        +count-block({
+                            classes: '',
+                            text: 'Телефон',
+                            num: '<a href="tel:+79999999999">+7 (999) 999 99 99</a>',
+                            vMode: 'column'
+                        })

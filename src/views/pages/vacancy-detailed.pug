@@ -1,0 +1,28 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Вакансия"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                classes: 'white-bg',
+                title: 'Вакансия',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Вакансии',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Вакансия',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
