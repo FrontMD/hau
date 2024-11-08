@@ -1,68 +1,99 @@
 .open-doors-block {
     padding: 22px;
 
-    &__container{
+    &__container {
         display: flex;
         justify-content: space-between;
 
-        @include max(mobile){
+        @include max(mobile) {
             display: block;
         }
-        &+&{
-            border-top:1px solid #ccc;
+
+        &+& {
+            border-top: 1px solid #ccc;
             margin-top: 120px;
             padding-top: 20px;
-            @include max(tablet){
+
+            @include max(tablet) {
                 margin-top: 80px;
             }
-            @include max(mobile){
+
+            @include max(mobile) {
                 margin-top: 10px;
             }
 
         }
-        .btn-plus, .socials__item{
+
+        .btn-plus,
+        .socials__item {
             display: flex;
         }
     }
-    &+&{
+
+    &+& {
         margin-top: 30px;
     }
-    &__left p{
+
+    &__left p {
         max-width: 500px;
     }
-    &__left h2, &__left h3{
+
+    &__left h2,
+    &__left h3 {
         max-width: 600px;
     }
-    &__right{
+
+    &__right {
         text-align: right;
         margin-left: 30px;
-        @include max(mobile){
+
+        @include max(mobile) {
             margin-left: 0;
             text-align: left;
             display: flex;
             padding-top: 10px;
-            .socials{
+
+            .socials {
                 margin-top: -12px;
             }
         }
     }
 
 }
-.m-columns__header{
-    .socials{
+
+.m-columns__header {
+    .socials {
         padding-left: 0;
         padding-right: 0;
     }
 }
 
-.open-doors-block__modal{
-    border-top:1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 120px;
-    @include max(tablet){
-        margin-top: 80px;
+.open-doors-block__format {
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn-plus {
+
+        &__icon {
+            color: $c-white;
+            background-color: $c-accent;
+            border-color: $c-accent;
+        }
     }
-    @include max(mobile){
+
+    @include max(mobile) {
+        display: block;
+    }
+}
+
+.open-doors-block__modal {
+    padding-top: 10px;
+    margin-top: 60px;
+
+    @include max(mobile) {
         margin-top: 10px;
     }
 }
