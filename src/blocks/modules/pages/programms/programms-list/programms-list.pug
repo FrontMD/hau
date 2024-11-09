@@ -1,0 +1,62 @@
+-
+    const defaultProgrammsListProps = {
+        classes: '',
+        vMode: 'rows'
+    }
+
+mixin programms-list(props = defaultProgrammsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProgrammsListProps.classes,
+            vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode
+        }
+
+        let vModeClass = ' programms-list--' + checkProps.vMode
+
+    section.programms-list(class= checkProps.classes + vModeClass)
+        .m-container
+            +news-filter({
+                items: [
+                    'Бакалавриат и специалитет',
+                    'Магистратура',
+                    'Аспирантура',
+                ]
+            })       
+                +visual-toggle({
+                    active: checkProps.vMode
+                })
+            .programms-list__list
+                - let cardsCount = 0
+                - while(cardsCount < 12)
+                    +programm-card({
+                        classes: '',
+                            faculty: 'Факультет экономики и управления',
+                            name: 'Управление бизнес-процессами (Менеджмент)',
+                            params: [
+                                {
+                                    name: 'Стоимость',
+                                    value: '321.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Проходной балл:',
+                                    value: '400'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '4 года'
+                                },
+                                {
+                                    name: 'Бюджетных мест:',
+                                    value: '26'
+                                }
+                            ],
+                            isRow: checkProps.vMode === 'rows' ? true : false
+                    })
+
+                    - cardsCount++
+
+            +btn({
+                classes: 'programm-list__more',
+                name: 'Загрузить еще',
+                cMode: 'lightGreen',
+            })

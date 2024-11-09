@@ -1,0 +1,64 @@
+extends ../layouts/default
+
+block variables
+    - const title = "СМИ о нас"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: 'Сми о нас',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'СМИ о нас',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+                .page-intro__text.text-editor 
+                    p
+                        b Интервью, колонки в газетах и журналах, посты в соц. сетях и многое другое
+            +smi-cards
+            .m-container
+                +m-columns({
+                    classes: 'm-columns--no-plpr no-border',
+                    title: `<h2>Режим приема по личным вопросам</h2>
+                        <p><a href="#"></a></p>
+                        `
+                })
+                    .text-items-list
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'О временном режиме приема по личным вопросам граждан, работников и учащихся университета ректором и проректорами (от 17.03.2020)'
+                        })
+                +m-columns({
+                    classes: 'm-columns--no-plpr',
+                    title: `<h2>Документы</h2>`
+                })
+                    .text-items-list
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'Об утверждении состава ректората (приказ от 13.05.2022 г. № 460-ОД)'
+                        })
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'Приказ от 31.01.2020 № 155-ОД «О назначении ученого секретаря Ученого совета»'
+                        })
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'Приказ от 31.01.2020 № 156-ОД «О назначении заместителя председателя Ученого совета»'
+                        })
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'Положение об организации управления деятельностью (утверждено приказом от 24.04.2017 г. № 311-ОД)'
+                        })
+                        +link-block({
+                            classes: 'white-bg',
+                            text: 'О внесении изменений в Положение об организации управления деятельностью'
+                        })

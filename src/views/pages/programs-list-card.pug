@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Программы обучения"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Программы</span> <br>обучения',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Программы обучения',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            +programms-list({
+                vMode: 'cards'
+            })

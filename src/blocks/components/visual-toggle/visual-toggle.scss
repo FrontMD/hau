@@ -1,0 +1,35 @@
+.visual-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+
+    @include max(tablet) {
+        display: none;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 53px;
+        height: 53px;
+        border-radius: 100%;
+        color: $c-accent;
+        background-color: transparent;
+        border: 1px solid $c-border-op;
+        border-color: $c-border-op;
+        transition: all $tr-time;
+
+        &:hover,
+        &.active {
+            border-color: rgba(207, 219, 236, 0.3);
+            background-color: $c-white;
+        }
+
+        svg {
+            max-width: 21px;
+            max-height: 18px;
+        }
+    }
+}

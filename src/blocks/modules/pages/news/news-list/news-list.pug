@@ -20,9 +20,8 @@ mixin news-list(props = defaultNewsListProps)
                     h2.h2.news-list__title!= checkProps.title
                     +period-select
             - else
-                +news-filter({
-                    hasDate: true
-                })
+                +news-filter()        
+                    +period-select
             .news-list__items
                 +news-card()
                 +news-card({

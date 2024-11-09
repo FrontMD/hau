@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Программа обучения"
+
+block content
+    .page
+        .page-layout
+            +i-intro({
+                title: 'Управление бизнес-процессами (Менеджмент)',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Программы обучения',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Программа обучения',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })

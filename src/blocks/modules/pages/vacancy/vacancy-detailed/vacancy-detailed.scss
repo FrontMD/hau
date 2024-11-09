@@ -4,54 +4,209 @@
         align-items: stretch;
         justify-content: space-between;
         gap: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 45px;
+        padding-bottom: 40px;
 
         @include max(laptop) {
             flex-direction: column;
+            gap: 0;
+            padding-bottom: 20px;
+        }
+
+        @include max(tablet) {
+            padding-bottom: 20px;
         }
 
         @include max(mobile) {
             padding-left: 0;
             padding-right: 0;
+            padding-bottom: 0;
         }
     }
 
     &__main {
         flex: 1 1 auto;
         background-color: $c-white;
-        padding: 50px;
         overflow: hidden;
+        padding: 30px 0 45px;
 
         @include max(tablet) {
-            padding: 30px;
+            padding: 30px 0;
         }
 
         @include max(mobile) {
-            padding: 30px 15px;
+            padding: 50px 0 20px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 35px 35px;
+
+        @include max(tablet) {
+            padding: 0 20px 30px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            padding: 0 15px 20px;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        color: $c-accent;
+        max-width: 570px;
+
+        @include max(large) {
+            max-width: 460px;
+        }
+
+        @include max(laptop) {
+            max-width: 590px;
+        }
+
+        @include max(mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &__middle {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 40px 35px;
+        border-top: 1px solid $c-border-op;
+
+        @include max(tablet) {
+            padding: 30px 20px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 15px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    .vacancy-detailed__count-block {
+        padding: 0 20px;
+        border-left: 1px solid $c-border-op;
+
+        @include max(mobile) {
+            padding: 0;
+            border: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 34px;
+        padding: 60px 35px 0;
+        border-top: 1px solid $c-border-op;
+
+        @include max(large) {
+            flex-direction: column;
+        }
+
+        @include max(tablet) {
+            padding: 30px 20px 0;
+        }
+
+        @include max(mobile) {
+            padding: 20px 15px 0;
+            gap: 20px;
+        }
+    }
+
+    &__desc {
+        flex: 0 0 655px;
+
+        @include max(large) {
+            flex-basis: auto;
         }
     }
 
     &__sidebar {
         flex: 0 0 422px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
 
         @include max(large) {
-            flex-basis: 422px;
+            flex-basis: 350px;
         }
 
         @include max(laptop) {
+            background-color: $c-white;
+            padding: 0 20px 30px;
             flex-basis: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding-bottom: 30px;
-            gap: 20px;
         }
 
         @include max(tablet) {
             flex-direction: column;
             gap: 30px;
+        }
 
+        @include max(mobile) {
+            padding: 0 15px 20px;
+            gap: 20px;
+        }
+    }
+
+    &__subtitle {
+        color: $c-accent-middle;
+        margin-bottom: 24px;
+
+        @include max(laptop) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+
+    }
+
+    &__contact {
+        color: $c-accent;
+        opacity: 0.4;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17em;
+
+        a:hover {
+            color: $c-accent-light;
+            transition: color $tr-time;
+        }
+    }
+
+    &__btn {
+        @include max(tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 16px;
+
+    @include max(laptop) {
+        gap: 10px;
+    }
+
+    .info-tag {
+        margin: 0;
+
+        @include max(mobile) {
+            margin: 0;
         }
     }
 }

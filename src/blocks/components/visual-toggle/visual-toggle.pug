@@ -1,0 +1,22 @@
+-
+    const defaultVisualToggleProps = {
+        classes: '',
+        active: 'rows'
+    }
+
+mixin visual-toggle(props= defaultVisualToggleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVisualToggleProps.classes,
+            active: props.active ? props.active : defaultVisualToggleProps.active
+        }
+
+    .visual-toggle(class= checkProps.classes)&attributes(attributes)
+        a.visual-toggle__btn(href="#" class=checkProps.active === 'cards' ? 'active' : '')
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#cards_mode`)
+        a.visual-toggle__btn(href="#" class=checkProps.active === 'rows' ? 'active' : '')
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#rows_mode`)
+
+

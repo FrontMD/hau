@@ -8,21 +8,18 @@
             'Дни открытых дверей',
             'Конференции',
             'Достижения'
-        ],
-        hasDate: false
+        ]
     }
 
 mixin news-filter(props = defaultNewsFilterProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultNewsFilterProps.classes,
-            items: props.items ? props.items : defaultNewsFilterProps.items,
-            hasDate: props.hasDate ? props.hasDate : defaultNewsFilterProps.hasDate
+            items: props.items ? props.items : defaultNewsFilterProps.items
         }
 
     .news-filter(class=checkProps.classes)
         ul.news-filter__list
             each val, index in checkProps.items
                 li.news-filter__item(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
-        - if(checkProps.hasDate === true)        
-            +period-select
+        block

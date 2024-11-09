@@ -1,1 +1,40 @@
-.salary {}
+.salary {
+    display: flex;
+    flex-direction: column;
+    color: $c-accent;
+
+    &--reverse {
+        flex-direction: column-reverse;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17em;
+        opacity: 0.4;
+
+        @include max(mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.14em;
+        letter-spacing: 0.025em;
+
+        @include max(laptop) {
+            font-size: 28px;
+        }
+
+        @include max(tablet) {
+            font-size: 26px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
+        }
+    }
+
+}

@@ -8,6 +8,8 @@
         padding: 0 29px 5px;
         overflow-x: auto;
 
+
+
         &::-webkit-scrollbar {
             width: 5px;
             height: 5px;
@@ -95,6 +97,16 @@
 
 
     &--middle {
+        .tabs-block__tabs {
+            @include max(laptop) {
+                padding: 0 20px 5px;
+            }
+
+            @include max(tablet) {
+                padding: 0 15px 5px;
+            }
+        }
+
         .tabs-block__tab {
             min-width: 220px;
             width: auto;

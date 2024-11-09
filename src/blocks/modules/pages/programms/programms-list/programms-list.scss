@@ -1,0 +1,49 @@
+.programms-list {
+    padding: 0 0 100px;
+
+    @include max(laptop) {
+        padding: 0 0 50px;
+    }
+
+    @include max(mobile) {
+        padding: 0 0 30px;
+    }
+
+    &__list {
+        padding: 20px 0;
+    }
+
+    &--rows &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include max(tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    &--cards &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+
+        @include max(large) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}
