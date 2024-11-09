@@ -4,7 +4,6 @@
         breadcrumbs: {},
         img: '',
         title: '',
-        small: false,
         date: '',
     }
 
@@ -25,6 +24,7 @@ mixin i-intro(props = defaultIIntroProps)
         .m-container.i-intro__container
             +breadcrumbs(checkProps.breadcrumbs)
             .i-intro__top
+                block
             .i-intro__bottom
                 +title({
                     classes: 'i-intro__title',

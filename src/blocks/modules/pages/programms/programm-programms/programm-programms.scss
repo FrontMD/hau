@@ -1,0 +1,25 @@
+.programm-programms {
+    padding-bottom: 30px;
+
+    &__title {
+        color: $c-accent;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+
+        @include max(tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}

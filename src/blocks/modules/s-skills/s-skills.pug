@@ -1,0 +1,56 @@
+-
+    const defaultSSkillsProps = {
+        classes: ''
+    }
+
+mixin s-skills(props = defaultSSkillsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSSkillsProps.classes
+        }
+
+    section.s-skills
+        .m-container
+            .h2.s-skills__title Навыки, которые вы получите
+            .s-skills__cards(data-js="sSkillsSlider")
+                .swiper-wrapper
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_1.webp' alt='')
+                        .s-skills__text планирование и анализ на предприятии
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_2.webp' alt='')
+                        .s-skills__text разработка и реализация управленческих решений, делового общения, переговоров и служебной переписки
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_3.webp' alt='')
+                        .s-skills__text владения различными управленческими технологиями
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_4.webp' alt='')
+                        .s-skills__text применение методов и инструментов управления бизнес-процессами
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_5.webp' alt='')
+                        .s-skills__text обработка и анализ управленческой информации
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_1.webp' alt='')
+                        .s-skills__text планирование и анализ на предприятии
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_2.webp' alt='')
+                        .s-skills__text разработка и реализация управленческих решений, делового общения, переговоров и служебной переписки
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_3.webp' alt='')
+                        .s-skills__text владения различными управленческими технологиями
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_4.webp' alt='')
+                        .s-skills__text применение методов и инструментов управления бизнес-процессами
+                    .s-skills__card.swiper-slide
+                        .s-skills__icon
+                            img(src='img/programms/skills_5.webp' alt='')
+                        .s-skills__text обработка и анализ управленческой информации

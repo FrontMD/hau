@@ -1,0 +1,79 @@
+.s-vacancy {
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    &__title {
+        color: $c-accent;
+    }
+
+    &__cards {
+        margin-top: 60px;
+
+        @include max(mobile) {
+            margin-top: 20px
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+}
+
+.s-vacancy-card {
+    height: auto;
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    background-color: $c-white;
+    color: $c-accent;
+    border-left: 4px solid $c-accent-light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.33em;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 170px;
+        flex: 0 0 auto;
+        padding-bottom: 20px;
+    }
+
+    &__tag {
+        font-weight: 500;
+        line-height: 1.02em;
+        color: $c-accent-light
+    }
+
+    &__title {
+        margin-bottom: auto;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        flex: 1 1 auto;
+        padding-top: 10px;
+        border-top: 1px solid $c-border-op;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+        opacity: 0.4;
+        line-height: 1.02em;
+    }
+
+    @include max(laptop) {
+        min-height: 270px;
+    }
+
+    @include max(mobile) {
+        min-height: auto;
+        width: 300px;
+    }
+}

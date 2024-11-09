@@ -1,0 +1,64 @@
+.s-skills {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: $c-accent-light;
+
+    &__title {
+        color: $c-white;
+    }
+
+    &__cards {
+        margin-top: 60px;
+
+        @include max(mobile) {
+            margin-top: 20px
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__card {
+        min-height: 335px;
+        height: auto;
+        width: 333px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px 25px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $c-white;
+
+        @include max(laptop) {
+            min-height: 270px;
+        }
+
+        @include max(mobile) {
+            min-height: auto;
+            width: 300px;
+        }
+    }
+
+    &__icon {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 40px;
+
+        @include max(mobile) {
+            margin-bottom: 35px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        margin-top: auto;
+        line-height: 1.02em;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

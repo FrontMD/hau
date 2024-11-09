@@ -1,28 +1,12 @@
 -
-    const defaultfacultyProgrammsProps = {
+    const defaultFacultyProgrammsProps = {
         classes: '',
-        title: '<span>История</span> университета',
-        breadcrumbs: {
-            cMode: 'light', //dark - на светлом фоне, light - на тёмном фоне
-            items: [
-                {
-                    name: 'Главная',
-                    link: 'javascript:void(0);'
-                },
-                {
-                    name: 'История университета',
-                    link: 'javascript:void(0);'
-                }
-            ],
-        },
     }
 
-mixin faculty-programms(props = defaultfacultyProgrammsProps)
+mixin faculty-programms(props = defaultFacultyProgrammsProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultfacultyProgrammsProps.classes,
-            title: props.title ? props.title : defaultfacultyProgrammsProps.title,
-            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultfacultyProgrammsProps.breadcrumbs,
+            classes: props.classes ? props.classes : defaultFacultyProgrammsProps.classes
         }
 
     section.faculty-programms

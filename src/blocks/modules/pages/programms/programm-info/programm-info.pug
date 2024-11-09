@@ -1,0 +1,18 @@
+-
+    const defaultProgrammInfoProps = {
+        classes: ''
+
+    }
+
+mixin programm-info(props = defaultProgrammInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProgrammInfoProps.classes,
+        }
+
+    section.programm-info
+        .m-container.programm-info__container
+            .programm-info__left
+                .programm-info__info.white-bg
+                    .h3.programm-info__title Информация об образовательной программе
+            .programm-info__right

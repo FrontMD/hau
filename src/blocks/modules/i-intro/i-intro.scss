@@ -60,6 +60,7 @@
         position: relative;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         margin-top: 24px;
+        padding-top: 25px;
 
         @include max(mobile) {
             border-top: none;
@@ -121,8 +122,47 @@
     }
 }
 
-.i-intro {
-    &--small &__container {
-        min-height: 812px;
+.intro-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: fit-content;
+    min-width: 646px;
+    padding: 25px 20px 25px 30px;
+    color: $c-white;
+    background-color: $c-accent;
+    transition: background-color $tr-time;
+
+    &:hover {
+        background-color: $c-accent-dark;
+    }
+
+    &__text {
+        opacity: 0.4;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17em;
+    }
+
+    &__title {
+        margin-top: 5px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 53px;
+        width: 53px;
+        height: 53px;
+        border-radius: 100%;
+        background-color: $c-accent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        svg {
+            width: 9px;
+            height: 12px;
+        }
     }
 }

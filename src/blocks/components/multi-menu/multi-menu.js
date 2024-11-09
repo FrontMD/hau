@@ -53,8 +53,6 @@ function multiMenu() {
                 let targetListIndex = menu.querySelector(`[data-js="multiMenuItem"][data-index="${currentListIndex}"]`).closest('[data-js="multiMenuList"]') //.dataset.index
                 let targetList = menu.querySelector(`[data-level="${targetLevel}"][data-index="${targetListIndex}"]`)
 
-                console.log(targetListIndex)
-
                 if(targetList) {
                     targetList.classList.add('active')
                     currentList.classList.remove('active')

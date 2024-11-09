@@ -3,8 +3,6 @@ function facultyAdvantagesSliders() {
 
     if(facultyAdvantagesSliders.length < 1) return
 
-    console.log(facultyAdvantagesSliders)
-
     facultyAdvantagesSliders.forEach(facultyAdvantagesSlider => {
         let facultyAdvantagesSliderEx = new Swiper(facultyAdvantagesSlider, {
             slidesPerView: 'auto',

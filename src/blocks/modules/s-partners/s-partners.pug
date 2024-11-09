@@ -1,0 +1,13 @@
+-
+    const defaultSPartnersProps = {
+        classes: '',
+    }
+
+mixin s-partners(props = defaultSPartnersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSPartnersProps.classes,
+        }
+
+    section.s-partners
+        .m-container

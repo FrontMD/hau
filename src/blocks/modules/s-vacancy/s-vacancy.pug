@@ -1,0 +1,56 @@
+-
+    const defaultSVacancyProps = {
+        classes: '',
+        title: '',
+        cards: [
+            {
+                tag: '',
+                title: '',
+                salary: '',
+                resp: '',
+                employer: ''
+            }
+
+        ]
+    }
+
+mixin s-vacancy(props = defaultSVacancyProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSVacancyProps.classes,
+            title: props.title ? props.title : defaultSVacancyProps.title,
+            cards: props.cards ? props.cards : defaultSVacancyProps.cards,
+        }
+
+    section.s-vacancy
+        .m-container
+            .h2.s-vacancy__title!= checkProps.title
+            .s-vacancy__cards(data-js="sVacancySlider")
+                .swiper-wrapper
+                    - let itemsCount = 0
+                    - while (itemsCount < checkProps.cards.length)
+                        - let currentItem = checkProps.cards[itemsCount]
+
+                        .s-vacancy__card.s-vacancy-card.swiper-slide
+                            .s-vacancy-card__top
+                                - if(currentItem.tag.length > 0)
+                                    .s-vacancy-card__tag!= currentItem.tag
+                                - if(currentItem.title.length > 0)
+                                    .h3.s-vacancy-card__title!= currentItem.title 
+                                - if(currentItem.salary.length > 0)
+                                    +salary({
+                                        text: 'Зарплата',
+                                        title: currentItem.salary
+                                    })
+                            - if(currentItem.resp.length > 0 || currentItem.employer.length > 0)
+                                .s-vacancy-card__bottom
+                                    - if(currentItem.resp.length > 0)
+                                        .s-vacancy-card__block
+                                            .s-vacancy-card__subtitle Обязанности:
+                                            .s-vacancy-card__resp!= currentItem.resp
+                                    - if(currentItem.employer.length > 0)
+                                        .s-vacancy-card__block
+                                            .s-vacancy-card__subtitle Нанимает
+                                            .s-vacancy-card__employer!= currentItem.employer
+
+                        - itemsCount++

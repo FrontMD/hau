@@ -1,0 +1,112 @@
+-
+    const defaultProgrammProgrammsProps = {
+        classes: ''
+
+    }
+
+mixin programm-programms(props = defaultProgrammProgrammsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProgrammProgrammsProps.classes,
+        }
+
+    section.programm-programms
+        .m-container
+            .h2.programm-programms__title Другие программы
+            .programm-programms__list
+                +programm-card({
+                    classes: '',
+                        faculty: 'Факультет экономики и управления 1',
+                        name: 'Управление бизнес-процессами (Менеджмент)',
+                        params: [
+                            {
+                                name: 'Стоимость',
+                                value: '321.8 тыс. (2024)'
+                            },
+                            {
+                                name: 'Проходной балл:',
+                                value: '400'
+                            },
+                            {
+                                name: 'Срок обучения:',
+                                value: '4 года'
+                            },
+                            {
+                                name: 'Бюджетных мест:',
+                                value: '26'
+                            }
+                        ],
+                        isRow: true
+                })
+                +programm-card({
+                    classes: '',
+                        faculty: 'Факультет экономики и управления',
+                        name: 'Управление бизнес-процессами (Менеджмент)',
+                        params: [
+                            {
+                                name: 'Стоимость',
+                                value: '321.8 тыс. (2024)'
+                            },
+                            {
+                                name: 'Проходной балл:',
+                                value: '400'
+                            },
+                            {
+                                name: 'Срок обучения:',
+                                value: '4 года'
+                            },
+                            {
+                                name: 'Бюджетных мест:',
+                                value: '26'
+                            }
+                        ],
+                        isRow: true
+                })
+                +programm-card({
+                    classes: '',
+                        faculty: 'Факультет экономики и управления',
+                        name: 'Управление бизнес-процессами (Менеджмент)',
+                        params: [
+                            {
+                                name: 'Стоимость',
+                                value: '321.8 тыс. (2024)'
+                            },
+                            {
+                                name: 'Проходной балл:',
+                                value: '400'
+                            },
+                            {
+                                name: 'Срок обучения:',
+                                value: '4 года'
+                            },
+                            {
+                                name: 'Бюджетных мест:',
+                                value: '26'
+                            }
+                        ],
+                        isRow: true
+                })
+                +programm-card({
+                    classes: '',
+                        faculty: 'Факультет экономики и управления',
+                        name: 'Управление бизнес-процессами (Менеджмент)',
+                        params: [
+                            {
+                                name: 'Стоимость',
+                                value: '321.8 тыс. (2024)'
+                            },
+                            {
+                                name: 'Проходной балл:',
+                                value: '400'
+                            },
+                            {
+                                name: 'Срок обучения:',
+                                value: '4 года'
+                            },
+                            {
+                                name: 'Бюджетных мест:',
+                                value: '26'
+                            }
+                        ],
+                        isRow: true
+                })
