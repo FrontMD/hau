@@ -1,12 +1,21 @@
-function sPartnersSliders() {
-    const sPartnersSliders = document.querySelectorAll('[data-js="sPartnersSlider"]');
+function sPartners() {
+    const sPartnersBlocks = document.querySelectorAll('[data-js="sPartners"]');
+    
+    if(sPartnersBlocks.length < 1) return
+    
+    sPartnersBlocks.forEach(sPartnersBlock => {
 
-    if(sPartnersSliders.length < 1) return
+        const sPartnersSlider = sPartnersBlock.querySelector('[data-js="sPartnersSlider"]');
+        const sPartnersSliderPrev = sPartnersBlock.querySelector('[data-js="sliderPrevBtn"]');
+        const sPartnersSliderNext = sPartnersBlock.querySelector('[data-js="sliderNextBtn"]');
 
-    sPartnersSliders.forEach(sPartnersSlider => {
-        let sVcancySliderEx = new Swiper(sPartnersSlider, {
-            slidesPerView: 3,
+        let sPartnersSliderEx = new Swiper(sPartnersSlider, {
+            slidesPerView: 'auto',
             spaceBetween: 0,
+            navigation: {
+                nextEl: sPartnersSliderNext,
+                prevEl: sPartnersSliderPrev,
+            }
         })
     })
 
