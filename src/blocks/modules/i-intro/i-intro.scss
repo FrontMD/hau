@@ -61,6 +61,12 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         margin-top: 24px;
         padding-top: 25px;
+        padding-bottom: 8px;
+
+        @include max(tablet) {
+            padding-top: 10px;
+            margin-top: 15px;
+        }
 
         @include max(mobile) {
             border-top: none;
@@ -129,10 +135,22 @@
     gap: 30px;
     width: fit-content;
     min-width: 646px;
+    max-width: 85%;
     padding: 25px 20px 25px 30px;
     color: $c-white;
     background-color: $c-accent;
     transition: background-color $tr-time;
+
+    @include max(tablet) {
+        min-width: 420px;
+        padding: 10px 15px;
+    }
+
+    @include max(mobile) {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
 
     &:hover {
         background-color: $c-accent-dark;
@@ -159,6 +177,12 @@
         border-radius: 100%;
         background-color: $c-accent;
         border: 1px solid rgba(255, 255, 255, 0.2);
+
+        @include max(tablet) {
+            flex-basis: 40px;
+            height: 40px;
+            width: 40px;
+        }
 
         svg {
             width: 9px;

@@ -10,12 +10,21 @@ function sPartners() {
         const sPartnersSliderNext = sPartnersBlock.querySelector('[data-js="sliderNextBtn"]');
 
         let sPartnersSliderEx = new Swiper(sPartnersSlider, {
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 0,
             navigation: {
                 nextEl: sPartnersSliderNext,
                 prevEl: sPartnersSliderPrev,
+            },
+            breakpoints: {
+                1341: {
+                    slidesPerView: 2,
+                },
+                1801: {
+                    slidesPerView: 3,
+                }
             }
+
         })
     })
 

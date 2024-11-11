@@ -34,6 +34,21 @@
     font-weight: 400;
     line-height: 1.33em;
 
+    @include max(laptop) {
+        min-height: 270px;
+    }
+
+    @include max(tablet) {
+        padding: 15px;
+    }
+
+    @include max(mobile) {
+        min-height: auto;
+        width: 300px;
+        font-size: 14px;
+        border-left-width: 2px;
+    }
+
     &__link {
         position: absolute;
         width: 100%;
@@ -50,6 +65,14 @@
         min-height: 170px;
         flex: 0 0 auto;
         padding-bottom: 20px;
+
+        @include max(tablet) {
+            min-height: 160px;
+        }
+
+        @include max(mobile) {
+            min-height: 130px;
+        }
     }
 
     &__tag {
@@ -91,23 +114,19 @@
         transition: all $tr-time;
         border-radius: 100%;
 
+        @include max(tablet) {
+            width: 40px;
+            height: 40px;
+        }
+
         svg {
             width: 9px;
-            height: 9px;
+            height: 12px;
         }
     }
 
     &:hover &__icon {
         background-color: $c-accent;
         color: $c-white;
-    }
-
-    @include max(laptop) {
-        min-height: 270px;
-    }
-
-    @include max(mobile) {
-        min-height: auto;
-        width: 300px;
     }
 }
