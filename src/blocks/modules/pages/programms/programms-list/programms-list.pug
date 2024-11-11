@@ -1,7 +1,7 @@
 -
     const defaultProgrammsListProps = {
         classes: '',
-        vMode: 'rows'
+        vMode: 'rows',
     }
 
 mixin programms-list(props = defaultProgrammsListProps)
@@ -13,7 +13,7 @@ mixin programms-list(props = defaultProgrammsListProps)
 
         let vModeClass = ' programms-list--' + checkProps.vMode
 
-    section.programms-list(class= checkProps.classes + vModeClass)
+    section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
             +news-filter({
                 items: [
@@ -24,7 +24,7 @@ mixin programms-list(props = defaultProgrammsListProps)
             })       
                 +visual-toggle({
                     active: checkProps.vMode
-                })
+                })(data-js="programmsListToggle")
             .programms-list__list
                 - let cardsCount = 0
                 - while(cardsCount < 12)

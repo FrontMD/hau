@@ -1,6 +1,7 @@
 -
     const defaultProgrammProgrammsProps = {
-        classes: ''
+        classes: '',
+        vMode: 'rows'
 
     }
 
@@ -8,105 +9,50 @@ mixin programm-programms(props = defaultProgrammProgrammsProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultProgrammProgrammsProps.classes,
+            vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode
         }
 
-    section.programm-programms
+        let vModeClass = ' programms-list--' + checkProps.vMode
+
+    section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
-            .h2.programm-programms__title Другие программы
-            .programm-programms__list
-                +programm-card({
-                    classes: '',
-                        faculty: 'Факультет экономики и управления 1',
-                        name: 'Управление бизнес-процессами (Менеджмент)',
-                        params: [
-                            {
-                                name: 'Стоимость',
-                                value: '321.8 тыс. (2024)'
-                            },
-                            {
-                                name: 'Проходной балл:',
-                                value: '400'
-                            },
-                            {
-                                name: 'Срок обучения:',
-                                value: '4 года'
-                            },
-                            {
-                                name: 'Бюджетных мест:',
-                                value: '26'
-                            }
-                        ],
-                        isRow: true
-                })
-                +programm-card({
-                    classes: '',
-                        faculty: 'Факультет экономики и управления',
-                        name: 'Управление бизнес-процессами (Менеджмент)',
-                        params: [
-                            {
-                                name: 'Стоимость',
-                                value: '321.8 тыс. (2024)'
-                            },
-                            {
-                                name: 'Проходной балл:',
-                                value: '400'
-                            },
-                            {
-                                name: 'Срок обучения:',
-                                value: '4 года'
-                            },
-                            {
-                                name: 'Бюджетных мест:',
-                                value: '26'
-                            }
-                        ],
-                        isRow: true
-                })
-                +programm-card({
-                    classes: '',
-                        faculty: 'Факультет экономики и управления',
-                        name: 'Управление бизнес-процессами (Менеджмент)',
-                        params: [
-                            {
-                                name: 'Стоимость',
-                                value: '321.8 тыс. (2024)'
-                            },
-                            {
-                                name: 'Проходной балл:',
-                                value: '400'
-                            },
-                            {
-                                name: 'Срок обучения:',
-                                value: '4 года'
-                            },
-                            {
-                                name: 'Бюджетных мест:',
-                                value: '26'
-                            }
-                        ],
-                        isRow: true
-                })
-                +programm-card({
-                    classes: '',
-                        faculty: 'Факультет экономики и управления',
-                        name: 'Управление бизнес-процессами (Менеджмент)',
-                        params: [
-                            {
-                                name: 'Стоимость',
-                                value: '321.8 тыс. (2024)'
-                            },
-                            {
-                                name: 'Проходной балл:',
-                                value: '400'
-                            },
-                            {
-                                name: 'Срок обучения:',
-                                value: '4 года'
-                            },
-                            {
-                                name: 'Бюджетных мест:',
-                                value: '26'
-                            }
-                        ],
-                        isRow: true
-                })
+            .programms-list__header 
+                .h2.programms-list__title Другие <br>программы     
+                +visual-toggle({
+                    active: checkProps.vMode
+                })(data-js="programmsListToggle")
+            .programms-list__list
+                - let cardsCount = 0
+                - while(cardsCount < 4)
+                    +programm-card({
+                        classes: '',
+                            faculty: 'Факультет экономики и управления',
+                            name: 'Управление бизнес-процессами (Менеджмент)',
+                            params: [
+                                {
+                                    name: 'Стоимость',
+                                    value: '321.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Проходной балл:',
+                                    value: '400'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '4 года'
+                                },
+                                {
+                                    name: 'Бюджетных мест:',
+                                    value: '26'
+                                }
+                            ],
+                            isRow: checkProps.vMode === 'rows' ? true : false
+                    })
+
+                    - cardsCount++
+
+            +btn({
+                classes: 'programm-list__more',
+                name: 'Загрузить еще',
+                cMode: 'lightGreen',
+            })

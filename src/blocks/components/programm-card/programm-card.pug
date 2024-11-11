@@ -24,7 +24,7 @@ mixin programm-card(props= defaultProgrammCardProps)
 
         isRowClass = checkProps.isRow === true ? ' programm-card--row' : ''
 
-    .programm-card(class= checkProps.classes + isRowClass)&attributes(attributes)
+    .programm-card(class= checkProps.classes + isRowClass data-js="programmCard")&attributes(attributes)
         .programm-card__header
             .programm-card__suptitle!= checkProps.faculty
             .h3.programm-card__title

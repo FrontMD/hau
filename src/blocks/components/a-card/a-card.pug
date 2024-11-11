@@ -1,0 +1,50 @@
+-
+    const defaultACardProps = {
+        classes: '',
+        img: '',
+        title: '',
+        text: '',
+        linkName: '',
+        date: '',
+        cMode: '',
+        topContent: false
+    }
+
+mixin a-card(props = defaultACardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultACardProps.classes,
+            img: props.title ? props.img : defaultACardProps.img,
+            title: props.title ? props.title : defaultACardProps.title,
+            text: props.text ? props.text : defaultACardProps.text,
+            linkName: props.linkName ? props.linkName : defaultACardProps.linkName,
+            date: props.date ? props.date : defaultACardProps.date,
+            cMode: props.cMode ? props.cMode : defaultACardProps.cMode,
+            topContent: props.topContent ? props.topContent : defaultACardProps.topContent,
+        }
+
+        let cModeClass = checkProps.cMode.length > 0 ? ` a-card--${checkProps.cMode}` : ''
+        let contentPosClass = checkProps.topContent === true ? ` a-card--topContent` : ''
+
+    .a-card(class=checkProps.classes + cModeClass + contentPosClass)&attributes(attributes)
+        .a-card__bg
+            img(src= checkProps.img alt="")
+        .a-card__content
+            - if(checkProps.title.length > 0)
+                .h3.a-card__title(href="#")
+                    a(href="#")!= checkProps.title
+            - if(checkProps.text.length > 0)
+                .a-card__text!= checkProps.text
+            - if(checkProps.linkName.length > 0)
+                a.a-card__link(href="#") 
+                    != checkProps.linkName
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            - if(checkProps.date.length > 0)
+                .a-card__date!= checkProps.date
+            a.a-card__icon(href="#")
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+
+

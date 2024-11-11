@@ -12,10 +12,10 @@ mixin visual-toggle(props= defaultVisualToggleProps)
         }
 
     .visual-toggle(class= checkProps.classes)&attributes(attributes)
-        a.visual-toggle__btn(href="#" class=checkProps.active === 'cards' ? 'active' : '')
+        a.visual-toggle__btn(href="#" class=checkProps.active === 'cards' ? 'active' : '' data-js="visualToggleBtn" data-mode="cards")
             svg
                 use(xlink:href=`img/sprites/sprite.svg#cards_mode`)
-        a.visual-toggle__btn(href="#" class=checkProps.active === 'rows' ? 'active' : '')
+        a.visual-toggle__btn(href="#" class=checkProps.active === 'rows' ? 'active' : '' data-js="visualToggleBtn" data-mode="rows")
             svg
                 use(xlink:href=`img/sprites/sprite.svg#rows_mode`)
 

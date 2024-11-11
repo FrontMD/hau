@@ -1,1 +1,8 @@
-.smi-cards {}
+.smi-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include max(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

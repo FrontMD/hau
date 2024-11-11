@@ -8,6 +8,7 @@
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
+@@include("../../blocks/modules/pages/programms/programms-list/programms-list.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sSkillsSliders()
     sVacancySliders()
     sPartners()
+    programmsList()
 })

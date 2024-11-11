@@ -1,0 +1,156 @@
+.a-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    aspect-ratio: 1 / 1.2;
+    padding: 3.6%;
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        min-height: 38%;
+        padding: 2.66% 3.55%;
+        background-color: $c-white;
+        color: $c-accent-middle;
+        font-size: 16px;
+
+        @include max(tablet) {
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__title {
+        transition: color $tr-time;
+        margin-bottom: auto;
+    }
+
+    &__title a:hover {
+        color: $c-accent-light;
+    }
+
+    &__text {
+        max-width: 410px;
+        width: calc(95% - 53px);
+        opacity: 0.5;
+
+        @include max(tablet) {
+            max-width: calc(95% - 40px);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        max-width: calc(95% - 53px);
+        opacity: 0.5;
+        transition: all $tr-time;
+
+        @include max(tablet) {
+            max-width: calc(95% - 40px);
+        }
+
+        &:hover {
+            color: $c-accent-light;
+            opacity: 1;
+        }
+
+        svg {
+            flex-shrink: 0;
+            width: 9px;
+            height: 12px;
+        }
+    }
+
+    &__date {
+        opacity: 0.5;
+        max-width: calc(95% - 53px);
+        font-weight: 500;
+
+        @include max(tablet) {
+            max-width: calc(95% - 40px);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 3.55%;
+        bottom: 5.66%;
+        width: 53px;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $c-accent;
+        background-color: $c-white;
+        border: 1px solid $c-border-op;
+        border-color: $c-border-op;
+        border-radius: 100%;
+        transition: all $tr-time;
+
+        @include max(tablet) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 9px;
+            height: 12px;
+        }
+
+        &:hover {
+            background-color: $c-accent;
+            border-color: $c-accent;
+            color: $c-white;
+        }
+    }
+}
+
+.a-card {
+    &--green &__content {
+        background-color: $c-accent-light;
+        color: $c-white;
+    }
+
+    &--green &__icon {
+        border-color: transparent;
+    }
+
+    &--green &__title a:hover {
+        color: $c-accent-dark;
+    }
+
+    &--green &__link:hover {
+        color: $c-accent-dark;
+    }
+}
+
+.a-card {
+    &--topContent &__title {
+        margin-bottom: 0;
+    }
+
+    &--topContent &__date {
+        margin-top: auto;
+    }
+}

@@ -31,7 +31,8 @@ mixin s-vacancy(props = defaultSVacancyProps)
                     - while (itemsCount < checkProps.cards.length)
                         - let currentItem = checkProps.cards[itemsCount]
 
-                        .s-vacancy__card.s-vacancy-card.swiper-slide
+                        .s-vacancy__card.s-vacancy-card.swiper-slide 
+                            a.s-vacancy-card__link(href="#")
                             .s-vacancy-card__top
                                 - if(currentItem.tag.length > 0)
                                     .s-vacancy-card__tag!= currentItem.tag
@@ -41,16 +42,19 @@ mixin s-vacancy(props = defaultSVacancyProps)
                                     +salary({
                                         text: 'Зарплата',
                                         title: currentItem.salary
-                                    })
-                            - if(currentItem.resp.length > 0 || currentItem.employer.length > 0)
-                                .s-vacancy-card__bottom
-                                    - if(currentItem.resp.length > 0)
-                                        .s-vacancy-card__block
-                                            .s-vacancy-card__subtitle Обязанности:
-                                            .s-vacancy-card__resp!= currentItem.resp
-                                    - if(currentItem.employer.length > 0)
-                                        .s-vacancy-card__block
-                                            .s-vacancy-card__subtitle Нанимает
-                                            .s-vacancy-card__employer!= currentItem.employer
+                                    })    
+                            .s-vacancy-card__bottom
+                                - if(currentItem.resp.length > 0)
+                                    .s-vacancy-card__block
+                                        .s-vacancy-card__subtitle Обязанности:
+                                        .s-vacancy-card__resp!= currentItem.resp
+                                - if(currentItem.employer.length > 0)
+                                    .s-vacancy-card__block
+                                        .s-vacancy-card__subtitle Нанимает
+                                        .s-vacancy-card__employer!= currentItem.employer
+
+                                .s-vacancy-card__icon
+                                    svg 
+                                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
 
                         - itemsCount++
