@@ -1,14 +1,29 @@
 .preparatory-tech {
     padding-top: 100px;
     padding-bottom: 50px;
+
+    @include max(tablet) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
 }
 
 .preparatory-news {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @include max(tablet) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .preparatory-about {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @include max(tablet) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }

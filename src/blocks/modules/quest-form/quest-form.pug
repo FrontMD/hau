@@ -33,18 +33,16 @@ mixin quest-form(props = defaultQuestFormProps)
                             inputAttr: {
                                 'required': ''
                             },
-                            placeholder: 'Фамилия, имя и отчество контактного лица*',
+                            placeholder: 'ФИО контактного лица*',
                             resetBtn: false,
                             isRequired: true
                         })
                         +field({
                             classes: '',
                             tag: 'select',
-                            inputAttr: {
-                                'required': ''
-                            },
-                            placeholder: 'Интересуют курсы подготовки',
+                            placeholder: 'Курсы подготовки',
                             selectOptions: [
+                                "",
                                 "Информатика",
                                 "Математика",
                                 "Физика",
@@ -75,10 +73,11 @@ mixin quest-form(props = defaultQuestFormProps)
                             tag: 'select',
                             placeholder: 'Формат занятий',
                             selectOptions: [
+                                "",
                                 "Очно",
                                 "Дистанционно"
-                            ]
-
+                            ],
+                            selectGreen: true
                         })
                     .form__flex
                         +field({
@@ -95,13 +94,14 @@ mixin quest-form(props = defaultQuestFormProps)
                         +field({
                             classes: '',
                             tag: 'select',
-                            placeholder: 'Интересует продолжительность курсов',
+                            placeholder: 'Продолжительность курсов',
                             selectOptions: [
+                                "",
                                 "96 ак.часов",
                                 "48 ак.часов",
                                 "28 ак.часов"
-                            ]
-
+                            ],
+                            selectGreen: true
                         })
 
                     +field({

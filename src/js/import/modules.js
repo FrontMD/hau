@@ -9,6 +9,7 @@
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
 @@include("../../blocks/modules/pages/programms/programms-list/programms-list.js")
+@@include("../../blocks/modules/pages/abiturientam/abiturientam-promo/abiturientam-promo.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sVacancySliders()
     sPartners()
     programmsList()
+    abiturientamPromo()
 })

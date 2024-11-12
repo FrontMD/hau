@@ -1,0 +1,25 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Абитуриентам"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                classes: 'white-bg',
+                title: 'Абитуриентам',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Абитуриентам',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            +abiturientam-promo

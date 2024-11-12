@@ -1,0 +1,20 @@
+-
+    const defaultAbiturientamPromoProps = {
+        classes: ''
+    }
+
+mixin abiturientam-promo(props = defaultAbiturientamPromoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAbiturientamPromoProps.classes
+        }
+
+    section.abiturientam-promo
+        .m-container
+            .abiturientam-promo__img 
+                img(src="img/abiturientam/abiturientam_promo.webp" alt="")
+            .abiturientam-promo__slider(data-js="abiturientamPromoSlider")
+                .swiper-wrapper 
+                    .abiturientam-promo__slide.swiper-slide
+
+

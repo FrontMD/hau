@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 100% !important;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $c-border;
     padding-bottom: 10px;
 
     .selection {
@@ -26,7 +26,8 @@
             background: transparent;
             cursor: pointer;
             transition: all 0.3s;
-            @include max(mobile){
+
+            @include max(mobile) {
                 font-size: 16px;
             }
 
@@ -144,6 +145,53 @@
         }
     }
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered{
-    color:$c-accent;
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $c-accent;
+}
+
+.field--greenSelect {
+    .select2 {
+        padding: 27px 23px;
+        border: 1px solid transparent;
+        background-color: $c-input-bg;
+
+        @include max(mobile) {
+            padding: 15px;
+        }
+    }
+
+    .select2.select2-container--open {
+        border-radius: 0;
+    }
+
+    .select2.select2-container--default .select2-selection--single .select2-selection__arrow::before {
+        background-image: url(../img/svg/select-arrow-white.svg);
+    }
+
+    .select2 .selection {
+        max-width: 100%;
+    }
+
+    .select2.select2-container--default .select2-selection--single {
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        max-width: calc(100% - 27px);
+        flex: 0 0 calc(100% - 27px);
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered .select2-selection__placeholder {
+        max-width: 100%;
+        display: block;
+        padding-top: 0;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered,
+    .select2-container--default .select2-selection--single .select2-selection__rendered .select2-selection__placeholder {
+        font-size: 16px;
+        color: $c-white;
+    }
 }

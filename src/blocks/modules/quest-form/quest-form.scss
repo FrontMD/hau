@@ -3,6 +3,10 @@
     padding-top: 5px;
     padding-bottom: 45px;
 
+    @include max(mobile) {
+        padding-bottom: 35px;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
@@ -16,7 +20,7 @@
 
         @include max(mobile) {
             flex-direction: column;
-            padding: 0 0 40px;
+            padding: 0;
             margin-left: -15px;
             margin-right: -15px;
             gap: 0;

@@ -46,7 +46,7 @@ mixin field(props = defaultFieldProps)
         - if(checkProps.tag === 'textarea')
             textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)
         - if(checkProps.tag === 'select')
-            select.field__select(data-js='formSelect')
+            select.field__select(placeholder=checkProps.placeholder data-js='formSelect')
                 - let optionCount = 0
                 - while (optionCount < checkProps.selectOptions.length)
                     option!= checkProps.selectOptions[optionCount] 

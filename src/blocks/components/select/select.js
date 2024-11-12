@@ -4,10 +4,17 @@ function selects() {
 		allowClear: true
 	});
 
-	$("[data-js='formSelect']").select2({
-		//placeholder: $("[data-js='formSelect']").attr('placeholder'),
-		allowClear: true
-	});
+	const formSelects = document.querySelectorAll("[data-js='formSelect']")
+
+	formSelects.forEach(formSelect => {
+		let placeholder = $(formSelect).attr('placeholder')
+
+		$(formSelect).select2({
+			placeholder: placeholder,
+			allowClear: true
+		});
+	}) 
+
 
 
 
