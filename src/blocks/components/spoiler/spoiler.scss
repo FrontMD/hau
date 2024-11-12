@@ -82,6 +82,7 @@
         overflow: hidden;
         padding-top: 25px;
         border-top: 1px solid $c-border;
+        padding-bottom: 50px;
 
         @include max(tablet) {
             padding-top: 15px;
