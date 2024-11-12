@@ -23,7 +23,9 @@ mixin news-list(props = defaultNewsListProps)
                 +news-filter()        
                     +period-select
             .news-list__items
-                +news-card()
+                +news-card({
+                    desc: "Работа семинара осуществлялась в дистанционном формате на платформе zoom, что позволило посетить мероприятие всем желающим. Участниками семинара стали более 100 студентов и преподавателей."
+                })
                 +news-card({
                     classes: '',
                     img: 'img/news/news_2.webp',

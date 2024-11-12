@@ -11,7 +11,8 @@
         selectOptions: [
             "вариант 1",
             "вариант 2"
-        ]
+        ],
+        selectGreen: false 
     }
 
 mixin field(props = defaultFieldProps)
@@ -26,9 +27,10 @@ mixin field(props = defaultFieldProps)
             resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
             isRequired: props.isRequired ? props.isRequired : defaultFieldProps.isRequired,
             selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
+            selectGreen: props.selectGreen ? props.selectGreen : defaultFieldProps.selectGreen,
         }
 
-    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
+    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
         - if(checkProps.title)
             span.field__title
                 != checkProps.title

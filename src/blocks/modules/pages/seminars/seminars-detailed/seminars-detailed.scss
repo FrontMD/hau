@@ -1,0 +1,134 @@
+.seminars-detailed {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include max(laptop) {
+            flex-direction: column;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__main {
+        flex: 1 1 auto;
+        background-color: $c-white;
+        padding: 50px;
+        overflow: hidden;
+
+        @include max(tablet) {
+            padding: 30px;
+        }
+
+        @include max(mobile) {
+            padding: 30px 15px;
+        }
+    }
+
+    &__sidebar {
+        flex: 0 0 575px;
+
+        @include max(large) {
+            flex-basis: 480px;
+        }
+
+        @include max(laptop) {
+            flex-basis: auto;
+            width: 100%;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 30px;
+
+        }
+    }
+}
+
+.seminar-info {
+
+    @include max(laptop) {
+        padding: 0 0 30px;
+    }
+
+    @include max(mobile) {
+        padding: 0 15px 30px;
+    }
+
+    &__title {
+        color: $c-accent;
+        line-height: 1.14em;
+        letter-spacing: -0.03125em;
+        margin-top: 40px;
+    }
+
+    &__items {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__desc {
+        margin-top: 20px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 32px 25px 32px 40px;
+        background-color: $c-white;
+        color: $c-accent-middle;
+        border-left: 4px solid $c-accent-light;
+        transition: all $tr-time;
+
+        @include max(tablet) {
+            padding: 25px 20px;
+            border-left-width: 2px;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 53px;
+            height: 53px;
+            color: $c-accent;
+            border: 1px solid $c-border-op;
+            border-color: $c-border-op;
+            border-radius: 100%;
+            transition: all $tr-time;
+
+            svg {
+                width: 9px;
+                height: 12px;
+            }
+        }
+
+        &:hover {
+            color: $c-accent-light;
+        }
+
+        &:hover &-icon {
+            background-color: $c-accent;
+            border-color: $c-accent;
+            color: $c-white;
+        }
+    }
+}

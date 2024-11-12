@@ -4,7 +4,7 @@
         img: 'img/news/news_1.webp',
         title: 'Студентам университета рассказали о&nbsp;противодействии коррупции',
         date: '04 сентября 2024',
-        desc: 'Работа семинара осуществлялась в дистанционном формате на платформе zoom, что позволило посетить мероприятие всем желающим. Участниками семинара стали более 100 студентов и преподавателей.'
+        desc: ''
     }
 
 mixin news-card(props = defaultNewsCardProps)
@@ -23,6 +23,7 @@ mixin news-card(props = defaultNewsCardProps)
         .news-card__content
             a.h2.news-card__title(href="#")!= checkProps.title
             .news-card__date!= checkProps.date
-            .news-card__footer 
-                .news-card__desc.text-editor!= checkProps.desc
+            .news-card__footer
+                if(checkProps.desc.length > 0)
+                    .news-card__desc.text-editor!= checkProps.desc
                 +btn-plus

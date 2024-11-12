@@ -31,16 +31,21 @@ block content
                     p 
                         b Присоединяйтесь к сообществу университета и будьте в курсе всех событий!
 
-        section.seminar-cards
-            +a-card({
-                img: 'img/seminars/seminars_card_1.webp',
-                title: 'Научный семинар «Культурный ландшафт»',
-            })
-            +a-card({
-                img: 'img/seminars/seminars_card_2.webp',
-                title: 'Суперкомпьютерные технологии в науке, образовании и промышленности',
-            })
-            +a-card({
-                img: 'img/seminars/seminars_card_3.webp',
-                title: 'Научный семинар НИЛ новейших отложений и палеогеографии плейстоцена',
-            })
+            section.a-card-list
+                +a-card({
+                    img: 'img/seminars/seminars_card_1.webp',
+                    title: 'Научный семинар «Культурный ландшафт»',
+                    date: '26 августа 2024',
+                    cMode: 'green'
+
+                })
+                +a-card({
+                    img: 'img/seminars/seminars_card_2.webp',
+                    title: 'Суперкомпьютерные технологии в науке, образовании и промышленности',
+                    date: '1 сентября 2024'
+                })
+                +a-card({
+                    img: 'img/seminars/seminars_card_3.webp',
+                    title: 'Научный семинар НИЛ новейших отложений и палеогеографии плейстоцена',
+                    date: '13 октября 2024'
+                })

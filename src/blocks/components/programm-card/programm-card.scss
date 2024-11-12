@@ -5,6 +5,10 @@
     background-color: $c-white;
     padding: 20px;
 
+    &--green {
+        background-color: $c-bg-main;
+    }
+
     &__items {
         display: flex;
         flex-direction: column;

@@ -1,7 +1,7 @@
 .news-detailed {
     &__container {
         display: flex;
-        align-items: stretch;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 20px;
         padding-top: 20px;

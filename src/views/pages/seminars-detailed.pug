@@ -1,0 +1,29 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Научный семинар «Культурный ландшафт»"
+
+block content
+    .page
+        .page-layout
+            +i-intro({
+                title: 'Научный семинар «Культурный ландшафт»',
+                img: 'img/seminars/seminar_detailed.webp',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Семинары',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Название семинара',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            +seminars-detailed

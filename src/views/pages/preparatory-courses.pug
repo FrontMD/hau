@@ -1,0 +1,348 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Подготовительные курсы"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Подготовительные</span> <br>курсы',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Подготовительные курсы',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Подготовительные курсы',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            section
+                .m-container 
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: `<h2>Довузовское образование и подготовка к ЕГЭ</h2>
+                            <div class="count-block  count-block--column">
+                                <div class="count-block__desc">Телефон:</div>
+                                <div class="h3 count-block__num"><a href="tel:+79900595039">+7 (990) 059-50-39</a></div>
+                            </div>`
+                    })
+                        ul
+                            li 
+                                b подготовка выпускников школ к поступлению и дальнейшей учёбе в вузе;
+                            li 
+                                b углублённое изучение профильных предметов 
+                            li 
+                                b и программы профессиональной ориентации
+
+                        +btn({
+                            classes: 'btn--darkGreen',
+                            name: 'Оставить заявку'
+                        })
+
+            section.a-card-list
+                +a-card({
+                    img: 'img/smi/smi_card_1.webp',
+                    title: 'Центр довузовского образования и подготовки к ЕГЭ',
+                    text: 'Подготовка к сдаче ЕГЭ, ОГЭ и внутренних вступительных испытаний по информатике, математике, физике, русскому языку и обществознанию. Программы для школьников, студентов колледжей, граждан иностранных государств.',
+                    cMode: 'green'
+
+                })
+                +a-card({
+                    img: 'img/smi/smi_card_2.webp',
+                    title: 'Технопарк',
+                    text: 'Инженерно-технологический комплекс, на базе которого проводятся углубленные технико-ориентированные курсы дополнительного образования для школьников. Целых 9 курсов по актуальным направлениям подготовки.'
+                })
+                +a-card({
+                    img: 'img/smi/smi_card_3.webp',
+                    title: 'Центр технологической поддержки образования'
+                })
+
+            section.preparatory-tech.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h2>Курсы в технопарке</h2>',
+                        noContent: true
+                    })
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Первое занятие бесплатно!</h3><ul><li><b>Автоконструирование и расчёты</b></li><li><b>3D-моделирование</b></li></ul>',
+                    })
+                        h3 Подготовка к ЕГЭ
+                        p  
+                            b Центр довузовского образования и подготовки к ЕГЭ предлагает школьникам и студентам колледжей углублённое изучение информатики, математики, физики, русского языка, обществознания, химии, биологии, иностранного языка для сдачи ЕГЭ и внутренних вступительных испытаний.
+                        p 
+                            b Объём часов: <br>от 28 до 96 (в зависимости от срока и формы обучения).
+
+            section.news-list.preparatory-news
+                .m-container
+                    .news-list__header
+                        h2.h2.news-list__title Новости приема
+                        +period-select
+                    .news-list__items
+                        +news-card({
+                            classes: '',
+                            img: 'img/news/news_5.webp',
+                            title: 'Набор на подготовительные курсы 2024/25 учебного года',
+                            date: '04 сентября 2024',
+                            desc: 'Подготовка к поступлению в вузы проводится для учащиеся 11-х классов, студентов колледжей и лиц, имеющих среднее полное образование.'
+                        })
+                        +news-card({
+                            classes: '',
+                            img: 'img/news/news_6.webp',
+                            title: 'Набор на курсы подготовки к внутренним вступительным по математике, физике, химии, биологии, обществознанию и русскому языку в 2024 году',
+                            date: '16 октября 2024',
+                            desc: 'Обучение ведётся с применением дистанционных технологий. Начало занятий в мае 2024 года (по мере формирования групп). Период обучения — 1,5 месяца.'
+                        })
+                        +news-card({
+                            classes: '',
+                            img: 'img/news/news_7.webp',
+                            title: 'Набор на подготовительные курсы в 2024 году для студентов колледжей и лиц, имеющих среднее полное образование (информатика, математика, физика, химия, биология, русский и иностранный язык)',
+                            date: '18 ноября 2024',
+                            desc: 'Занятия начнутся в феврале 2024 года (по мере формирования групп).'
+                        })
+                        +news-card({
+                            classes: '',
+                            img: 'img/news/news_8.webp',
+                            title: 'Набор на курсы подготовки к внутренним вступительным по математике, информатике, физике, химии и русскому языку в 2025 году',
+                            date: '26 декабря 2024',
+                            desc: ''
+                        })
+                    +pagination({classes: 'news-list__pagination'})
+
+            section.preparatory-about.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h2>О курсах</h2>',
+                    })
+                        h2 Занятия проводятся очно по адресу: 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23 и дистанционно.
+                        h2 По окончании курсов выдаётся сертификат.
+
+            section.programms-list.white-bg(class='programms-list--rows' data-js="programmsList")
+                .m-container
+                    .programms-list__header 
+                        .h2.programms-list__title Программы курсов     
+                        +visual-toggle({
+                            active: 'rows'
+                        })(data-js="programmsListToggle")
+                    .news-filter
+                        ul.news-filter__group
+                            .news-filter__subtitle Формат
+                            ul.news-filter__list
+                                li.news-filter__item(class="active") Все
+                                li.news-filter__item Дистанционный
+                                li.news-filter__item Очный
+                                li.news-filter__item Заочный
+                        ul.news-filter__group
+                            .news-filter__subtitle Срок обучения
+                            ul.news-filter__list
+                                li.news-filter__item(class="active") Все
+                                li.news-filter__item 96 ак.часов
+                                li.news-filter__item 48 ак.часов
+                                li.news-filter__item 28 ак.часов
+
+                    .programms-list__list
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Информатика',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Математика',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Физика',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Русский язык',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Обществознание',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Биология',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: '',
+                            name: 'Химия',
+                            params: [
+                                {
+                                    name: '96 ак.часов — стоимость',
+                                    value: '35 520 руб'
+                                },
+                                {
+                                    name: '48 ак.часов — стоимость',
+                                    value: '17 760 руб.'
+                                },
+                                {
+                                    name: '28 ак.часов — стоимость',
+                                    value: '10 640 руб'
+                                },
+                                {
+                                    name: 'Форма обучения',
+                                    value: 'Очная и дистанционная '
+                                }
+                            ],
+                            isRow: true,
+                            vMode: 'green'
+                        })
+
+                    +btn({
+                        classes: 'programm-list__more',
+                        name: 'Загрузить еще',
+                        cMode: 'lightGreen',
+                    })
+
+            section.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h2>Контактная информация:</h2>',
+                        noContent: true
+                    })
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Начальник Центра</h3><p><b>Иванов Иван Иванович <br>кандидат педагогических наук, доцент</b></p>',
+                    })
+                        h3 Делопроизводитель
+                        p  
+                            b Иванов Иван Иванович <br><a href="mailto:cdo@khay.ru">cdo@khay.ru</a> <br><a href="tel:+79999009090">+7 (999) 900-90-90</a>
+
+            +quest-form

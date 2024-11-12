@@ -9,7 +9,8 @@
                 value: 'Значение параметра'
             }
         ],
-        isRow: false
+        isRow: false,
+        vMode: ''
     }
 
 mixin programm-card(props= defaultProgrammCardProps)
@@ -19,14 +20,17 @@ mixin programm-card(props= defaultProgrammCardProps)
             faculty: props.faculty ? props.faculty : defaultProgrammCardProps.faculty,
             name: props.name ? props.name : defaultProgrammCardProps.name,
             params: props.params ? props.params : defaultProgrammCardProps.params,
-            isRow: props.isRow ? props.isRow : defaultProgrammCardProps.isRow
+            isRow: props.isRow ? props.isRow : defaultProgrammCardProps.isRow,
+            vMode: props.vMode ? props.vMode : defaultProgrammCardProps.vMode
         }
 
         isRowClass = checkProps.isRow === true ? ' programm-card--row' : ''
+        vModeClass = checkProps.vMode.length > 0 ? ' programm-card--' + checkProps.vMode : ''
 
-    .programm-card(class= checkProps.classes + isRowClass data-js="programmCard")&attributes(attributes)
+    .programm-card(class= checkProps.classes + isRowClass + vModeClass data-js="programmCard")&attributes(attributes)
         .programm-card__header
-            .programm-card__suptitle!= checkProps.faculty
+            if(checkProps.faculty.lenght > 0)
+                .programm-card__suptitle!= checkProps.faculty
             .h3.programm-card__title
                 a(href="#")!= checkProps.name
 
