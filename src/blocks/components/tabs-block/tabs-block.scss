@@ -114,4 +114,11 @@
             min-height: 60px;
         }
     }
+
+    &--white-tabs{
+        .tabs-block__tabs{
+            background: #fff;
+            padding-bottom: 45px;
+        }
+    }
 }
