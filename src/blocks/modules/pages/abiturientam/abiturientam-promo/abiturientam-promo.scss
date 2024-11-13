@@ -1,1 +1,16 @@
-.abiturientam-promo {}
+.abiturientam-promo {
+    position: relative;
+    padding-top: 30px;
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide {
+        background-color: $c-accent;
+    }
+}

@@ -140,8 +140,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 54px;
-            height: 54px;
+            width: 53px;
+            height: 53px;
             background-color: $c-accent;
             border-radius: 100%;
             color: $c-white;
@@ -154,6 +154,12 @@
             }
         }
 
+        &--arrow .title-link__icon svg {
+            width: 9px;
+            height: 12px;
+        }
+
+        &--arrow .title-link__icon,
         &--plus .title-link__icon {
             background-color: transparent;
             color: $c-accent;
@@ -161,6 +167,7 @@
             transition: all $tr-time;
         }
 
+        &--arrow:hover .title-link__icon,
         &--plus:hover .title-link__icon {
             background-color: $c-accent;
             border: 1px solid $c-accent;
