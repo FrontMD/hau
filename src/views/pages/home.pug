@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Главная"
+
+block content
+    .page
+        .page-layout
+            section.page-intro.white-bg
+                span
+                .page-intro__content
+                    +title({
+                        tag: 'h1',
+                        text: '<span>Херсонский</span> аграрный университет'
+                    })
+
+            +home-intro

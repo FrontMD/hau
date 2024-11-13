@@ -23,6 +23,20 @@ mixin abiturientam-steps(props = defaultAbiturientamStepsProps)
             })
                 <h3>Сдать ЕГЭ</h3>
                 <p><b>Для поступления на бакалавриат или специалитет сдайте ЕГЭ по общеобразовательным предметам. Перечень вступительных испытаний и минимальные баллы можно посмотреть на страницах образовательных программ, а также в Приложении 2.1 и Приложении 2.2 (для творческих направлений и специальностей) к Правилам приема.</b></p>
+                .text-items-list
+                    +link-block({
+                        classes: '',
+                        text: 'Я после колледжа',
+                        vMode: 'btn',
+                        type: 'link_angle'
+                    })
+                    +link-block({
+                        classes: '',
+                        text: 'Проходные баллы',
+                        vMode: 'btn',
+                        type: 'link_angle'
+                    })
+
 
             +m-columns({
                 classes: "m-columns--no-plpr",

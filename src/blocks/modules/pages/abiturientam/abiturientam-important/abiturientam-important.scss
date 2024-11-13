@@ -7,6 +7,14 @@
         gap: 1px 0;
         background-color: #70B173;
         color: $c-white;
+
+        @include max(tablet) {
+            grid-template-columns: repeat(2, minmax(0, 50%));
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 100%);
+        }
     }
 
     &__intro {
@@ -19,6 +27,17 @@
         background-repeat: no-repeat;
         background-position: bottom -7% right -20%;
         background-size: 57% auto;
+
+        @include max(tablet) {
+            padding: 20px;
+            min-height: 320px;
+        }
+
+        @include max(mobile) {
+            min-height: auto;
+            width: 100%;
+            grid-row-end: 2;
+        }
     }
 
     &__subtitle {
@@ -32,6 +51,17 @@
         justify-content: space-between;
         padding: 30px;
         background-color: $c-accent-light;
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
     }
 
     &__icon {
@@ -46,6 +76,11 @@
         background-color: $c-white;
         border-radius: 100%;
         transition: all $tr-time;
+
+        @include max(tablet) {
+            width: 40px;
+            height: 40px;
+        }
 
         svg {
             width: 9px;

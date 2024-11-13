@@ -1,0 +1,55 @@
+-
+    const defaultAbiturientamAdmissionProps = {
+        classes: ''
+    }
+
+mixin abiturientam-admission(props = defaultAbiturientamAdmissionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAbiturientamAdmissionProps.classes
+        }
+
+    section.abiturientam-admission
+        .m-container
+            .abiturientam-admission__container
+                .abiturientam-admission__left
+                    .abiturientam-admission__img 
+                        img(src="img/abiturientam/abiturientam_admission.webp" alt="")
+                    .abiturientam-admission__title.title.title--light
+                        .title__h1 Поступление в&nbsp;университет
+                .abiturientam-admission__right
+                    a.abiturientam-admission__link(href="#")
+                        span.h3 Дни открытых дверей
+                        span.abiturientam-admission__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.abiturientam-admission__link(href="#")
+                        span.h3 Приём 2024
+                        span.abiturientam-admission__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.abiturientam-admission__link(href="#")
+                        span.h3 Правила приема
+                        span.abiturientam-admission__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.abiturientam-admission__link(href="#")
+                        span.h3 Рейтинг абитуриентов
+                        span.abiturientam-admission__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.abiturientam-admission__link(href="#")
+                        span.h3 Стоимость обучения
+                        span.abiturientam-admission__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            +btn({
+                classes: 'abiturientam-admission__btn',
+                name: 'Подать документы',
+                cMode: 'green'
+            })
+
+
+
+
+

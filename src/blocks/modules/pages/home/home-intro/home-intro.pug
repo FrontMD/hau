@@ -1,0 +1,15 @@
+-
+    const defaultHomeIntroProps = {
+        classes: '',
+    }
+
+mixin home-intro(props = defaultHomeIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeIntroProps.classes
+        }
+
+    section.home-intro
+        .home-intro__bg 
+            img(src="img/home/home_intro.webp" alt="")
+        .m-container

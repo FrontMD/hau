@@ -1,5 +1,5 @@
 .link-block {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     gap: 34px;
@@ -40,11 +40,58 @@
         }
     }
 
+    &--btn {
+        background-color: $c-white;
+        padding: 20px 30px 20px 40px;
+        border-left: 4px solid $c-accent-light;
+        margin-top: 10px;
+
+        @include max(mobile) {
+            padding: 10px;
+            border-left-width: 2px;
+        }
+    }
+
+    &--btn .link-block__desc {
+        font-weight: 500;
+    }
+
     &.link-block--link a.link-block__link {
         flex: 0 0 137px;
 
         @include max(mobile) {
             flex-basis: 30px;
+        }
+    }
+
+    &.link-block--link_angle a.link-block__link {
+        flex: 0 0 auto;
+
+        @include max(mobile) {
+            flex-basis: 30px;
+        }
+    }
+
+    &.link-block--link_angle &__icon {
+        background-color: transparent;
+        color: $c-accent;
+        border: 1px solid $c-border-op;
+        transition: all $tr-time;
+
+        svg {
+            width: 9px;
+            height: 12px;
+        }
+    }
+
+    &.link-block--link_angle:hover &__icon {
+        background-color: $c-accent;
+        color: $c-white;
+        border: 1px solid $c-accent;
+
+        svg {
+            width: 9px;
+            height: 12px;
         }
     }
 

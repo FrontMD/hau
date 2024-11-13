@@ -58,3 +58,78 @@ block content
                 ]
             })
             +abiturientam-steps
+            section.programms-list(class='programms-list--rows' data-js="programmsList")
+                .m-container
+                    .programms-list__header 
+                        .h2.programms-list__title Программы обучения
+                    +news-filter({
+                        items: [
+                            'Бакалавриат и специалитет',
+                            'Магистратура',
+                            'Аспирантура',
+                        ]
+                    })       
+                        +visual-toggle({
+                            active: 'rows'
+                        })(data-js="programmsListToggle")
+                    .programms-list__list
+                        - let cardsCount = 0
+                        - while(cardsCount < 10)
+                            +programm-card({
+                                classes: '',
+                                    faculty: 'Факультет экономики и управления',
+                                    name: 'Управление бизнес-процессами (Менеджмент)',
+                                    params: [
+                                        {
+                                            name: 'Стоимость',
+                                            value: '321.8 тыс. (2024)'
+                                        },
+                                        {
+                                            name: 'Проходной балл:',
+                                            value: '400'
+                                        },
+                                        {
+                                            name: 'Срок обучения:',
+                                            value: '4 года'
+                                        },
+                                        {
+                                            name: 'Бюджетных мест:',
+                                            value: '26'
+                                        }
+                                    ],
+                                    isRow: true
+                            })
+
+                            - cardsCount++
+
+                    +btn({
+                        classes: 'programm-list__more',
+                        name: 'Загрузить еще',
+                        cMode: 'lightGreen',
+                    })
+
+            +abiturientam-admission
+            +abiturientam-info({
+                items: [
+                    {
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Перевод из другого вуза',
+                        text: 'Пошаговое руководство по поступлению'
+                    },
+                    {
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Иностранным абитуриентам',
+                        text: 'Пошаговое руководство по поступлению'
+                    },
+                    {
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Инвалидам и лицам с ОВЗ',
+                        text: 'Условия поступления'
+                    },
+                    {
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Вопрос - ответ',
+                        text: 'Найдите ответ на свой вопрос'
+                    }
+                ]
+            })

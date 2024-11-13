@@ -5,8 +5,14 @@ function abiturientamPromo() {
 
     abiturientamPromoSliders.forEach(abiturientamPromoSlider => {
         let abiturientamPromoSliderEx = new Swiper(abiturientamPromoSlider, {
-            slidesPerView: 'auto',
+            slidesPerView: 1.5,
             spaceBetween: 10,
+            breakpoints: {
+                769: {
+                    slidesPerView: 'auto',
+                    
+                }
+            }
         })
     })
 }

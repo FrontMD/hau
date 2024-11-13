@@ -19,17 +19,25 @@ mixin link-block(props= defaultLinkBlockProps)
             noLink: props.noLink ? props.noLink : defaultLinkBlockProps.noLink
         }
 
-    .link-block(class= checkProps.classes + ' ' + `link-block--${checkProps.vMode}` + ' ' + `link-block--${checkProps.type}`)&attributes(attributes)
-        .link-block__desc!= checkProps.text
-        -if(checkProps.noLink === false)
-            a.link-block__link(href="javascript:void(0)" target="_blank")
-                span.link-block__text!= checkProps.linkText
-                span.link-block__icon
-                    svg 
-                        use(xlink:href=`img/sprites/sprite.svg#${checkProps.type}`)
-        - else
-            .link-block__link.link-block__link--nolink
-                span.link-block__text!= checkProps.linkText
+    -if (checkProps.vMode === 'btn')
+        a.link-block(class= checkProps.classes + ' ' + `link-block--${checkProps.vMode}` + ' ' + `link-block--${checkProps.type}` href="#")&attributes(attributes)
+            span.link-block__desc!= checkProps.text
+            span.link-block__icon
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.type}`)
+    - else
+        .link-block(class= checkProps.classes + ' ' + `link-block--${checkProps.vMode}` + ' ' + `link-block--${checkProps.type}`)&attributes(attributes)
+            .link-block__desc!= checkProps.text
+            -if(checkProps.noLink === false)
+                a.link-block__link(href="javascript:void(0)" target="_blank")
+                    -if(checkProps.linkText.length > 0)
+                        span.link-block__text!= checkProps.linkText
+                    span.link-block__icon
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#${checkProps.type}`)
+            - else
+                .link-block__link.link-block__link--nolink
+                    span.link-block__text!= checkProps.linkText
 
 
 
