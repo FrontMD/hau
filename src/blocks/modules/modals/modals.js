@@ -1,6 +1,8 @@
 
+let modals = false
+
 function modalsInit() {
-    const modals = new HystModal({
+    modals = new HystModal({
         linkAttributeName: "data-modal"
     });
 }
