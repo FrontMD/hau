@@ -227,18 +227,9 @@ block content
                             vMode: 'table',
                             type: 'link'
                         })
-                        br
-            br
-            br
-            .m-container
-                <div class="news-list__header">
-                    <h2 class="h2 news-list__title">Вопрос-ответ</h2>
-                </div>
-            br
-            br
-            br
-            +m-questions
-            br
-            br
+
+            +m-questions({
+                title: 'Вопрос-ответ'
+            })
 
 
