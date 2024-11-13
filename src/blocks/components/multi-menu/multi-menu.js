@@ -50,8 +50,9 @@ function multiMenu() {
                 let currentList = backBtn.closest('[data-js="multiMenuList"]')
                 let targetLevel = parseInt(currentList.dataset.level) - 1
                 let currentListIndex = parseInt(currentList.dataset.index)
-                let targetListIndex = menu.querySelector(`[data-js="multiMenuItem"][data-index="${currentListIndex}"]`).closest('[data-js="multiMenuList"]') //.dataset.index
-                let targetList = menu.querySelector(`[data-level="${targetLevel}"][data-index="${targetListIndex}"]`)
+                let targetList = menu.querySelector(`[data-js="multiMenuList"][data-level="${targetLevel}"] [data-js="multiMenuItem"][data-index="${currentListIndex}"]`).closest('[data-js="multiMenuList"]')
+
+                console.log(targetList)
 
                 if(targetList) {
                     targetList.classList.add('active')

@@ -14,6 +14,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
+    headerMenu()
     sidebarLayout()
     mTable()
     mainBurger()

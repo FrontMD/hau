@@ -1,5 +1,5 @@
 header.site-header(data-js="siteHeader")
-    .section
+    .section.site-header__section
         .site-header__container
             a.site-header__logo(href="/")
                 img(src="img/full_logo.svg" alt="")
@@ -7,23 +7,23 @@ header.site-header(data-js="siteHeader")
                 mode: 'header'
             })
             nav.site-header__nav
-                a.nav-link(href="")
+                a.nav-link(href="" data-js="headerMenuBtn" data-menu="0")
                     span.nav-link__icon
                         svg 
                             use(xlink:href=`img/sprites/sprite.svg#plus`)
                     span.nav-link__text Университет
-                a.nav-link(href="")
+                a.nav-link(href="" data-js="headerMenuBtn" data-menu="1")
                     span.nav-link__icon
                         svg 
                             use(xlink:href=`img/sprites/sprite.svg#plus`)
                     span.nav-link__text Абитуриентам
-                a.nav-link(href="")
+                a.nav-link(href="" data-js="headerMenuBtn" data-menu="2")
                     span.nav-link__icon
                         svg 
                             use(xlink:href=`img/sprites/sprite.svg#plus`)
                     span.nav-link__text Студентам
 
-    .site-header__menu 
-        //-+multi-menu({
-
-        //-})
+    .site-header__menu(data-js="siteHeaderMenu")
+        +multi-menu({
+            isHeader: true
+        })

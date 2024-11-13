@@ -187,7 +187,38 @@
 
 .multi-menu {
     &--header {
+        display: none;
         border-top: none;
+        max-width: 1090px;
         padding-top: 0;
+        height: 95%;
+        background-color: $c-accent;
+        background-image: linear-gradient(to right, $c-accent 0%, $c-accent 50%, $c-bg-menu 50%, $c-bg-menu 100%);
+
+        @include max(laptop) {
+            max-width: 940px;
+        }
+    }
+
+    &--header.active {
+        display: block;
+    }
+
+    &--header &__list {
+        width: calc((100% - 60px) / 2 - 7px);
+        height: calc(100% - 30px);
+    }
+
+    &--header &__list--1 {
+        left: 20px;
+    }
+
+    &--header &__list--2 {
+        left: calc(50% + 10px);
+    }
+
+    &--header &__item {
+        min-height: 60px;
+        font-size: 18px;
     }
 }

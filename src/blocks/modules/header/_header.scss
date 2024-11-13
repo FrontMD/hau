@@ -3,13 +3,19 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 12px 0;
     background-color: $c-white;
     z-index: 80;
     border-bottom: 1px solid $c-border-op;
 
-    @include max(mobile) {
-        padding: 8px 0;
+
+    &__section {
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        @include max(mobile) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     }
 
     &__container {
@@ -72,6 +78,7 @@
     }
 
     .nav-link {
+        position: relative;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -82,6 +89,7 @@
         font-size: 24px;
         font-weight: 500;
         border-left: 1px solid $c-border;
+        transition: all $tr-time;
 
         @include max(laptop) {
             padding: 3px 10px 11px;
@@ -92,8 +100,10 @@
         }
 
         &__text {
+            position: relative;
             margin-top: 153px;
             transition: margin-top $tr-time linear;
+            z-index: 3;
 
             @include max(laptop) {
                 margin-top: 105px;
@@ -101,6 +111,7 @@
         }
 
         &__icon {
+            position: relative;
             width: 53px;
             height: 53px;
             display: flex;
@@ -111,6 +122,8 @@
             color: $c-accent-middle;
             border: 1px solid $c-border;
             border-radius: 100%;
+            background-color: $c-white;
+            z-index: 3;
 
             @include max(laptop) {
                 width: 40px;
@@ -121,6 +134,7 @@
             svg {
                 width: 14px;
                 height: 14px;
+                transition: all $tr-time;
 
                 @include max(laptop) {
                     width: 10.5px;
@@ -128,19 +142,62 @@
                 }
             }
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -12px;
+            width: 100%;
+            height: calc(100% + 24px);
+            background-color: $c-accent;
+            z-index: 1;
+            opacity: 0;
+            transition: all $tr-time;
+        }
+
+        &.active,
+        &:hover {
+            color: $c-white;
+        }
+
+        &:hover::after {
+            opacity: 0.9;
+        }
+
+        &.active::after {
+            opacity: 1;
+        }
+
+        &.active .nav-link__icon svg {
+            transform: rotate(-45deg);
+        }
+
     }
 
     &__menu {
-        display: none !important;
-        position: absolute;
         display: flex;
+        position: absolute;
         align-items: flex-start;
         justify-content: flex-end;
         left: 0;
         top: 100%;
         width: 100%;
-        height: calc(100vh - 220px);
+        height: 0;
         background-color: rgba(0, 0, 0, 0.54);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $tr-time;
+
+        @include max(laptop) {
+            height: calc(100vh - 158px);
+        }
+
+        &.active {
+            height: calc(100vh - 220px);
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     &--small .nav-link {
@@ -156,6 +213,10 @@
 
     &--small &__menu {
         height: calc(100vh - 94px);
+
+        @include max(laptop) {
+            height: calc(100vh - 80px);
+        }
     }
 
 }
