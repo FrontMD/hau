@@ -1,0 +1,29 @@
+-
+    const defaultNewsVerticalProps = {
+        classes: '',
+        img: '',
+        title: '',
+        desc: ''
+    }
+
+mixin news-vertical(props = defaultNewsVerticalProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsVerticalProps.classes,
+            img: props.img ? props.img : defaultNewsVerticalProps.img,
+            title: props.title ? props.title : defaultNewsVerticalProps.title,
+            desc: props.desc ? props.desc : defaultNewsVerticalProps.desc,
+        }
+
+    .news-vertical(class=checkProps.classes)
+        .news-vertical__img 
+            img(src=checkProps.img alt="")
+        .news-vertical__content
+            a.h2.news-vertical__title(href="#")!= checkProps.title
+            .news-vertical__footer
+                if(checkProps.desc.length > 0)
+                    .news-vertical__desc.text-editor!= checkProps.desc
+                a.news-vertical__icon(href="#")
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+

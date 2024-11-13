@@ -10,6 +10,7 @@
 @@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
 @@include("../../blocks/modules/pages/programms/programms-list/programms-list.js")
 @@include("../../blocks/modules/pages/abiturientam/abiturientam-promo/abiturientam-promo.js")
+@@include("../../blocks/modules/pages/abiturientam/abiturientam-info/abiturientam-info.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -24,4 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sPartners()
     programmsList()
     abiturientamPromo()
+    abiturientamInfo()
 })

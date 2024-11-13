@@ -1,0 +1,13 @@
+.abiturientam-news {
+    padding-top: 30px;
+
+    &__container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+}

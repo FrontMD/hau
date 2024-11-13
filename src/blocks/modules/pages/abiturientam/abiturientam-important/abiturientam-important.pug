@@ -1,0 +1,31 @@
+-
+    const defaultAbiturientamImportantProps = {
+        classes: ''
+    }
+
+mixin abiturientam-important(props = defaultAbiturientamImportantProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAbiturientamImportantProps.classes
+        }
+
+    section.abiturientam-important
+        .m-container
+            .abiturientam-important__container
+                .abiturientam-important__intro
+                    .title.title--light
+                        .title__h1 <span>Важное</span> <br>абитуриенту
+                    .h3.abiturientam-important__subtitle Актуальная информация для поступающих
+                a.abiturientam-important__link(href="")
+                    span.h3.abiturientam-important__text Дни открытых дверей
+                    span.abiturientam-important__icon 
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                a.abiturientam-important__link(href="")
+                    span.h3.abiturientam-important__text Объявления приемной комиссии
+                    span.abiturientam-important__icon 
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+
+

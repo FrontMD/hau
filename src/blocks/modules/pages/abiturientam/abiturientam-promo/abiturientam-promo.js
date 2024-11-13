@@ -6,7 +6,7 @@ function abiturientamPromo() {
     abiturientamPromoSliders.forEach(abiturientamPromoSlider => {
         let abiturientamPromoSliderEx = new Swiper(abiturientamPromoSlider, {
             slidesPerView: 'auto',
-            spaceBetween: 15,
+            spaceBetween: 10,
         })
     })
 }

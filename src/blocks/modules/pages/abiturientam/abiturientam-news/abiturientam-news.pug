@@ -1,0 +1,31 @@
+-
+    const defaultAbiturientamNewsProps = {
+        classes: '',
+        news: [
+            {
+                classes: '',
+                img: '',
+                title: '',
+                desc: ''
+            }
+        ]
+    }
+
+mixin abiturientam-news(props = defaultAbiturientamNewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAbiturientamNewsProps.classes,
+            news: props.news ? props.news : defaultAbiturientamNewsProps.news,
+        }
+
+    section.abiturientam-news
+        .m-container
+            .abiturientam-news__container
+                - let newsCount = 0
+                - while(newsCount < checkProps.news.length)
+                    +news-vertical(checkProps.news[newsCount])
+                    - newsCount++
+
+
+
+

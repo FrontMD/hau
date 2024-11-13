@@ -1,0 +1,44 @@
+-
+    const defaultAbiturientamInfoProps = {
+        classes: ''
+    }
+
+mixin abiturientam-info(props = defaultAbiturientamInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAbiturientamInfoProps.classes
+        }
+
+    section.abiturientam-info
+        .m-container
+            .abiturientam-info__slider(data-js="abiturientamPromoSlider")
+                .swiper-wrapper 
+                    a.abiturientam-info__slide.swiper-slide(href="#")
+                        span.abiturientam-info__icon
+                            img(src=`img/abiturientam/abiturientam_info_1.svg` alt='')
+                        span.h3.abiturientam-info__subtitle Структура, план приема
+                        span.abiturientam-info__text.text-editor Направления подготовки для бакалавриата и магистратуры, стоимость обучения по контракту
+                    a.abiturientam-info__slide.swiper-slide(href="#")
+                        span.abiturientam-info__icon
+                            img(src=`img/abiturientam/abiturientam_info_2.svg` alt='')
+                        span.h3.abiturientam-info__subtitle Приемная комиссия
+                        span.abiturientam-info__text.text-editor Состав приемной комиссии, расписание и часы работы
+                    a.abiturientam-info__slide.swiper-slide(href="#")
+                        span.abiturientam-info__icon
+                            img(src=`img/abiturientam/abiturientam_info_3.svg` alt='')
+                        span.h3.abiturientam-info__subtitle Результаты вступительных испытаний
+                        span.abiturientam-info__text.text-editor Состав приемной комиссии, расписание и часы работы
+                    a.abiturientam-info__slide.swiper-slide(href="#")
+                        span.abiturientam-info__icon
+                            img(src=`img/abiturientam/abiturientam_info_4.svg` alt='')
+                        span.h3.abiturientam-info__subtitle Иностранным абитуриентам
+                        span.abiturientam-info__text.text-editor Состав приемной комиссии, расписание и часы работы
+                    a.abiturientam-info__slide.swiper-slide(href="#")
+                        span.abiturientam-info__icon
+                            img(src=`img/abiturientam/abiturientam_info_5.svg` alt='')
+                        span.h3.abiturientam-info__subtitle Результаты вступительных испытаний
+                        span.abiturientam-info__text.text-editor Состав приемной комиссии, расписание и часы работы
+
+
+
+
