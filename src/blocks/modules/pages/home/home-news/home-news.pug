@@ -1,0 +1,46 @@
+-
+    const defaultHomeNewsProps = {
+        classes: '',
+    }
+
+mixin home-news(props = defaultHomeNewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeNewsProps.classes
+        }
+
+    section.home-news
+        .m-container
+            .h2.home-news__title Новости
+            .home-news__cards
+                .home-news__list
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_13.webp" alt="")
+                        a.h3.home-news-card__title(href="#") Подведены итоги конкурса на заселение в общежития поступивших в магистратуру и аспирантуру
+                        .home-news-card__date 26 августа 2024
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_14.webp" alt="")
+                        a.h3.home-news-card__title(href="#") Студенты университета получили стипендию им. Черномырдина
+                        .home-news-card__date 26 августа 2024
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_15.webp" alt="")
+                        a.h3.home-news-card__title(href="#") В университете пройдут защиты проектов в рамках конкурса грантов им. П.Л. Капицы
+                        .home-news-card__date 26 августа 2024
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_16.webp" alt="")
+                        a.h3.home-news-card__title(href="#") Продолжается прием заявок на Всероссийский конкурс «Знание.Лектор»
+                        .home-news-card__date 26 августа 2024
+                .home-news__card.home-news-card.home-news-card--big
+                    .home-news-card__img
+                        img(src="img/news/news_17.webp" alt="")
+                    .home-news-card__content
+                        a.h3.home-news-card__title(href="#") Университет стал соорганизатором XIX Международного конкурса «Социализация, воспитание, образование»
+                        .home-news-card__date 26 августа 2024
+                        +btn-plus({
+                            noText: true,
+                            icon: 'link_angle'
+                        })

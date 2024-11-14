@@ -1,0 +1,53 @@
+-
+    const defaultHomeStructureProps = {
+        classes: '',
+    }
+
+mixin home-structure(props = defaultHomeStructureProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeStructureProps.classes
+        }
+
+    section.home-structure
+        .m-container
+            .home-structure__cards
+                .home-structure__card
+                    a.h2.home-structure__title(href="#") Кафедры
+                    .home-structure__text.text-editor
+                        p 15 специализированных кафедр, представляющих разнообразные общие или частные науки.
+                        p Каждая кафедра — сложившаяся крупная научная школа
+
+                    a.home-structure__icon(href="#")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                .home-structure__card
+                    a.h2.home-structure__title(href="#") Научные лаборатории
+                    .home-structure__text.text-editor
+                        p Научно-исследовательский центр, занимающийся передовыми разработками в различных областях знаний. 
+                        p Здесь проводятся фундаментальные и прикладные исследования, создаются новые технологии и продукты, а также осуществляется подготовка высококвалифицированных специалистов.
+
+                    a.home-structure__icon(href="#")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                .home-structure__card.home-structure__card--green
+                    a.h2.home-structure__title(href="#") Дополнительное образование
+                    .home-structure__text.text-editor.text-editor--light
+                        ul
+                            li подготовка выпускников школ к поступлению и дальнейшей учёбе в вузе;
+                            li углублённое изучение профильных предметов и программы профессиональной ориентации
+
+                    a.home-structure__icon(href="#")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                .home-structure__card
+                    a.h2.home-structure__title(href="#") Образовательные программы бакалавриата
+                    .home-structure__text.text-editor
+                        p Более 40 направлений
+
+                    a.home-structure__icon(href="#")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)

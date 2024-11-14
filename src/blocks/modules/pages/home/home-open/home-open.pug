@@ -1,0 +1,55 @@
+-
+    const defaultHomeOpenProps = {
+        classes: '',
+        items: [
+            {
+                date: '10 октября 2024',
+                subtitle: '09 ноября 2024 в 11:00',
+                text: 'Мероприятие пройдёт в корпусе на ул. Сретенская, д. 23'
+            },
+            {
+                date: '1 декабря 2024',
+                subtitle: 'Онлайн мероприятие 04 декабря 2024 в 13:00',
+                text: 'Проводить будет преподаватель специальных дисциплин по специальности “Менеджмент”'
+            },
+            {
+                date: '22 декабря 2024',
+                subtitle: 'День открытых дверей для специальности «Экономика и бухгалтерский учет»',
+                text: 'Экскурсию проводит волонтер: Иванов Иван, студент 3го курса специальности “Менеджмент”'
+            },
+            {
+                date: '22 декабря 2024',
+                subtitle: 'День открытых дверей для специальности «Экономика и бухгалтерский учет»',
+                text: 'Экскурсию проводит волонтер: Иванов Иван, студент 3го курса специальности “Менеджмент”'
+            }
+        ]
+    }
+
+mixin home-open(props = defaultHomeOpenProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeOpenProps.classes,
+            items: props.items ? props.items : defaultHomeOpenProps.items,
+        }
+
+    section.home-open
+        .m-container
+            .home-open__header
+                .h2.home-open__title Дни открытых дверей
+                +btn-plus({
+                    name: 'Все направления',
+                    icon: 'link_angle'
+                })
+            .home-open__cards
+                - let itemsCount = 0
+                - while (itemsCount < checkProps.items.length)
+                    a.home-open__card(href="#")
+                        span.home-open__date!= checkProps.items[itemsCount].date
+                        span.h3.home-open__subtitle!= checkProps.items[itemsCount].subtitle
+                        span.home-open__text.text-editor!= checkProps.items[itemsCount].text
+
+                    - itemsCount++
+
+
+
+

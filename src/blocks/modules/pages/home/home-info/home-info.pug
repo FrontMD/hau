@@ -12,12 +12,13 @@ mixin home-info(props = defaultHomeInfoProps)
     section.home-info
         .home-info__bg 
             img(src="img/home/home_info.webp" alt="")
-        .m-container
+        .m-container.home-info__container
             .home-info__items
-                .home-info__item
+                .home-info__item.home-info__item--green
                     .h2.home-info__title История
                     .home-info__text С 1874 года
                     +btn-plus({
+                        classes: 'btn-plus--white',
                         noText: true,
                         icon: 'link_angle',
                     })
