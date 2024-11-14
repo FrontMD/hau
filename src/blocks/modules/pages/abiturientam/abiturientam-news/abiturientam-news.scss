@@ -1,10 +1,28 @@
 .abiturientam-news {
     padding-top: 30px;
 
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        color: $c-accent;
+    }
+
     &__container {
         display: flex;
         align-items: stretch;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
 
         @include max(mobile) {
             flex-direction: column;
@@ -12,11 +30,29 @@
         }
     }
 
+
     &__item {
-        flex: 0 0 calc((100% - 20px) / 2);
+        flex: 0 0 calc((100% - 40px) / 3);
+
+        @include max(laptop) {
+            flex: 0 0 calc((100% - 20px) / 2);
+        }
 
         @include max(mobile) {
             flex-basis: auto;
         }
     }
+
+    &__all {
+        padding: 17px 24px;
+    }
+
+    &__more {
+        margin-top: 20px;
+    }
+}
+
+.abiturientam-news-list {
+    padding-top: 30px;
+    padding-bottom: 0;
 }

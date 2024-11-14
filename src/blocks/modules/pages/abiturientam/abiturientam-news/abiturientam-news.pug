@@ -20,11 +20,24 @@ mixin abiturientam-news(props = defaultAbiturientamNewsProps)
 
     section.abiturientam-news
         .m-container
+            .abiturientam-news__header
+                h2.h2.abiturientam-news__title Дни открытых дверей
+                +btn({
+                    classes: 'abiturientam-news__all',
+                    name:'Смотреть все',
+                    cMode: 'darkGreen'
+                })
             .abiturientam-news__container
                 - let newsCount = 0
                 - while(newsCount < checkProps.news.length)
                     +news-vertical(checkProps.news[newsCount])
                     - newsCount++
+
+            +btn({
+                classes: 'abiturientam-news__more',
+                name: 'Загрузить ещё',
+                cMode: 'lightGreen'
+            })
 
 
 
