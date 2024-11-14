@@ -402,7 +402,9 @@ iframe {
 		}
 	}
 
-	p a {
+	p a,
+	ul a,
+	ol a {
 		margin: 0;
 		display: inline;
 		text-decoration: none;

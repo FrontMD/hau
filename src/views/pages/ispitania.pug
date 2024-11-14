@@ -1,0 +1,209 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Вступительные испытания"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Вступительные</span><br> испытания',
+                classes: "white-bg border-bottom",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Вступительные  испытания',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Для поступающих в этом году</h2>'
+                })
+                    p Познакомиться с перечнем вступительных испытаний и минимальными баллами также можно на страницах программ обучения
+                    br
+                    br
+                    br
+            +tabs-block({
+                classes: "tabs-block--white-tabs tabs-block--middle",
+                tabs: [
+                    {
+                        name: 'Бакалавриат и специалитет',
+                    },
+                    {
+                        name: 'Магистратура',
+                    },
+                    {
+                        name: 'Аспирантура',
+                    },
+                ],
+            }
+            )
+                .tabs-block__slide.tabs-block__slide--active(data-js="tabsBlockSlide")
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr no-border",
+                            title: '<h2>Консультация по экзаменам\n</h2>',
+                            noContent: true
+                        })
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr no-border",
+                            title: '<p><b>Время начала экзамена в онлайн формате по предметам</b></p><p>Информатика и ИКТ / Информационные технологии :</p><ul><li>Если Ваша фамилия начинается с букв А-Л – время начала экзамена 10:00 по московскому времени</li><li>Если Ваша фамилия начинается с букв М-Я - время начала экзамена 14:00 по московскому времени</li></ul></p>'
+                        })
+                            p <b>Консультация 12.07.2024 в 15:00 по следующим предметам:</b>
+                            ul
+                                li дисциплины «Информатика и ИКТ», «Информационные технологии» — <a href=""><b>ссылка на кабинет;</b></a>
+                                li дисциплины «Иностранный язык», «Иностранный язык в профессиональной сфере» - <a href=""><b>ссылка на кабинет;</b></a>
+                                li дисциплина «Эскиз» — <a href=""><b>ссылка на кабинет;</b></a>
+                                li дисциплина «Основы журналистики» — <a href=""><b>ссылка на кабинет;</b></a>
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr no-border",
+                            title: '<h2>Онлайн-комната для экзаменов</h2>',
+                            noContent: true
+                        })
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr",
+                            title: '<p><b>Ссылки на кабинеты по предметам</b></p>'
+                        })
+                            ul
+                                li Экзамен 15.07.2023, в 10:00 по предмету Эскиз - <a href=""><b>ссылка на кабинет</b></a>
+
+                                li Экзамен 15.07.2024, в 10:00 по предмету Основы журналистики - <a href=""><b>ссылка на кабинет</b></a>
+
+                                li Экзамен 16.07.2024, в 10:00 по предмету Основы журналистики - <a href=""><b>ссылка на кабинет</b></a>
+
+                                li Экзамен 17.07.2024, в 10:00 по предмету Основы журналистики - <a href=""><b>ссылка на кабинет</b></a>
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr no-border",
+                            title: '<h2>Кабинет для сдачи вступительных испытаний</h2>',
+                            noContent: true
+                        })
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr",
+                            title: '<p><b>Время начала экзамена в онлайн формате по предметам</b></p><p>Информатика и ИКТ / Информационные технологии :</p><ul><li>Если Ваша фамилия начинается с букв А-Л – время начала экзамена 10:00 по московскому времени</li><li>Если Ваша фамилия начинается с букв М-Я - время начала экзамена 14:00 по московскому времени</li></ul></p>'
+                        })
+                            p <b>Доступ в кабинет для сдачи вступительных испытаний — online.khay.ru</b>
+                            ul
+                                li Логином от личного кабинета является e-mail, который вы указали при подаче документов. Первичный пароль был (будет) выслан в информационном письме на указанный e-mail не позднее, чем за день (вечером) до начала первого экзамена.
+
+                                li Для сдачи вступительного испытания онлайн и доступа в кабинет для сдачи вступительных испытаний убедительно просим использовать Google Chrome.
+
+                                li В электронный системе необходимо выбрать «Мои курсы», далее Вы увидите доступные Вам предметы для сдачи.
+
+                            p В случае потери пароля или не получения информационного письма воспользуйтесь страницей <a href=""><b style="text-decoration:underline">Восстановление пароля</b></a>.
+
+                            p Для сброса пароля укажите на ней ваш логин или e-mail. Если ваша учетная запись есть в базе данных, на e-mail будет отправлено письмо, содержащее инструкции по восстановлению доступа.
+
+                            p Если у вас не получилось зайти в систему и приступить к сдаче экзамена, обратитесь в техническую поддержку.
+
+                            p Телефоны технической поддержки <b>lпо вопросам подключения к системам тестирования</b> на период экзаменов и консультаций
+
+                            p с 9:00 до 18:00:+7(985) 111-11-11;<br>E-mail технической поддержки: <a href=""><b>lms@khay.ru</b></a>
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr",
+                            title: '<h2>Информация для победителей и призеров Олимпиад</h2>'
+                        })
+                            p Победители и призеры олимпиад школьников, входящих в перечень Минобрнауки России, поступают в университет без вступительных испытаний.
+                    .m-container
+                        +m-columns({
+                            classes: "m-columns--no-plpr",
+                            title: '<h2>Расписание вступительных испытаний в 2024 году</h2>'
+                        })
+                            p <b>1 поток</b>
+
+                            p на направления подготовки и специальности, не требующие творческих вступительных испытаний <br>(даты проведения вступительных испытаний 1 потока - <b>с 13 по 27 июня 2024 года</b>)
+
+                            p <b>2 поток</b>
+
+                            p на направления подготовки и специальности, не требующие творческих вступительных испытаний (для подавших документы до 10.07.2024 включительно)<br>2 поток: на творческие направления подготовки и специальности <br>(для подавших документы до 10.07.2024 включительно) <br>(даты проведения вступительных испытаний 2 потока - <b>с 28 июня по 25 июля 2024 года</b>)
+
+                            p <b>3 поток</b>
+
+                            p на направления подготовки и специальности, не требующие творческих вступительных испытаний (для подавших документы до 09.08.2024 на платную договорную основу)<br>3 поток: на творческие направления подготовки и специальности (для подавших документы до 09.08.2024 на платную договорную основу)<br>(даты проведения вступительных испытаний 3 потока - <b>с 12 по 29 августа 2024 года</b>)
+                    .m-container.white-bg
+                        +m-columns({
+                            classes: "m-columns--no-plpr no-border",
+                            title: '<h2>Формы проведения вступительных испытаний, правила проведения, программы вступительных испытаний</h2>'
+                        })
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Русский язык. Программа вступительного испытания</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Русский язык. Правила проведения в формате собеседования</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Обществознание. Программа вступительного испытания </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Обществознание. Правила проведения в формате собеседования</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">История. Программа вступительного испытания  </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">История. Правила проведения в формате собеседования  </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+                            br
+                            br
+                            br
+
+                    .m-container.white-bg
+                        +m-columns({
+                            classes: "m-columns--no-plpr",
+                            title: '<h2>Документы</h2>'
+                        })
+                            <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Направления подготовки бакалавриата и специалитета в университете в 2024 году; вступительные испытания; минимальные баллы, подтверждающие успешное прохождение вступительного испытания (шкала оценивания - 100-балльная)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                            <svg>
+                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                            </svg></span></a>
+                            </div>
+                            br
+                            br
+                            br
+
+                .tabs-block__slide(data-js="tabsBlockSlide")
+                    .m-container
+                        p test2
+                .tabs-block__slide(data-js="tabsBlockSlide")
+                    .m-container
+                        p test3
+                +m-questions({
+                    title: 'Вопрос-ответ'
+                })

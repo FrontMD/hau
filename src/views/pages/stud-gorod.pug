@@ -1,0 +1,248 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Студенческий городок"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Студенческий</span><br> городок',
+                classes: "white-bg border-bottom",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Студентам',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Общежития',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<p><b>Комплекс из 10 студенческих домов (общежитий) с развитой инфраструктурой, доступным расположением и необходимыми бытовыми условиями для проживания.</b> </p>'
+                })
+                    p <b>Предназначен для временного проживания обучающихся университета</b>
+                    br
+                    br
+                    br
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Дирекция по развитию студенческого городка </h2><p>Центр гостиничного сервиса — осуществляет заселение и организует бытовое обслуживание, готов решить любые вопросы, связанные с пребыванием в общежитии.</p>Центр по работе с проживающими — создает условия для самореализации и социализации проживающих в студенческом городке, готов оказать поддержку каждому проживающему.<p></p><p>Центр развития студенческого городка — осуществляет разработку и реализацию проектов, направленных на создание комфортных условий для проживания, готов совместно с проживающими развивать студенческие дома.</p>'
+                })
+                    h2 Время проведения занятий
+                    p Директор: <b>Иванов Иван Иванович</b><br>Тел.: <a href=""><b>+7 (495) 255 67-33</b></a>, <a href=""><b>+7 (495) 255 67-34</b></a>
+
+            +c-map()
+                .h2.c-map__title Карта студенческих домов <br>(общежитий) и учебных корпусов
+                .c-map__row.no-border
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642435, 32.584581")
+                        .h3.c-map__subtitle Контакты главного корпуса
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.640548, 32.585375")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №1
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                .c-map__row
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642528, 32.587303")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №2
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642138, 32.587308")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №3
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr no-border",
+                    title: '<h2>Стоимость размещения и услуг в студенческом городке</h2><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Стоимость для обучающихся</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Стоимость для работников</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Дополнительные услуги</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+            .m-container.white-bg
+                +m-columns({
+                    classes: "m-columns--no-plpr",
+                    title: '<h2>Правила, инструкции и формы договора найма для проживающих в студенческом городке</h2><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                })
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Правила внутреннего распорядка в студенческом городке </div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Правила внутреннего распорядка в студенческом городке (на английском языке)</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Инструкция по технике безопасности для проживающих в общежитиях</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Инструкция по технике безопасности для проживающих в общежитиях (на английском языке);</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+                    <div class="link-block  link-block--note link-block--download">
+                    <div class="link-block__desc">Форма договора найма жилого помещения в студенческом городке</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__text">Скачать документ</span><span class="link-block__icon">
+                    <svg>
+                    <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg></span></a>
+                    </div>
+
+
+            +media-slider({
+                isSection: true,
+                fancyGroup: 'facultyDetailed',
+                slides: [
+                    {
+                        image: 'img/news/news_slide_1.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_2.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_3.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_1.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_2.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_3.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                ],
+            })
+
+
+
+
+
+
+
+
