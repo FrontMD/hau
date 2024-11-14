@@ -1,0 +1,40 @@
+-
+    const defaultHomeMaterialsProps = {
+        classes: '',
+    }
+
+mixin home-materials(props = defaultHomeMaterialsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeMaterialsProps.classes
+        }
+
+    section.home-materials
+        .home-materials__bg 
+            img(src="img/home/home_materials.webp" alt="")
+        .m-container
+            .home-materials__content
+                .h2.home-materials__title Всё для обучения и практики
+                .home-materials__text.text-editor 
+                    p Университет обеспечен достаточно современной технической базой для подготовки студентов: имеется 1 корпус с оборудованными лекционными аудиториями, учебными и научными лабораториями, компьютерными классами, спортивными залами, научно-технической библиотекой, насчитывающей почти 2 миллиона книг, кафе и столовыми.
+                .home-materials__links
+                    a.home-materials__link(href="")
+                        span Адреса учебных корпусов
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-materials__link(href="")
+                        span Общежитие
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-materials__link(href="")
+                        span Библиотеки
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-materials__link(href="")
+                        span Спортзалы
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-materials__link(href="")
+                        span Проектная деятельность
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)

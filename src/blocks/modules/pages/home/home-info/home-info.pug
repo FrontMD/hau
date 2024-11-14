@@ -1,0 +1,37 @@
+-
+    const defaultHomeInfoProps = {
+        classes: '',
+    }
+
+mixin home-info(props = defaultHomeInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeInfoProps.classes
+        }
+
+    section.home-info
+        .home-info__bg 
+            img(src="img/home/home_info.webp" alt="")
+        .m-container
+            .home-info__items
+                .home-info__item
+                    .h2.home-info__title История
+                    .home-info__text С 1874 года
+                    +btn-plus({
+                        noText: true,
+                        icon: 'link_angle',
+                    })
+                .home-info__item
+                    .h2.home-info__title Устав и свидетельство
+                    .home-info__text с приложениями
+                    +btn-plus({
+                        noText: true,
+                        icon: 'link_angle',
+                    })
+                .home-info__item
+                    .h2.home-info__title Адреса и контакты
+                    .home-info__text Карта корпусов и общежитий
+                    +btn-plus({
+                        noText: true,
+                        icon: 'link_angle',
+                    })

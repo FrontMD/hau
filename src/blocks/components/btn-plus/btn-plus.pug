@@ -2,15 +2,17 @@
     const defaultBtnPlusProps = {
         classes: '',
         name: 'Подробнее',
-        noText: false
+        noText: false,
+        icon: 'plus',
     }
 
 mixin btn-plus(props = defaultBtnPlusProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultBtnPlusProps.classes,
-            name: props.name ? props.name : defaultNewsCardProps.name,
-            noText: props.noText ? props.noText : defaultNewsCardProps.noText
+            name: props.name ? props.name : defaultBtnPlusProps.name,
+            noText: props.noText ? props.noText : defaultBtnPlusProps.noText,
+            icon: props.icon ? props.icon : defaultBtnPlusProps.icon
         }
 
     a.btn-plus(class=checkProps.classes href="#")&attributes(attributes)
@@ -18,5 +20,5 @@ mixin btn-plus(props = defaultBtnPlusProps)
             span.btn-plus__text!= checkProps.name
         span.btn-plus__icon 
             svg
-                use(xlink:href=`img/sprites/sprite.svg#plus`)
+                use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 

@@ -1,28 +1,34 @@
 -
     const defaultAbiturientamInfoProps = {
         classes: '',
+        hasHeader: false,
         items: [
             {
+                num: '',
                 icon: 'img/abiturientam/abiturientam_info_1.svg',
                 subtitle: 'Структура, план приема',
                 text: 'Направления подготовки для бакалавриата и магистратуры, стоимость обучения по контракту'
             },
             {
+                num: '',
                 icon: 'img/abiturientam/abiturientam_info_2.svg',
                 subtitle: 'Приемная комиссия',
                 text: 'Состав приемной комиссии, расписание и часы работы'
             },
             {
+                num: '',
                 icon: 'img/abiturientam/abiturientam_info_3.svg',
                 subtitle: 'Результаты вступительных испытаний',
                 text: 'Состав приемной комиссии, расписание и часы работы'
             },
             {
+                num: '',
                 icon: 'img/abiturientam/abiturientam_info_4.svg',
                 subtitle: 'Иностранным абитуриентам',
                 text: 'Состав приемной комиссии, расписание и часы работы'
             },
             {
+                num: '',
                 icon: 'img/abiturientam/abiturientam_info_5.svg',
                 subtitle: 'Результаты вступительных испытаний',
                 text: 'Состав приемной комиссии, расписание и часы работы'
@@ -34,22 +40,40 @@ mixin abiturientam-info(props = defaultAbiturientamInfoProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultAbiturientamInfoProps.classes,
-            items: props.items ? props.items : defaultAbiturientamInfoProps.items
+            hasHeader: props.hasHeader ? props.hasHeader : defaultAbiturientamInfoProps.hasHeader,
+            items: props.items ? props.items : defaultAbiturientamInfoProps.items,
         }
 
     section.abiturientam-info
         .m-container
+            -if(checkProps.hasHeader === true)
+                .abiturientam-info__header
+                    .h2.abiturientam-info__title Готовим специалистов в областях:
+                    +btn-plus({
+                        name: 'Приемная комиссия',
+                        icon: 'link_angle'
+                    })
             .abiturientam-info__slider(data-js="abiturientamInfoSlider")
                 .swiper-wrapper
                     - let itemsCount = 0
                     - while (itemsCount < checkProps.items.length)
                         a.abiturientam-info__slide.swiper-slide(href="#")
+                            if(checkProps.items[itemsCount].num.length > 0)
+                                span.abiturientam-info__num!= checkProps.items[itemsCount].num
                             span.abiturientam-info__icon
                                 img(src=checkProps.items[itemsCount].icon alt='')
                             span.h3.abiturientam-info__subtitle!= checkProps.items[itemsCount].subtitle
-                            span.abiturientam-info__text.text-editor!= checkProps.items[itemsCount].text
+                            if(checkProps.items[itemsCount].text.length > 0)
+                                span.abiturientam-info__text.text-editor!= checkProps.items[itemsCount].text
 
                         - itemsCount++
+
+            -if(checkProps.hasHeader === true)
+                +btn({
+                    classes: 'abiturientam-info__all',
+                    name: 'Все направления',
+                    cMode: 'green'
+                })
 
 
 

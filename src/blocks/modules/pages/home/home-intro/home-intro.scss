@@ -31,7 +31,10 @@
     }
 
     .intro-history {
+        display: flex;
+        flex-direction: column;
         padding: 20px 25px;
+        width: 100%;
         max-width: 646px;
         min-height: 380px;
         color: $c-white;
@@ -43,11 +46,19 @@
             justify-content: space-between;
         }
 
+        &__text {
+            max-width: 290px;
+        }
+
         &__num {
             display: flex;
             align-items: flex-start;
+            margin-top: auto;
 
-            span {}
+            span {
+                font-size: 300%;
+                line-height: 1em;
+            }
         }
     }
 
@@ -55,11 +66,30 @@
         display: flex;
         align-items: flex-end;
         gap: 30px;
+        margin-top: 230px;
     }
 
     &__now {
+        display: flex;
+        flex-direction: column;
         width: 35%;
+        padding: 30px;
+        min-height: 530px;
         background-color: $c-white;
+
+        .btn-plus {
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        color: $c-accent;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        margin-top: 30px;
+        max-width: 400px;
     }
 
     &__cards {
@@ -83,7 +113,14 @@
         flex-direction: column;
         gap: 130px;
         flex: 0 0 calc((100% - 60px) / 3);
+        padding: 30px 25px;
+        color: $c-white;
+        font-size: 72px;
+        line-height: 1em;
         background-color: $c-accent-light;
 
+        .text {
+            margin-top: auto;
+        }
     }
 }

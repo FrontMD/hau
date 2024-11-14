@@ -1,0 +1,66 @@
+-
+    const defaultHomeActivityProps = {
+        classes: '',
+    }
+
+mixin home-activity(props = defaultHomeActivityProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeActivityProps.classes
+        }
+
+    section.home-activity
+        .home-activity__items
+            .home-activity__item
+                .h2.home-activity__title Научная деятельность
+                .home-activity__text.text-editor.text-editor--light
+                    p Научные коллективы университета проводят исследования в различных областях, включая:
+                    ul 
+                        li информатика и информационные системы, инженерия;
+                        li авиация и производство, материаловедение;
+                        li искусство и дизайн.
+                    p Особое внимание уделяется вовлечению студентов в научную деятельность. В университете ежегодно проводится открытая студенческая научная конференция.
+
+                .home-activity__links
+                    +btn-plus({
+                        classes: 'btn-plus--white',
+                        icon: 'link_angle'
+                    })
+
+            .home-activity__item
+                .h2.home-activity__title Внеучебная деятельность
+                .home-activity__text.text-editor.text-editor--light
+                    p Насыщенная внеучебная деятельность позволит каждому найти занятие по душе.
+
+                .home-activity__links
+                    a.home-activity__link(href="")
+                        span Творческие кружки
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-activity__link(href="")
+                        span Спортивные секции
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-activity__link(href="")
+                        span Волонтёрство
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+            .home-activity__item.home-activity__item--last
+                .h2.home-activity__title Международная деятельность
+                .home-activity__text.text-editor.text-editor--light
+                    p Насыщенная внеучебная деятельность позволит каждому найти занятие по душе.
+
+                .home-activity__links
+                    a.home-activity__link(href="")
+                        span Англоязычные программы
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-activity__link(href="")
+                        span Международные стажировки
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    a.home-activity__link(href="")
+                        span Европейское приложение к диплому
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)

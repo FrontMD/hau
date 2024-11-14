@@ -16,9 +16,11 @@ mixin home-intro(props = defaultHomeIntroProps)
             .home-intro__top
                 .home-intro__history.intro-history
                     .intro-history__top
-                        .intro-history__text В 2024 году Университету исполняется 150 лет
+                        .h3.intro-history__text В 2024 году Университету исполняется 150 лет
                         +btn-plus({
-                            name: 'История университета'
+                            classes: 'btn-plus--white',
+                            name: 'История <br>университета',
+                            icon: 'link_angle'
                         })
                     .h3.intro-history__num
                         span 150
@@ -29,15 +31,17 @@ mixin home-intro(props = defaultHomeIntroProps)
                     .home-intro__text.text-editor 
                         p Херсонский аграрный университет — многопрофильное высшее учебное заведение. 
                         p Учредителем университета является Министерство науки и высшего образования Российской Федерации.
-                    +btn-plus
+                    +btn-plus({
+                        icon: 'link_angle'
+                        })
                 .home-intro__cards
                     .h3.home-intro__subtitle Факты и цифры
                     .home-intro__card
                         span 3600+
-                        span Студентов
+                        span.h3.text Студентов
                     .home-intro__card
                         span 300
-                        span Профессорско-преподавательский состав
+                        span.h3.text Профессорско-преподавательский состав
                     .home-intro__card
                         span 1874 год
-                        span Дата основания
+                        span.h3.text Дата основания
