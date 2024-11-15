@@ -504,6 +504,29 @@ iframe {
 		}
 	}
 
+	>table,
+	&__column>table {
+		width: 100%;
+		font-weight: 500;
+
+		th,
+		td {
+			padding-top: 15px;
+			padding-bottom: 25px;
+			border-top: 1px solid $c-border;
+		}
+
+		th {
+			text-align: left;
+			color: $c-accent-middle;
+		}
+
+		td {
+			text-align: end;
+			color: $c-accent-light;
+		}
+	}
+
 	>iframe,
 	.video {
 		margin-bottom: 50px;

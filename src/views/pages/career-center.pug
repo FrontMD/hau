@@ -1,0 +1,38 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Карьерный центр"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: 'Карьерный центр',
+                classes: "border-bottom white-bg",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Студентам',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Карьерный центр',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            section.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h2>Содействие в построении успешной карьеры каждого студента и выпускника по выбранной специальности</h2>'
+                    })
+
+
+

@@ -1,14 +1,14 @@
 extends ../layouts/default
 
 block variables
-    - const title = "Административные подразделения"
+    - const title = "Расписания"
 
 block content
     .page
         .page-layout
             +page-intro({
-                title: '<span>Административные</span><br> подразделения',
-                classes: "border-bottom",
+                title: 'Расписания',
+                classes: "white-bg",
                 breadcrumbs: {
                     items: [
                         {
@@ -16,42 +16,223 @@ block content
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: 'Структурные подразделения',
+                            name: 'Студентам',
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: 'Административные подразделения',
+                            name: 'Расписания',
                             link: 'javascript:void(0);'
                         }
                     ],
                 }
             })
 
-            section.admin-signatures
+            section
                 .m-container
                     +m-columns({
                         classes: "m-columns--no-plpr no-border",
-                        title: '<a href="#" class="title-link"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#download></use></svg></span><span class="title-link__text">Полный состав сотрудников университета</span></a>'
+                        title: '<p>Учебные занятия — важная составляющая учебного процесса.</p><p>Лекции, семинары, лабораторные и практические работы — составные элементы, из которых складывается освоение образовательной программы.</p>'
+                    })
+                        p В университете несколько локаций, где осуществляется образовательный процесс.
+                        .text-items-list
+                            +link-block({
+                                classes: 'white-bg',
+                                text: 'Графики учебного процесса'
+                            })
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<br><br><br><h2>Время проведения занятий</h2>',
+                        noContent: true
+                    })
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Расписание пар</h3>'
+                    })
+                        .text-editor__columns
+                            .text-editor__column
+                                p 
+                                    b (очная и заочная форма обучения)
+
+                                table 
+                                    tr 
+                                        th 1 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 2 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 3 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 4 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 5 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 6 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 7 пара
+                                        td 9:00-10:30
+
+                            .text-editor__column
+                                p 
+                                    b (очно-заочная форма обучения)
+
+                                table 
+                                    tr 
+                                        th 1 пара
+                                        td 9:00-10:30
+                                    tr 
+                                        th 2 пара
+                                        td 9:00-10:30
+
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Документы</h3>'
                     })
                         .text-items-list
-                            +link-unit({
-                                phone: '+7 (999) 999-99-99',
-                                email: 'khay1@khay.ru',
-                                employeesNumber: '4'
+                            +link-block({
+                                classes: 'white-bg',
+                                text: 'Расписание занятий по группам'
                             })
-                            +link-unit({
-                                title: 'Ректорат',
-                                employeesNumber: '2'
+                            +link-block({
+                                classes: 'white-bg',
+                                text: 'Расписание экзаменов и зачётов'
                             })
-                            +link-unit({
-                                title: 'Профком',
-                                employeesNumber: '14'
-                            })
-                            +link-unit({
-                                title: 'Издательство',
-                                employeesNumber: '39'
-                            })
-                            +link-unit({
-                                title: '​​​​Бизнес-и​нкубатор​​',
-                                employeesNumber: '400'
-                            })
+
+            +c-map()
+                .h2.c-map__title Карта студенческих домов <br>(общежитий) и учебных корпусов
+                .c-map__row.no-border
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642435, 32.584581")
+                        .h3.c-map__subtitle Контакты главного корпуса
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.640548, 32.585375")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №1
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+                .c-map__row
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642528, 32.587303")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №2
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+                    .c-map__block(data-js="cMapPlacemark" data-coords="46.642138, 32.587308")
+                        .h3.c-map__subtitle Студенческий дом (общежитие) №3
+                        .c-map__params
+                            .c-map__param
+                                .c-map__name Адрес
+                                .c-map__val 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            .c-map__param
+                                .c-map__name Телефон:
+                                .c-map__val <a href="tel:+74959328836">+7 (495) 932 88 36</a>
+                            .c-map__param
+                                .c-map__name Факс:
+                                .c-map__val +7 (495) 932 88 36
+                            .c-map__param
+                                .c-map__name E-mail:
+                                .c-map__val <a href="mailto:info@khay.ru">info@khay.ru</a>
+                            .c-map__param
+                                .c-map__name Telegram
+                                .c-map__val <a href="https://t.me/khersonkhau">https://t.me/khersonkhau</a>
+
+            section.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h3>Графики учебного процесса на 2024/2025 учебный год</h3><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                        })
+                            .text-items-list
+                                +link-block({
+                                    classes: '',
+                                    text: 'Бакалавриат/специалитет и магистратура'
+                                })
+                                +link-block({
+                                    classes: '',
+                                    text: 'Аспирантура'
+                                })
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Расписание государственной итоговой аттестации на 2024/2025 учебный год</h3><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                        })
+                            .text-items-list
+                                +link-block({
+                                    classes: '',
+                                    text: 'Бакалавриат/специалитет и магистратура'
+                                })
+                                +link-block({
+                                    classes: '',
+                                    text: 'Аспирантура'
+                                })
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Графики консультаций обучающихся с преподавателями в весеннем семестре 2024/2025 учебного года</h3><div class="info-tag">Актуальная дата проверки: 01.09.2024</div>'
+                        })
+                            .text-items-list
+                                +link-block({
+                                    classes: '',
+                                    text: 'Факультет экономики и управления'
+                                })
+                                +link-block({
+                                    classes: '',
+                                    text: 'Факультет урбанистики и городского хозяйства'
+                                })
+                                +link-block({
+                                    classes: '',
+                                    text: 'Факультет химической технологии и биотехнологии'
+                                })
+                                +link-block({
+                                    classes: '',
+                                    text: 'Факультет базовых компетенций'
+                                })
+
+
+
