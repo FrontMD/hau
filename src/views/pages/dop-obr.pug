@@ -110,14 +110,14 @@ block content
                         })
                     +pagination({classes: 'news-list__pagination'})
 
-            section.programms-list.white-bg(class='programms-list--rows' data-js="programmsList")
+            section.programms-list(class='programms-list--cards' data-js="programmsList")
                 br
                 br
                 .m-container
                     .programms-list__header
                         .h2.programms-list__title Программы курсов
                         +visual-toggle({
-                            active: 'rows'
+                            active: 'cards'
                         })(data-js="programmsListToggle")
                     .news-filter
                         ul.news-filter__group
@@ -138,178 +138,386 @@ block content
                     .programms-list__list
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Информатика',
+                            faculty: 'Финансовый учет и отчетность',
+                            name: '«Бухгалтерский учёт, налогообложение и основы аудита (базовый уровень)»',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Смешанный'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '32.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '250 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '26'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
+
+
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Математика',
+                            faculty: 'Градостроительство',
+                            name: 'Охрана труда. Техносферная безопасность',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Онлайн'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '6'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
+
+
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Физика',
+                            faculty: 'Градостроительство',
+                            name: 'Охрана труда. Техносферная безопасность',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Онлайн'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '6'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
+
+
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Русский язык',
+                            faculty: 'Стратегический менеджмент',
+                            name: 'Контрактный менеджмент',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Смешанный'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '40 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '6'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Обществознание',
+                            faculty: 'Право',
+                            name: 'Право на английском / Legal English',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Смешанный'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '32.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '250 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '26'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
+
+
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Биология',
+                            faculty: 'Управление персоналом/HR-менеджмент',
+                            name: 'Руководитель службы мотивации и управления вознаграждением персонала ',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Онлайн'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '6'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
                         })
                         +programm-card({
                             classes: '',
-                            faculty: '',
-                            name: 'Химия',
+                            faculty: 'Психология, Право',
+                            name: 'Медиация и психология личности в разрешении конфликтов',
                             params: [
                                 {
-                                    name: '96 ак.часов — стоимость',
-                                    value: '35 520 руб'
+                                    name: 'Формат',
+                                    value: 'Онлайн'
                                 },
                                 {
-                                    name: '48 ак.часов — стоимость',
-                                    value: '17 760 руб.'
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
                                 },
                                 {
-                                    name: '28 ак.часов — стоимость',
-                                    value: '10 640 руб'
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
                                 },
                                 {
-                                    name: 'Форма обучения',
-                                    value: 'Очная и дистанционная '
+                                    name: 'Мест:',
+                                    value: '6'
                                 }
                             ],
-                            isRow: true,
-                            vMode: 'green'
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Лингвистика',
+                            name: 'Переводчик в сфере профессиональной коммуникации (английский язык)',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Смешанный'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '40 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+
+
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Право',
+                            name: 'Право на английском / Legal English',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Смешанный'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '32.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '250 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '26'
+                                }
+                            ],
+
+
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Управление персоналом/HR-менеджмент',
+                            name: 'Руководитель службы мотивации и управления вознаграждением персонала ',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Онлайн'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Психология, Право',
+                            name: 'Медиация и психология личности в разрешении конфликтов',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Онлайн'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Лингвистика',
+                            name: 'Переводчик в сфере профессиональной коммуникации (английский язык)',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Смешанный'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '40 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Право',
+                            name: 'Право на английском / Legal English',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Смешанный'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '32.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '250 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '26'
+                                }
+                            ],
+
+
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Управление персоналом/HR-менеджмент',
+                            name: 'Руководитель службы мотивации и управления вознаграждением персонала ',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Онлайн'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Психология, Право',
+                            name: 'Медиация и психология личности в разрешении конфликтов',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Онлайн'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '12.8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '90 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
+                        })
+                        +programm-card({
+                            classes: '',
+                            faculty: 'Лингвистика',
+                            name: 'Переводчик в сфере профессиональной коммуникации (английский язык)',
+                            params: [
+                                {
+                                    name: 'Формат',
+                                    value: 'Смешанный'
+                                },
+                                {
+                                    name: 'Стоимость',
+                                    value: '8 тыс. (2024)'
+                                },
+                                {
+                                    name: 'Срок обучения:',
+                                    value: '40 часов'
+                                },
+                                {
+                                    name: 'Мест:',
+                                    value: '6'
+                                }
+                            ],
                         })
 
                     +btn({

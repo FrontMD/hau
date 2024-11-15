@@ -1,0 +1,57 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Административные подразделения"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Административные</span><br> подразделения',
+                classes: "border-bottom",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Структурные подразделения',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Административные подразделения',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            section.admin-signatures
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<a href="#" class="title-link"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#download></use></svg></span><span class="title-link__text">Полный состав сотрудников университета</span></a>'
+                    })
+                        .text-items-list
+                            +link-unit({
+                                phone: '+7 (999) 999-99-99',
+                                email: 'khay1@khay.ru',
+                                employeesNumber: '4'
+                            })
+                            +link-unit({
+                                title: 'Ректорат',
+                                employeesNumber: '2'
+                            })
+                            +link-unit({
+                                title: 'Профком',
+                                employeesNumber: '14'
+                            })
+                            +link-unit({
+                                title: 'Издательство',
+                                employeesNumber: '39'
+                            })
+                            +link-unit({
+                                title: '​​​​Бизнес-и​нкубатор​​',
+                                employeesNumber: '400'
+                            })

@@ -1,7 +1,7 @@
 -
     const defaultProgrammCardProps = {
         classes: '',
-        faculty: 'Название факультета',
+        faculty: '',
         name: 'Название программы',
         params: [
             {
@@ -29,7 +29,7 @@ mixin programm-card(props= defaultProgrammCardProps)
 
     .programm-card(class= checkProps.classes + isRowClass + vModeClass data-js="programmCard")&attributes(attributes)
         .programm-card__header
-            if(checkProps.faculty.lenght > 0)
+            - if(checkProps.faculty.length > 0)
                 .programm-card__suptitle!= checkProps.faculty
             .h3.programm-card__title
                 a(href="#")!= checkProps.name
