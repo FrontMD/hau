@@ -2,6 +2,10 @@
     &__items {
         display: flex;
         align-items: stretch;
+
+        @include max(laptop) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -13,6 +17,14 @@
         color: $c-white;
         border-left: 1px solid rgba(255, 255, 255, 0.2);
 
+        @include max(laptop) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @include max(tablet) {
+            padding: 25px 15px;
+        }
+
         &--last {
             background-color: $c-bg-menu;
             background-image: url('../img/home/home_activity_bg.svg');
@@ -20,6 +32,10 @@
             background-position: right top 136px;
             background-size: 44%;
             border-left: none;
+
+            @include max(laptop) {
+                border-bottom: none;
+            }
         }
     }
 
@@ -28,6 +44,15 @@
         margin-bottom: 250px;
         color: $c-white;
         opacity: 0.4;
+
+        @include max(large) {
+            margin-bottom: 80px;
+        }
+
+        @include max(tablet) {
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
 
         ul li:before {
             background-color: $c-white;

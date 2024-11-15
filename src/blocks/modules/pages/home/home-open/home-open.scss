@@ -1,9 +1,9 @@
 .home-open {
     padding: 25px 0 50px;
 
-    @include max(tablet) {}
-
-    @include max(mobile) {}
+    @include max(mobile) {
+        padding: 20px 0 40px;
+    }
 
     &__header {
         display: flex;
@@ -16,6 +16,10 @@
             align-items: flex-start;
             gap: 20px;
         }
+
+        @include max(mobile) {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
@@ -26,24 +30,45 @@
         display: flex;
         align-items: stretch;
         gap: 30px;
+
+        @include max(laptop) {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__card {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         flex: 0 1 25%;
-        min-height: 440px;
+        min-height: 380px;
         height: auto;
-        padding: 16px 25px 30px;
+        padding: 25px 30px;
         color: $c-accent;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        @include max(laptop) {
+            flex: 0 1 calc((100% - 20px) / 2);
+            min-height: 280px;
+        }
 
         @include max(mobile) {
             width: auto;
-            padding: 40px 20px 20px;
+            padding: 25px 20px 20px;
             gap: 10px;
             min-height: auto;
         }
+    }
+
+    &__card--white {
+        background-color: $c-white;
+        border-top: 5px solid $c-accent-light;
     }
 
     &__date {
@@ -51,11 +76,19 @@
         font-weight: 500;
         line-height: 1.02em;
         color: $c-accent;
-        align-self: flex-end;
+        opacity: 0.4;
     }
 
     &__subtitle {
-        margin-top: auto;
+        margin-bottom: 40px;
+
+        @include max(mobile) {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            color: $c-accent-light;
+        }
     }
 
     &__text {

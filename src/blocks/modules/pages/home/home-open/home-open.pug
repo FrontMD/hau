@@ -43,10 +43,10 @@ mixin home-open(props = defaultHomeOpenProps)
             .home-open__cards
                 - let itemsCount = 0
                 - while (itemsCount < checkProps.items.length)
-                    a.home-open__card(href="#")
-                        span.home-open__date!= checkProps.items[itemsCount].date
-                        span.h3.home-open__subtitle!= checkProps.items[itemsCount].subtitle
-                        span.home-open__text.text-editor!= checkProps.items[itemsCount].text
+                    .home-open__card(class= itemsCount === 0 ? 'home-open__card--white' : '')
+                        .home-open__date!= checkProps.items[itemsCount].date
+                        a.h3.home-open__subtitle(href='#')!= checkProps.items[itemsCount].subtitle
+                        .home-open__text.text-editor!= checkProps.items[itemsCount].text
 
                     - itemsCount++
 

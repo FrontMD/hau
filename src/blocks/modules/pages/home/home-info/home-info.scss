@@ -1,12 +1,21 @@
 .home-info {
     position: relative;
 
+    @include max(mobile) {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
     &__bg {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 80%;
+
+        @include max(mobile) {
+            height: 100%;
+        }
 
         img {
             width: 100%;
@@ -22,6 +31,10 @@
         min-height: calc(100vh - 150px);
         padding-bottom: 25px;
         height: 100%;
+
+        @include max(tablet) {
+            min-height: calc(100vh - 300px);
+        }
     }
 
     &__items {
@@ -30,6 +43,10 @@
         position: relative;
         width: 100%;
 
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
@@ -40,6 +57,16 @@
         color: $c-accent;
         padding: 35px;
         min-height: calc((100vh - 150px) * 0.36);
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            min-height: auto;
+            width: 100%;
+            max-width: 450px;
+        }
 
         &--green {
             background-color: $c-accent-light;
@@ -55,6 +82,11 @@
 
     &__item+&__item {
         border-left: 1px solid $c-border;
+
+        @include max(mobile) {
+            border-left: none;
+            border-top: 1px solid $c-border;
+        }
     }
 
     &__text {

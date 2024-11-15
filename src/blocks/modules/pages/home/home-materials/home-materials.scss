@@ -3,6 +3,11 @@
     padding-top: 25px;
     padding-bottom: 35px;
 
+    @include max(mobile) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     &__bg {
         position: absolute;
         left: 0;
@@ -23,6 +28,15 @@
         max-width: 646px;
         padding: 35px 50px 10px;
         background-color: $c-white;
+
+        @include max(tablet) {
+            padding: 25px 25px 10px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 15px 10px;
+            max-width: 100%;
+        }
     }
 
     &__title {
@@ -31,10 +45,18 @@
 
     &__text {
         margin-top: 30px;
+
+        @include max(tablet) {
+            margin-top: 10px;
+        }
     }
 
     &__links {
         margin-top: 60px;
+
+        @include max(tablet) {
+            margin-top: 25px;
+        }
     }
 
     &__link {
@@ -58,6 +80,10 @@
 
         &:hover {
             opacity: 1;
+        }
+
+        @include max(mobile) {
+            padding: 15px;
         }
     }
 }
