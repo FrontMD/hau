@@ -1,7 +1,9 @@
 -
     const defaultQuestFormProps = {
         classes: '',
-        title: '<span>Анкета-заявка</span> на&nbsp;подготовительные курсы Центра довузовского образования и&nbsp;подготовки к&nbsp;ЕГЭ'
+        title: '<span>Анкета-заявка</span> на&nbsp;подготовительные курсы Центра довузовского образования и&nbsp;подготовки к&nbsp;ЕГЭ',
+        formText: '',
+        type: 'default'
     }
 
 mixin quest-form(props = defaultQuestFormProps)
@@ -9,6 +11,8 @@ mixin quest-form(props = defaultQuestFormProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultQuestFormProps.classes,
             title: props.title ? props.title : defaultQuestFormProps.title,
+            formText: props.formText ? props.formText : defaultQuestFormProps.formText,
+            type: props.type ? props.type : defaultQuestFormProps.type
         }
 
     section.quest-form
@@ -16,102 +20,160 @@ mixin quest-form(props = defaultQuestFormProps)
             .quest-form__content 
                 .quest-form__left
                     .h2.quest-form__title!= checkProps.title
-                    .quest-form__text.text-editor
-                        p Заполните заявку на курсы
-                        p Уточнить информацию вы можете <br>по телефонам: <a href="tel:+79999009090">+7 (999) 900 90 90</a> <br>E-mail: <a href="mailto:cdo@khay.ru">cdo@khay.ru</a>
-                        p Мы обязательно свяжемся с Вами!
+                    - if(checkProps.type == 'сonsult')
+                        .quest-form__links
+                            a.quest-form__link(href="#")
+                                span.soc
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#telegram`)
+                                | Написать в Telegram
+                                span.icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                            a.quest-form__link(href="#")
+                                span.soc
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#vk`)
+                                | Написать в VK
+                                span.icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+                    -else
+                        .quest-form__text.text-editor
+                            p Заполните заявку на курсы
+                            p Уточнить информацию вы можете <br>по телефонам: <a href="tel:+79999009090">+7 (999) 900 90 90</a> <br>E-mail: <a href="mailto:cdo@khay.ru">cdo@khay.ru</a>
+                            p Мы обязательно свяжемся с Вами!
 
                 +form({
                     classes: 'quest-form__form',
                     title: '',
-                    text: '',
+                    text: checkProps.formText,
                     btnText: 'Отправить',
                 })
-                    .form__flex
+                    - if(checkProps.type == 'сonsult') 
                         +field({
                             classes: '',
                             type: 'text',
                             title: '',
-                            inputAttr: {
-                                'required': ''
-                            },
-                            placeholder: 'ФИО контактного лица*',
+                            placeholder: 'Как к Вам обращаться',
                             resetBtn: false,
-                            isRequired: true
                         })
-                        +field({
+                        .form__flex
+                            +field({
+                                classes: '',
+                                type: 'tel',
+                                title: '',
+                                placeholder: 'Контактный телефон*',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'phoneNumber',
+                                    'data-v-name': 'phone'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
                             classes: '',
-                            tag: 'select',
-                            placeholder: 'Курсы подготовки',
-                            selectOptions: [
-                                "",
-                                "Информатика",
-                                "Математика",
-                                "Физика",
-                                "Русский язык",
-                                "Обществознание",
-                                "Биология",
-                                "Химия"
-                            ],
-                            selectGreen: true
-
-                        })
-                    .form__flex
-                        +field({
-                            classes: '',
-                            type: 'tel',
+                            type: 'text',
                             title: '',
-                            placeholder: 'Контактный телефон*',
-                            inputAttr: {
-                                'required': '',
-                                'data-type': 'phoneNumber',
-                                'data-v-name': 'phone'
-                            },
+                            placeholder: 'Группа (место работы)',
                             resetBtn: false,
-                            isRequired: true
-                        })
-                        +field({
-                            classes: '',
-                            tag: 'select',
-                            placeholder: 'Формат занятий',
-                            selectOptions: [
-                                "",
-                                "Очно",
-                                "Дистанционно"
-                            ],
-                            selectGreen: true
-                        })
-                    .form__flex
-                        +field({
-                            classes: '',
-                            type: 'email',
-                            title: '',
-                            placeholder: 'Контактный email',
-                            inputAttr: {
-                                'required': '',
-                                'data-v-name': 'email'
-                            },
-                            resetBtn: false
-                        })
-                        +field({
-                            classes: '',
-                            tag: 'select',
-                            placeholder: 'Продолжительность курсов',
-                            selectOptions: [
-                                "",
-                                "96 ак.часов",
-                                "48 ак.часов",
-                                "28 ак.часов"
-                            ],
-                            selectGreen: true
-                        })
+                            })
 
-                    +field({
-                        classes: '',
-                        tag: 'textarea',
-                        title: '',
-                        placeholder: 'Текст обращения',
-                    })
+                        +field({
+                            classes: '',
+                            tag: 'textarea',
+                            title: '',
+                            placeholder: 'Текст обращения',
+                        })
+                    -else
+                        .form__flex
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                inputAttr: {
+                                    'required': ''
+                                },
+                                placeholder: 'ФИО контактного лица*',
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Курсы подготовки',
+                                selectOptions: [
+                                    "",
+                                    "Информатика",
+                                    "Математика",
+                                    "Физика",
+                                    "Русский язык",
+                                    "Обществознание",
+                                    "Биология",
+                                    "Химия"
+                                ],
+                                selectGreen: true
+
+                            })
+                        .form__flex
+                            +field({
+                                classes: '',
+                                type: 'tel',
+                                title: '',
+                                placeholder: 'Контактный телефон*',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'phoneNumber',
+                                    'data-v-name': 'phone'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Формат занятий',
+                                selectOptions: [
+                                    "",
+                                    "Очно",
+                                    "Дистанционно"
+                                ],
+                                selectGreen: true
+                            })
+                        .form__flex
+                            +field({
+                                classes: '',
+                                type: 'email',
+                                title: '',
+                                placeholder: 'Контактный email',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'email'
+                                },
+                                resetBtn: false
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Продолжительность курсов',
+                                selectOptions: [
+                                    "",
+                                    "96 ак.часов",
+                                    "48 ак.часов",
+                                    "28 ак.часов"
+                                ],
+                                selectGreen: true
+                            })
+
+                        +field({
+                            classes: '',
+                            tag: 'textarea',
+                            title: '',
+                            placeholder: 'Текст обращения',
+                        })
 
 
 
