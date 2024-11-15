@@ -1,19 +1,21 @@
 -
     const defaultQuestFormProps = {
         classes: '',
+        title: '<span>Анкета-заявка</span> на&nbsp;подготовительные курсы Центра довузовского образования и&nbsp;подготовки к&nbsp;ЕГЭ'
     }
 
 mixin quest-form(props = defaultQuestFormProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultQuestFormProps.classes,
+            title: props.title ? props.title : defaultQuestFormProps.title,
         }
 
     section.quest-form
         .m-container
             .quest-form__content 
                 .quest-form__left
-                    .h2.quest-form__title <span>Анкета-заявка</span> на&nbsp;подготовительные курсы Центра довузовского образования и&nbsp;подготовки к&nbsp;ЕГЭ
+                    .h2.quest-form__title!= checkProps.title
                     .quest-form__text.text-editor
                         p Заполните заявку на курсы
                         p Уточнить информацию вы можете <br>по телефонам: <a href="tel:+79999009090">+7 (999) 900 90 90</a> <br>E-mail: <a href="mailto:cdo@khay.ru">cdo@khay.ru</a>
