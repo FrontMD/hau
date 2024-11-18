@@ -42,6 +42,7 @@ mixin a-card(props = defaultACardProps)
                         use(xlink:href=`img/sprites/sprite.svg#link_angle`)
             - if(checkProps.date.length > 0)
                 .a-card__date!= checkProps.date
+            block
             a.a-card__icon(href="#")
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#link_angle`)

@@ -55,6 +55,14 @@
         @include max(tablet) {
             max-width: calc(95% - 40px);
         }
+
+        a {
+            transition: color $tr-time;
+        }
+
+        a:hover {
+            color: $c-accent-light;
+        }
     }
 
     &__link {
@@ -124,6 +132,42 @@
             color: $c-white;
         }
     }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__social {
+        width: 53px;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $c-accent;
+        background-color: transparent;
+        border: 1px solid $c-border-op;
+        border-color: $c-border-op;
+        border-radius: 100%;
+        transition: all $tr-time;
+
+        @include max(tablet) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 19.47px;
+            height: 13.39px;
+        }
+
+        &:hover {
+            background-color: $c-accent;
+            border-color: $c-accent;
+            color: $c-white;
+        }
+    }
 }
 
 .a-card {
@@ -142,6 +186,11 @@
 
     &--green &__link:hover {
         color: $c-accent-dark;
+    }
+
+    &--green &__social {
+        color: $c-white;
+        border-color: rgba(255, 255, 255, 0.2);
     }
 }
 

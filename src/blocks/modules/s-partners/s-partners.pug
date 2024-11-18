@@ -1,37 +1,66 @@
 -
     const defaultSPartnersProps = {
         classes: '',
+        type: 'default'
     }
 
 mixin s-partners(props = defaultSPartnersProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSPartnersProps.classes,
+            type: props.type ? props.type : defaultSPartnersProps.type,
         }
 
     section.s-partners(data-js="sPartners")
         .m-container.s-partners__container
-            .s-partners__slider(data-js="sPartnersSlider")
-                .swiper-wrapper
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_1.webp" alt="")
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_2.webp" alt="")
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_3.webp" alt="")
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_1.webp" alt="")
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_2.webp" alt="")
-                    .swiper-slide.s-partners__slide
-                        img(src="img/partners/partner_3.webp" alt="")
-            .s-partners__info
-                .s-partners__title Партнеры-работодатели
-                .h3.s-partners__text Мы работаем с некоммерческими, корпоративными и общественными организациями. <br><br>Студенты с лучшими результатами могут быть трудоустроены к нашим партнерам после окончания Университета.
-                .slider-btns.s-partners__btns
-                    .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
-                        svg 
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    .slider-btn.slider-btn--next(data-js="sliderNextBtn")
-                        svg 
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            - if(checkProps.type == 'er')
+                .s-partners__slider(data-js="sPartnersSlider")
+                    .swiper-wrapper
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_4.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_5.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_6.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_1.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_2.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_3.webp" alt="")
+                .s-partners__info
+                    .s-partners__title Электронные ресурсы
+                    .h3.s-partners__text Для всех студентов и преподавателей предоставляем доступы в бесплатные и коммерческие библиотечные системы <br><br>Доступы выдает библиотекарь при предоставлении зачетной книжки
+
+                    .slider-btns.s-partners__btns
+                        .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                        .slider-btn.slider-btn--next(data-js="sliderNextBtn")
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            - else
+                .s-partners__slider(data-js="sPartnersSlider")
+                    .swiper-wrapper
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_1.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_2.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_3.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_4.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_5.webp" alt="")
+                        .swiper-slide.s-partners__slide
+                            img(src="img/partners/partner_6.webp" alt="")
+                .s-partners__info
+                    .s-partners__title Партнеры-работодатели
+                    .h3.s-partners__text Мы работаем с некоммерческими, корпоративными и общественными организациями. <br><br>Студенты с лучшими результатами могут быть трудоустроены к нашим партнерам после окончания Университета.
+                    .slider-btns.s-partners__btns
+                        .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                        .slider-btn.slider-btn--next(data-js="sliderNextBtn")
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)

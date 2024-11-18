@@ -1,0 +1,146 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Медицинский центр"
+
+block content
+    .page
+        .page-layout
+            +page-intro({
+                title: '<span>Медицинский</span> центр',
+                classes: "border-bottom white-bg",
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Студентам',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Медицинский центр',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+
+            section.white-bg
+                .m-container
+                    +m-columns({
+                        classes: "m-columns--no-plpr no-border",
+                        title: '<h2>Оказание медицинской помощи всем студентам и&nbsp;работникам университета</h2>'
+                    })
+                        ul
+                            li 
+                                b первичная медицинская помощь при травмах и несчастных случаях;
+                            li 
+                                b первичная медицинская помощь при острых заболеваниях и обострении хронических заболеваний.
+
+                        +btn({
+                            name: 'Задать вопрос',
+                            cMode: 'darkGreen'
+                        })
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Служба психологической помощи</h3>'
+                    })
+                        .text-items-list
+                            +link-block({
+                                classes: '',
+                                text: 'Служба психологической помощи',
+                                type: 'link',
+                                vMode: 'table',
+                                linkText: 'Перейти'
+                            })
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Документы</h3>'
+                    })
+                        .text-items-list
+                            +link-block({
+                                classes: '',
+                                text: 'Выписка из реестра лицензий по состоянию на 16:47 06.06.2022 г.',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'Медицинская лицензия № ФС-99-01-009577 от 18.10.2018',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'Экспертное заключение № 77.15.08.М.000125.01.18 от 17.01.2018 О соответствии для осуществления медицинской деятельности',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'Презентация для первокурсников',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'ГРИПП: симптомы и профилактика',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'Рекомендации по профилактике короновирусной инфекции COVID-19',
+                            })
+                            +link-block({
+                                classes: '',
+                                text: 'Санитарно-эпидемиологическое заключение № 77.15.16.000.М.000294.01.18 от 17 января 2018 г. О соответствии для осуществления медицинской деятельности',
+                            })
+
+            +media-slider({
+                isSection: true,
+                fancyGroup: 'medicalCenter',
+                slides: [
+                    {
+                        image: 'img/news/news_slide_1.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_4.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_5.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_1.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_4.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                    {
+                        image: 'img/news/news_slide_5.webp',
+                        video: '',
+                        title: '',
+                        text: '',
+                        mMode: 'image'
+                    },
+                ],
+            })
+
+
+            +m-questions({
+                title: 'Вопрос-ответ'
+            })
