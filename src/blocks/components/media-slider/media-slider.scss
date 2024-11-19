@@ -5,6 +5,14 @@
         padding: 25px 0;
     }
 
+    &.no-padding-bottom {
+        padding: 35px 0 0;
+
+        @include max(mobile) {
+            padding: 25px 0 0;
+        }
+    }
+
     .media-slider {
 
         margin-right: -28px;

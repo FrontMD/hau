@@ -31,33 +31,7 @@ block content
                 .m-container
                     +m-columns({
                         classes: "m-columns--no-plpr no-border",
-                        title: `<h2>Оказание медицинской помощи всем студентам и&nbsp;работникам университета</h2>
-                            <div class="text-editor__columns">
-                                <div class="text-editor__column">
-                                    <div class="text-items-list">
-                                        <div class="count-block  count-block--column">
-                                        <div class="count-block__desc">Адрес:</div>
-                                        <div class="h3 count-block__num">273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
-                                        </div>
-                                        <div class="count-block  count-block--column">
-                                        <div class="count-block__desc">График работы:</div>
-                                        <div class="h3 count-block__num">ПН-ПТ: с 9:00 до 17:00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-editor__column">    
-                                    <div class="text-items-list">
-                                        <div class="count-block  count-block--column">
-                                        <div class="count-block__desc">Медицинская сестра:</div>
-                                        <div class="h3 count-block__num">Иванова Елена Анатольевна</div>
-                                        </div>
-                                        <div class="count-block  count-block--column">
-                                        <div class="count-block__desc">Телефон:</div>
-                                        <div class="h3 count-block__num"><a href="+79996130101">+7 (999) 613-01-01</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>`
+                        title: `<h2>Оказание медицинской помощи всем студентам и&nbsp;работникам университета</h2>`
                     })
                         ul
                             li 
@@ -69,6 +43,18 @@ block content
                             name: 'Задать вопрос',
                             cMode: 'darkGreen'
                         })
+
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h3>Контактные данные</h3>'
+                    })
+                        p Адрес: 
+                            b 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
+                            <br>График работы: 
+                            b ПН-ПТ: с 9:00 до 17:00
+                            <br>Медицинская сестра: 
+                            b Иванова Елена Анатольевна
+                            <br>Телефон: <a href="+79996130101"><b>+7 (999) 613-01-01</b></a>
 
                     +m-columns({
                         classes: "m-columns--no-plpr",

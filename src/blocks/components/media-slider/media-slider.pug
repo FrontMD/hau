@@ -1,6 +1,7 @@
 -
     const defaultImageSliderProps = {
         classes: '',
+        sectionClasses: '',
         isSection: false,
         vMode: 'horizontal',
         fancyGroup: '', 
@@ -19,15 +20,15 @@ mixin media-slider(props= defaultImageSliderProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultImageSliderProps.classes,
+            sectionClasses: props.sectionClasses ? props.sectionClasses : defaultImageSliderProps.sectionClasses,
             vMode: props.vMode ? props.vMode : defaultImageSliderProps.vMode,
             fancyGroup: props.fancyGroup ? props.fancyGroup : defaultImageSliderProps.fancyGroup,
             slides: props.slides ? props.slides : defaultImageSliderProps.slides,
             isSection: props.isSection ? props.isSection : defaultImageSliderProps.isSection
         }
 
-
     - if(checkProps.isSection === true)
-        .media-slider-section.white-bg
+        .media-slider-section.white-bg(class= checkProps.sectionClasses)
             .m-container
                 .media-slider(class= `${checkProps.classes} media-slider--${checkProps.vMode}` data-js="imageSlider")&attributes(attributes)
                     .swiper-wrapper
