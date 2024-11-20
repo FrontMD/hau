@@ -15,7 +15,7 @@ mixin page-intro(props = defaultPageIntroProps)
             backBtn: props.backBtn ? props.backBtn : defaultPageIntroProps.backBtn
         }
 
-        let mobileEmpty = checkProps.title.length < 1 && checkProps.backBtn === false ? ' .page-intro--mobileEmpty' : ''
+        let mobileEmpty = checkProps.title.length < 1 && checkProps.backBtn === false ? ' page-intro--mobileEmpty' : ''
 
     section.page-intro(class= checkProps.classes + mobileEmpty)
         +breadcrumbs(checkProps.breadcrumbs)

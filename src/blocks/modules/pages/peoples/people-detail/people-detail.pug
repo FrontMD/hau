@@ -1,15 +1,60 @@
 -
     const defaultPeopleDetailProps = {
-    classes: ''
+        classes: '',
+        hasTitle: false,
+        abbreviated: false,
+        items: [
+            {
+                param: 'Должность',
+                val: 'Профессор'
+            },
+            {
+                param: 'Образование',
+                val: 'МГУ им.М.В.Ломоносова, географический факультет, кафедра геоморфологии, 1976 г.'
+            },
+            {
+                param: 'Ученая степень',
+                val: 'Доктор географических наук (2003)'
+            },
+            {
+                param: 'Ученое звание',
+                val: 'Профессор'
+            },
+            {
+                param: 'Область научных интересов',
+                val: 'Биогенное рельефообразование, овражная эрозия, стационарные наблюдения за динамикой рельефа, экологическая геоморфология, городская геоморфология, субрельеф, методология и методика геоморфологических исследований и геоморфологического картографирования, школьная физическая география.'
+            },
+            {
+                param: 'Тема кандидатской диссертации',
+                val: 'История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)'
+            },
+            {
+                param: 'Тема докторской диссертации',
+                val: 'История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)'
+            },
+            {
+                param: 'Телефон:',
+                val: 'a(href="tel:+74959395469") +7 (495) 939 54 69' 
+            },
+            {
+                param: 'E-mail:',
+                val: 'a(href="mailto:sibol1954@bk.ru") sibol1954@bk.ru'
+            }              
+        ]
     }
 
 mixin people-detail(props = defaultPeopleDetailProps)
     -
         const checkProps = {
-        classes: props.classes ? props.classes : defaultPeopleDetailProps.classes
+            classes: props.classes ? props.classes : defaultPeopleDetailProps.classes,
+            hasTitle: props.hasTitle ? props.hasTitle : defaultPeopleDetailProps.hasTitle,
+            abbreviated: props.abbreviated ? props.abbreviated : defaultPeopleDetailProps.abbreviated,
+            items: props.items ? props.items : defaultPeopleDetailProps.items
         }
 
-    section.people-detail(class=checkProps.classes)
+        let hasTitleClass = checkProps.hasTitle === true ? ' people-detail--hasTitle' : ''
+
+    .people-detail(class=checkProps.classes + hasTitleClass)
         .people-detail__img
             img(src="img/peoples/people.webp")
         .people-detail__content
@@ -18,34 +63,10 @@ mixin people-detail(props = defaultPeopleDetailProps)
                     h1 <span>Мищенко</span><br> Сергей Сергеевич
 
             .people-detail__info
-                .people-detail__item
-                    .people-detail__param Должность
-                    .people-detail__val Профессор
-                .people-detail__item
-                    .people-detail__param Образование
-                    .people-detail__val МГУ им.М.В.Ломоносова, географический факультет, кафедра геоморфологии, 1976 г.
-                .people-detail__item
-                    .people-detail__param Ученая степень
-                    .people-detail__val Доктор географических наук (2003)
+                - let itemsCount = 0
+                - while(itemsCount < checkProps.items.length)
+                    .people-detail__item
+                        .people-detail__param!= checkProps.items[itemsCount].param
+                        .people-detail__val!= checkProps.items[itemsCount].val
 
-                .people-detail__item
-                    .people-detail__param Ученое звание
-                    .people-detail__val Профессор
-                .people-detail__item
-                    .people-detail__param Область научных интересов
-                    .people-detail__val Биогенное рельефообразование, овражная эрозия, стационарные наблюдения за динамикой рельефа, экологическая геоморфология, городская геоморфология, субрельеф, методология и методика геоморфологических исследований и геоморфологического картографирования, школьная физическая география.
-                .people-detail__item
-                    .people-detail__param Тема кандидатской диссертации
-                    .people-detail__val История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
-
-                .people-detail__item
-                    .people-detail__param Тема докторской диссертации
-                    .people-detail__val  История развития малых эрозионных форм краевой зоны московского оледенения (на примере бассейна р.Протвы)
-                .people-detail__item
-                    .people-detail__param Телефон:
-                    .people-detail__val
-                        a(href="tel:+74959395469") +7 (495) 939 54 69
-                .people-detail__item
-                    .people-detail__param E-mail:
-                    .people-detail__val
-                        a(href="mailto:sibol1954@bk.ru") sibol1954@bk.ru
+                    - itemsCount++

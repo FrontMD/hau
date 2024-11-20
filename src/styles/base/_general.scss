@@ -311,6 +311,10 @@ iframe {
 		}
 	}
 
+	img+.text-items-list {
+		margin-top: 50px;
+	}
+
 	&__columns {
 		display: flex;
 		gap: 80px;
@@ -535,6 +539,7 @@ iframe {
 			margin-bottom: 30px;
 		}
 	}
+
 }
 
 .section {
