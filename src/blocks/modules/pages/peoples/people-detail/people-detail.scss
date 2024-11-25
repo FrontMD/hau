@@ -1,7 +1,7 @@
 .people-detail {
 
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
 
     @include max(tablet) {
         flex-direction: column;
@@ -23,8 +23,6 @@
             margin-top: 0;
         }
     }
-
-
 
     &__img {
         flex: 0 0 851px;
@@ -58,6 +56,7 @@
 
         @include max(tablet) {
             max-width: 600px;
+            flex-basis: auto;
         }
 
         @include max(mobile) {
@@ -68,9 +67,12 @@
 
     &__info {
         max-width: 500px;
+        max-height: none;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         gap: 30px;
+        transition: max-height $tr-time;
     }
 
     &__item {
@@ -96,6 +98,53 @@
 
         a:hover {
             color: $c-accent-light;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.1em;
+        }
+    }
+
+    &__showmore {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        min-height: 44px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: left;
+        color: $c-accent;
+        cursor: pointer;
+
+        .show-more {
+            display: none;
+        }
+
+        .show-less {
+            display: block;
+        }
+
+        svg {
+            margin-top: 3px;
+            flex: 0 0 10px;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .collapsed &__showmore {
+        .show-more {
+            display: block;
+        }
+
+        .show-less {
+            display: none;
+        }
+
+        svg {
+            transform: rotate(90deg);
         }
     }
 

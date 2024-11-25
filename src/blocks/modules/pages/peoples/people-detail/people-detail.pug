@@ -34,11 +34,11 @@
             },
             {
                 param: 'Телефон:',
-                val: 'a(href="tel:+74959395469") +7 (495) 939 54 69' 
+                val: '<a href="tel:+74959395469">+7 (495) 939 54 69</a>' 
             },
             {
                 param: 'E-mail:',
-                val: 'a(href="mailto:sibol1954@bk.ru") sibol1954@bk.ru'
+                val: '<a href="mailto:sibol1954@bk.ru"> sibol1954@bk.ru</a>'
             }              
         ]
     }
@@ -54,15 +54,14 @@ mixin people-detail(props = defaultPeopleDetailProps)
 
         let hasTitleClass = checkProps.hasTitle === true ? ' people-detail--hasTitle' : ''
 
-    .people-detail(class=checkProps.classes + hasTitleClass)
-        .people-detail__img
+    .people-detail(class=checkProps.classes + hasTitleClass)&attributes(attributes)
+        .people-detail__img(data-js='peopleDetailImg')
             img(src="img/peoples/people.webp")
-        .people-detail__content
-            .title.title--dark
+        .people-detail__content(data-js='peopleDetailContent')
+            .title.title--dark(data-js='peopleDetailTitle')
                 .title__h1
                     h1 <span>Мищенко</span><br> Сергей Сергеевич
-
-            .people-detail__info
+            .people-detail__info(data-js='peopleDetailInfo')
                 - let itemsCount = 0
                 - while(itemsCount < checkProps.items.length)
                     .people-detail__item

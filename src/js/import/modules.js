@@ -11,6 +11,7 @@
 @@include("../../blocks/modules/pages/programms/programms-list/programms-list.js")
 @@include("../../blocks/modules/pages/abiturientam/abiturientam-promo/abiturientam-promo.js")
 @@include("../../blocks/modules/pages/abiturientam/abiturientam-info/abiturientam-info.js")
+@@include("../../blocks/modules/pages/peoples/people-detail/people-detail.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     programmsList()
     abiturientamPromo()
     abiturientamInfo()
+    peopleDetail()
 })
