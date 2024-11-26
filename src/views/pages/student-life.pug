@@ -153,6 +153,19 @@ block content
                                 li научиться глубже воспринимать произведения искусства;
                                 li найти продуктивную творческую среду.
 
+                    +m-columns({
+                        classes: "m-columns--no-plpr",
+                        title: '<h2>Документы</h2>'
+                    })
+                        .text-items-list
+                            +link-block({
+                                classes: '',
+                                text: 'Концепция воспитательной работы в университете',
+                                vMode: 'note',
+                                type: 'download',
+                                cMode: 'green'
+                            })
+
             +media-slider({
                 sectionClasses: "no-padding-bottom",
                 isSection: true,
