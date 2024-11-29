@@ -39,7 +39,7 @@
     }
 
     &__title {
-        transition: color $tr-time;
+        transition: all $tr-time;
         margin-bottom: auto;
     }
 
@@ -181,7 +181,8 @@
     }
 
     &--green &__title a:hover {
-        color: $c-accent-dark;
+        color: $c-white;
+        opacity: 0.5;
     }
 
     &--green &__link:hover {
@@ -204,6 +205,17 @@
     }
 }
 
+.a-card {
+    &--short {
+        aspect-ratio: 1.82 / 1;
+    }
+
+    &--short &__content {
+        max-width: 563px;
+        min-height: 45%;
+    }
+}
+
 .a-card-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -216,4 +228,8 @@
     @include max(mobile) {
         grid-template-columns: minmax(0, 1fr);
     }
+}
+
+.a-card-list--duo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }

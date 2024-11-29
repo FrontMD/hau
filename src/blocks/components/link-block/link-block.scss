@@ -64,6 +64,14 @@
         }
     }
 
+    &.link-block--link .link-block__link {
+        flex: 0 0 54px;
+
+        @include max(mobile) {
+            flex-basis: 30px;
+        }
+    }
+
     &.link-block--link_angle a.link-block__link {
         flex: 0 0 auto;
 
