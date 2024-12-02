@@ -25,6 +25,7 @@
 
         @include max(tablet) {
             padding: 30px;
+            max-width: 100%;
         }
 
         @include max(mobile) {

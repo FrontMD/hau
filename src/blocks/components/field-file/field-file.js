@@ -1,5 +1,7 @@
 function fileFieldInit() {
-    const fileFields = document.querySelectorAll('.field-file input');
+    const fileFields = document.querySelectorAll('[data-js="formField"] input[type="file"]');
+
+    if(fileFields.length < 1) return
 
     fileFields.forEach(field => {
         let fieldLabel = field.closest('.field-file');
@@ -19,8 +21,6 @@ function fileFieldInit() {
                 let validExtentions = [];
                 let validTypes = [];
                 let validGroups = [];
-
-                console.log(validParams)
 
                 if(validParams.length > 0) {
                     //получаем список разрешённых расширений и проверяем загруженный файл на соответствие
@@ -69,6 +69,10 @@ function fileFieldInit() {
                     isInvalidType = false;
                 }
 
+                console.log(!isNaN(fileMaxSize))
+                console.log(field.files[0].size)
+                console.log(fileMaxSize)
+
                 //проверяем размер файла
                 if(!isNaN(fileMaxSize) && field.files[0].size > fileMaxSize) {
                     field.value = '';
@@ -77,7 +81,7 @@ function fileFieldInit() {
                     fileName.innerHTML = fieldPlaceholder;
                     fileError.innerHTML = 'Файл превышает допустимый размер';
                 //проверяем тип файла
-                } if(isInvalidType) {
+                } else if(isInvalidType) {
                     field.value = '';
                     fieldLabel.classList.remove('field-file--full');
                     fieldLabel.classList.add('field--invalid');

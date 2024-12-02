@@ -95,7 +95,7 @@ mixin seminars-detailed(props = defaultSeminarsDetailedProps)
                     +btn({
                         classes: 'btn--darkGreen',
                         name: 'Запрос на участие'
-                    })
+                    })(data-modal="#seminarModal")
                     .h2.seminar-info__title Сопредседатели семинара:
                     .seminar-info__items
                         +count-block({

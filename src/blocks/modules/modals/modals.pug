@@ -63,9 +63,9 @@ noindex
                     li Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.
             </div>
 
-        +modal({modalId:"questionModal", classes:"question-modal form-modal"})(data-js="questionModal")
+        +modal({modalId:"questionModal", classes:"form-modal"})(data-js="questionModal")
             +form({
-                classes: 'question-modal__form',
+                classes: '',
                 title: 'Задать вопрос',
                 text: '',
                 btnText: 'Задать вопрос',
@@ -114,9 +114,9 @@ noindex
                         placeholder: 'Текст вопроса',
                     })
 
-        +modal({modalId:"vacancyRespModal", classes:"vacancy-resp-modal form-modal"})(data-js="vacancyRespModal")
+        +modal({modalId:"vacancyRespModal", classes:"form-modal"})(data-js="vacancyRespModal")
             +form({
-                classes: 'vacancy-resp-modal__form',
+                classes: '',
                 title: 'Отправить резюме',
                 text: '',
                 btnText: 'Отправить резюме',
@@ -157,6 +157,246 @@ noindex
                         resetBtn: false,
                         isRequired: true
                     }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Комментарий',
+                    })
+
+                    +field-file({
+                        placeholder: 'Прикрепить резюме',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'file',
+                            'data-size': '10485760',
+                            'accept': 'image/*, text/plain, .docx, .pdf'
+                        },
+                        isRequired: true
+                    })
+
+        +modal({modalId:"seminarModal", classes:"form-modal"})(data-js="seminarModal")
+            +form({
+                classes: '',
+                title: 'Запрос на участие',
+                text: '',
+                btnText: 'Отправить запрос',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'email',
+                            title: '',
+                            placeholder: 'Email',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'email'
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        }) 
+                        +field({
+                            classes: '',
+                            type: 'tel',
+                            title: '',
+                            placeholder: '+7 (___) ___-__-__',
+                            inputAttr: {
+                                'data-type': 'phoneNumber',
+                                'required': '',
+                                'data-v-name': 'phone'
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'email',
+                            title: '',
+                            placeholder: 'DATE',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'date'
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        }) 
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Формат участия',
+                            selectOptions: [
+                                "",
+                                "Очно",
+                                "Онлайн",
+                            ],
+                            selectGreen: true
+                        })
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Список участников',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        isRequired: true
+                    })
+
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Название компании / учреждения',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'ФИО руководителя',
+                            inputAttr: {
+                                'required': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Должность руководителя',
+                            inputAttr: {
+                                'required': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Юридический адрес',
+                            inputAttr: {
+                                'required': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Почтовый адрес',
+                            inputAttr: {
+                                'required': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'ИНН',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'inn'
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'КПП',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'kpp'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                        })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Расчётный счёт',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'БИК',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'bik'
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Кор. счёт',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
+
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: 'Наименование банка',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': ''
+                            },
+                            resetBtn: false,
+                            isRequired: true
+                        })
 
                     +field({
                         classes: '',

@@ -10,13 +10,13 @@
 
 .modal.hystmodal--active {
     .hystmodal__window {
-        margin: 50px 0 0;
+        margin: 0;
         transition: all 0.3s linear;
         transform: scale(1);
         opacity: 1;
 
         @include max(tablet) {
-            margin: 20px 0 0;
+            margin: 0;
         }
     }
 }
@@ -52,9 +52,10 @@
             width: 20px;
             height: 20px;
         }
-        @include max(mobile){
-            right:0;
-            top:0;
+
+        @include max(mobile) {
+            right: 0;
+            top: 0;
             background: transparent;
         }
     }
@@ -71,9 +72,9 @@
             width: calc(100% - 40px);
             margin: 0 auto;
         }
+
         @include max(mobile) {
             padding: 40px 15px 15px;
         }
     }
 }
-

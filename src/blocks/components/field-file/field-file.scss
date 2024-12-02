@@ -6,30 +6,37 @@
     width: 100%;
     padding: 0;
     border: none;
+
     @include max(1024) {
         gap: 6px;
     }
+
     @include max(1024) {
         gap: 6px;
     }
+
     &.field--invalid {
         .field-file__fakeinput {
             border-color: red;
         }
+
         .field-file__error {
             display: block;
         }
     }
+
     &--full {
         .field-file__fakeinput {
             .icon-empty {
                 display: none;
             }
+
             .icon-full {
                 display: block;
             }
         }
     }
+
     &__title {
         position: relative;
         width: fit-content;
@@ -37,12 +44,15 @@
         font-weight: 500;
         line-height: 1.23em;
         color: black;
+
         @include max(1024) {
             font-size: 13px;
         }
+
         @include max(1024) {
             font-size: 13px;
         }
+
         span {
             position: absolute;
             right: -8px;
@@ -50,12 +60,14 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 0;
-            color: $c-blue;
+            color: $c-accent;
+
             @include max(1024) {
                 font-size: 20px;
                 right: -8px;
                 top: 10px;
             }
+
             @include max(1024) {
                 font-size: 20px;
                 right: -8px;
@@ -63,114 +75,76 @@
             }
         }
     }
+
     &__fakeinput {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 6px 15px;
-        border: 1px solid #E6E6EA;
+        padding: 32px 23px;
+        border: 1px solid transparent;
         border-radius: 8px;
-        color: #B0B2B7;
-        font-size: 13px;
-        line-height: 1.2;
+        color: $c-white;
+        font-family: $ff-main;
+        font-size: 16px;
+        line-height: 1.02em;
+        font-weight: 500;
         min-height: 40px;
-        background-color: white;
+        background-color: $c-input-bg;
+        outline: none;
         cursor: pointer;
-        @include max(1024) {
-            padding: 6px 15px;
-            border-radius: 8px;
-            font-size: 13px;
-            min-height: 40px;
+
+        @include max(mobile) {
+            padding: 20px 15px;
         }
-        @include max(1024) {
-            padding: 6px 15px;
-            border-radius: 8px;
-            font-size: 13px;
-            min-height: 40px;
-        }
+
         .icon-empty {
             width: 24px;
             height: 24px;
             display: block;
-            @include max(1024) {
-                width: 24px;
-                height: 24px;
-            }
-            @include max(1024) {
-                width: 24px;
-                height: 24px;
-            }
+
             svg {
                 width: 24px;
                 height: 24px;
-                color: $c-blue;
-                @include max(1024) {
-                    width: 24px;
-                    height: 24px;
-                }
-                @include max(1024) {
-                    width: 24px;
-                    height: 24px;
-                }
+                color: $c-white;
+
             }
         }
+
         .icon-full {
             display: none;
             width: 24px;
             height: 24px;
-            @include max(1024) {
-                width: 24px;
-                height: 24px;
-            }
-            @include max(1024) {
-                width: 24px;
-                height: 24px;
-            }
+
             svg {
                 width: 24px;
                 height: 24px;
-                @include max(1024) {
-                    width: 24px;
-                    height: 24px;
-                }
-                @include max(1024) {
-                    width: 24px;
-                    height: 24px;
-                }
-                color: $c-blue;
+
+                color: $c-white;
             }
         }
     }
+
     &__error {
-        font-size: 11px;
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 100%;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.18em;
-        color: red;
-        margin-top: 4px;
+        color: $c-error;
         display: none;
-        @include max(1024) {
-            font-size: 11px;
-            margin-top: 4px;
-        }
-        @include max(1024) {
-            font-size: 11px;
-            margin-top: 4px;
-        }
     }
+
     &__note {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
-        line-height: 1.23;
+        line-height: 1.02em;
         color: #B0B2B7;
         font-size: 11px;
-        @include max(1024) {
-            font-size: 13px;
-        }
-        @include max(1024) {
-            font-size: 13px;
-        }
     }
+
     &__input {
         position: absolute;
         width: 0;
