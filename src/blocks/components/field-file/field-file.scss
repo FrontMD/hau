@@ -1,0 +1,182 @@
+.field-file {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    @include max(1024) {
+        gap: 6px;
+    }
+    @include max(1024) {
+        gap: 6px;
+    }
+    &.field--invalid {
+        .field-file__fakeinput {
+            border-color: red;
+        }
+        .field-file__error {
+            display: block;
+        }
+    }
+    &--full {
+        .field-file__fakeinput {
+            .icon-empty {
+                display: none;
+            }
+            .icon-full {
+                display: block;
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        width: fit-content;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.23em;
+        color: black;
+        @include max(1024) {
+            font-size: 13px;
+        }
+        @include max(1024) {
+            font-size: 13px;
+        }
+        span {
+            position: absolute;
+            right: -8px;
+            top: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 0;
+            color: $c-blue;
+            @include max(1024) {
+                font-size: 20px;
+                right: -8px;
+                top: 10px;
+            }
+            @include max(1024) {
+                font-size: 20px;
+                right: -8px;
+                top: 10px;
+            }
+        }
+    }
+    &__fakeinput {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 6px 15px;
+        border: 1px solid #E6E6EA;
+        border-radius: 8px;
+        color: #B0B2B7;
+        font-size: 13px;
+        line-height: 1.2;
+        min-height: 40px;
+        background-color: white;
+        cursor: pointer;
+        @include max(1024) {
+            padding: 6px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            min-height: 40px;
+        }
+        @include max(1024) {
+            padding: 6px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            min-height: 40px;
+        }
+        .icon-empty {
+            width: 24px;
+            height: 24px;
+            display: block;
+            @include max(1024) {
+                width: 24px;
+                height: 24px;
+            }
+            @include max(1024) {
+                width: 24px;
+                height: 24px;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                color: $c-blue;
+                @include max(1024) {
+                    width: 24px;
+                    height: 24px;
+                }
+                @include max(1024) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .icon-full {
+            display: none;
+            width: 24px;
+            height: 24px;
+            @include max(1024) {
+                width: 24px;
+                height: 24px;
+            }
+            @include max(1024) {
+                width: 24px;
+                height: 24px;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                @include max(1024) {
+                    width: 24px;
+                    height: 24px;
+                }
+                @include max(1024) {
+                    width: 24px;
+                    height: 24px;
+                }
+                color: $c-blue;
+            }
+        }
+    }
+    &__error {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.18em;
+        color: red;
+        margin-top: 4px;
+        display: none;
+        @include max(1024) {
+            font-size: 11px;
+            margin-top: 4px;
+        }
+        @include max(1024) {
+            font-size: 11px;
+            margin-top: 4px;
+        }
+    }
+    &__note {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.23;
+        color: #B0B2B7;
+        font-size: 11px;
+        @include max(1024) {
+            font-size: 13px;
+        }
+        @include max(1024) {
+            font-size: 13px;
+        }
+    }
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        z-index: -10;
+    }
+}

@@ -1074,7 +1074,7 @@
     <noindex>
       <div>
         <!--код модалок сюда-->
-            <div class="modal hystmodal c-map-modal" id="myModal" aria-hidden="true" data-js="cMapAddressModal">
+            <div class="modal hystmodal c-map-modal" id="cMapAddressModal" aria-hidden="true" data-js="cMapAddressModal">
               <div class="hystmodal__wrap">
                 <div class="hystmodal__window" role="dialog" aria-modal="true">
                   <div class="modal__content">
@@ -1147,6 +1147,104 @@
                         <li>Поговорите с представителями приемной комиссии. Ответы конспектируйте в блокнот. Мы подготовили перечень важных вопросов, которые можно выяснить в приемной комиссии: Есть ли у вуза действующая аккредитация по выбранному вами направлению? Где проходит практика? Помогает ли вуз с трудоустройством?Дают ли баллы за золотую медаль и дипломы призеров олимпиад? Каких? Можно ли перевестись на другое направление, если не понравится учиться там, куда поступил? Как и когда это делается? По какому принципу распределяются места в общежитие? За какой период надо вносить оплату? За какой период надо вносить оплату, если поступите на платное?</li>
                         <li>Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.</li>
                       </ul></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal question-modal form-modal" id="questionModal" aria-hidden="true" data-js="questionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form question-modal__form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Задать вопрос</div>
+                              <div class="form__fields">
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="textarea">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текст вопроса"></textarea>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Задать вопрос</button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal vacancy-resp-modal form-modal" id="vacancyRespModal" aria-hidden="true" data-js="vacancyRespModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form vacancy-resp-modal__form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Отправить резюме</div>
+                              <div class="form__fields">
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   " data-js="textarea">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Отправить резюме</button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
                     </div>
                   </div>
                 </div>

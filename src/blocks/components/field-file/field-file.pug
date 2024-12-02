@@ -1,0 +1,36 @@
+-
+    const defaultFieldFileProps = {
+        classes: '',
+        title: '',
+        placeholder: '',
+        inputAttr: '',
+        isRequired: false
+    }
+
+mixin field-file(props = defaultFieldFileProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFieldFileProps.classes,
+            title: props.title ? props.title : defaultFieldFileProps.title,
+            placeholder: props.placeholder ? props.placeholder : defaultFieldFileProps.placeholder,
+            inputAttr: props.inputAttr ? props.inputAttr : defaultFieldFileProps.inputAttr,
+            isRequired: props.isRequired ? props.isRequired : defaultFieldFileProps.isRequired,
+        }
+
+    label.field-file(class= checkProps.classes + "" data-js="formField" data-placeholder= checkProps.placeholder)&attributes(attributes)
+        - if(checkProps.title)
+            span.field-file__title
+                != checkProps.title
+                - if(checkProps.isRequired)
+                    span!= "*"
+        span.field-file__fakeinput
+            span(data-js='fileName')!= checkProps.placeholder
+            span.icon-empty
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#clip`)
+            span.icon-full(data-js='iconFull')
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#close`)
+        span.field-file__note Не более 10 Мб
+        span.field-file__error(data-js='fieldError')
+        input.field-file__input(type='file')&attributes(checkProps.inputAttr)

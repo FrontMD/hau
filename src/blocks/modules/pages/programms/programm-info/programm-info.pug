@@ -60,7 +60,7 @@ mixin programm-info(props = defaultProgrammInfoProps)
                         +btn({
                             classes: 'btn--darkGreen programm-faq__btn',
                             name: 'Задать вопрос'
-                        })
+                        })(data-modal="#questionModal")
                     .programm-faq__accordion(data-js="accordion")
                         +spoiler({
                             title: 'Смогу ли я поступить на направление подготовки «Менеджмент», если сдавал ЕГЭ по математике базового уровня?',

@@ -1,7 +1,8 @@
 noindex
     div
         //код модалок сюда
-        +modal({id:"cMapAddressModal", classes:"c-map-modal"})(data-js="cMapAddressModal")
+        +modal({modalId:"cMapAddressModal", classes:"c-map-modal"})(data-js="cMapAddressModal")
+
         +modal({modalId:"openDoorsModal", classes:"open-doors-modal"})(data-js="openDoorsModal")
             <div class="open-doors-block__container text-editor">
                 <div class="open-doors-block__left">
@@ -61,3 +62,106 @@ noindex
                     li Поговорите с представителями приемной комиссии. Ответы конспектируйте в блокнот. Мы подготовили перечень важных вопросов, которые можно выяснить в приемной комиссии: Есть ли у вуза действующая аккредитация по выбранному вами направлению? Где проходит практика? Помогает ли вуз с трудоустройством?Дают ли баллы за золотую медаль и дипломы призеров олимпиад? Каких? Можно ли перевестись на другое направление, если не понравится учиться там, куда поступил? Как и когда это делается? По какому принципу распределяются места в общежитие? За какой период надо вносить оплату? За какой период надо вносить оплату, если поступите на платное?
                     li Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.
             </div>
+
+        +modal({modalId:"questionModal", classes:"question-modal form-modal"})(data-js="questionModal")
+            +form({
+                classes: 'question-modal__form',
+                title: 'Задать вопрос',
+                text: '',
+                btnText: 'Задать вопрос',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: '+7 (___) ___-__-__',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Текст вопроса',
+                    })
+
+        +modal({modalId:"vacancyRespModal", classes:"vacancy-resp-modal form-modal"})(data-js="vacancyRespModal")
+            +form({
+                classes: 'vacancy-resp-modal__form',
+                title: 'Отправить резюме',
+                text: '',
+                btnText: 'Отправить резюме',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: '+7 (___) ___-__-__',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Комментарий',
+                    })
+

@@ -2,3 +2,32 @@
     background-color: #000;
     opacity: 0.7;
 }
+
+.form-modal {
+
+    .modal__content {
+        background-color: $c-accent;
+    }
+
+    .form {
+        padding: 0;
+
+        @include max(mobile) {
+            padding: 0;
+        }
+    }
+
+    .form__title+.form__fields,
+    .form__text+.form__fields,
+    .form__fields+.form__fields {
+        margin-top: 30px;
+    }
+
+    .modal__close {
+        @include max(mobile) {
+            color: $c-white;
+        }
+    }
+}
+
+.question-modal {}
