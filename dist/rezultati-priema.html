@@ -1219,16 +1219,16 @@
                             <div class="form__content" data-js="form-content">
                               <div class="h2 form__title">Задать вопрос</div>
                               <div class="form__fields">
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Имя" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="textarea">
+                                    <label class="field     " data-js="textarea">
                                       <textarea class="field__textarea" rows="7" placeholder="Текст вопроса"></textarea>
                                     </label>
                               </div>
@@ -1268,16 +1268,16 @@
                             <div class="form__content" data-js="form-content">
                               <div class="h2 form__title">Отправить резюме</div>
                               <div class="form__fields">
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Имя" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field   " data-js="textarea">
+                                    <label class="field     " data-js="textarea">
                                       <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea>
                                     </label>
                                     <label class="field-file" data-js="formField" data-placeholder="Прикрепить резюме"><span class="field-file__fakeinput"><span data-js="fileName">Прикрепить резюме</span><span class="icon-empty">
@@ -1303,7 +1303,7 @@
                                   <use xlink:href="img/sprites/sprite.svg#success"></use>
                                 </svg>
                               </div>
-                              <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                              <div class="h2 form__title">Ваше резюме отправлено.</div>
                               <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
                             </div>
                           </form>
@@ -1322,26 +1322,29 @@
                       </svg>
                     </div>
                     <div class="modal__inner" data-js="modalInner">
-                          <form class="form" action="#" data-validate novalidate>
+                          <form class="form" action="#" data-validate novalidate data-js="seminarForm">
                             <div class="form__content" data-js="form-content">
                               <div class="h2 form__title">Запрос на участие</div>
                               <div class="form__fields">
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="ФИО" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Название семинара" required="" data-js="saminarName"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
-                                        <input class="field__input" type="email" placeholder="DATE" required="" data-v-name="date"><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Дата" required="" data-v-name="date" data-type="date" data-js="saminarDate"><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   field--greenSelect" data-js="formField">
+                                      <label class="field   field--greenSelect  " data-js="formField">
                                         <select class="field__select" placeholder="Формат участия" data-js="formSelect">
                                           <option></option>
                                           <option>Очно</option>
@@ -1349,50 +1352,53 @@
                                         </select>
                                       </label>
                                 </div>
-                                    <label class="field   " data-js="textarea">
+                                    <label class="field     " data-js="textarea">
                                       <textarea class="field__textarea" rows="7" placeholder="Список участников"></textarea>
                                     </label>
-                                    <label class="field   " data-js="formField">
+                                    <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Название компании / учреждения" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="text" placeholder="ФИО руководителя" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="text" placeholder="Должность руководителя" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="text" placeholder="Юридический адрес" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   " data-js="formField">
+                                      <label class="field     " data-js="formField">
                                         <input class="field__input" type="text" placeholder="Почтовый адрес" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
-                                        <input class="field__input" type="text" placeholder="ИНН" required="" data-v-name="inn"><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="ИНН" required="" data-v-name="inn" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="КПП" required="" data-v-name="kpp" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
-                                        <input class="field__input" type="text" placeholder="Расчётный счёт" required="" data-v-name=""><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Расчётный счёт" required="" data-v-name="account" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   " data-js="formField">
-                                        <input class="field__input" type="text" placeholder="БИК" required="" data-v-name="bik"><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="БИК" required="" data-v-name="bik" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
                                 <div class="form__flex">
-                                      <label class="field   " data-js="formField">
-                                        <input class="field__input" type="text" placeholder="Кор. счёт" required="" data-v-name=""><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Кор. счёт" required="" data-v-name="account" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                       </label>
-                                      <label class="field   " data-js="formField"><span class="field__title">Наименование банка<span>*</span></span>
-                                        <input class="field__input" type="text" placeholder="" required="" data-v-name=""><span class="field__error" data-js="fieldError"></span>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Наименование банка" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
-                                    <label class="field   " data-js="textarea">
+                                    <label class="field     " data-js="textarea">
                                       <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea>
                                     </label>
                               </div>
@@ -1409,7 +1415,128 @@
                                   <use xlink:href="img/sprites/sprite.svg#success"></use>
                                 </svg>
                               </div>
-                              <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                              <div class="h2 form__title">Ваш запрос отправлен.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="submitDocsModal" aria-hidden="true" data-js="submitDocsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate data-js="submitDocsForm">
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Отправить документы</div>
+                              <div class="form__fields">
+                                <div class="form__radios">
+                                  <div class="form__radios-title">Вы гражданин Российской Федерации?</div>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Да</span>
+                                        <input class="field__input" type="radio" placeholder="" checked="" name="citizenship" value="Да" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Нет</span>
+                                        <input class="field__input" type="radio" placeholder="" name="citizenship" value="Нет" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                </div>
+                                <div class="form__radios">
+                                  <div class="form__radios-title">Вы поступаете в магистратуру/аспирантуру?</div>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Да</span>
+                                        <input class="field__input" type="radio" placeholder="" checked="" name="level-education" value="Да" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Нет</span>
+                                        <input class="field__input" type="radio" placeholder="" name="level-education" value="Нет" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                </div>
+                                <div class="form__block" data-js="formBlock" data-condition="ifLevelNo">
+                                  <div class="form__note text-editor">
+                                    <h3>Внимание!</h3>
+                                    <p> <b>Дистанционная подача документов поступающими на программы бакалавриата, специалитета, программы среднего профессионального образования осуществляется через портал Госуслуг <a href="https://www.gosuslugi.ru/">https://www.gosuslugi.ru/</a></b></p>
+                                  </div>
+                                </div>
+                                <div class="form__block" data-js="formBlock" data-condition="ifLevelYes">
+                                  <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipYes">
+                                        <label class="field   field--greenSelect  " data-js="formField">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect">
+                                            <option></option>
+                                            <option>Паспорт гражданина РФ</option>
+                                          </select>
+                                        </label>
+                                  </div>
+                                  <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipNo">
+                                        <label class="field   field--greenSelect  " data-js="formField">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect">
+                                            <option></option>
+                                            <option>Иностранный паспорт</option>
+                                          </select>
+                                        </label>
+                                  </div>
+                                  <div class="form__flex">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Серия документа" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Номер документа" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                      <label class="field     field--checkbox" data-js="formField"><span class="field__title">Имею СНИЛС</span>
+                                        <input class="field__input" type="checkbox" placeholder="" data-js="snils-tab"><span class="fake-checkbox"></span>
+                                      </label>
+                                  <div class="form__block" data-js="formBlock" data-condition="ifSnils">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="СНИЛС"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__note text-editor">
+                                    <h3>Внимание!</h3>
+                                    <ul>
+                                      <li><b>Бланк заполняется от руки!</b></li>
+                                      <li><b>Личная подпись ставится<br>- на первой странице (в таблице)<br>- на последней странице</b></li>
+                                    </ul>
+                                  </div>
+                                  <div class="form__links"><a href="#" target="_blank">Согласие на обработку персональных данных (18+ лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных (до 18 лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (18+ лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (до 18 лет)</a></div>
+                                      <label class="field-file" data-js="formField" data-placeholder="Согласие на обработку персональных данных"><span class="field-file__fakeinput"><span data-js="fileName">Согласие на обработку персональных данных</span><span class="icon-empty">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                            </svg></span><span class="icon-full" data-js="iconFull">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                        <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                      </label>
+                                      <label class="field-file" data-js="formField" data-placeholder="Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения"><span class="field-file__fakeinput"><span data-js="fileName">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения</span><span class="icon-empty">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                            </svg></span><span class="icon-full" data-js="iconFull">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                        <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                      </label>
+                                </div>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Отправить документы</button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваши документы отправлены.</div>
                               <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
                             </div>
                           </form>

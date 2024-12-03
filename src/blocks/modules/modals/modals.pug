@@ -120,6 +120,7 @@ noindex
                 title: 'Отправить резюме',
                 text: '',
                 btnText: 'Отправить резюме',
+                successTitle: 'Ваше резюме отправлено.'
                 })
                     +field({
                         classes: '',
@@ -182,7 +183,8 @@ noindex
                 title: 'Запрос на участие',
                 text: '',
                 btnText: 'Отправить запрос',
-                })
+                successTitle: 'Ваш запрос отправлен.'
+                })(data-js="seminarForm")
                     +field({
                         classes: '',
                         type: 'text',
@@ -220,15 +222,31 @@ noindex
                             resetBtn: false,
                             isRequired: true
                         })
+
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Название семинара',
+                        inputAttr: {
+                            'required': '',
+                            'data-js': 'saminarName'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+
                     .form__flex
                         +field({
                             classes: '',
-                            type: 'email',
+                            type: 'text',
                             title: '',
-                            placeholder: 'DATE',
+                            placeholder: 'Дата',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': 'date'
+                                'data-v-name': 'date',
+                                'data-type': 'date',
+                                'data-js': 'saminarDate'
                             },
                             resetBtn: false,
                             isRequired: true
@@ -326,23 +344,25 @@ noindex
                             placeholder: 'ИНН',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': 'inn'
+                                'data-v-name': 'inn',
+                                'data-type': 'number'
                             },
                             resetBtn: false,
                             isRequired: true
                         })
 
-                            +field({
-                                classes: '',
-                                type: 'text',
-                                title: '',
-                                placeholder: 'КПП',
-                                inputAttr: {
-                                    'required': '',
-                                    'data-v-name': 'kpp'
-                                },
-                                resetBtn: false,
-                                isRequired: true
+                        +field({
+                            classes: '',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'КПП',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'kpp',
+                                'data-type': 'number'
+                            },
+                            resetBtn: false,
+                            isRequired: true
                         })
 
                     .form__flex
@@ -353,7 +373,8 @@ noindex
                             placeholder: 'Расчётный счёт',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': ''
+                                'data-v-name': 'account',
+                                'data-type': 'number'
                             },
                             resetBtn: false,
                             isRequired: true
@@ -366,7 +387,8 @@ noindex
                             placeholder: 'БИК',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': 'bik'
+                                'data-v-name': 'bik',
+                                'data-type': 'number'
                             },
                             resetBtn: false,
                             isRequired: true
@@ -380,7 +402,8 @@ noindex
                             placeholder: 'Кор. счёт',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': ''
+                                'data-v-name': 'account',
+                                'data-type': 'number'
                             },
                             resetBtn: false,
                             isRequired: true
@@ -389,10 +412,10 @@ noindex
                         +field({
                             classes: '',
                             type: 'text',
-                            title: 'Наименование банка',
+                            title: '',
+                            placeholder: 'Наименование банка',
                             inputAttr: {
                                 'required': '',
-                                'data-v-name': ''
                             },
                             resetBtn: false,
                             isRequired: true
@@ -405,3 +428,177 @@ noindex
                         placeholder: 'Комментарий',
                     })
 
+        +modal({modalId:"submitDocsModal", classes:"form-modal"})(data-js="submitDocsModal")
+            +form({
+                classes: '',
+                title: 'Отправить документы',
+                text: '',
+                btnText: 'Отправить документы',
+                successTitle: 'Ваши документы отправлены.'
+                })(data-js="submitDocsForm")
+
+                    .form__radios
+                        .form__radios-title Вы гражданин Российской Федерации?
+                        +field({
+                            classes: '',
+                            type: 'radio',
+                            title: 'Да',
+                            placeholder: '',
+                            inputAttr: {
+                                'checked': '',
+                                'name': 'citizenship',
+                                'value': 'Да',
+                                'data-js': 'radioTab'
+                            },
+                            resetBtn: false,
+                        })
+                        +field({
+                            classes: '',
+                            type: 'radio',
+                            title: 'Нет',
+                            placeholder: '',
+                            inputAttr: {
+                                'name': 'citizenship',
+                                'value': 'Нет',
+                                'data-js': 'radioTab'
+                            },
+                            resetBtn: false,
+                        })
+
+                    .form__radios
+                        .form__radios-title Вы поступаете в магистратуру/аспирантуру?
+                        +field({
+                            classes: '',
+                            type: 'radio',
+                            title: 'Да',
+                            placeholder: '',
+                            inputAttr: {
+                                'checked': '',
+                                'name': 'level-education',
+                                'value': 'Да',
+                                'data-js': 'radioTab'
+                            },
+                            resetBtn: false,
+                        })
+                        +field({
+                            classes: '',
+                            type: 'radio',
+                            title: 'Нет',
+                            placeholder: '',
+                            inputAttr: {
+                                'name': 'level-education',
+                                'value': 'Нет',
+                                'data-js': 'radioTab'
+                            },
+                            resetBtn: false,
+                        })
+
+                    .form__block(data-js="formBlock" data-condition="ifLevelNo")
+                        .form__note.text-editor
+                            h3 Внимание!
+                            p 
+                                b Дистанционная подача документов поступающими на программы бакалавриата, специалитета, программы среднего профессионального образования осуществляется через портал Госуслуг <a href="https://www.gosuslugi.ru/">https://www.gosuslugi.ru/</a>
+
+                    .form__block(data-js="formBlock" data-condition="ifLevelYes")
+                        .form__block(data-js="formBlock" data-condition="ifCitizenshipYes")
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Тип документа',
+                                selectOptions: [
+                                    "",
+                                    "Паспорт гражданина РФ"
+                                ],
+                                selectGreen: true
+                            })
+                        .form__block(data-js="formBlock" data-condition="ifCitizenshipNo")
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Тип документа',
+                                selectOptions: [
+                                    "",
+                                    "Иностранный паспорт"
+                                ],
+                                selectGreen: true
+                            })
+
+                        .form__flex
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Серия документа',
+                                inputAttr: {
+                                    'required': '',
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            }) 
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Номер документа',
+                                inputAttr: {
+                                    'required': '',
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+
+                        +field({
+                            classes: '',
+                            type: 'checkbox',
+                            title: 'Имею СНИЛС',
+                            placeholder: '',
+                            inputAttr: {
+                                'data-js': 'snils-tab'
+                            },
+                            resetBtn: false,
+                        })
+
+                        .form__block(data-js="formBlock" data-condition="ifSnils")
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'СНИЛС',
+                                resetBtn: false
+                            })
+
+                        .form__note.text-editor
+                            h3 Внимание!
+                            ul
+                                li
+                                    b Бланк заполняется от руки!
+                                li
+                                    b Личная подпись ставится<br>- на первой странице (в таблице)<br>- на последней странице
+
+                        .form__links
+                            a(href='#' target='_blank') Согласие на обработку персональных данных (18+ лет)
+                            a(href='#' target='_blank') Согласие на обработку персональных данных (до 18 лет)
+                            a(href='#' target='_blank') Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (18+ лет)
+                            a(href='#' target='_blank') Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (до 18 лет)
+
+                        +field-file({
+                            placeholder: 'Согласие на обработку персональных данных',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'file',
+                                'data-size': '10485760',
+                                'accept': 'image/*, text/plain, .docx, .pdf'
+                            },
+                            isRequired: true
+                        })
+
+                        +field-file({
+                            placeholder: 'Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'file',
+                                'data-size': '10485760',
+                                'accept': 'image/*, text/plain, .docx, .pdf'
+                            },
+                            isRequired: true
+                        })

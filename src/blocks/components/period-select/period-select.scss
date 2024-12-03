@@ -132,3 +132,7 @@
     --adp-cell-background-color-in-range-hover: #E6FFEC; // наведение на ячейки в периоде
     --adp-background-color-in-range-focused: #E6FFEC; // наведение на ячейки в периоде в другом месяце
 }
+
+.air-datepicker-global-container {
+    z-index: 110;
+}

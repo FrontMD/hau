@@ -30,7 +30,7 @@ mixin field(props = defaultFieldProps)
             selectGreen: props.selectGreen ? props.selectGreen : defaultFieldProps.selectGreen,
         }
 
-    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
+    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
         - if(checkProps.title)
             span.field__title
                 != checkProps.title
@@ -38,11 +38,16 @@ mixin field(props = defaultFieldProps)
                     span!= "*"
         - if(checkProps.tag === 'input')
             input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
-            - if(checkProps.resetBtn)
-                span.field__reset(data-js='fieldResetBtn')
-                    svg 
-                        use(xlink:href=`img/sprites/sprite.svg#close`)
-            span.field__error(data-js='fieldError')
+            - if(checkProps.type === 'radio')
+                span.fake-radio
+            - else if(checkProps.type === 'checkbox')
+                span.fake-checkbox
+            - else
+                - if(checkProps.resetBtn)
+                    span.field__reset(data-js='fieldResetBtn')
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                span.field__error(data-js='fieldError')
         - if(checkProps.tag === 'textarea')
             textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)
         - if(checkProps.tag === 'select')

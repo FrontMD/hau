@@ -28,10 +28,10 @@
     &__title {
         position: relative;
         width: fit-content;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 1.23em;
-        color: black;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1em;
+        color: white;
 
         span {
             position: absolute;
@@ -144,6 +144,94 @@
             color: inherit;
         }
     }
+}
 
+.field {
+    &--radio {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: fit-content;
+        align-items: center;
+    }
 
+    &--radio input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    &--radio .fake-radio {
+        display: block;
+        position: relative;
+        width: 13px;
+        height: 13px;
+        background-color: $c-text-grey;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $c-white;
+            border-radius: 100%;
+        }
+    }
+
+    &--radio input:checked+.fake-radio::after {
+        background-color: $c-accent-light;
+    }
+}
+
+.field {
+    &--checkbox {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: fit-content;
+        align-items: center;
+    }
+
+    &--checkbox input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    &--checkbox .fake-checkbox {
+        display: block;
+        position: relative;
+        width: 13px;
+        height: 13px;
+        background-color: $c-text-grey;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $c-white;
+        }
+    }
+
+    &--checkbox input:checked+.fake-checkbox::after {
+        background-color: $c-accent-light;
+    }
 }
