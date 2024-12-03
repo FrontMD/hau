@@ -68,6 +68,22 @@
         margin-top: 50px;
     }
 
+    &__step {
+        display: none;
+
+        .text-editor * {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .text-editor b {
+            color: $c-white;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
     &__fields {
         display: flex;
         flex-direction: column;

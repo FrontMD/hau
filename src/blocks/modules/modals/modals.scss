@@ -33,6 +33,10 @@
     .form {
         padding: 0;
 
+        &--sent {
+            min-height: auto !important;
+        }
+
         @include max(mobile) {
             padding: 0;
         }

@@ -1586,6 +1586,127 @@
                 </div>
               </div>
             </div>
+            <div class="modal hystmodal form-modal" id="sectionModal" aria-hidden="true" data-js="sectionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Оставить заявку</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field   field--greenSelect  " data-js="formField">
+                                        <select class="field__select" placeholder="Специальность" data-js="formSelect">
+                                          <option></option>
+                                          <option>Менеджмент</option>
+                                          <option>Прикладная математика и информатика</option>
+                                          <option>Картография и геоинформатика</option>
+                                        </select>
+                                      </label>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="название секции/кружка" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="textarea">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текущие навыки"></textarea>
+                                    </label>
+                                    <label class="field     " data-js="textarea">
+                                      <textarea class="field__textarea" rows="7" placeholder="Ожидания от секции"></textarea>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Оставить заявку</button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваша заявка отправлена.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="projectsModal" aria-hidden="true" data-js="projectsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                      <form class="form" action="#" data-validate novalidate data-js="projectsModalForm">
+                        <div class="form__content" data-js="form-content">
+                          <div class="h2 form__title">Предложить проект</div>
+                          <div class="form__step active">
+                            <div class="text-editor form-text-editor">
+                              <p><b>Данная форма предназначена для сбора проектных инициатив для реализации проектов в рамках дисциплины "Проектная деятельность" в 2024-2025 учебном году.</b></p>
+                              <p> <b>Термины и определения:</b></p>
+                              <p><b>Проект</b> – комплекс взаимосвязанных мероприятий, направленный на создание уникального продукта и/или услуги в условиях временных и ресурсных ограничений.</p>
+                              <p><b>Проектная команда</b> – группа обучающихся, объединенных для реализации проекта.</p>
+                              <p><b>Заказчик</b> – лицо, инициирующее проект, заинтересованное в осуществлении проекта и достижении его целей, осуществляющее контроль его реализации и принимающее результаты после его окончания.</p>
+                              <p><b>Партнер</b> – это лицо либо организация оказывающее содействие в реализации проекта.</p>
+                              <p><b>Инициативные проекты</b> – персональные проекты обучающихся, сотрудников Университета или внешних инициаторов, направленные на создание новых продуктов, имеющих предпринимательский потенциал и претендующие на коммерциализацию результатов.</p>
+                              <p>Перед подачей заявки необходимо ознакомиться с Регламентом: <a href="">ссылка</a></p>
+                              <p> <b>Я ознакомлен и согласен *</b></p>
+                              <p>В соответствии с пунктом 2.7 Регламента, администрация ЦПД оставляет за собой право отклонить заявку при несоответствии требований, к проектам и реализации</p>
+                            </div>
+                          </div>
+                          <div class="form__step">
+                            <div class="form__fields"></div>
+                                <button class="btn form__submit btn--green" type="submit">Предложить проект</button>
+                            <div class="form__privacy form-privacy" data-js="formField">
+                              <label>
+                                <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                              </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form__thanks" data-js="form-thanks">
+                          <div class="form__image-success">
+                            <svg></svg>
+                            <use xlink:href="img/sprites/sprite.svg#success"></use>
+                          </div>
+                          <div class="h2 form__title">Ваше предложение отправлено.</div>
+                          <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.                     </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
     </noindex>
     <script src="js/main.min.js"></script>
