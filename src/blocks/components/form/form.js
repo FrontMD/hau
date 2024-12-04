@@ -278,24 +278,24 @@ function customFormScripts() {
 
     if(submitDocsForms.length > 0) {
         submitDocsForms.forEach(submitDocsForm => {
-            showHideblocks(submitDocsForm)
+            showHideSubmitDocsBlocks(submitDocsForm)
 
             const radioTabs = submitDocsForm.querySelectorAll('[data-js="radioTab"]')
 
             radioTabs.forEach(radioTab => {
                 radioTab.addEventListener('change', function() {
-                    showHideblocks(submitDocsForm)
+                    showHideSubmitDocsBlocks(submitDocsForm)
                 })
             })
 
             const snilsTab = submitDocsForm.querySelector('[data-js="snils-tab"]')
 
             snilsTab.addEventListener('change', function() {
-                showHideblocks(submitDocsForm)
+                showHideSubmitDocsBlocks(submitDocsForm)
             })
         })
 
-        function showHideblocks(currentForm) {
+        function showHideSubmitDocsBlocks(currentForm) {
             const blocks = currentForm.querySelectorAll('[data-js="formBlock"]')
             const formBtn = currentForm.querySelector('.form__submit')
             const formPrivacy = currentForm.querySelector('.form__privacy')
@@ -356,6 +356,24 @@ function customFormScripts() {
             const prevBtns = projectsForm.querySelectorAll('[data-js="formPrevStep"]')
             const nextBtns = projectsForm.querySelectorAll('[data-js="formNextStep"]')
 
+            showHideProjectsBlocks(projectsForm)
+
+            const projectPartnerTabs = projectsForm.querySelectorAll('[data-js="projectPartnerTab"]')
+
+            projectPartnerTabs.forEach(projectPartnerTab => {
+                projectPartnerTab.addEventListener('change', function() {
+                    showHideProjectsBlocks(projectsForm)
+                })
+            })
+
+            const projectProgressTabs = projectsForm.querySelectorAll('[data-js="projectProgressTab"]')
+
+            projectProgressTabs.forEach(projectProgressTab => {
+                projectProgressTab.addEventListener('change', function() {
+                    showHideProjectsBlocks(projectsForm)
+                })
+            })
+
             prevBtns.forEach(prevBtn => {
                 prevBtn.addEventListener('click', function(){
                     let currentStep = this.closest('[data-js="formStep"]')
@@ -407,7 +425,43 @@ function customFormScripts() {
                     
                 })
             })
+
         })
+
+        function showHideProjectsBlocks(currentForm) {
+            const blocks = currentForm.querySelectorAll('[data-js="formBlock"]')
+
+            blocks.forEach(block => {
+                block.style.display = 'none'
+                block.querySelectorAll('[data-js="formField"]').forEach(cField => {
+                    cField.classList.remove('field--invalid')
+                    if(cField.querySelector('input')) {
+                        cField.querySelector('input').removeAttribute('required')
+                    }
+                })
+            })
+
+            let projectPartnerValue = currentForm.querySelector('input[name="project-partner"]:checked').value
+
+            if(projectPartnerValue === 'Партнер' || projectPartnerValue === 'Заказчик') {
+                let targetBlock = currentForm.querySelector('[data-condition="ifProjectHasPartner"]')
+                targetBlock.style.display = 'flex'
+                targetBlock.querySelectorAll('input').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+            }
+            
+            let projectProgressValue = currentForm.querySelector('input[name="project-in-progress"]:checked').value
+
+            if(projectProgressValue === 'Да') {
+                let targetBlock = currentForm.querySelector('[data-condition="ifProjectInProgress"]')
+                targetBlock.style.display = 'flex'
+                targetBlock.querySelectorAll('input').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+            }
+
+        }
     }
 
 }

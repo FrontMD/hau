@@ -768,7 +768,7 @@ noindex
                                 +field({
                                     classes: '',
                                     type: 'radio',
-                                    title: 'Есть звказчик',
+                                    title: 'Есть заказчик',
                                     placeholder: '',
                                     inputAttr: {
                                         'name': 'project-partner',
@@ -790,7 +790,7 @@ noindex
                                     resetBtn: false,
                                 })
 
-                            .form__block(data-js="formBlock" data-condition="ifProjectHasPartner" style="display: flex;")
+                            .form__block(data-js="formBlock" data-condition="ifProjectHasPartner")
                                 +field({
                                     classes: '',
                                     type: 'text',
@@ -852,6 +852,18 @@ noindex
                                 placeholder: 'Название проекта',
                                 inputAttr: {
                                     'required': ''
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Предварительный бюджет проекта, руб.',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'number'
                                 },
                                 resetBtn: false,
                                 isRequired: true
@@ -989,117 +1001,7 @@ noindex
                                 cMode: 'green',
                             })(data-js="formNextStep")
 
-                    .form__step(data-js="formStep" data-name="budget" data-id="3")
-                        .form__fields
-                            +field({
-                                classes: '',
-                                type: 'text',
-                                title: '',
-                                placeholder: 'Предварительный бюджет проекта, руб.',
-                                inputAttr: {
-                                    'required': '',
-                                    'data-type': 'number'
-                                },
-                                resetBtn: false,
-                                isRequired: true
-                            })
-
-                        .form__btns
-                            +btn({
-                                classes: 'form-projects-modal__prev',
-                                type: 'button',
-                                buttonType: 'button',
-                                name: 'Назад',
-                                cMode: 'lightGreen',
-                            })(data-js="formPrevStep")
-                            +btn({
-                                classes: 'form-projects-modal__next',
-                                type: 'button',
-                                buttonType: 'button',
-                                name: 'Дальше',
-                                cMode: 'green',
-                            })(data-js="formNextStep")
-
-                    .form__step(data-js="formStep" data-name="studentsNumber" data-id="4")
-                        .form__fields
-                            .form__radios
-                                .form__radios-title Укажите желаемое количество студентов на практике
-                                +field({
-                                    classes: '',
-                                    type: 'radio',
-                                    title: '7',
-                                    placeholder: '',
-                                    inputAttr: {
-                                        'name': 'project-students-number',
-                                        'value': '7',
-                                    },
-                                    resetBtn: false,
-                                })
-                                +field({
-                                    classes: '',
-                                    type: 'radio',
-                                    title: '14',
-                                    placeholder: '',
-                                    inputAttr: {
-                                        'name': 'project-students-number',
-                                        'value': '14',
-                                    },
-                                    resetBtn: false,
-                                })
-                                +field({
-                                    classes: '',
-                                    type: 'radio',
-                                    title: '21',
-                                    placeholder: '',
-                                    inputAttr: {
-                                        'name': 'project-students-number',
-                                        'value': '21',
-                                    },
-                                    resetBtn: false,
-                                })
-                                +field({
-                                    classes: '',
-                                    type: 'radio',
-                                    title: '28',
-                                    placeholder: '',
-                                    inputAttr: {
-                                        'name': 'project-students-number',
-                                        'value': '28',
-                                    },
-                                    resetBtn: false,
-                                })
-                                +field({
-                                    classes: '',
-                                    type: 'radio',
-                                    title: '35',
-                                    placeholder: '',
-                                    inputAttr: {
-                                        'name': 'project-students-number',
-                                        'value': '35',
-                                    },
-                                    resetBtn: false,
-                                })
-
-                            .text-editor.form-text-editor
-                                p На слежующих страницах указаны специальности, распределённые по факультетам/институтам. Вам необходимо указать <b>желаемое</b> количество студентов каждой специальности. Обращаем Ваше внимание, что итоговое количество студентов каждой специальности может измениться по факту рассмотрения заявки администрацией Центра проектной деятельности.
-
-                        .form__btns
-                            +btn({
-                                classes: 'form-projects-modal__prev',
-                                type: 'button',
-                                buttonType: 'button',
-                                name: 'Назад',
-                                cMode: 'lightGreen',
-                            })(data-js="formPrevStep")
-                            +btn({
-                                classes: 'form-projects-modal__next',
-                                type: 'button',
-                                buttonType: 'button',
-                                name: 'Дальше',
-                                cMode: 'green',
-                            })(data-js="formNextStep")
-
-                    .form__step(data-js="formStep" data-name="contacts" data-id="5")
+                    .form__step(data-js="formStep" data-name="contacts" data-id="3")
                         .form__fields
                             .form__radios
                                 .form__radios-title Ваш статус
@@ -1136,6 +1038,58 @@ noindex
                                         'value': 'Обучающийся ХАУ',
                                     },
                                     resetBtn: false,
+                                })
+
+                            .form__block(data-js="formBlock" data-condition="ifIsStudent" style="display: flex;")
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Специальность',
+                                    selectOptions: [
+                                        "",
+                                        "Менеджмент",
+                                        "Прикладная математика и информатика",
+                                        "Картография и геоинформатика",
+                                    ],
+                                    selectGreen: true
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'text',
+                                    title: '',
+                                    placeholder: 'Группа',
+                                    inputAttr: {
+                                        'required': ''
+                                    },
+                                    resetBtn: false,
+                                    isRequired: true
+                                })
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Уровень образования',
+                                    selectOptions: [
+                                        "",
+                                        "Бакалавриат",
+                                        "Специалитет",
+                                        "Магистратура",
+                                    ],
+                                    selectGreen: true
+                                })
+
+                            .form__block(data-js="formBlock" data-condition="ifUndergraduate" style="display: flex;")
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Курс',
+                                    selectOptions: [
+                                        "",
+                                        "1 курс",
+                                        "2 курс",
+                                        "3 курс",
+                                        "4 курс",
+                                    ],
+                                    selectGreen: true
                                 })
 
                             +field({

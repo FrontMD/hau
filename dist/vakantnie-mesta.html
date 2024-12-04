@@ -1681,14 +1681,14 @@
                                     <label class="field    field--radio " data-js="formField"><span class="field__title">Есть партнер</span>
                                       <input class="field__input" type="radio" placeholder="" checked="" name="project-partner" value="Партнер" data-js="projectPartnerTab"><span class="fake-radio"></span>
                                     </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Есть звказчик</span>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Есть заказчик</span>
                                       <input class="field__input" type="radio" placeholder="" name="project-partner" value="Заказчик" data-js="projectPartnerTab"><span class="fake-radio"></span>
                                     </label>
                                     <label class="field    field--radio " data-js="formField"><span class="field__title">Нет, проект инициативный</span>
                                       <input class="field__input" type="radio" placeholder="" name="project-partner" value="Нет" data-js="projectPartnerTab"><span class="fake-radio"></span>
                                     </label>
                               </div>
-                              <div class="form__block" data-js="formBlock" data-condition="ifProjectHasPartner" style="display: flex;">
+                              <div class="form__block" data-js="formBlock" data-condition="ifProjectHasPartner">
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Кто является партнером/заказчиком" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
@@ -1709,6 +1709,9 @@
                             <div class="form__fields">
                                   <label class="field     " data-js="formField">
                                     <input class="field__input" type="text" placeholder="Название проекта" required=""><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="Предварительный бюджет проекта, руб." required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                   <label class="field     " data-js="textarea">
                                     <textarea class="field__textarea" rows="7" placeholder="Проблема, которую решает проект"></textarea>
@@ -1774,47 +1777,7 @@
                                   <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше</button>
                             </div>
                           </div>
-                          <div class="form__step" data-js="formStep" data-name="budget" data-id="3">
-                            <div class="form__fields">
-                                  <label class="field     " data-js="formField">
-                                    <input class="field__input" type="text" placeholder="Предварительный бюджет проекта, руб." required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
-                                  </label>
-                            </div>
-                            <div class="form__btns">
-                                  <button class="btn form-projects-modal__prev btn--lightGreen" type="button" data-js="formPrevStep">Назад</button>
-                                  <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше</button>
-                            </div>
-                          </div>
-                          <div class="form__step" data-js="formStep" data-name="studentsNumber" data-id="4">
-                            <div class="form__fields">
-                              <div class="form__radios">
-                                <div class="form__radios-title">Укажите желаемое количество студентов на практике</div>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">7</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-students-number" value="7"><span class="fake-radio"></span>
-                                    </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">14</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-students-number" value="14"><span class="fake-radio"></span>
-                                    </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">21</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-students-number" value="21"><span class="fake-radio"></span>
-                                    </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">28</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-students-number" value="28"><span class="fake-radio"></span>
-                                    </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">35</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-students-number" value="35"><span class="fake-radio"></span>
-                                    </label>
-                              </div>
-                              <div class="text-editor form-text-editor">
-                                <p>На слежующих страницах указаны специальности, распределённые по факультетам/институтам. Вам необходимо указать <b>желаемое</b> количество студентов каждой специальности. Обращаем Ваше внимание, что итоговое количество студентов каждой специальности может измениться по факту рассмотрения заявки администрацией Центра проектной деятельности.</p>
-                              </div>
-                            </div>
-                            <div class="form__btns">
-                                  <button class="btn form-projects-modal__prev btn--lightGreen" type="button" data-js="formPrevStep">Назад</button>
-                                  <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше</button>
-                            </div>
-                          </div>
-                          <div class="form__step" data-js="formStep" data-name="contacts" data-id="5">
+                          <div class="form__step" data-js="formStep" data-name="contacts" data-id="3">
                             <div class="form__fields">
                               <div class="form__radios">
                                 <div class="form__radios-title">Ваш статус</div>
@@ -1826,6 +1789,38 @@
                                     </label>
                                     <label class="field    field--radio " data-js="formField"><span class="field__title">Обучающийся ХАУ</span>
                                       <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Обучающийся ХАУ"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifIsStudent" style="display: flex;">
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Специальность" data-js="formSelect">
+                                        <option></option>
+                                        <option>Менеджмент</option>
+                                        <option>Прикладная математика и информатика</option>
+                                        <option>Картография и геоинформатика</option>
+                                      </select>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect">
+                                        <option></option>
+                                        <option>Бакалавриат</option>
+                                        <option>Специалитет</option>
+                                        <option>Магистратура</option>
+                                      </select>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifUndergraduate" style="display: flex;">
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Курс" data-js="formSelect">
+                                        <option></option>
+                                        <option>1 курс</option>
+                                        <option>2 курс</option>
+                                        <option>3 курс</option>
+                                        <option>4 курс</option>
+                                      </select>
                                     </label>
                               </div>
                                   <label class="field     " data-js="formField">

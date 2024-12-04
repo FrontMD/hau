@@ -55,6 +55,13 @@
         padding: 25px 20px;
     }
 
+    .field--checkbox,
+    .field--radio {
+        .field__title {
+            font-size: 16px;
+        }
+    }
+
     .field--greenSelect .select2 {
         padding: 20px;
     }
@@ -73,12 +80,6 @@
 
     .modal__inner {
         min-height: 80vh;
-    }
-
-    &__agreement {
-        .field__title {
-            font-size: 16px;
-        }
     }
 
     &__next {
