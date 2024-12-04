@@ -70,6 +70,7 @@
 
     &__step {
         display: none;
+        padding-top: 20px;
 
         .text-editor * {
             color: rgba(255, 255, 255, 0.5);
@@ -142,6 +143,16 @@
         a:hover {
             color: $c-accent-light;
         }
+    }
+
+    &__btns {
+        display: flex;
+
+        .btn {
+            width: fit-content;
+            min-width: 200px;
+        }
+
     }
 
     &__note {

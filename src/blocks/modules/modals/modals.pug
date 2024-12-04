@@ -700,49 +700,510 @@ noindex
                         placeholder: 'Ожидания от секции',
                     })
 
-        +modal({modalId:"projectsModal", classes:"form-modal"})(data-js="projectsModal")
-            form.form(action="#" data-validate novalidate data-js="projectsModalForm")
+        +modal({modalId:"projectsModal", classes:"form-modal form-projects-modal"})(data-js="projectsModal")
+            form.form(action="#" data-validate novalidate data-js="projectsForm")
                 .form__content(data-js='form-content')
                     .h2.form__title Предложить проект
-                    .form__step.active
-                        .text-editor.form-text-editor
-                            p
-                                b Данная форма предназначена для сбора проектных инициатив для реализации проектов в рамках дисциплины "Проектная деятельность" в 2024-2025 учебном году.
-
-                            p 
-                                b Термины и определения:
-
-                            p <b>Проект</b> – комплекс взаимосвязанных мероприятий, направленный на создание уникального продукта и/или услуги в условиях временных и ресурсных ограничений.
-
-                            p <b>Проектная команда</b> – группа обучающихся, объединенных для реализации проекта.
-
-                            p <b>Заказчик</b> – лицо, инициирующее проект, заинтересованное в осуществлении проекта и достижении его целей, осуществляющее контроль его реализации и принимающее результаты после его окончания.
-
-                            p <b>Партнер</b> – это лицо либо организация оказывающее содействие в реализации проекта.
-
-                            p <b>Инициативные проекты</b> – персональные проекты обучающихся, сотрудников Университета или внешних инициаторов, направленные на создание новых продуктов, имеющих предпринимательский потенциал и претендующие на коммерциализацию результатов.
-                            p Перед подачей заявки необходимо ознакомиться с Регламентом: <a href="">ссылка</a>
-
-                            p 
-                                b Я ознакомлен и согласен *
-
-                            p В соответствии с пунктом 2.7 Регламента, администрация ЦПД оставляет за собой право отклонить заявку при несоответствии требований, к проектам и реализации
-                    .form__step
+                    .form__step.active(data-js="formStep" data-name="desc" data-id="0")
                         .form__fields
+                            .text-editor.form-text-editor
+                                p
+                                    b Данная форма предназначена для сбора проектных инициатив для реализации проектов в рамках дисциплины "Проектная деятельность" в 2024-2025 учебном году.
 
-                        +btn({
-                            classes: 'form__submit',
-                            type: 'button',
-                            buttonType: 'submit',
-                            name: 'Предложить проект',
-                            cMode: 'green',
-                        })
+                                p 
+                                    b Термины и определения:
+
+                                p <b>Проект</b> – комплекс взаимосвязанных мероприятий, направленный на создание уникального продукта и/или услуги в условиях временных и ресурсных ограничений.
+
+                                p <b>Проектная команда</b> – группа обучающихся, объединенных для реализации проекта.
+
+                                p <b>Заказчик</b> – лицо, инициирующее проект, заинтересованное в осуществлении проекта и достижении его целей, осуществляющее контроль его реализации и принимающее результаты после его окончания.
+
+                                p <b>Партнер</b> – это лицо либо организация оказывающее содействие в реализации проекта.
+
+                                p <b>Инициативные проекты</b> – персональные проекты обучающихся, сотрудников Университета или внешних инициаторов, направленные на создание новых продуктов, имеющих предпринимательский потенциал и претендующие на коммерциализацию результатов.
+                                p Перед подачей заявки необходимо ознакомиться с Регламентом: <a href="">ссылка</a>
+
+                            +field({
+                                classes: 'form-projects-modal__agreement',
+                                type: 'checkbox',
+                                title: 'Я ознакомлен и согласен *',
+                                placeholder: '',
+                                inputAttr: {
+                                    'required': '',
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })(data-js='formProjectsModalAgreement')
+
+                            .text-editor.form-text-editor
+                                p В соответствии с пунктом 2.7 Регламента, администрация ЦПД оставляет за собой право отклонить заявку при несоответствии требований, к проектам и реализации
+
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Дальше',
+                                cMode: 'green',
+                            })(data-js="formNextStep")
+
+                    .form__step(data-js="formStep" data-name="partner" data-id="1")
+                        .form__fields
+                            .form__radios
+                                .form__radios-title Есть ли у проекта партнер/заказчик?
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Есть партнер',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'checked': '',
+                                        'name': 'project-partner',
+                                        'value': 'Партнер',
+                                        'data-js': 'projectPartnerTab'
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Есть звказчик',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-partner',
+                                        'value': 'Заказчик',
+                                        'data-js': 'projectPartnerTab'
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Нет, проект инициативный',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-partner',
+                                        'value': 'Нет',
+                                        'data-js': 'projectPartnerTab'
+                                    },
+                                    resetBtn: false,
+                                })
+
+                            .form__block(data-js="formBlock" data-condition="ifProjectHasPartner" style="display: flex;")
+                                +field({
+                                    classes: '',
+                                    type: 'text',
+                                    title: '',
+                                    placeholder: 'Кто является партнером/заказчиком',
+                                    inputAttr: {
+                                        'required': ''
+                                    },
+                                    resetBtn: false,
+                                    isRequired: true
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'text',
+                                    title: '',
+                                    placeholder: 'ФИО представителя партнера/заказчика',
+                                    inputAttr: {
+                                        'required': ''
+                                    },
+                                    resetBtn: false,
+                                    isRequired: true
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'tel',
+                                    title: '',
+                                    placeholder: 'Телефон представителя',
+                                    inputAttr: {
+                                        'data-type': 'phoneNumber',
+                                        'required': '',
+                                        'data-v-name': 'phone'
+                                    },
+                                    resetBtn: false,
+                                    isRequired: true
+                                })
+
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__prev',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Назад',
+                                cMode: 'lightGreen',
+                            })(data-js="formPrevStep")
+                            +btn({
+                                classes: 'form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Дальше',
+                                cMode: 'green',
+                            })(data-js="formNextStep")
+
+                    .form__step(data-js="formStep" data-name="project" data-id="2")
+                        .form__fields
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Название проекта',
+                                inputAttr: {
+                                    'required': ''
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'textarea',
+                                title: '',
+                                placeholder: 'Проблема, которую решает проект',
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'textarea',
+                                title: '',
+                                placeholder: 'Цель проекта',
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'textarea',
+                                title: '',
+                                placeholder: 'Актуальность проекта',
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'textarea',
+                                title: '',
+                                placeholder: 'Ключевые задачи проекта',
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'textarea',
+                                title: '',
+                                placeholder: 'Ожидаемый продуктовый результат',
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Направление проекта',
+                                selectOptions: [
+                                    "",
+                                    "Вариант 1",
+                                    "Вариант 2",
+                                    "Вариант 3",
+                                ],
+                                selectGreen: true
+                            })
+
+                            +field-file({
+                                placeholder: 'Дополнительные материалы к заявке',
+                                inputAttr: {
+                                    'data-v-name': 'file',
+                                    'data-size': '10485760',
+                                    'accept': 'image/*, text/plain, .docx, .pdf'
+                                },
+                            })
+
+                            .form__radios
+                                .form__radios-title Срок реализации проекта
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '1 учебный год',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'checked': '',
+                                        'name': 'project-term',
+                                        'value': '1 учебный год',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '1 учебный год с продолжением',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-term',
+                                        'value': '1 учебный год с продолжением',
+                                    },
+                                    resetBtn: false,
+                                })
+
+                            .form__radios
+                                .form__radios-title Проект уже реализуется в рамках проектной деятельности?
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Да',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-in-progress',
+                                        'value': 'Да',
+                                        'data-js': 'projectProgressTab'
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Нет',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'checked': '',
+                                        'name': 'project-in-progress',
+                                        'value': 'Нет',
+                                        'data-js': 'projectProgressTab'
+                                    },
+                                    resetBtn: false,
+                                })
+
+                            .form__block(data-js="formBlock" data-condition="ifProjectInProgress" style="display: flex;")
+                                .text-editor.form-text-editor
+                                    p 
+                                        b Введите в поле ниже не более 5 студентов с указанием группы для закрепления их за проектом
+                                +field({
+                                    classes: '',
+                                    tag: 'textarea',
+                                    title: '',
+                                    placeholder: 'Список студентов',
+                                })
+
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__prev',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Назад',
+                                cMode: 'lightGreen',
+                            })(data-js="formPrevStep")
+                            +btn({
+                                classes: 'form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Дальше',
+                                cMode: 'green',
+                            })(data-js="formNextStep")
+
+                    .form__step(data-js="formStep" data-name="budget" data-id="3")
+                        .form__fields
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Предварительный бюджет проекта, руб.',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'number'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__prev',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Назад',
+                                cMode: 'lightGreen',
+                            })(data-js="formPrevStep")
+                            +btn({
+                                classes: 'form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Дальше',
+                                cMode: 'green',
+                            })(data-js="formNextStep")
+
+                    .form__step(data-js="formStep" data-name="studentsNumber" data-id="4")
+                        .form__fields
+                            .form__radios
+                                .form__radios-title Укажите желаемое количество студентов на практике
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '7',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-students-number',
+                                        'value': '7',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '14',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-students-number',
+                                        'value': '14',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '21',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-students-number',
+                                        'value': '21',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '28',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-students-number',
+                                        'value': '28',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: '35',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-students-number',
+                                        'value': '35',
+                                    },
+                                    resetBtn: false,
+                                })
+
+                            .text-editor.form-text-editor
+                                p На слежующих страницах указаны специальности, распределённые по факультетам/институтам. Вам необходимо указать <b>желаемое</b> количество студентов каждой специальности. Обращаем Ваше внимание, что итоговое количество студентов каждой специальности может измениться по факту рассмотрения заявки администрацией Центра проектной деятельности.
+
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__prev',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Назад',
+                                cMode: 'lightGreen',
+                            })(data-js="formPrevStep")
+                            +btn({
+                                classes: 'form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Дальше',
+                                cMode: 'green',
+                            })(data-js="formNextStep")
+
+                    .form__step(data-js="formStep" data-name="contacts" data-id="5")
+                        .form__fields
+                            .form__radios
+                                .form__radios-title Ваш статус
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Сотрудник внешней организации',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'checked': '',
+                                        'name': 'project-proposer-status',
+                                        'value': 'Сотрудник внешней организации',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Сотрудник ХАУ',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-proposer-status',
+                                        'value': 'Сотрудник ХАУ',
+                                    },
+                                    resetBtn: false,
+                                })
+                                +field({
+                                    classes: '',
+                                    type: 'radio',
+                                    title: 'Обучающийся ХАУ',
+                                    placeholder: '',
+                                    inputAttr: {
+                                        'name': 'project-proposer-status',
+                                        'value': 'Обучающийся ХАУ',
+                                    },
+                                    resetBtn: false,
+                                })
+
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'ФИО',
+                                inputAttr: {
+                                    'required': ''
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'email',
+                                title: '',
+                                placeholder: 'Email',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'email'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'tel',
+                                title: '',
+                                placeholder: '+7 (___) ___-__-__',
+                                inputAttr: {
+                                    'data-type': 'phoneNumber',
+                                    'required': '',
+                                    'data-v-name': 'phone'
+                                },
+                                resetBtn: false,
+                                isRequired: true
+                            })
+
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                title: '',
+                                placeholder: 'Откуда вы узнали о проектной деятельности в ХАУ?',
+                                resetBtn: false,
+                            })
+
                         .form__privacy.form-privacy(data-js="formField")
                             label
                                 input(type="checkbox" data-v-name='checkbox' required)
                                 span.form-privacy__fake
                             span.form-privacy__text Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>
                             span.field__error(data-js='fieldError')
+                        .form__btns
+                            +btn({
+                                classes: 'form-projects-modal__prev',
+                                type: 'button',
+                                buttonType: 'button',
+                                name: 'Назад',
+                                cMode: 'lightGreen',
+                            })(data-js="formPrevStep")
+                            +btn({
+                                classes: 'form__submit form-projects-modal__next',
+                                type: 'button',
+                                buttonType: 'submit',
+                                name: 'Отправить на рассмотрение',
+                                cMode: 'green',
+                            })
 
                 .form__thanks(data-js='form-thanks')
                     .form__image-success

@@ -66,4 +66,27 @@
     }
 }
 
-.question-modal {}
+.form-projects-modal {
+    .modal__content {
+        width: 800px;
+    }
+
+    .modal__inner {
+        min-height: 80vh;
+    }
+
+    &__agreement {
+        .field__title {
+            font-size: 16px;
+        }
+    }
+
+    &__next {
+        margin-left: auto;
+        padding: 20px;
+    }
+
+    &__prev {
+        padding: 20px;
+    }
+}

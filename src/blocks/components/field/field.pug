@@ -42,6 +42,7 @@ mixin field(props = defaultFieldProps)
                 span.fake-radio
             - else if(checkProps.type === 'checkbox')
                 span.fake-checkbox
+                span.field__error(data-js='fieldError') Нужно обязательно ознакомиться и согласиться
             - else
                 - if(checkProps.resetBtn)
                     span.field__reset(data-js='fieldResetBtn')
