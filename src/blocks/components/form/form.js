@@ -206,7 +206,8 @@ function inputMasksInit(form) {
 
     const phones = form.querySelectorAll('input[data-type="phoneNumber"]');
     const dates = form.querySelectorAll('input[data-type="date"]');
-    const numbers = form.querySelectorAll('input[data-type="number"]')
+    const numbers = form.querySelectorAll('input[data-type="number"]');
+    const letters = form.querySelectorAll('input[data-type="letters"]');
 
     if(phones.length > 0) {
         phones.forEach(phone => {
@@ -241,6 +242,16 @@ function inputMasksInit(form) {
         numbers.forEach(number => {
             number.addEventListener('input', function(e){
                 let val = e.target.value.replace(/\D/g, "");
+                this.value = val;
+            })
+        })
+    }
+
+    if(letters.length > 0) {
+        letters.forEach(letter => {
+            letter.addEventListener('input', function(e){
+                
+                let val = e.target.value.replace(/[^А-Яа-яA-Za-z\s-]/g, "");
                 this.value = val;
             })
         })

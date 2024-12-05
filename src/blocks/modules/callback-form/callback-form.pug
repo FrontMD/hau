@@ -32,7 +32,10 @@ mixin callback-form(props = defaultCallbackFormProps)
                             type: 'text',
                             title: '',
                             placeholder: 'ФИО',
-                            resetBtn: false
+                            resetBtn: false,
+                            inputAttr: {
+                                'data-v-name': 'letters'
+                            },
                         })
                         +field({
                             classes: '',
