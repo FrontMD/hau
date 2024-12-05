@@ -1,10 +1,20 @@
 .quest-form {
+    scroll-margin-top: 94px;
     background-color: $c-accent;
     padding-top: 5px;
     padding-bottom: 45px;
 
+    @include max(laptop) {
+        scroll-margin-top: 81px;
+    }
+
+    @include max(tablet) {
+        scroll-margin-top: 71px;
+    }
+
     @include max(mobile) {
         padding-bottom: 35px;
+        scroll-margin-top: 63px;
     }
 
     &__content {

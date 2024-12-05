@@ -36,7 +36,8 @@ block content
                     +btn({
                         name: 'Оставить заявку',
                         type: 'link',
-                        cMode: 'darkGreen'
+                        cMode: 'darkGreen',
+                        link: '#questionareForm'
                     })
 
                 br
@@ -527,4 +528,4 @@ block content
                     })
             +quest-form({
                 title: '<span>Анкета-заявка</span> на&nbsp;курсы дополнительного профессионального образования'
-            })
+            })(id="questionareForm")

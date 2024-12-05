@@ -400,7 +400,6 @@ function customFormScripts() {
 
     if(projectsForms.length > 0) {
         projectsForms.forEach(projectsForm => {
-            const stepsList = projectsForm.querySelectorAll('[data-js="formStep"]')
             const prevBtns = projectsForm.querySelectorAll('[data-js="formPrevStep"]')
             const nextBtns = projectsForm.querySelectorAll('[data-js="formNextStep"]')
 
@@ -418,6 +417,22 @@ function customFormScripts() {
 
             projectProgressTabs.forEach(projectProgressTab => {
                 projectProgressTab.addEventListener('change', function() {
+                    showHideProjectsBlocks(projectsForm)
+                })
+            })
+
+            const porposeStatusTabs = projectsForm.querySelectorAll('[data-js="porposeStatusTab"]')
+
+            porposeStatusTabs.forEach(porposeStatusTab => {
+                porposeStatusTab.addEventListener('change', function() {
+                    showHideProjectsBlocks(projectsForm)
+                })
+            })
+
+            const courseTabs = projectsForm.querySelectorAll('[data-tab="courseTab"]')
+
+            courseTabs.forEach(courseTab => {
+                $(courseTab).on('change', function() {
                     showHideProjectsBlocks(projectsForm)
                 })
             })
@@ -582,13 +597,34 @@ function customFormScripts() {
 
             let projectStatusValue = currentForm.querySelector('input[name="project-proposer-status"]:checked').value
 
-            if(projectStatusValue === 'Обучающийся ХАУ') {
+            if(projectStatusValue === 'Обучающийся университета') {
                 let targetBlock = currentForm.querySelector('[data-condition="ifIsStudent"]')
                 targetBlock.style.display = 'flex'
                 targetBlock.querySelectorAll('input').forEach(cInput => {
                     cInput.setAttribute('required', '')
                 })
                 targetBlock.querySelectorAll('select').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+
+                let courseTabValue = currentForm.querySelector('[data-tab="courseTab"]').value
+
+                if(courseTabValue === "Бакалавриат") {
+                    let targetBlock = currentForm.querySelector('[data-condition="ifUndergraduate"]')
+                    targetBlock.style.display = 'flex'
+                    targetBlock.querySelectorAll('select').forEach(cInput => {
+                        cInput.setAttribute('required', '')
+                    })
+                } else {
+                    let targetBlock = currentForm.querySelector('[data-condition="ifUndergraduate"]')
+                    targetBlock.querySelectorAll('select').forEach(cInput => {
+                        cInput.removeAttribute('required')
+                    })
+                }
+            } else if(projectStatusValue === 'Сотрудник университета') {
+                let targetBlock = currentForm.querySelector('[data-condition="ifIsEmployee"]')
+                targetBlock.style.display = 'flex'
+                targetBlock.querySelectorAll('input').forEach(cInput => {
                     cInput.setAttribute('required', '')
                 })
             }

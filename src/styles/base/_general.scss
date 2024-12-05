@@ -121,6 +121,10 @@ body.no-scroll {
 	flex-grow: 1;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	height: 100%;
@@ -129,7 +133,6 @@ body {
 .m-container {
 	box-sizing: border-box;
 	width: 100%;
-	//max-width: 1820px;
 	margin: 0 auto;
 	padding: 0 28px;
 

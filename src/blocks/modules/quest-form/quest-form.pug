@@ -15,7 +15,7 @@ mixin quest-form(props = defaultQuestFormProps)
             type: props.type ? props.type : defaultQuestFormProps.type
         }
 
-    section.quest-form
+    section.quest-form()&attributes(attributes)
         .m-container
             .quest-form__content 
                 .quest-form__left

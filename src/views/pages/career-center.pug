@@ -40,7 +40,8 @@ block content
                             <br> по почте: <a href="#"><b>crpk@khay.ru</b></a>
                         +btn({
                             name: "Записаться на консультацию",
-                            cMode: "darkGreen"
+                            cMode: "darkGreen",
+                            link: '#consultForm'
                         })
 
             +s-vacancy({
@@ -177,7 +178,7 @@ block content
                 title: '<span>Записаться на&nbsp;консультацию</span> по&nbsp;вопросам карьеры',
                 formText: '',
                 type: 'сareer'
-            })
+            })(id="consultForm")
 
 
 

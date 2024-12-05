@@ -1056,30 +1056,46 @@ noindex
                                         'checked': '',
                                         'name': 'project-proposer-status',
                                         'value': 'Сотрудник внешней организации',
+                                        'data-js': 'porposeStatusTab'
                                     },
                                     resetBtn: false,
                                 })
                                 +field({
                                     classes: '',
                                     type: 'radio',
-                                    title: 'Сотрудник ХАУ',
+                                    title: 'Сотрудник университета',
                                     placeholder: '',
                                     inputAttr: {
                                         'name': 'project-proposer-status',
-                                        'value': 'Сотрудник ХАУ',
+                                        'value': 'Сотрудник университета',
+                                        'data-js': 'porposeStatusTab'
                                     },
                                     resetBtn: false,
                                 })
                                 +field({
                                     classes: '',
                                     type: 'radio',
-                                    title: 'Обучающийся ХАУ',
+                                    title: 'Обучающийся университета',
                                     placeholder: '',
                                     inputAttr: {
                                         'name': 'project-proposer-status',
-                                        'value': 'Обучающийся ХАУ',
+                                        'value': 'Обучающийся университета',
+                                        'data-js': 'porposeStatusTab'
                                     },
                                     resetBtn: false,
+                                })
+
+                            .form__block(data-js="formBlock" data-condition="ifIsEmployee")
+                                +field({
+                                    classes: '',
+                                    type: 'text',
+                                    title: '',
+                                    placeholder: 'Должность',
+                                    inputAttr: {
+                                        'required': ''
+                                    },
+                                    resetBtn: false,
+                                    isRequired: true
                                 })
 
                             .form__block(data-js="formBlock" data-condition="ifIsStudent")
@@ -1120,12 +1136,13 @@ noindex
                                         "Магистратура",
                                     ],
                                     inputAttr: {
-                                        'required': ''
+                                        'required': '',
+                                        'data-tab': "courseTab"
                                     },
                                     selectGreen: true
                                 })
 
-                            .form__block(data-js="formBlock" data-condition="ifUndergraduate" style="display: flex;")
+                            .form__block(data-js="formBlock" data-condition="ifUndergraduate")
                                 +field({
                                     classes: '',
                                     tag: 'select',

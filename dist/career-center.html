@@ -605,7 +605,7 @@
                       <p>Рассказываем про вакансии и стажировки</p>
                       <p>  <b>Записаться на консультацию</b><br> по телефону: <a href="#"><b>+7 (990) 059 50 39</b></a>
 <br> по почте: <a href="#"><b>crpk@khay.ru</b></a>
-                      </p><a class="btn  btn--darkGreen" href="#">Записаться на консультацию</a>
+                      </p><a class="btn  btn--darkGreen" href="#consultForm">Записаться на консультацию</a>
                     </div>
                   </div>
             </div>
@@ -938,7 +938,7 @@
                   </div>
             </div>
           </section>
-              <section class="quest-form">
+              <section class="quest-form" id="consultForm">
                 <div class="m-container">
                   <div class="quest-form__content"> 
                     <div class="quest-form__left">
@@ -958,13 +958,13 @@
                                     <label class="field   field--greenSelect  " data-js="formField">
                                       <select class="field__select" placeholder="На каком направлении обучаетесь?" data-js="formSelect" required="">
                                         <option></option>
-                                        <option>Информатика</option>
-                                        <option>Математика</option>
-                                        <option>Физика</option>
-                                        <option>Русский язык</option>
-                                        <option>Обществознание</option>
-                                        <option>Биология</option>
-                                        <option>Химия</option>
+                                        <option value="Информатика">Информатика</option>
+                                        <option value="Математика">Математика</option>
+                                        <option value="Физика">Физика</option>
+                                        <option value="Русский язык">Русский язык</option>
+                                        <option value="Обществознание">Обществознание</option>
+                                        <option value="Биология">Биология</option>
+                                        <option value="Химия">Химия</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
@@ -975,8 +975,8 @@
                                     <label class="field   field--greenSelect  " data-js="formField">
                                       <select class="field__select" placeholder="Кем планируете стать?" data-js="formSelect" required="">
                                         <option></option>
-                                        <option>Менеджер</option>
-                                        <option>Логист</option>
+                                        <option value="Менеджер">Менеджер</option>
+                                        <option value="Логист">Логист</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
@@ -987,13 +987,13 @@
                                     <label class="field   field--greenSelect  " data-js="formField">
                                       <select class="field__select" placeholder="Курс" data-js="formSelect" required="">
                                         <option></option>
-                                        <option>Информатика</option>
-                                        <option>Математика</option>
-                                        <option>Физика</option>
-                                        <option>Русский язык</option>
-                                        <option>Обществознание</option>
-                                        <option>Биология</option>
-                                        <option>Химия</option>
+                                        <option value="Информатика">Информатика</option>
+                                        <option value="Математика">Математика</option>
+                                        <option value="Физика">Физика</option>
+                                        <option value="Русский язык">Русский язык</option>
+                                        <option value="Обществознание">Обществознание</option>
+                                        <option value="Биология">Биология</option>
+                                        <option value="Химия">Химия</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
@@ -1573,8 +1573,8 @@
                                       <label class="field   field--greenSelect  " data-js="formField">
                                         <select class="field__select" placeholder="Формат участия" data-js="formSelect" required="">
                                           <option></option>
-                                          <option>Очно</option>
-                                          <option>Онлайн</option>
+                                          <option value="Очно">Очно</option>
+                                          <option value="Онлайн">Онлайн</option>
                                         </select><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
@@ -1693,7 +1693,7 @@
                                         <label class="field   field--greenSelect  " data-js="formField">
                                           <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
                                             <option></option>
-                                            <option>Паспорт гражданина РФ</option>
+                                            <option value="Паспорт гражданина РФ">Паспорт гражданина РФ</option>
                                           </select><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
@@ -1701,7 +1701,7 @@
                                         <label class="field   field--greenSelect  " data-js="formField">
                                           <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
                                             <option></option>
-                                            <option>Иностранный паспорт</option>
+                                            <option value="Иностранный паспорт">Иностранный паспорт</option>
                                           </select><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
@@ -1803,9 +1803,9 @@
                                       <label class="field   field--greenSelect  " data-js="formField">
                                         <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
                                           <option></option>
-                                          <option>Менеджмент</option>
-                                          <option>Прикладная математика и информатика</option>
-                                          <option>Картография и геоинформатика</option>
+                                          <option value="Менеджмент">Менеджмент</option>
+                                          <option value="Прикладная математика и информатика">Прикладная математика и информатика</option>
+                                          <option value="Картография и геоинформатика">Картография и геоинформатика</option>
                                         </select><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
@@ -1934,9 +1934,9 @@
                                   <label class="field   field--greenSelect  " data-js="formField">
                                     <select class="field__select" placeholder="Направление проекта" data-js="formSelect" required="">
                                       <option></option>
-                                      <option>Вариант 1</option>
-                                      <option>Вариант 2</option>
-                                      <option>Вариант 3</option>
+                                      <option value="Вариант 1">Вариант 1</option>
+                                      <option value="Вариант 2">Вариант 2</option>
+                                      <option value="Вариант 3">Вариант 3</option>
                                     </select><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                   <label class="field-file" data-js="formField" data-placeholder="Дополнительные материалы к заявке"><span class="field-file__fakeinput"><span data-js="fileName">Дополнительные материалы к заявке</span><span class="icon-empty">
@@ -1985,44 +1985,49 @@
                               <div class="form__radios">
                                 <div class="form__radios-title">Ваш статус</div>
                                     <label class="field    field--radio " data-js="formField"><span class="field__title">Сотрудник внешней организации</span>
-                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-proposer-status" value="Сотрудник внешней организации"><span class="fake-radio"></span>
+                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-proposer-status" value="Сотрудник внешней организации" data-js="porposeStatusTab"><span class="fake-radio"></span>
                                     </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Сотрудник ХАУ</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Сотрудник ХАУ"><span class="fake-radio"></span>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Сотрудник университета</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Сотрудник университета" data-js="porposeStatusTab"><span class="fake-radio"></span>
                                     </label>
-                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Обучающийся ХАУ</span>
-                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Обучающийся ХАУ"><span class="fake-radio"></span>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Обучающийся университета</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Обучающийся университета" data-js="porposeStatusTab"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifIsEmployee">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Должность" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                               <div class="form__block" data-js="formBlock" data-condition="ifIsStudent">
                                     <label class="field   field--greenSelect  " data-js="formField">
                                       <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
                                         <option></option>
-                                        <option>Менеджмент</option>
-                                        <option>Прикладная математика и информатика</option>
-                                        <option>Картография и геоинформатика</option>
+                                        <option value="Менеджмент">Менеджмент</option>
+                                        <option value="Прикладная математика и информатика">Прикладная математика и информатика</option>
+                                        <option value="Картография и геоинформатика">Картография и геоинформатика</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field   field--greenSelect  " data-js="formField">
-                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect" required="">
+                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect" required="" data-tab="courseTab">
                                         <option></option>
-                                        <option>Бакалавриат</option>
-                                        <option>Специалитет</option>
-                                        <option>Магистратура</option>
+                                        <option value="Бакалавриат">Бакалавриат</option>
+                                        <option value="Специалитет">Специалитет</option>
+                                        <option value="Магистратура">Магистратура</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
-                              <div class="form__block" data-js="formBlock" data-condition="ifUndergraduate" style="display: flex;">
+                              <div class="form__block" data-js="formBlock" data-condition="ifUndergraduate">
                                     <label class="field   field--greenSelect  " data-js="formField">
                                       <select class="field__select" placeholder="Курс" data-js="formSelect" required="">
                                         <option></option>
-                                        <option>1 курс</option>
-                                        <option>2 курс</option>
-                                        <option>3 курс</option>
-                                        <option>4 курс</option>
+                                        <option value="1 курс">1 курс</option>
+                                        <option value="2 курс">2 курс</option>
+                                        <option value="3 курс">3 курс</option>
+                                        <option value="4 курс">4 курс</option>
                                       </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
