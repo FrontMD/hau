@@ -1124,8 +1124,8 @@
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Текст вопроса"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текст вопроса" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                                   <button class="btn form__submit btn--green" type="submit">Задать вопрос</button>
@@ -1173,8 +1173,8 @@
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field-file" data-js="formField" data-placeholder="Прикрепить резюме"><span class="field-file__fakeinput"><span data-js="fileName">Прикрепить резюме</span><span class="icon-empty">
                                           <svg>
@@ -1241,15 +1241,15 @@
                                         <input class="field__input" type="text" placeholder="Дата" required="" data-v-name="date" data-type="date" data-js="saminarDate"><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                       <label class="field   field--greenSelect  " data-js="formField">
-                                        <select class="field__select" placeholder="Формат участия" data-js="formSelect">
+                                        <select class="field__select" placeholder="Формат участия" data-js="formSelect" required="">
                                           <option></option>
                                           <option>Очно</option>
                                           <option>Онлайн</option>
-                                        </select>
+                                        </select><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Список участников"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Список участников" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Название компании / учреждения" required=""><span class="field__error" data-js="fieldError"></span>
@@ -1294,8 +1294,8 @@
                                         <input class="field__input" type="text" placeholder="Наименование банка" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                                   <button class="btn form__submit btn--green" type="submit">Отправить запрос</button>
@@ -1361,18 +1361,18 @@
                                 <div class="form__block" data-js="formBlock" data-condition="ifLevelYes">
                                   <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipYes">
                                         <label class="field   field--greenSelect  " data-js="formField">
-                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
                                             <option></option>
                                             <option>Паспорт гражданина РФ</option>
-                                          </select>
+                                          </select><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
                                   <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipNo">
                                         <label class="field   field--greenSelect  " data-js="formField">
-                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
                                             <option></option>
                                             <option>Иностранный паспорт</option>
-                                          </select>
+                                          </select><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
                                   <div class="form__flex">
@@ -1388,7 +1388,7 @@
                                       </label>
                                   <div class="form__block" data-js="formBlock" data-condition="ifSnils">
                                         <label class="field     " data-js="formField">
-                                          <input class="field__input" type="text" placeholder="СНИЛС"><span class="field__error" data-js="fieldError"></span>
+                                          <input class="field__input" type="text" placeholder="СНИЛС" required=""><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
                                   <div class="form__note text-editor">
@@ -1471,22 +1471,22 @@
                                         <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                       <label class="field   field--greenSelect  " data-js="formField">
-                                        <select class="field__select" placeholder="Специальность" data-js="formSelect">
+                                        <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
                                           <option></option>
                                           <option>Менеджмент</option>
                                           <option>Прикладная математика и информатика</option>
                                           <option>Картография и геоинформатика</option>
-                                        </select>
+                                        </select><span class="field__error" data-js="fieldError"></span>
                                       </label>
                                 </div>
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="название секции/кружка" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Текущие навыки"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текущие навыки"></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Ожидания от секции"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Ожидания от секции"></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                                   <button class="btn form__submit btn--green" type="submit">Оставить заявку</button>
@@ -1537,7 +1537,7 @@
                                 <p>Перед подачей заявки необходимо ознакомиться с Регламентом: <a href="">ссылка</a></p>
                               </div>
                                   <label class="field form-projects-modal__agreement    field--checkbox" data-js="formProjectsModalAgreement"><span class="field__title">Я ознакомлен и согласен *<span>*</span></span>
-                                    <input class="field__input" type="checkbox" placeholder="" required=""><span class="fake-checkbox"></span><span class="field__error" data-js="fieldError">Нужно обязательно ознакомиться и согласиться</span>
+                                    <input class="field__input" type="checkbox" placeholder="" required="" value="Да"><span class="fake-checkbox"></span><span class="field__error" data-js="fieldError">Нужно обязательно ознакомиться и согласиться</span>
                                   </label>
                               <div class="text-editor form-text-editor">
                                 <p>В соответствии с пунктом 2.7 Регламента, администрация ЦПД оставляет за собой право отклонить заявку при несоответствии требований, к проектам и реализации</p>
@@ -1586,28 +1586,28 @@
                                   <label class="field     " data-js="formField">
                                     <input class="field__input" type="text" placeholder="Предварительный бюджет проекта, руб." required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field     " data-js="textarea">
-                                    <textarea class="field__textarea" rows="7" placeholder="Проблема, которую решает проект"></textarea>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Проблема, которую решает проект" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field     " data-js="textarea">
-                                    <textarea class="field__textarea" rows="7" placeholder="Цель проекта"></textarea>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Цель проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field     " data-js="textarea">
-                                    <textarea class="field__textarea" rows="7" placeholder="Актуальность проекта"></textarea>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Актуальность проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field     " data-js="textarea">
-                                    <textarea class="field__textarea" rows="7" placeholder="Ключевые задачи проекта"></textarea>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Ключевые задачи проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
-                                  <label class="field     " data-js="textarea">
-                                    <textarea class="field__textarea" rows="7" placeholder="Ожидаемый продуктовый результат"></textarea>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Ожидаемый продуктовый результат" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                   <label class="field   field--greenSelect  " data-js="formField">
-                                    <select class="field__select" placeholder="Направление проекта" data-js="formSelect">
+                                    <select class="field__select" placeholder="Направление проекта" data-js="formSelect" required="">
                                       <option></option>
                                       <option>Вариант 1</option>
                                       <option>Вариант 2</option>
                                       <option>Вариант 3</option>
-                                    </select>
+                                    </select><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                   <label class="field-file" data-js="formField" data-placeholder="Дополнительные материалы к заявке"><span class="field-file__fakeinput"><span data-js="fileName">Дополнительные материалы к заявке</span><span class="icon-empty">
                                         <svg>
@@ -1616,7 +1616,7 @@
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#close"></use>
                                         </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
-                                    <input class="field-file__input" type="file" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                    <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
                                   </label>
                               <div class="form__radios">
                                 <div class="form__radios-title">Срок реализации проекта</div>
@@ -1640,8 +1640,8 @@
                                 <div class="text-editor form-text-editor">
                                   <p> <b>Введите в поле ниже не более 5 студентов с указанием группы для закрепления их за проектом</b></p>
                                 </div>
-                                    <label class="field     " data-js="textarea">
-                                      <textarea class="field__textarea" rows="7" placeholder="Список студентов"></textarea>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Список студентов" required=""></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                             </div>
@@ -1664,36 +1664,36 @@
                                       <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Обучающийся ХАУ"><span class="fake-radio"></span>
                                     </label>
                               </div>
-                              <div class="form__block" data-js="formBlock" data-condition="ifIsStudent" style="display: flex;">
+                              <div class="form__block" data-js="formBlock" data-condition="ifIsStudent">
                                     <label class="field   field--greenSelect  " data-js="formField">
-                                      <select class="field__select" placeholder="Специальность" data-js="formSelect">
+                                      <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
                                         <option></option>
                                         <option>Менеджмент</option>
                                         <option>Прикладная математика и информатика</option>
                                         <option>Картография и геоинформатика</option>
-                                      </select>
+                                      </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field   field--greenSelect  " data-js="formField">
-                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect">
+                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect" required="">
                                         <option></option>
                                         <option>Бакалавриат</option>
                                         <option>Специалитет</option>
                                         <option>Магистратура</option>
-                                      </select>
+                                      </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                               <div class="form__block" data-js="formBlock" data-condition="ifUndergraduate" style="display: flex;">
                                     <label class="field   field--greenSelect  " data-js="formField">
-                                      <select class="field__select" placeholder="Курс" data-js="formSelect">
+                                      <select class="field__select" placeholder="Курс" data-js="formSelect" required="">
                                         <option></option>
                                         <option>1 курс</option>
                                         <option>2 курс</option>
                                         <option>3 курс</option>
                                         <option>4 курс</option>
-                                      </select>
+                                      </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                                   <label class="field     " data-js="formField">

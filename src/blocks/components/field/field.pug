@@ -30,7 +30,7 @@ mixin field(props = defaultFieldProps)
             selectGreen: props.selectGreen ? props.selectGreen : defaultFieldProps.selectGreen,
         }
 
-    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js=`${checkProps.tag === 'textarea' ? 'textarea' : 'formField'}`)&attributes(attributes)
+    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)
         - if(checkProps.title)
             span.field__title
                 != checkProps.title
@@ -50,10 +50,12 @@ mixin field(props = defaultFieldProps)
                             use(xlink:href=`img/sprites/sprite.svg#close`)
                 span.field__error(data-js='fieldError')
         - if(checkProps.tag === 'textarea')
-            textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)
+            textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+            span.field__error(data-js='fieldError')
         - if(checkProps.tag === 'select')
-            select.field__select(placeholder=checkProps.placeholder data-js='formSelect')
+            select.field__select(placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
                 - let optionCount = 0
                 - while (optionCount < checkProps.selectOptions.length)
                     option!= checkProps.selectOptions[optionCount] 
                     - optionCount++
+            span.field__error(data-js='fieldError')

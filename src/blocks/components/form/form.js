@@ -35,7 +35,7 @@ function validation() {
             }
 
             function validateInput(input) {
-                const field = input.querySelector('input');
+                const field = input.querySelector('input') ? input.querySelector('input') : input.querySelector('textarea') ? input.querySelector('textarea') : input.querySelector('select')
 
                 if(!field) return
 
@@ -135,12 +135,20 @@ function validation() {
                 inputFields.forEach(input => {
                     input.addEventListener('click', () => {
                         if (form.getAttribute('data-validate')) {
-                            const field = input.querySelector('input')
+                            const field = input.querySelector('input') ? input.querySelector('input') : input.querySelector('textarea') ? input.querySelector('textarea') : input.querySelector('select')
+
+                            if(!field) return
 
                             field.addEventListener('input', () =>
                                 validateInput(input),
                             )
+
                             checkFields()
+
+                            if(field.dataset.js === 'formSelect') {
+                                field.closest('[data-js="formField"]').classList.remove('field--invalid')
+                            }
+
                         }
                     })
                 })
@@ -189,6 +197,7 @@ function validation() {
             form.setAttribute('data-validate', 'true')
 
             validate()
+
         })
     })
 }
@@ -302,16 +311,20 @@ function customFormScripts() {
 
             blocks.forEach(block => {
                 block.style.display = 'none'
+                block.querySelectorAll('[data-js="formField"]').forEach(cField => {
+                    cField.classList.remove('field--invalid')
+                    if(cField.querySelector('input')) {
+                        cField.querySelector('input').removeAttribute('required')
+                    }
+                    if(cField.querySelector('select')) {
+                        cField.querySelector('select').removeAttribute('required')
+                    }
+                })
             })
 
             let levelEdValue = currentForm.querySelector('input[name="level-education"]:checked').value
             let citizenshipValue = currentForm.querySelector('input[name="citizenship"]:checked').value
             let snilsValue = currentForm.querySelector('input[data-js="snils-tab"]:checked') ? true : false
-
-            if(snilsValue) {
-                currentForm.querySelector('[data-condition="ifSnils"]').style.display = 'flex'
-            }
-
 
             if(levelEdValue === 'Нет') {
                 currentForm.querySelector('[data-condition="ifLevelNo"]').style.display = 'flex'
@@ -322,12 +335,47 @@ function customFormScripts() {
                 currentForm.querySelector('[data-condition="ifCitizenshipYes"]').style.display = 'flex'
                 formBtn.style.display = 'flex'
                 formPrivacy.style.display = 'flex'
+                currentForm.querySelector('[data-condition="ifLevelYes"]').querySelectorAll('input').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+                currentForm.querySelector('[data-condition="ifCitizenshipYes"]').querySelectorAll('select').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+                if(snilsValue) {
+                    currentForm.querySelector('[data-condition="ifSnils"]').style.display = 'flex'
+                    currentForm.querySelector('[data-condition="ifSnils"]').querySelectorAll('input').forEach(cInput => {
+                        cInput.setAttribute('required', '')
+                    })
+                } else {
+                    currentForm.querySelector('[data-condition="ifSnils"]').querySelectorAll('input').forEach(cInput => {
+                        cInput.removeAttribute('required')
+                    })
+                }
+
             } else {
                 currentForm.querySelector('[data-condition="ifLevelYes"]').style.display = 'flex'
                 currentForm.querySelector('[data-condition="ifCitizenshipNo"]').style.display = 'flex'
                 formBtn.style.display = 'flex'
                 formPrivacy.style.display = 'flex'
+                currentForm.querySelector('[data-condition="ifLevelYes"]').querySelectorAll('input').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+                currentForm.querySelector('[data-condition="ifCitizenshipNo"]').querySelectorAll('select').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+                if(snilsValue) {
+                    currentForm.querySelector('[data-condition="ifSnils"]').style.display = 'flex'
+                    currentForm.querySelector('[data-condition="ifSnils"]').querySelectorAll('input').forEach(cInput => {
+                        cInput.setAttribute('required', '')
+                    })
+                } else {
+                    currentForm.querySelector('[data-condition="ifSnils"]').querySelectorAll('input').forEach(cInput => {
+                        cInput.removeAttribute('required')
+                    })
+                }
             }
+
+            currentForm.querySelector('input[data-js="snils-tab"]').removeAttribute('required')
         }
     }
 
@@ -396,6 +444,14 @@ function customFormScripts() {
                             let agreementField = currentStep.querySelector('[data-js="formProjectsModalAgreement"]'),
                                 agreementFieldInput = agreementField.querySelector('input')
 
+                            agreementFieldInput.addEventListener('change', (e) => {
+                                if(e.target.checked) {
+                                    e.target.closest('[data-js="formProjectsModalAgreement"]').classList.remove('field--invalid')
+                                } else {
+                                    e.target.closest('[data-js="formProjectsModalAgreement"]').classList.add('field--invalid')
+                                }
+                            })
+
                             if(agreementFieldInput.checked) {
                                 allowedToSwitch = true
                                 agreementField.classList.remove('field--invalid')
@@ -404,16 +460,73 @@ function customFormScripts() {
                             }
                             break;
                         case "partner":
-                            allowedToSwitch = true
+                            let stepFields = currentStep.querySelectorAll("[data-js='formField']"),
+                                errorCount = 0
+
+                            stepFields.forEach(stepField => {
+                                if(stepField.querySelector('input').hasAttribute('required')) {
+                                    let stepFieldValue = stepField.querySelector('input').value
+                                    let stepFieldName = stepField.querySelector('input').getAttribute('data-v-name')
+                                    let stepFieldError = stepField.querySelector('[data-js="fieldError"]')
+
+                                    if(stepFieldName == 'phone') {
+                                        if(stepFieldValue.replace(/\D/g, "").length == 11) {
+                                            stepField.classList.remove('field--invalid')
+                                        } else {
+                                            errorCount += 1
+                                            stepField.classList.add('field--invalid')
+                                            stepFieldError.innerHTML = 'Телефон введён неверно'
+                                        }
+                                    } else {
+                                        if(stepFieldValue.length < 1) {
+                                            errorCount += 1
+                                            stepField.classList.add('field--invalid')
+                                            stepFieldError.innerHTML = 'Поле обязательно для заполнения'
+                                        } else {
+                                            stepField.classList.remove('field--invalid')
+                                        }
+                                    }
+
+                                    stepField.addEventListener('click', function() {
+                                        stepField.classList.remove('field--invalid')
+                                    })
+                                }
+                            })
+
+                            if(errorCount == 0) {
+                                allowedToSwitch = true
+                            }
                             break;
                         case "project":
-                            allowedToSwitch = true
+                            let stepFields2 = currentStep.querySelectorAll("[data-js='formField']"),
+                                errorCount2 = 0
+
+                                stepFields2.forEach(stepField => {
+                                    
+                                    let stepFieldInput = stepField.querySelector('input') ? stepField.querySelector('input') : stepField.querySelector('textarea') ? stepField.querySelector('textarea') : stepField.querySelector('select')
+
+                                    if(stepFieldInput.hasAttribute('required')) {
+                                        let stepFieldValue = stepFieldInput.value
+                                        let stepFieldError = stepField.querySelector('[data-js="fieldError"]')
+                                        if(stepFieldValue.length < 1) {
+                                            errorCount2 += 1
+                                            stepField.classList.add('field--invalid')
+                                            stepFieldError.innerHTML = 'Поле обязательно для заполнения'
+                                        } else {
+                                            stepField.classList.remove('field--invalid')
+                                        }
+                                    }
+
+                                    stepField.addEventListener('click', function() {
+                                        stepField.classList.remove('field--invalid')
+                                    })
+                                })
+
+                            if(errorCount2 == 0) {
+                                allowedToSwitch = true
+                            }
                             break;
-                        case "budget":
-                            allowedToSwitch = true
-                            break;
-                        case "studentsNumber":
-                            allowedToSwitch = true
+                        default:
                             break;
                     }
 
@@ -438,6 +551,12 @@ function customFormScripts() {
                     if(cField.querySelector('input')) {
                         cField.querySelector('input').removeAttribute('required')
                     }
+                    if(cField.querySelector('select')) {
+                        cField.querySelector('select').removeAttribute('required')
+                    }
+                    if(cField.querySelector('textarea')) {
+                        cField.querySelector('textarea').removeAttribute('required')
+                    }
                 })
             })
 
@@ -456,7 +575,20 @@ function customFormScripts() {
             if(projectProgressValue === 'Да') {
                 let targetBlock = currentForm.querySelector('[data-condition="ifProjectInProgress"]')
                 targetBlock.style.display = 'flex'
+                targetBlock.querySelectorAll('textarea').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+            }
+
+            let projectStatusValue = currentForm.querySelector('input[name="project-proposer-status"]:checked').value
+
+            if(projectStatusValue === 'Обучающийся ХАУ') {
+                let targetBlock = currentForm.querySelector('[data-condition="ifIsStudent"]')
+                targetBlock.style.display = 'flex'
                 targetBlock.querySelectorAll('input').forEach(cInput => {
+                    cInput.setAttribute('required', '')
+                })
+                targetBlock.querySelectorAll('select').forEach(cInput => {
                     cInput.setAttribute('required', '')
                 })
             }

@@ -8,10 +8,6 @@
     border: none;
 
     &--invalid {
-        .field__input {
-            border-color: red;
-        }
-
         .field__error {
             display: block;
         }
@@ -88,8 +84,9 @@
     }
 
     &--invalid &__input,
-    &--invalid &__textarea {
-        border-color: $c-error;
+    &--invalid &__textarea,
+    &--invalid .select2 {
+        border-color: $c-error !important;
     }
 
     &__input {

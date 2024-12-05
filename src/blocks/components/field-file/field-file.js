@@ -31,7 +31,7 @@ function fileFieldInit() {
                         
                         for(let i = 0; i < validExtentions.length; i++) {
                             if(validExtentions[i] == currentFileExtention) {
-                                console.log("соответствие по расширению")
+                                
                                 isInvalidType = false;
                                 break
                             }
@@ -43,7 +43,7 @@ function fileFieldInit() {
                     if(validTypes.length > 0) {
                         for(let i = 0; i < validTypes.length; i++) {
                             if(validTypes[i] == currentFileType) {
-                                console.log("соответствие по типу")
+                                
                                 isInvalidType = false;
                                 break
                             }
@@ -57,7 +57,7 @@ function fileFieldInit() {
                         for(let i = 0; i < validGroups.length; i++) {
                             let currentValidGroup = validGroups[i].replace(/\*$/, '');
                             if(currentFileType.startsWith(currentValidGroup)) {
-                                console.log("соответствие по группе")
+                               
                                 isInvalidType = false;
                                 break
                             }
@@ -68,10 +68,6 @@ function fileFieldInit() {
                 } else {
                     isInvalidType = false;
                 }
-
-                console.log(!isNaN(fileMaxSize))
-                console.log(field.files[0].size)
-                console.log(fileMaxSize)
 
                 //проверяем размер файла
                 if(!isNaN(fileMaxSize) && field.files[0].size > fileMaxSize) {
