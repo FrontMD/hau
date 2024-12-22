@@ -28,6 +28,9 @@ function getScrollbarWidth() {
     return scrollWidth
 }
 
+
+const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : '');
+
 //Инициализация фансибокса
 document.addEventListener('DOMContentLoaded', () => {
     Fancybox.bind("[data-fancybox]", {
@@ -37,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Carousel: {
             transition: "crossfade",
             Navigation: {
-                prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#angle_arrow></use></svg>',
-                nextTpl: '<svg><use xlink:href=img/sprites/sprite.svg#angle_arrow></use></svg>',
+                prevTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#angle_arrow"></use></svg>',
+                nextTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#angle_arrow"></use></svg>',
               },
         },
         Thumbs: {
