@@ -59,4 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
+
+    Array.prototype.forEach.call(
+        document.querySelectorAll('.js-simplebar'),
+        (el) => new SimpleBar(el)
+    );
 })
