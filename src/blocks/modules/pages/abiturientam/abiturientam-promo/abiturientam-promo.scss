@@ -48,20 +48,46 @@
         }
     }
 
+    &__title {
+        position: relative;
+        color: $c-white;
+        margin-bottom: 30px;
+        max-width: 520px;
+        line-height: 1.16em;
+        letter-spacing: -0.03em;
+
+        @include max(laptop) {
+            max-width: 450px;
+        }
+
+        @include max(tablet) {
+            max-width: 410px;
+        }
+
+        @include max(mobile) {
+            max-width: 330px;
+        }
+    }
+
     .swiper-wrapper {
         align-items: stretch;
     }
 
     &__slide {
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 85px;
         width: 335px;
         min-height: 228px;
-        height: auto;
         padding: 20px;
         background-color: $c-accent;
         color: $c-white;
+        transition: background-color $tr-time linear;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
 
         @include max(mobile) {
             min-height: 200px;

@@ -879,3 +879,20 @@ iframe {
 		}
 	}
 }
+
+.simplebar-track {
+	background-color: transparent;
+}
+
+.simplebar-track.simplebar-vertical {
+	width: 3px;
+}
+
+.simplebar-track.simplebar-horizontal {
+	height: 3px;
+}
+
+.simplebar-scrollbar {
+	background-color: $c-accent-middle;
+	border-radius: 8px;
+}
