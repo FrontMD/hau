@@ -53,7 +53,7 @@ class ProgrammsListView {
             cards.forEach(card => cardAction(card));
         };
 
-        if (targetMode === 'cards' && !programmsList.classList.contains('programms-list--cards')) {
+        if (targetMode === 'cards') {
             updateView(
                 'programms-list--rows',
                 'programms-list--cards',
@@ -61,7 +61,7 @@ class ProgrammsListView {
             );
         }
 
-        if (targetMode === 'rows' && !programmsList.classList.contains('programms-list--rows')) {
+        if (targetMode === 'rows') {
             updateView(
                 'programms-list--cards',
                 'programms-list--rows',
