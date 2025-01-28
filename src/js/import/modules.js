@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sSkillsSliders()
     sVacancySliders()
     sPartners()
-    programmsList()
+    new ProgrammsListView()
     abiturientamPromo()
     abiturientamInfo()
     peopleDetail()
