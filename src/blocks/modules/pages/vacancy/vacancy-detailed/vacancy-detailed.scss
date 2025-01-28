@@ -58,19 +58,6 @@
 
     &__title {
         color: $c-accent;
-        max-width: 570px;
-
-        @include max(large) {
-            max-width: 460px;
-        }
-
-        @include max(laptop) {
-            max-width: 590px;
-        }
-
-        @include max(mobile) {
-            max-width: 100%;
-        }
     }
 
     &__middle {
