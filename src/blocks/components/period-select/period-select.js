@@ -35,11 +35,19 @@ function periodSelect() {
             selectClendarClose(selectModal)
         });
         submit.addEventListener('click', function (event) {
+            event.preventDefault();
             if(input && input.value && sourceInputFrom && sourceInputTo) {
                 let datesArr = input.value.split(' - ')
                 datesArr && datesArr[0] && (sourceInputFrom.value = datesArr[0])
                 datesArr && datesArr[1] && (sourceInputTo.value = datesArr[1])
 
+                const selectDatesEvent = new CustomEvent('selectDates', {
+                    detail: {
+                        from: datesArr[0],
+                        to: datesArr[1]
+                    }
+                });
+                select.dispatchEvent(selectDatesEvent);
 
                 if(sourceSubmitButton){
                     sourceSubmitButton.click()
@@ -50,7 +58,7 @@ function periodSelect() {
             selectClendarClose(selectModal)
         });
     })
-    
+
 }
 
 function selectClendarOpen(modal) {
