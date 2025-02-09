@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Инвалидам и лицам с ОВЗ</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <!-- лучше добавлять только на те страницы где есть блок с картой-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
+  </head>
+  <body>
+    <header class="site-header" data-js="siteHeader">
+      <div class="section">
+        <div class="site-header__container"><a class="site-header__logo" href="/"><img src="<?=SITE_TEMPLATE_PATH?>/img/full_logo.svg" alt=""></a>
+              <div class="socials socials--header"><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#rutube"></use>
+                  </svg></a></div>
+          <nav class="site-header__nav"><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Университет</span></a><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Абитуриентам</span></a><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Студентам</span></a></nav>
+        </div>
+      </div>
+      <div class="site-header__menu"> </div>
+    </header>
+    <main class="site-main">
+      <div class="page">
+        <div class="page-layout">
+              <section class="page-intro white-bg border-bottomundefined">
+                    <div class="breadcrumbs  breadcrumbs--dark">
+                      <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Инвалидам и лицам с ОВЗ</span>
+                        </li>
+                      </ul>
+                    </div>
+                <div class="page-intro__content">
+                      <div class="title  title--dark">
+                        <div class="title__h1">
+                          <h1><span>Инвалидам  </span><br> и лицам с ОВЗ</h1>
+                        </div>
+                      </div>
+                </div>
+              </section>
+          <div class="m-container white-bg">
+                <div class="m-columns m-columns--no-plpr no-border  ">
+                  <div class="m-columns__header text-editor"><h2>В университете создана доступная среда</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <p>Из этого раздела вы узнаете всю информацию для лиц <br>с инвалидностью и ограниченными возможностями здоровья<br><br></p>
+                  </div>
+                </div>
+          </div>
+          <div class="m-container white-bg">
+                <div class="m-columns m-columns--no-plpr no-border  ">
+                  <div class="m-columns__header text-editor"><h2>Информация для абитуриентов и студентов с инвалидностью и лиц с ограниченными возможностями здоровья</h2></div>
+                </div>
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><p><b>В целях обеспечения выполнения показателей доступности высшего образования для инвалидов и лиц с ограниченными возможностями здоровья в университете проводятся следующие мероприятия:</b></p></div>
+                  <div class="m-columns__main text-editor">
+                    <ul>
+                      <li>в период проведения приёмной кампании профориентирование абитуриентов из числа инвалидов и лиц с ОВЗ обеспечивается сотрудниками профориентационной зоны, в остальное время сотрудниками приёмной комиссии (ответственный — секретарь приёмной комиссии И.И. Иванов);</li>
+                      <li>при необходимости приём документов от абитуриентов-инвалидов и лиц с ОВЗ осуществляется в индивидуальном порядке на специально оборудованном рабочем месте с прикреплением ассистента (ответственный — секретарь приёмной комиссии И.И. Иванов);</li>
+                      <li>в университете работает персональная «горячая линия» для инвалидов и лиц с ОВЗ (тел. +7 (990) 059 50 39);</li>
+                      <li>приём документов от инвалидов на обучение в соответствии с их особыми образовательными потребностями осуществляют заместители ответственного секретаря приёмной комиссии;</li>
+                      <li>при входе в университет размещены специальные значки и указатели, информационные таблички с телефонами, и при необходимости, потребности абитуриента или студента инвалида предоставляется сопровождение волонтера (ответственные за сопровождение — Иванов Иван Иванович, Петров Петр Петрович);</li>
+                      <li>для инвалидов и лиц с ОВЗ полностью оборудован корпус по адресу:  Херсон, Сретенская улица, 23,;</li>
+                      <li>при проведении вступительных испытаний для поступающих из числа инвалидов и лиц с ОВЗ университет обеспечивает создание условий с учетом особенностей психофизического развития поступающих, их индивидуальных возможностей и состояния здоровья (подробнее в <b>правилах проведения вступительных испытаний для лиц с ограниченными возможностями здоровья</b>);</li>
+                      <li>в университете создана программа «Доступная среда», в которой предусмотрено развитие инклюзивного образования, оборудование учебных корпусов, специализированных учебных аудиторий, организация профессиональной ориентации инвалидов, волонтёрского движения в этом направлении.</li>
+                    </ul><br><br>
+                  </div>
+                </div>
+          </div>
+          <div class="m-container white-bg">
+                <div class="m-columns m-columns--no-plpr no-border  ">
+                  <div class="m-columns__header text-editor"><h2>Возможности и условия для получения образования обучающимися с ограниченными возможностями</h2></div>
+                </div>
+          </div>
+          <div class="m-container white-bg">
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><p><b>В университете созданы условия для получения образования студентами с ограниченными возможностями здоровья и студентами-инвалидами. Присутствует доступная среда, достаточная для обеспечения возможности беспрепятственного доступа студентов и работников с ограниченными возможностями здоровья в учебные корпуса по следующим адресам:  Скадовский район, п. Антоновка, ул. Студенческая, 1. В университете организован учет обучающихся с ограниченными возможностями здоровья и инвалидов.</b></p></div>
+                  <div class="m-columns__main text-editor">
+                    <p>Студенты-инвалиды и студенты с ограниченными возможностями здоровья, как и все остальные студенты, могут обучаться в установленные сроки. При необходимости, с учетом особенностей и образовательных потребностей конкретных обучающихся, разрабатываются индивидуальные учебные планы. По каждой дисциплине учебных планов образовательных программ разработаны методические документы, включающие методические рекомендации по самостоятельному освоению курсов. На основе индивидуализированного подхода организуется прохождение практики обучающихся-инвалидов и обучающихся с ограниченными возможностями здоровья.</p>
+                    <p>Особое внимание уделяется охране здоровья обучающимся из числа инвалидов и лиц с ограниченными возможностями здоровья. В учебном корпусе по адресу:  Скадовский район, п. Антоновка, ул. Студенческая, 1 работает медицинский кабинет, где оказывается необходимая первичная медико-санитарная помощь, производится периодичный осмотр обучающихся инвалидов и обучающихся с ограниченными возможностями. В университете работает консультативный пункт психологической помощи для всех обучающихся, со штатом в количестве 2 человек. Утверждена и действует программа об охране и укреплении здоровья обучающихся в университете.</p>
+                    <p>Библиотечно-информационный центр университета, представленный по адресам:  Скадовский район, п. Антоновка, ул. Студенческая, 1, осуществляет обслуживание обучающихся из числа инвалидов и лиц с ограниченными возможностями здоровья, а именно:</p>
+                    <ul>
+                      <li>обеспечивает доступность к книжным фондам и электронным ресурсам библиотеки;</li>
+                      <li>принимает заказы на издания и другие документы (дистанционно);</li>
+                      <li>подбирает и доставляет литературу и другие документы к месту пребывания обучающихся в университете;</li>
+                      <li>оказывает помощь в работе с электронным и карточным каталогом;</li>
+                      <li>организует доступ (удаленный доступ) к электронным библиотечным системам (ЭБС) и другим электронным ресурсам.</li>
+                      <li>Все ЭБС снабжены версиями для слабовидящих. В ЭБС «Лань» интегрированы сервисы для незрячих студентов, которые позволяют эффективно работать с ЭБС. В мобильное приложение ЭБС «Лань» интегрирован синтезатор речи. Используя этот сервис, незрячие обучающиеся могут:</li>
+                      <li>осуществлять навигацию как по каталогу, так и в тексте книги;</li>
+                      <li>слушать озвученные книги на мобильном устройстве;</li>
+                      <li>регулировать скорость воспроизведения речи;</li>
+                      <li>осуществлять переход по предложениям, абзацам или главам книги.</li>
+                    </ul>
+                    <p>Для освоения дисциплины «Физическая культура» студентами-инвалидами предлагаются задания и специальный комплекс упражнений для самостоятельного физического совершенствования в соответствии с рабочей программой дисциплин. Для студентов с ограниченными возможностями здоровья проводятся занятия с доступной физической нагрузкой, учитывающей особенности каждого студента. Занятия проводятся в специально оборудованном спортивном зале по адресу:  Скадовский район, п. Антоновка, ул. Студенческая, 1.</p>
+                    <p>Работники приёмной комиссии университета работают с соблюдением законодательства в части приема абитуриентов-инвалидов и абитуриентов с ограниченными возможностями здоровья.</p>
+                    <p>Полностью оборудован объект студенческого городка — общежитие № 8 по адресу: Скадовский район, п. Антоновка, ул. Студенческая, 1 и является доступным для пользования инвалидами и лицами с ограниченными возможностями здоровья. Общежитие предусматривает 3 жилых помещения (57,6 кв.м) на 1-м этаже для проживания 7 инвалидов и лиц с ограниченными возможностями здоровья. Соответствие общежития для использования инвалидами и лицами с ограниченными возможностями здоровья подтверждено заключением Общественной инспекции по делам инвалидов в г. Херсон (Акт обследования объекта действующей инфраструктуры в г. Херсоне от 31.01.2024 № 1).</p>
+                    <p>В университете разработаны локальные нормативные документы, которые регламентируют процедуру организации образовательного процесса для инвалидов и лиц с ограниченными возможностями здоровья студентов с ограниченными возможностями здоровья.</p>
+                    <p>Подготовлены специализированные стоянки для автотранспорта лиц с ограниченными возможностями в соответствии с ГОСТ Р 52289 и ГОСТ Р 12.4.026 по следующим адресам:  Скадовский район, п. Антоновка, ул. Студенческая, 1 — 2 парковочных места. Размещены информационные таблички о наличии ситуационной помощи лицам с ограниченными возможностями выполненные в соответствии с требованиями ГОСТ Р 52875.</p>
+                    <p>Входы в вышеуказанные учебные корпуса университета оборудованы пандусами в соответствии с требованиями к доступности среды для маломобильных граждан СНиП 35.01.2001, СП 42.13330, ГОСТ Р 51261, ГОСТ Р 52875.</p>
+                    <p>С целью обеспечения принятия коллегиальных решений по вопросам организации образовательного процесса для инвалидов и лиц с ограниченными возможностями здоровья, определения основных направлений и координации работы по развитию инклюзивного образования в университете приказом ректора создана постоянно действующая комиссия.</p>
+                    <p>Для выполнения Требований к организации образовательного процесса для обучения инвалидов и лиц с ограниченными возможностями здоровья в институте утвержден План мероприятий по организации образовательного процесса для обучения инвалидов и лиц с ограниченными возможностями здоровья.</p><br>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="section">
+        <div class="m-container site-footer__container">
+          <div class="site-footer__row">
+            <div class="site-footer__col site-footer__col--first">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Главный корпус</div>
+                <div class="site-footer__textblock">
+                  <p>273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</p><a href="#">все адреса корпусов</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Контакт-центр:</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a>
+                  <p>
+                    Часы работы:<br>Пн. — Чт.: 9:00 - 21:00
+<br>Пт: 9:00 - 20:00
+<br>Сб. — Вс.: 9:30 - 17:15
+                  </p>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Общие вопросы <br>(кроме вопросов о поступлении):</div>
+                <div class="site-footer__textblock"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Приемная комиссия</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a></div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">График работы:</div>
+                <div class="site-footer__textblock">
+                  <p>
+                    Пн. — Пт.: 10:30 - 18:00<br> Сб.: 10:30 - 15:00
+<br> Вс.: приём онлайн
+                  </p><a href="mailto:priem@khay.ru">priem@khay.ru</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title"> <a href="#">Прием документов</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Пресс-служба</div>
+                <div class="site-footer__textblock"><a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+                <div class="site-footer__subtitle">СМИ и новости:</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru</a></div>
+                <div class="site-footer__subtitle">Обновление сайта <br>(добавить/исправить):</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru							</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__row site-footer__row--mid">
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ПОСТУПАЮЩИМ</a><a class="site-footer__link" href="#">ОБУЧАЮЩИМСЯ</a><a class="site-footer__link" href="#">СТРУКТУРА</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ОБ УНИВЕРСИТЕТЕ</a><a class="site-footer__link" href="#">КАФЕДРЫ</a><a class="site-footer__link" href="#">ДОВУЗОВСКОЕ ОБРАЗОВАНИЕ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">НАУКА</a><a class="site-footer__link" href="#">МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ</a><a class="site-footer__link" href="#">ОБЩИЕ СВЕДЕНИЯ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a><a class="site-footer__link" href="#">ПРОТИВОДЕЙСТВИЕ КОРРУПЦИИ</a><a class="site-footer__link" href="#">НОВОСТИ</a></div>
+          </div>
+          <div class="site-footer__copyright">© 2024 Федеральное государственное автономное образовательное учреждение высшего образования Херсонский Аграрный Университет</div>
+        </div>
+      </div>
+    </footer>
+    <div class="main-burger">
+      <div class="main-burger__menu" data-js="mainBurgerMenu">
+        <div class="main-burger__content">
+          <div class="main-burger__header">
+            <div class="main-burger__left">
+              <div class="main-burger__close" data-js="mainBurgerClose">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#close"></use>
+                </svg>Закрыть
+              </div>
+            </div>
+            <div class="main-burger__right">
+                  <div class="socials socials--burger"><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#rutube"></use>
+                      </svg></a></div>
+              <div class="main-burger__contacts">Приемная комиссия<a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+            </div>
+          </div>
+          <div class="main-burger__main">
+                <div class="multi-menu" data-js="multiMenu">
+                  <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="13">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-13</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-burger__line">
+        <div class="main-burger__open" data-js="mainBurgerOpen">
+          <svg> 
+            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#main_burger"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <noindex>
+      <div>
+        <!--код модалок сюда-->
+            <div class="modal hystmodal c-map-modal" id="myModal" aria-hidden="true" data-js="cMapAddressModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal open-doors-modal" id="openDoorsModal" aria-hidden="true" data-js="openDoorsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner"><div class="open-doors-block__container text-editor">
+<div class="open-doors-block__left">
+<h3>Онлайн мероприятие 04 декабря 2024 в 13:00</h3>
+<p><b>10 октября 2024</b></p>
+</div>
+<div class="open-doors-block__right">
+<p><b>Поделиться</b></p>
+<div class="socials">
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+</svg>
+</a>
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Встреча в Zoom</h3></div>
+<div class="open-doors-block__right">
+<a class="btn-plus" href="#">
+<span class="btn-plus__text">Перейти</span>
+<span class="btn-plus__icon"> 
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link"></use>
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Адрес:</h3></div>
+<div class="open-doors-block__right">
+                      <p> <b>Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</b></p></div>
+</div> 
+<div class="open-doors-block__modal text-editor"><img src="<?=SITE_TEMPLATE_PATH?>/img/open-doors/open-doors-2.jpg"><br>
+                      <p>Что нужно сделать перед посещением университета:<br>Спланируйте маршрут до вуза, чтобы не опоздать. Оцените, удобно ли вам будет ездить.</p>
+                      <h3>Правила посещения</h3>
+                      <ul>
+                        <li>Прослушайте официальную часть. Мы рекомендуем приходить к самому началу мероприятия. Так вы не упустите нужную информацию. Возможно, на выступлении ректора вы получите ответы на большую часть своих вопросов. Все важные моменты записывайте в блокнот. Приветственное слово будет говорит заведующий кафедры “Менеджмент”.</li>
+                        <li>Поговорите с представителями приемной комиссии. Ответы конспектируйте в блокнот. Мы подготовили перечень важных вопросов, которые можно выяснить в приемной комиссии: Есть ли у вуза действующая аккредитация по выбранному вами направлению? Где проходит практика? Помогает ли вуз с трудоустройством?Дают ли баллы за золотую медаль и дипломы призеров олимпиад? Каких? Можно ли перевестись на другое направление, если не понравится учиться там, куда поступил? Как и когда это делается? По какому принципу распределяются места в общежитие? За какой период надо вносить оплату? За какой период надо вносить оплату, если поступите на платное?</li>
+                        <li>Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.</li>
+                      </ul></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

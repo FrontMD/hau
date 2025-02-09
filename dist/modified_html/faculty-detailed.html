@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Факультет</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="<?=SITE_TEMPLATE_PATH?>/img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <!-- лучше добавлять только на те страницы где есть блок с картой-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
+  </head>
+  <body>
+    <header class="site-header" data-js="siteHeader">
+      <div class="section">
+        <div class="site-header__container"><a class="site-header__logo" href="/"><img src="<?=SITE_TEMPLATE_PATH?>/img/full_logo.svg" alt=""></a>
+              <div class="socials socials--header"><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#rutube"></use>
+                  </svg></a></div>
+          <nav class="site-header__nav"><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Университет</span></a><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Абитуриентам</span></a><a class="nav-link" href=""><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Студентам</span></a></nav>
+        </div>
+      </div>
+      <div class="site-header__menu"> </div>
+    </header>
+    <main class="site-main">
+      <div class="page">
+        <div class="page-layout">
+              <section class="i-intro">
+                <div class="i-intro__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/faculties/faculty_intro.webp" alt=""></div>
+                <div class="m-container i-intro__container">
+                      <div class="breadcrumbs  breadcrumbs--dark">
+                        <ul class="breadcrumbs__list">
+                          <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator"></span>
+                          </li>
+                          <li class="breadcrumbs__item"><a href="javascript:void(0);">Факультеты</a><span class="breadcrumbs__separator"></span>
+                          </li>
+                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Название факультета</span>
+                          </li>
+                        </ul>
+                      </div>
+                  <div class="i-intro__top">
+                  </div>
+                  <div class="i-intro__bottom">
+                        <div class="title i-intro__title title--light">
+                          <div class="title__h1">
+                            <h1>Факультет экономики и управления</h1>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </section>
+          <div class="m-container">
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><h2>Факультет экономики и управления (ФЭиУ) готовит специалистов в области экономики, управления и рекламы нового поколения, обладающих стратегическим мышлением, аналитическими навыками, практическими знаниями. Все образовательные программы факультета разрабатываются совместно с индустриальными партнёрами.</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <p> <b>Обучаясь на нашем факультете, вы не только получите теоретические знания, <br>прикладные навыки, приобретете управленческие компетенции, но и станете <br>обладателями незаурядных знаний, научитесь командной работе, <br>приобретете лидерские и организаторские качества.</b></p>
+                  </div>
+                </div>
+          </div>
+              <section class="faculty-programms">
+                    <div class="tabs-block tabs-block--middle" data-js="tabsBlock">
+                      <div class="tabs-block__tabs">
+                        <div class="tabs-block__tab tabs-block__tab--active" data-index="0" data-js="tabsBlockTab">Бакалавриат и специалитет</div>
+                        <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab">Магистратура</div>
+                        <div class="tabs-block__tab" data-index="2" data-js="tabsBlockTab">Аспирантура</div>
+                      </div>
+                      <div class="tabs-block__slides">
+                        <div class="tabs-block__slide tabs-block__slide--active" data-js="tabsBlockSlide">
+                          <div class="m-container">
+                            <div class="faculty-programms__list">
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления 1</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div><a class="btn faculty-programms__more btn--lightGreen" href="#">Загрузить еще</a>
+                          </div>
+                        </div>
+                        <div class="tabs-block__slide" data-js="tabsBlockSlide">
+                          <div class="m-container">
+                            <div class="faculty-programms__list">
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления 2</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div><a class="btn faculty-programms__more btn--lightGreen" href="#">Загрузить еще</a>
+                          </div>
+                        </div>
+                        <div class="tabs-block__slide" data-js="tabsBlockSlide">
+                          <div class="m-container">
+                            <div class="faculty-programms__list">
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления 3</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="programm-card  programm-card--row">
+                                    <div class="programm-card__header">
+                                      <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                                      <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                                    </div>
+                                    <div class="programm-card__items">
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Стоимость</div>
+                                        <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Проходной балл:</div>
+                                        <div class="h3 programm-card__val">400</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Срок обучения:</div>
+                                        <div class="h3 programm-card__val">4 года</div>
+                                      </div>
+                                      <div class="programm-card__item">
+                                        <div class="programm-card__param">Бюджетных мест:</div>
+                                        <div class="h3 programm-card__val">26</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div><a class="btn faculty-programms__more btn--lightGreen" href="#">Загрузить еще</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </section>
+          <div class="m-container white-bg">
+                <div class="m-columns m-columns--no-plpr no-border  ">
+                  <div class="m-columns__header text-editor"><h2>Структура факультета</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <div class="text-items-list">
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">зав. кафедрой к.э.н., доцент Елена Эдуардовна Аленина</div>
+                            <div class="h3 count-block__num"><a href="#">Кафедра «Менеджмент»</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">зав. кафедрой к.э.н., доцент Юлия Олеговна Алтунина</div>
+                            <div class="h3 count-block__num"><a href="#">Кафедра «Реклама и связи с общественностью в медиаиндустрии»</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">зав. кафедрой к.э.н., доцент Елена Эдуардовна Аленина</div>
+                            <div class="h3 count-block__num"><a href="#">Кафедра «Управление персоналом»</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse count-block--column">
+                            <div class="count-block__desc"> зав. кафедрой к.э.н., доцент Александр Владимирович Тенищев</div>
+                            <div class="h3 count-block__num"><a href="#">Кафедра «Экономика и организация»</a></div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><h2>Учёный совет</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <div class="text-items-list">
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse border-bottom count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                          <div class="count-block count-block--reverse count-block--column">
+                            <div class="count-block__desc">председатель ученого совета – декан факультета экономики и управления</div>
+                            <div class="h3 count-block__num"><a href="#">Иванов Антон Владимирович</a></div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><img src="<?=SITE_TEMPLATE_PATH?>/img/programma-razvitia/1.webp")></div>
+                  <div class="m-columns__main text-editor">
+                    <h2>Что мы делаем?</h2>
+                    <p>Мы даём только нужные знания и ничего лишнего. Точечная подготовка кадров под конкретные управленческие позиции по заказу отраслевых предприятий обеспечивает востребованность всех наших выпускников.</p>
+                    <p>Обучаясь у нас, вы не только получите теоретические знания, прикладные навыки, приобретёте управленческие компетенции, но и станете обладателями незаурядных знаний, научитесь командной работе, приобретете лидерские и организаторские качества. Часть занятий построена в формате игр и реальных кейсов. На чемпионатах по Управленческим боям студенты развивают soft skills, учатся аргументировать и отстаивать свою позицию, решать ситуационные задачи, в «Парламентском клубе» тренируют навыки публичных выступлений, а на Digital PRактике проводят маркетинговые исследования и создают рекламные проекты. В процессе обучения со студентами проводятся практикоориентированные занятия в управе и префектуре района, Московской Городской Думе, Государственной Думе РФ, Совете Федерации. Проводить мастер-классы приглашают представителей коммуникационных агентств. </p>
+                    <p>Стажировку и практику наши студенты проходят в таких компаниях как Samsung, BMW, Газпром, Ростелеком, Сбербанк, Промсвязьбанк, МГТС, Мосгортранс, Мосавтосантранс, Минэкономразвития, Минпром, Минтранс, Министерстве науки и высшего образования РФ, аппарате Госдумы, Федеральном казначействе РФ, администрациях и управах районов Херсона.</p>
+                  </div>
+                </div>
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><h2>Перспективные направления развития</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <p>Опираясь на перспективные направления развития профессиональной деятельности, такие как: форсайт-менеджер, модератор платформы общения с органами власти, менеджер распределенных сообществ, координатор программ развития местных сообществ, модератор личных профессиональных траекторий, бизнес-аналитик, специалист по логистике, финансист, диджитал и креатив стратегия; а также запросы работодателей, студенты факультета осваивают такие дисциплины, как архитектура бизнес-систем, тайм-менеджмент, прикладной форсайтинг, бизнес-планирование, стратегический менеджмент в инновационной деятельности, цифровая экономика, HR-аналитика, диджитал технологии, комплексный экономический анализ, оценка эффективности инноваций, компетентностный подход и профстандарты в управлении персоналом, перспективные рынки труда, цифровая экономика труда. Дисциплина HR-брендинг успешно переросла в разработку проекта для BMW.</p>
+                  </div>
+                </div>
+                <div class="m-columns m-columns--no-plpr  ">
+                  <div class="m-columns__header text-editor"><h2>Перспективные направления развития</h2></div>
+                  <div class="m-columns__main text-editor">
+                    <p>Взаимодействие с индустриальными партнёрами ФЭиУ осуществляется как в процессе обучения (прохождение практик и проектной деятельности), так и после выпуска (трудоустройство).</p>
+                    <p>К числу наших основных партнёров можно отнести ПАО Сбербанк, ПАО ВТБ, государственные корпорации «РОСКОСМОС» и «РОСТЕХ», технопарки «Мосгормаш» и «Сапфир», Г, рекламные агентства: ООО "Рекламно-издательское агентство «Максим» и многие другие.</p>
+                    <p>Мы работаем с некоммерческими, корпоративными и общественными организациями. Студенты с лучшими результатами могут быть трудоустроены к нашим партнерам после окончания Университета.</p>
+                  </div>
+                </div>
+          </div>
+              <section class="faculty-advantages">
+                <div class="m-container">
+                  <div class="h2 faculty-advantages__title">Наши выпускники</div>
+                  <div class="faculty-advantages__cards" data-js="facultyAdvantagesSlider">
+                    <div class="swiper-wrapper">
+                      <div class="faculty-advantages__card swiper-slide">
+                        <div class="h2 faculty-advantages__subtitle">01</div>
+                        <div class="faculty-advantages__text">Ориентируются в тенденциях развития цифровой экономики;</div>
+                      </div>
+                      <div class="faculty-advantages__card swiper-slide">
+                        <div class="h2 faculty-advantages__subtitle">02</div>
+                        <div class="faculty-advantages__text">обладают универсальными и профессиональными компетенциями работы в командах разработчиков инновационных проектов;</div>
+                      </div>
+                      <div class="faculty-advantages__card swiper-slide">
+                        <div class="h2 faculty-advantages__subtitle">03</div>
+                        <div class="faculty-advantages__text">являются высококвалифицированным кадровым резервом для всех уровней и подразделений органов государственного и муниципального управления;</div>
+                      </div>
+                      <div class="faculty-advantages__card swiper-slide">
+                        <div class="h2 faculty-advantages__subtitle">04</div>
+                        <div class="faculty-advantages__text">Владеют методиками и технологиями проведения конкурентного анализа продукции компаний, исследования особенностей поведения потребителей, продвижения брендов на высокотехнологические рынки.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="faculty-video">
+                <div class="m-container">
+                      <div class="m-columns m-columns--no-plpr no-border  ">
+                        <div class="m-columns__header text-editor"><div class="video" data-js="video">
+                    <div class="video__video">
+                        <div class="video__img" data-js="videoPoster"><img src="<?=SITE_TEMPLATE_PATH?>/img/video-poster.webp" alt=""></div>
+                        <div class="video__frame" data-js="videoFrame" data-video="<iframe width=&quot;720&quot; height=&quot;405&quot; src=&quot;https://rutube.ru/play/embed/1b56934dff273b81a8c991062e7a85cf/?skinColor=43a047&quot; frameBorder=&quot;0&quot; allow=&quot;clipboard-write; autoplay&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>"></div>
+                    </div>
+                    <button class="video__btn" type="button" data-js="videoBtnPlay">
+                        <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#play"></use>
+                        </svg>
+                    </button>
+                    </div></div>
+                        <div class="m-columns__main text-editor">
+                          <h2>Видеовизитка факультета</h2>
+                          <p> <b>Рассказываем и показываем возможности при поступлении на наш факультет:</b></p>
+                          <ul> 
+                            <li>Чем уникален наш факультет. Какие возможности мы предоставляем студентам.</li>
+                            <li>Почему стоит выбрать именно нас.</li>
+                            <li>Что вы получите, выбрав наш факультет?</li>
+                            <li>Как поступить на наш факультет?</li>
+                            <li>Какие перспективы открываются перед выпускниками факультета экономики и управления?</li>
+                            <li>Какие знания и навыки можно получить на факультете экономики и управления?</li>
+                            <li>Как преподаватели факультета помогают студентам в раскрытии их потенциала?</li>
+                            <li>Почему важно выбирать факультет, который постоянно обновляет учебные программы?</li>
+                            <li>Как практико-ориентированное обучение помогает студентам подготовиться к будущей работе?</li>
+                            <li>Почему международная кооперация важна для будущих экономистов и управленцев?</li>
+                            <li>Какие специализации можно выбрать на факультете экономики и управления?</li>
+                            <li>Как факультет помогает студентам в карьерном росте?</li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+              </section>
+              <div class="media-slider-section white-bg">
+                <div class="m-container">
+                  <div class="media-slider  media-slider--horizontal" data-js="imageSlider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_1.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_2.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                      <div class="swiper-slide media-slider__slide"><a class="media-slider__media" href="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp" data-fancybox="facultyDetailed" data-thumb="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp"><img src="<?=SITE_TEMPLATE_PATH?>/img/news/news_slide_3.webp" alt="">
+                          <div class="media-slider__zoom">
+                            <svg> 
+                              <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#search"></use>
+                            </svg>
+                          </div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="c-map" data-js="cMap">
+                <div class="c-map__map" data-js="cMapContainer"></div>
+                <div class="m-container c-map__container">
+                  <div class="c-map__content white-bg">
+                    <div class="h2 c-map__title">Руководство и контакты</div>
+                    <div class="c-map__row no-border">
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Декан факультета:</div>
+                            <div class="c-map__val">Иванов Антон Владимирович, д.э.н., доцент</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__val">Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Приемная:</div>
+                            <div class="c-map__val">Дронова Виктория Алексеевна, Волошина Мария Валерьевна</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74951111111">+7 (495) 111-11-11 доб. 33</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Заместитель декана по учебной работе:</div>
+                            <div class="c-map__val">Иванова Нина Эдуардовна</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__val">г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74951111111">+7 (495) 111-11-11 доб. 35</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:n.e.ivanova@khay.ru">n.e.ivanova@khay.ru</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-map__row">
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.642528, 32.587303">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Деканат:</div>
+                            <div class="c-map__val">Петрова Анастасия Ильинична г.&nbsp;Херсон, ул.&nbsp;Сретенская, д.&nbsp;23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74951111111">+7 (495) 111-11-11 доб. 46</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:fem@khay.ru"> fem@khay.ru</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-map__block">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Заместитель декана по воспитательной и социальной работе:</div>
+                            <div class="c-map__val">Петрова Наталья Николаевна</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__val">г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Телефон:</div>
+                            <div class="c-map__val"><a href="tel:+74951111111">+7 (495) 111-11-11 доб. 35</a></div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">E-mail:</div>
+                            <div class="c-map__val"><a href="mailto:n.e.ivanova@khay.ru">n.e.ivanova@khay.ru</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-map__row">
+                      <div class="c-map__block" data-js="cMapPlacemark" data-coords="46.640548, 32.585375">
+                        <div class="c-map__params">
+                          <div class="c-map__param">
+                            <div class="c-map__name">Адрес учебного корпуса</div>
+                            <div class="c-map__val">г. Херсон, ул. Сретенская, д. 23</div>
+                          </div>
+                          <div class="c-map__param">
+                            <div class="c-map__name">Проезд:</div>
+                            <div class="c-map__val">от станции метро «Херсон» (выход №4 и №5) на автобусах 378, 286 до ост. «Гимназия», далее пешком меньше 5 минут; <br><br>от станции метро «Херсон» (выход №1) на трамваях 11, 25 до ост. «Пл. Академика Люльки», далее пешком 8 минут; <br><br>от станции метро «Херсон» пройти до остановки на ул. Мытищинская 3-я пешком 6 минут, сесть на автобус 714 до ост. «Гимназия», далее пешком 3 минуты.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="section">
+        <div class="m-container site-footer__container">
+          <div class="site-footer__row">
+            <div class="site-footer__col site-footer__col--first">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Главный корпус</div>
+                <div class="site-footer__textblock">
+                  <p>273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</p><a href="#">все адреса корпусов</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Контакт-центр:</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a>
+                  <p>
+                    Часы работы:<br>Пн. — Чт.: 9:00 - 21:00
+<br>Пт: 9:00 - 20:00
+<br>Сб. — Вс.: 9:30 - 17:15
+                  </p>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Общие вопросы <br>(кроме вопросов о поступлении):</div>
+                <div class="site-footer__textblock"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Приемная комиссия</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a></div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">График работы:</div>
+                <div class="site-footer__textblock">
+                  <p>
+                    Пн. — Пт.: 10:30 - 18:00<br> Сб.: 10:30 - 15:00
+<br> Вс.: приём онлайн
+                  </p><a href="mailto:priem@khay.ru">priem@khay.ru</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title"> <a href="#">Прием документов</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Пресс-служба</div>
+                <div class="site-footer__textblock"><a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+                <div class="site-footer__subtitle">СМИ и новости:</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru</a></div>
+                <div class="site-footer__subtitle">Обновление сайта <br>(добавить/исправить):</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru							</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__row site-footer__row--mid">
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ПОСТУПАЮЩИМ</a><a class="site-footer__link" href="#">ОБУЧАЮЩИМСЯ</a><a class="site-footer__link" href="#">СТРУКТУРА</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ОБ УНИВЕРСИТЕТЕ</a><a class="site-footer__link" href="#">КАФЕДРЫ</a><a class="site-footer__link" href="#">ДОВУЗОВСКОЕ ОБРАЗОВАНИЕ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">НАУКА</a><a class="site-footer__link" href="#">МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ</a><a class="site-footer__link" href="#">ОБЩИЕ СВЕДЕНИЯ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a><a class="site-footer__link" href="#">ПРОТИВОДЕЙСТВИЕ КОРРУПЦИИ</a><a class="site-footer__link" href="#">НОВОСТИ</a></div>
+          </div>
+          <div class="site-footer__copyright">© 2024 Федеральное государственное автономное образовательное учреждение высшего образования Херсонский Аграрный Университет</div>
+        </div>
+      </div>
+    </footer>
+    <div class="main-burger">
+      <div class="main-burger__menu" data-js="mainBurgerMenu">
+        <div class="main-burger__content">
+          <div class="main-burger__header">
+            <div class="main-burger__left">
+              <div class="main-burger__close" data-js="mainBurgerClose">
+                <svg> 
+                  <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#close"></use>
+                </svg>Закрыть
+              </div>
+            </div>
+            <div class="main-burger__right">
+                  <div class="socials socials--burger"><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#rutube"></use>
+                      </svg></a></div>
+              <div class="main-burger__contacts">Приемная комиссия<a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+            </div>
+          </div>
+          <div class="main-burger__main">
+                <div class="multi-menu" data-js="multiMenu">
+                  <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="13">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-13</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-burger__line">
+        <div class="main-burger__open" data-js="mainBurgerOpen">
+          <svg> 
+            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#main_burger"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <noindex>
+      <div>
+        <!--код модалок сюда-->
+            <div class="modal hystmodal c-map-modal" id="myModal" aria-hidden="true" data-js="cMapAddressModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal open-doors-modal" id="openDoorsModal" aria-hidden="true" data-js="openDoorsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner"><div class="open-doors-block__container text-editor">
+<div class="open-doors-block__left">
+<h3>Онлайн мероприятие 04 декабря 2024 в 13:00</h3>
+<p><b>10 октября 2024</b></p>
+</div>
+<div class="open-doors-block__right">
+<p><b>Поделиться</b></p>
+<div class="socials">
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#telegram"></use>
+</svg>
+</a>
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#vk"></use>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Встреча в Zoom</h3></div>
+<div class="open-doors-block__right">
+<a class="btn-plus" href="#">
+<span class="btn-plus__text">Перейти</span>
+<span class="btn-plus__icon"> 
+<svg>
+<use xlink:href="<?=SITE_TEMPLATE_PATH?>/img/sprites/sprite.svg#link"></use>
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Адрес:</h3></div>
+<div class="open-doors-block__right">
+                      <p> <b>Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</b></p></div>
+</div> 
+<div class="open-doors-block__modal text-editor"><img src="<?=SITE_TEMPLATE_PATH?>/img/open-doors/open-doors-2.jpg"><br>
+                      <p>Что нужно сделать перед посещением университета:<br>Спланируйте маршрут до вуза, чтобы не опоздать. Оцените, удобно ли вам будет ездить.</p>
+                      <h3>Правила посещения</h3>
+                      <ul>
+                        <li>Прослушайте официальную часть. Мы рекомендуем приходить к самому началу мероприятия. Так вы не упустите нужную информацию. Возможно, на выступлении ректора вы получите ответы на большую часть своих вопросов. Все важные моменты записывайте в блокнот. Приветственное слово будет говорит заведующий кафедры “Менеджмент”.</li>
+                        <li>Поговорите с представителями приемной комиссии. Ответы конспектируйте в блокнот. Мы подготовили перечень важных вопросов, которые можно выяснить в приемной комиссии: Есть ли у вуза действующая аккредитация по выбранному вами направлению? Где проходит практика? Помогает ли вуз с трудоустройством?Дают ли баллы за золотую медаль и дипломы призеров олимпиад? Каких? Можно ли перевестись на другое направление, если не понравится учиться там, куда поступил? Как и когда это делается? По какому принципу распределяются места в общежитие? За какой период надо вносить оплату? За какой период надо вносить оплату, если поступите на платное?</li>
+                        <li>Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.</li>
+                      </ul></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
